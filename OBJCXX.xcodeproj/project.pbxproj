@@ -32,21 +32,23 @@
 		058FA8611C2B0D5B009DD4DD /* Functions.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA8501C2B0D5B009DD4DD /* Functions.hpp */; };
 		058FA8621C2B0D5B009DD4DD /* NSLocking.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA8521C2B0D5B009DD4DD /* NSLocking.hpp */; };
 		058FA8631C2B0D5B009DD4DD /* Types.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA8531C2B0D5B009DD4DD /* Types.hpp */; };
-		058FA8731C2B0EA8009DD4DD /* NSArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8651C2B0EA8009DD4DD /* NSArray.cpp */; };
-		058FA8741C2B0EA8009DD4DD /* NSData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8661C2B0EA8009DD4DD /* NSData.cpp */; };
-		058FA8751C2B0EA8009DD4DD /* NSDate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8671C2B0EA8009DD4DD /* NSDate.cpp */; };
-		058FA8761C2B0EA8009DD4DD /* NSDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8681C2B0EA8009DD4DD /* NSDictionary.cpp */; };
-		058FA8771C2B0EA8009DD4DD /* NSError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8691C2B0EA8009DD4DD /* NSError.cpp */; };
-		058FA8781C2B0EA8009DD4DD /* NSFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA86A1C2B0EA8009DD4DD /* NSFileManager.cpp */; };
-		058FA8791C2B0EA8009DD4DD /* NSLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA86B1C2B0EA8009DD4DD /* NSLock.cpp */; };
-		058FA87A1C2B0EA8009DD4DD /* NSMutableArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA86C1C2B0EA8009DD4DD /* NSMutableArray.cpp */; };
-		058FA87B1C2B0EA8009DD4DD /* NSMutableData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA86D1C2B0EA8009DD4DD /* NSMutableData.cpp */; };
-		058FA87C1C2B0EA8009DD4DD /* NSMutableDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA86E1C2B0EA8009DD4DD /* NSMutableDictionary.cpp */; };
-		058FA87D1C2B0EA8009DD4DD /* NSObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA86F1C2B0EA8009DD4DD /* NSObject.cpp */; };
-		058FA87E1C2B0EA8009DD4DD /* NSRecursiveLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8701C2B0EA8009DD4DD /* NSRecursiveLock.cpp */; };
-		058FA87F1C2B0EA8009DD4DD /* NSString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8711C2B0EA8009DD4DD /* NSString.cpp */; };
 		058FA8801C2B0EA8009DD4DD /* Functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8721C2B0EA8009DD4DD /* Functions.cpp */; };
 		058FA8821C2B0ED5009DD4DD /* NSObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA8811C2B0ED5009DD4DD /* NSObject.hpp */; };
+		058FA8931C2B11FC009DD4DD /* NSArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8851C2B11FC009DD4DD /* NSArray.cpp */; };
+		058FA8941C2B11FC009DD4DD /* NSData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8861C2B11FC009DD4DD /* NSData.cpp */; };
+		058FA8951C2B11FC009DD4DD /* NSDate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8871C2B11FC009DD4DD /* NSDate.cpp */; };
+		058FA8961C2B11FC009DD4DD /* NSDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8881C2B11FC009DD4DD /* NSDictionary.cpp */; };
+		058FA8971C2B11FC009DD4DD /* NSError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8891C2B11FC009DD4DD /* NSError.cpp */; };
+		058FA8981C2B11FC009DD4DD /* NSFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88A1C2B11FC009DD4DD /* NSFileManager.cpp */; };
+		058FA8991C2B11FC009DD4DD /* NSLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88B1C2B11FC009DD4DD /* NSLock.cpp */; };
+		058FA89A1C2B11FC009DD4DD /* NSMutableArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88C1C2B11FC009DD4DD /* NSMutableArray.cpp */; };
+		058FA89B1C2B11FC009DD4DD /* NSMutableData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88D1C2B11FC009DD4DD /* NSMutableData.cpp */; };
+		058FA89C1C2B11FC009DD4DD /* NSMutableDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88E1C2B11FC009DD4DD /* NSMutableDictionary.cpp */; };
+		058FA89D1C2B11FC009DD4DD /* NSMutableString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88F1C2B11FC009DD4DD /* NSMutableString.cpp */; };
+		058FA89E1C2B11FC009DD4DD /* NSObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8901C2B11FC009DD4DD /* NSObject.cpp */; };
+		058FA89F1C2B11FC009DD4DD /* NSRecursiveLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8911C2B11FC009DD4DD /* NSRecursiveLock.cpp */; };
+		058FA8A01C2B11FC009DD4DD /* NSString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8921C2B11FC009DD4DD /* NSString.cpp */; };
+		058FA8A21C2B1202009DD4DD /* NSMutableString.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA8A11C2B1202009DD4DD /* NSMutableString.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,21 +90,23 @@
 		058FA8501C2B0D5B009DD4DD /* Functions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Functions.hpp; sourceTree = "<group>"; };
 		058FA8521C2B0D5B009DD4DD /* NSLocking.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NSLocking.hpp; sourceTree = "<group>"; };
 		058FA8531C2B0D5B009DD4DD /* Types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Types.hpp; sourceTree = "<group>"; };
-		058FA8651C2B0EA8009DD4DD /* NSArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSArray.cpp; sourceTree = "<group>"; };
-		058FA8661C2B0EA8009DD4DD /* NSData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSData.cpp; sourceTree = "<group>"; };
-		058FA8671C2B0EA8009DD4DD /* NSDate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSDate.cpp; sourceTree = "<group>"; };
-		058FA8681C2B0EA8009DD4DD /* NSDictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSDictionary.cpp; sourceTree = "<group>"; };
-		058FA8691C2B0EA8009DD4DD /* NSError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSError.cpp; sourceTree = "<group>"; };
-		058FA86A1C2B0EA8009DD4DD /* NSFileManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSFileManager.cpp; sourceTree = "<group>"; };
-		058FA86B1C2B0EA8009DD4DD /* NSLock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSLock.cpp; sourceTree = "<group>"; };
-		058FA86C1C2B0EA8009DD4DD /* NSMutableArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSMutableArray.cpp; sourceTree = "<group>"; };
-		058FA86D1C2B0EA8009DD4DD /* NSMutableData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSMutableData.cpp; sourceTree = "<group>"; };
-		058FA86E1C2B0EA8009DD4DD /* NSMutableDictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSMutableDictionary.cpp; sourceTree = "<group>"; };
-		058FA86F1C2B0EA8009DD4DD /* NSObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSObject.cpp; sourceTree = "<group>"; };
-		058FA8701C2B0EA8009DD4DD /* NSRecursiveLock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSRecursiveLock.cpp; sourceTree = "<group>"; };
-		058FA8711C2B0EA8009DD4DD /* NSString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSString.cpp; sourceTree = "<group>"; };
 		058FA8721C2B0EA8009DD4DD /* Functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Functions.cpp; sourceTree = "<group>"; };
 		058FA8811C2B0ED5009DD4DD /* NSObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NSObject.hpp; sourceTree = "<group>"; };
+		058FA8851C2B11FC009DD4DD /* NSArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSArray.cpp; sourceTree = "<group>"; };
+		058FA8861C2B11FC009DD4DD /* NSData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSData.cpp; sourceTree = "<group>"; };
+		058FA8871C2B11FC009DD4DD /* NSDate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSDate.cpp; sourceTree = "<group>"; };
+		058FA8881C2B11FC009DD4DD /* NSDictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSDictionary.cpp; sourceTree = "<group>"; };
+		058FA8891C2B11FC009DD4DD /* NSError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSError.cpp; sourceTree = "<group>"; };
+		058FA88A1C2B11FC009DD4DD /* NSFileManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSFileManager.cpp; sourceTree = "<group>"; };
+		058FA88B1C2B11FC009DD4DD /* NSLock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSLock.cpp; sourceTree = "<group>"; };
+		058FA88C1C2B11FC009DD4DD /* NSMutableArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSMutableArray.cpp; sourceTree = "<group>"; };
+		058FA88D1C2B11FC009DD4DD /* NSMutableData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSMutableData.cpp; sourceTree = "<group>"; };
+		058FA88E1C2B11FC009DD4DD /* NSMutableDictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSMutableDictionary.cpp; sourceTree = "<group>"; };
+		058FA88F1C2B11FC009DD4DD /* NSMutableString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSMutableString.cpp; sourceTree = "<group>"; };
+		058FA8901C2B11FC009DD4DD /* NSObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSObject.cpp; sourceTree = "<group>"; };
+		058FA8911C2B11FC009DD4DD /* NSRecursiveLock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSRecursiveLock.cpp; sourceTree = "<group>"; };
+		058FA8921C2B11FC009DD4DD /* NSString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSString.cpp; sourceTree = "<group>"; };
+		058FA8A11C2B1202009DD4DD /* NSMutableString.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NSMutableString.hpp; sourceTree = "<group>"; };
 		05FCC6B819DB3E7A00BC1FBE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,7 +173,7 @@
 		058FA7701C29E3FB009DD4DD /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				058FA8641C2B0EA8009DD4DD /* Classes */,
+				058FA8841C2B11FC009DD4DD /* Classes */,
 				058FA8721C2B0EA8009DD4DD /* Functions.cpp */,
 			);
 			path = Foundation;
@@ -196,6 +200,7 @@
 				058FA84A1C2B0D5B009DD4DD /* NSMutableArray.hpp */,
 				058FA84B1C2B0D5B009DD4DD /* NSMutableData.hpp */,
 				058FA84C1C2B0D5B009DD4DD /* NSMutableDictionary.hpp */,
+				058FA8A11C2B1202009DD4DD /* NSMutableString.hpp */,
 				058FA84D1C2B0D5B009DD4DD /* NSObject.hpp */,
 				058FA84E1C2B0D5B009DD4DD /* NSRecursiveLock.hpp */,
 				058FA84F1C2B0D5B009DD4DD /* NSString.hpp */,
@@ -212,22 +217,23 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		058FA8641C2B0EA8009DD4DD /* Classes */ = {
+		058FA8841C2B11FC009DD4DD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				058FA8651C2B0EA8009DD4DD /* NSArray.cpp */,
-				058FA8661C2B0EA8009DD4DD /* NSData.cpp */,
-				058FA8671C2B0EA8009DD4DD /* NSDate.cpp */,
-				058FA8681C2B0EA8009DD4DD /* NSDictionary.cpp */,
-				058FA8691C2B0EA8009DD4DD /* NSError.cpp */,
-				058FA86A1C2B0EA8009DD4DD /* NSFileManager.cpp */,
-				058FA86B1C2B0EA8009DD4DD /* NSLock.cpp */,
-				058FA86C1C2B0EA8009DD4DD /* NSMutableArray.cpp */,
-				058FA86D1C2B0EA8009DD4DD /* NSMutableData.cpp */,
-				058FA86E1C2B0EA8009DD4DD /* NSMutableDictionary.cpp */,
-				058FA86F1C2B0EA8009DD4DD /* NSObject.cpp */,
-				058FA8701C2B0EA8009DD4DD /* NSRecursiveLock.cpp */,
-				058FA8711C2B0EA8009DD4DD /* NSString.cpp */,
+				058FA8851C2B11FC009DD4DD /* NSArray.cpp */,
+				058FA8861C2B11FC009DD4DD /* NSData.cpp */,
+				058FA8871C2B11FC009DD4DD /* NSDate.cpp */,
+				058FA8881C2B11FC009DD4DD /* NSDictionary.cpp */,
+				058FA8891C2B11FC009DD4DD /* NSError.cpp */,
+				058FA88A1C2B11FC009DD4DD /* NSFileManager.cpp */,
+				058FA88B1C2B11FC009DD4DD /* NSLock.cpp */,
+				058FA88C1C2B11FC009DD4DD /* NSMutableArray.cpp */,
+				058FA88D1C2B11FC009DD4DD /* NSMutableData.cpp */,
+				058FA88E1C2B11FC009DD4DD /* NSMutableDictionary.cpp */,
+				058FA88F1C2B11FC009DD4DD /* NSMutableString.cpp */,
+				058FA8901C2B11FC009DD4DD /* NSObject.cpp */,
+				058FA8911C2B11FC009DD4DD /* NSRecursiveLock.cpp */,
+				058FA8921C2B11FC009DD4DD /* NSString.cpp */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 				058FA8601C2B0D5B009DD4DD /* NSString.hpp in Headers */,
 				058FA8581C2B0D5B009DD4DD /* NSError.hpp in Headers */,
 				058FA8561C2B0D5B009DD4DD /* NSDate.hpp in Headers */,
+				058FA8A21C2B1202009DD4DD /* NSMutableString.hpp in Headers */,
 				058FA85D1C2B0D5B009DD4DD /* NSMutableDictionary.hpp in Headers */,
 				058FA76F1C29E3CA009DD4DD /* RT.hpp in Headers */,
 				058FA8611C2B0D5B009DD4DD /* Functions.hpp in Headers */,
@@ -375,22 +382,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058FA87F1C2B0EA8009DD4DD /* NSString.cpp in Sources */,
+				058FA8931C2B11FC009DD4DD /* NSArray.cpp in Sources */,
+				058FA89C1C2B11FC009DD4DD /* NSMutableDictionary.cpp in Sources */,
+				058FA8941C2B11FC009DD4DD /* NSData.cpp in Sources */,
+				058FA89A1C2B11FC009DD4DD /* NSMutableArray.cpp in Sources */,
+				058FA8A01C2B11FC009DD4DD /* NSString.cpp in Sources */,
+				058FA8951C2B11FC009DD4DD /* NSDate.cpp in Sources */,
 				058FA79A1C29F726009DD4DD /* RT.cpp in Sources */,
-				058FA87D1C2B0EA8009DD4DD /* NSObject.cpp in Sources */,
-				058FA8751C2B0EA8009DD4DD /* NSDate.cpp in Sources */,
-				058FA8771C2B0EA8009DD4DD /* NSError.cpp in Sources */,
-				058FA8731C2B0EA8009DD4DD /* NSArray.cpp in Sources */,
-				058FA8741C2B0EA8009DD4DD /* NSData.cpp in Sources */,
+				058FA89F1C2B11FC009DD4DD /* NSRecursiveLock.cpp in Sources */,
 				058FA8801C2B0EA8009DD4DD /* Functions.cpp in Sources */,
-				058FA8791C2B0EA8009DD4DD /* NSLock.cpp in Sources */,
-				058FA8761C2B0EA8009DD4DD /* NSDictionary.cpp in Sources */,
-				058FA87E1C2B0EA8009DD4DD /* NSRecursiveLock.cpp in Sources */,
-				058FA8781C2B0EA8009DD4DD /* NSFileManager.cpp in Sources */,
-				058FA87B1C2B0EA8009DD4DD /* NSMutableData.cpp in Sources */,
-				058FA87C1C2B0EA8009DD4DD /* NSMutableDictionary.cpp in Sources */,
+				058FA8991C2B11FC009DD4DD /* NSLock.cpp in Sources */,
+				058FA89B1C2B11FC009DD4DD /* NSMutableData.cpp in Sources */,
+				058FA8961C2B11FC009DD4DD /* NSDictionary.cpp in Sources */,
 				058FA7761C29E3FB009DD4DD /* Object.cpp in Sources */,
-				058FA87A1C2B0EA8009DD4DD /* NSMutableArray.cpp in Sources */,
+				058FA89E1C2B11FC009DD4DD /* NSObject.cpp in Sources */,
+				058FA8981C2B11FC009DD4DD /* NSFileManager.cpp in Sources */,
+				058FA89D1C2B11FC009DD4DD /* NSMutableString.cpp in Sources */,
+				058FA8971C2B11FC009DD4DD /* NSError.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

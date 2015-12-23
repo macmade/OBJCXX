@@ -27,27 +27,10 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_H
-#define OBJCXX_H
-
-#include <OBJCXX/RT.hpp>
-#include <OBJCXX/Object.hpp>
-#include <OBJCXX/Foundation/Types.hpp>
-#include <OBJCXX/Foundation/Functions.hpp>
-#include <OBJCXX/Foundation/Protocols/NSLocking.hpp>
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
-#include <OBJCXX/Foundation/Classes/NSString.hpp>
 #include <OBJCXX/Foundation/Classes/NSMutableString.hpp>
-#include <OBJCXX/Foundation/Classes/NSArray.hpp>
-#include <OBJCXX/Foundation/Classes/NSMutableArray.hpp>
-#include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
-#include <OBJCXX/Foundation/Classes/NSMutableDictionary.hpp>
-#include <OBJCXX/Foundation/Classes/NSData.hpp>
-#include <OBJCXX/Foundation/Classes/NSDate.hpp>
-#include <OBJCXX/Foundation/Classes/NSError.hpp>
-#include <OBJCXX/Foundation/Classes/NSMutableData.hpp>
-#include <OBJCXX/Foundation/Classes/NSFileManager.hpp>
-#include <OBJCXX/Foundation/Classes/NSLock.hpp>
-#include <OBJCXX/Foundation/Classes/NSRecursiveLock.hpp>
 
-#endif /* OBJCXX_H */
+namespace Foundation
+{
+    NSMutableString::NSMutableString( void ): NSString( "NSMutableString" )
+    {}
+}
