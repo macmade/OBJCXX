@@ -41,8 +41,12 @@
 #include <OBJCXX/Foundation/NSDictionary.hpp>
 #include <OBJCXX/Foundation/NSMutableDictionary.hpp>
 #include <OBJCXX/Foundation/NSData.hpp>
+#include <OBJCXX/Foundation/NSDate.hpp>
 #include <OBJCXX/Foundation/NSError.hpp>
 #include <OBJCXX/Foundation/NSMutableData.hpp>
 #include <OBJCXX/Foundation/NSFileManager.hpp>
+#include <OBJCXX/Foundation/NSLocking.hpp>
+#include <OBJCXX/Foundation/NSLock.hpp>
+#include <OBJCXX/Foundation/NSRecursiveLock.hpp>
 
 #endif /* OBJCXX_H */

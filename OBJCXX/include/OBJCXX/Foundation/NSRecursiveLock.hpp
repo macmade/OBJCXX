@@ -27,21 +27,32 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_OBJECT_H
-#define OBJCXX_FOUNDATION_NS_OBJECT_H
+#ifndef OBJCXX_FOUNDATION_NS_RECURSIVE_LOCK_H
+#define OBJCXX_FOUNDATION_NS_RECURSIVE_LOCK_H
 
-#include <OBJCXX/Object.hpp>
+#include <OBJCXX/Foundation/NSObject.hpp>
+#include <OBJCXX/Foundation/NSString.hpp>
+#include <OBJCXX/Foundation/NSDate.hpp>
+#include <OBJCXX/Foundation/NSLocking.hpp>
 
 namespace Foundation
 {
-    class NSObject: public OBJCXX::Object
+    class NSRecursiveLock: public NSObject, NSLocking
     {
         public:
             
-            using Object::Object;
+            using NSObject::NSObject;
             
-            NSObject( void );
+            NSRecursiveLock( void );
+            
+            void lock( void )   override;
+            void unlock( void ) override;
+            
+            bool     lockBeforeDate( const NSDate & limit );
+            bool     tryLock( void );
+            NSString name( void );
+            void     setName( const NSString & name );
     };
 }
 
-#endif /* OBJCXX_FOUNDATION_NS_OBJECT_H */
+#endif /* OBJCXX_FOUNDATION_NS_RECURSIVE_LOCK_H */

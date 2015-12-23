@@ -27,21 +27,22 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_OBJECT_H
-#define OBJCXX_FOUNDATION_NS_OBJECT_H
+#ifndef OBJCXX_FOUNDATION_NS_LOCKING_H
+#define OBJCXX_FOUNDATION_NS_LOCKING_H
 
 #include <OBJCXX/Object.hpp>
 
 namespace Foundation
 {
-    class NSObject: public OBJCXX::Object
+    class NSLocking
     {
         public:
             
-            using Object::Object;
+            virtual ~NSLocking( void ) = default;
             
-            NSObject( void );
+            virtual void lock( void )   = 0;
+            virtual void unlock( void ) = 0;
     };
 }
 
-#endif /* OBJCXX_FOUNDATION_NS_OBJECT_H */
+#endif /* OBJCXX_FOUNDATION_NS_LOCKING_H */

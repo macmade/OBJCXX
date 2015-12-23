@@ -29,6 +29,7 @@
 
 #include <OBJCXX/Object.hpp>
 #include <OBJCXX/Foundation/NSString.hpp>
+#include <iostream>
 
 template<>
 class XS::PIMPL::Object< OBJCXX::Object >::IMPL

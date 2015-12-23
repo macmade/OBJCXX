@@ -96,6 +96,20 @@ int main( void )
     }
     
     {
+        Foundation::NSLock o;
+        
+        std::cout << o << std::endl;
+        
+        o.setName( "test" );
+        
+        std::cout << o << std::endl;
+    }
+    
+    {
+        std::cout << Foundation::NSDate() << std::endl;
+    }
+    
+    {
         Foundation::NSLog( "hello, world %i %i", 42, 43 );
     }
     

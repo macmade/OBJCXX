@@ -27,21 +27,40 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_OBJECT_H
-#define OBJCXX_FOUNDATION_NS_OBJECT_H
-
-#include <OBJCXX/Object.hpp>
+#include <OBJCXX/Foundation/NSLock.hpp>
 
 namespace Foundation
 {
-    class NSObject: public OBJCXX::Object
+    NSLock::NSLock( void ): NSObject( "NSLock" )
+    {}
+    
+    void NSLock::lock( void )
     {
-        public:
-            
-            using Object::Object;
-            
-            NSObject( void );
-    };
+        this->sendMessage< void >( "lock" );
+    }
+    
+    void NSLock::unlock( void )
+    {
+        this->sendMessage< void >( "unlock" );
+    }
+    
+    bool NSLock::lockBeforeDate( const NSDate & limit )
+    {
+        return this->sendMessage< bool, id >( "lockBeforeDate:", limit );
+    }
+    
+    bool NSLock::tryLock( void )
+    {
+        return this->sendMessage< bool >( "tryLock" );
+    }
+    
+    NSString NSLock::name( void )
+    {
+        return this->sendMessage< id >( "name" );
+    }
+    
+    void NSLock::setName( const NSString & name )
+    {
+        this->sendMessage< void, id >( "setName:", name );
+    }
 }
-
-#endif /* OBJCXX_FOUNDATION_NS_OBJECT_H */

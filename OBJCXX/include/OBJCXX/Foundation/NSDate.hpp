@@ -27,21 +27,21 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_OBJECT_H
-#define OBJCXX_FOUNDATION_NS_OBJECT_H
+#ifndef OBJCXX_FOUNDATION_NS_DATE_H
+#define OBJCXX_FOUNDATION_NS_DATE_H
 
-#include <OBJCXX/Object.hpp>
+#include <OBJCXX/Foundation/NSObject.hpp>
 
 namespace Foundation
 {
-    class NSObject: public OBJCXX::Object
+    class NSDate: public NSObject
     {
         public:
             
-            using Object::Object;
+            using NSObject::NSObject;
             
-            NSObject( void );
+            NSDate( void );
     };
 }
 
-#endif /* OBJCXX_FOUNDATION_NS_OBJECT_H */
+#endif /* OBJCXX_FOUNDATION_NS_DATE_H */

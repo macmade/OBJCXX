@@ -27,21 +27,40 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_OBJECT_H
-#define OBJCXX_FOUNDATION_NS_OBJECT_H
-
-#include <OBJCXX/Object.hpp>
+#include <OBJCXX/Foundation/NSRecursiveLock.hpp>
 
 namespace Foundation
 {
-    class NSObject: public OBJCXX::Object
+    NSRecursiveLock::NSRecursiveLock( void ): NSObject( "NSRecursiveLock" )
+    {}
+    
+    void NSRecursiveLock::lock( void )
     {
-        public:
-            
-            using Object::Object;
-            
-            NSObject( void );
-    };
+        this->sendMessage< void >( "lock" );
+    }
+    
+    void NSRecursiveLock::unlock( void )
+    {
+        this->sendMessage< void >( "unlock" );
+    }
+    
+    bool NSRecursiveLock::lockBeforeDate( const NSDate & limit )
+    {
+        return this->sendMessage< bool, id >( "lockBeforeDate:", limit );
+    }
+    
+    bool NSRecursiveLock::tryLock( void )
+    {
+        return this->sendMessage< bool >( "tryLock" );
+    }
+    
+    NSString NSRecursiveLock::name( void )
+    {
+        return this->sendMessage< id >( "name" );
+    }
+    
+    void NSRecursiveLock::setName( const NSString & name )
+    {
+        this->sendMessage< void, id >( "setName:", name );
+    }
 }
-
-#endif /* OBJCXX_FOUNDATION_NS_OBJECT_H */
