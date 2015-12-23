@@ -27,49 +27,16 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_TYPES_H
-#define OBJCXX_FOUNDATION_TYPES_H
+#ifndef OBJCXX_FOUNDATION_FUNCTIONS_H
+#define OBJCXX_FOUNDATION_FUNCTIONS_H
+
+#include <OBJCXX/Foundation/Types.hpp>
 
 namespace Foundation
 {
-    #if defined( _WIN64 )
-        typedef          long long      NSInteger;
-        typedef unsigned long long      NSUInteger;
-        typedef               double    CGFloat;
-    #elif defined( __LP64__ )
-        typedef          long           NSInteger;
-        typedef unsigned long           NSUInteger;
-        typedef          double         CGFloat;
-    #else
-        typedef          int            NSInteger;
-        typedef unsigned int            NSUInteger;
-        typedef          float          CGFloat;
-    #endif
-    
-    typedef struct
-    {
-        CGFloat x;
-        CGFloat y;
-    }
-    CGPoint;
-    
-    typedef struct
-    {
-        CGFloat width;
-        CGFloat height;
-    }
-    CGSize;
-    
-    typedef struct
-    {
-        CGPoint origin;
-        CGSize  size;
-    }
-    CGRect;
-    
-    typedef CGPoint NSPoint;
-    typedef CGSize  NSSize;
-    typedef CGRect  NSRect;
+    NSPoint NSMakePoint( CGFloat x, CGFloat y );
+    NSSize  NSMakeSize( CGFloat w, CGFloat h );
+    NSRect  NSMakeRect( CGFloat x, CGFloat y, CGFloat w, CGFloat h );
 }
 
-#endif /* OBJCXX_FOUNDATION_TYPES_H */
+#endif /* OBJCXX_FOUNDATION_FUNCTIONS_H */

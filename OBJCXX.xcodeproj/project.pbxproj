@@ -37,6 +37,8 @@
 		058FA82B1C2A3AE3009DD4DD /* NSMutableData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8291C2A3AE3009DD4DD /* NSMutableData.cpp */; };
 		058FA82D1C2A3CE9009DD4DD /* NSError.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA82C1C2A3CE9009DD4DD /* NSError.hpp */; };
 		058FA82F1C2A3CEE009DD4DD /* NSError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA82E1C2A3CEE009DD4DD /* NSError.cpp */; };
+		058FA8311C2A425A009DD4DD /* Functions.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA8301C2A425A009DD4DD /* Functions.hpp */; };
+		058FA8331C2A4260009DD4DD /* Functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8321C2A4260009DD4DD /* Functions.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +85,8 @@
 		058FA8291C2A3AE3009DD4DD /* NSMutableData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSMutableData.cpp; sourceTree = "<group>"; };
 		058FA82C1C2A3CE9009DD4DD /* NSError.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NSError.hpp; sourceTree = "<group>"; };
 		058FA82E1C2A3CEE009DD4DD /* NSError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSError.cpp; sourceTree = "<group>"; };
+		058FA8301C2A425A009DD4DD /* Functions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Functions.hpp; sourceTree = "<group>"; };
+		058FA8321C2A4260009DD4DD /* Functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Functions.cpp; sourceTree = "<group>"; };
 		05FCC6B819DB3E7A00BC1FBE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,7 @@
 		058FA7671C29E3CA009DD4DD /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				058FA8301C2A425A009DD4DD /* Functions.hpp */,
 				058FA7CB1C2A1013009DD4DD /* NSArray.hpp */,
 				058FA8241C2A3AC1009DD4DD /* NSData.hpp */,
 				058FA7CC1C2A1013009DD4DD /* NSDictionary.hpp */,
@@ -156,6 +161,7 @@
 		058FA7701C29E3FB009DD4DD /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				058FA8321C2A4260009DD4DD /* Functions.cpp */,
 				058FA7C51C2A100B009DD4DD /* NSArray.cpp */,
 				058FA8281C2A3AE3009DD4DD /* NSData.cpp */,
 				058FA7C61C2A100B009DD4DD /* NSDictionary.cpp */,
@@ -230,6 +236,7 @@
 				058FA7C11C2A07A7009DD4DD /* NSMutableArray.hpp in Headers */,
 				058FA82D1C2A3CE9009DD4DD /* NSError.hpp in Headers */,
 				058FA76D1C29E3CA009DD4DD /* NSString.hpp in Headers */,
+				058FA8311C2A425A009DD4DD /* Functions.hpp in Headers */,
 				058FA7CE1C2A1013009DD4DD /* NSArray.hpp in Headers */,
 				058FA8271C2A3ADA009DD4DD /* NSMutableData.hpp in Headers */,
 				058FA76F1C29E3CA009DD4DD /* RT.hpp in Headers */,
@@ -318,6 +325,7 @@
 				058FA7741C29E3FB009DD4DD /* NSObject.cpp in Sources */,
 				058FA7CA1C2A100B009DD4DD /* NSMutableDictionary.cpp in Sources */,
 				058FA7C31C2A07AD009DD4DD /* NSMutableArray.cpp in Sources */,
+				058FA8331C2A4260009DD4DD /* Functions.cpp in Sources */,
 				058FA79A1C29F726009DD4DD /* RT.cpp in Sources */,
 				058FA7751C29E3FB009DD4DD /* NSString.cpp in Sources */,
 				058FA7C81C2A100B009DD4DD /* NSArray.cpp in Sources */,

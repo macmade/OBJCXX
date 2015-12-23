@@ -33,6 +33,7 @@
 #include <OBJCXX/RT.hpp>
 #include <OBJCXX/Object.hpp>
 #include <OBJCXX/Foundation/Types.hpp>
+#include <OBJCXX/Foundation/Functions.hpp>
 #include <OBJCXX/Foundation/NSObject.hpp>
 #include <OBJCXX/Foundation/NSString.hpp>
 #include <OBJCXX/Foundation/NSArray.hpp>
