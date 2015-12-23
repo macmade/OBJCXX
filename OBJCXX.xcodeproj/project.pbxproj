@@ -407,7 +407,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					OBJCXX/include,
-					../../Submodules/PIMPL/PIMPL/include,
+					Submodules/PIMPL/PIMPL/include,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -512,7 +512,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					OBJCXX/include,
-					../../Submodules/PIMPL/PIMPL/include,
+					Submodules/PIMPL/PIMPL/include,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = NO;
@@ -591,6 +591,7 @@
 				058FA7931C29F62C009DD4DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

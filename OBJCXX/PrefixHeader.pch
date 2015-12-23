@@ -30,7 +30,7 @@
 #ifndef OBJCXX_PREFIX_H
 #define OBJCXX_PREFIX_H
 
-#include "../../../Submodules/SeriousCode/clang-warnings.h"
+#include "../Submodules/SeriousCode/clang-warnings.h"
 
 #ifdef __clang__
 #pragma clang diagnostic ignored "-Wpadded"
