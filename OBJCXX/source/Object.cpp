@@ -134,16 +134,22 @@ namespace OBJCXX
     
     std::string Object::description( void ) const
     {
+        const char         * cp;
         Foundation::NSString s( this->sendMessage< id >( "description" ) );
         
-        return s.UTF8String();
+        cp = s.UTF8String();
+        
+        return ( cp ) ? cp : "";
     }
     
     std::string Object::debugDescription( void ) const
     {
+        const char         * cp;
         Foundation::NSString s( this->sendMessage< id >( "debugDescription" ) );
         
-        return s.UTF8String();
+        cp = s.UTF8String();
+        
+        return ( cp ) ? cp : "";
     }
     
     id Object::performSelector( SEL sel )
@@ -205,12 +211,15 @@ XS::PIMPL::Object< OBJCXX::Object >::IMPL::IMPL( void ):
     _object( nullptr )
 {}
     
-XS::PIMPL::Object< OBJCXX::Object >::IMPL::IMPL( id o )
+XS::PIMPL::Object< OBJCXX::Object >::IMPL::IMPL( id o ): IMPL()
 {
-    this->_className = OBJCXX::RT::GetClassName( OBJCXX::RT::GetClass( o ) );
-    this->_class     = OBJCXX::RT::GetClass( this->_className );
-    this->_object    = o;
-    this->_object    = OBJCXX::RT::SendMessage( this->_object, OBJCXX::RT::GetSelector( "retain" ) );
+    if( o )
+    {
+        this->_className = OBJCXX::RT::GetClassName( OBJCXX::RT::GetClass( o ) );
+        this->_class     = OBJCXX::RT::GetClass( this->_className );
+        this->_object    = o;
+        this->_object    = OBJCXX::RT::SendMessage( this->_object, OBJCXX::RT::GetSelector( "retain" ) );
+    }
 }
 
 XS::PIMPL::Object< OBJCXX::Object >::IMPL::IMPL( const IMPL & o ):

@@ -27,21 +27,10 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_H
-#define OBJCXX_H
-
-#include <OBJCXX/RT.hpp>
-#include <OBJCXX/Object.hpp>
-#include <OBJCXX/Foundation/Types.hpp>
-#include <OBJCXX/Foundation/NSObject.hpp>
-#include <OBJCXX/Foundation/NSString.hpp>
-#include <OBJCXX/Foundation/NSArray.hpp>
-#include <OBJCXX/Foundation/NSMutableArray.hpp>
-#include <OBJCXX/Foundation/NSDictionary.hpp>
-#include <OBJCXX/Foundation/NSMutableDictionary.hpp>
-#include <OBJCXX/Foundation/NSData.hpp>
 #include <OBJCXX/Foundation/NSError.hpp>
-#include <OBJCXX/Foundation/NSMutableData.hpp>
-#include <OBJCXX/Foundation/NSFileManager.hpp>
 
-#endif /* OBJCXX_H */
+namespace Foundation
+{
+    NSError::NSError( void ): NSObject( "NSError" )
+    {}
+}

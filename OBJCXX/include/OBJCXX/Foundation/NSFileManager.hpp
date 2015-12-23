@@ -27,21 +27,30 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_H
-#define OBJCXX_H
+#ifndef OBJCXX_FOUNDATION_NS_FILE_MANAGER_H
+#define OBJCXX_FOUNDATION_NS_FILE_MANAGER_H
 
-#include <OBJCXX/RT.hpp>
-#include <OBJCXX/Object.hpp>
-#include <OBJCXX/Foundation/Types.hpp>
 #include <OBJCXX/Foundation/NSObject.hpp>
 #include <OBJCXX/Foundation/NSString.hpp>
-#include <OBJCXX/Foundation/NSArray.hpp>
-#include <OBJCXX/Foundation/NSMutableArray.hpp>
-#include <OBJCXX/Foundation/NSDictionary.hpp>
-#include <OBJCXX/Foundation/NSMutableDictionary.hpp>
 #include <OBJCXX/Foundation/NSData.hpp>
 #include <OBJCXX/Foundation/NSError.hpp>
-#include <OBJCXX/Foundation/NSMutableData.hpp>
-#include <OBJCXX/Foundation/NSFileManager.hpp>
+#include <OBJCXX/Foundation/NSDictionary.hpp>
 
-#endif /* OBJCXX_H */
+namespace Foundation
+{
+    class NSFileManager: public NSObject
+    {
+        public:
+            
+            using NSObject::NSObject;
+            
+            static NSFileManager defaultManager( void );
+            
+            NSFileManager( void );
+            
+            bool         createFileAtPath( const NSString & path, const NSData & contents, const NSDictionary & attributes ) const;
+            NSDictionary attributesOfItemAtPath( const NSString & path, NSError & error ) const;
+    };
+}
+
+#endif /* OBJCXX_FOUNDATION_NS_FILE_MANAGER_H */

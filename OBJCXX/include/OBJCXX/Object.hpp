@@ -33,7 +33,7 @@
 #include <string>
 #include <functional>
 #include <OBJCXX/RT.hpp>
-#include <OBJCXX/Foundation/Types.h>
+#include <OBJCXX/Foundation/Types.hpp>
 #include <XS/PIMPL/Object.hpp>
 
 namespace OBJCXX

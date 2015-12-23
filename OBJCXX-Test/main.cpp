@@ -81,5 +81,19 @@ int main( void )
         std::cout << static_cast< id >( o2 ) << std::endl;
     }
     
+    {
+        Foundation::NSFileManager o1;
+        Foundation::NSFileManager o2;
+        Foundation::NSError       e;
+        
+        o1 = Foundation::NSFileManager::defaultManager();
+        o2 = Foundation::NSFileManager::defaultManager();
+        
+        std::cout << o1 << std::endl;
+        std::cout << o2 << std::endl;
+        std::cout << o1.createFileAtPath( "/tmp/OBJCXX-Test.txt", nullptr, nullptr ) << std::endl;
+        std::cout << o1.attributesOfItemAtPath( "/tmp/OBJCXX-Test.txt", e ) << std::endl;
+    }
+    
     return 0;
 }
