@@ -1337,11 +1337,13 @@
 				058FABDF1C2B1768009DD4DD /* NSKeyedUnarchiverDelegate.hpp */,
 				058FABE01C2B1769009DD4DD /* NSKeyValueCoding.hpp */,
 				058FABE11C2B1769009DD4DD /* NSKeyValueObserving.hpp */,
+				058FA8521C2B0D5B009DD4DD /* NSLocking.hpp */,
 				058FABE21C2B1769009DD4DD /* NSMachPortDelegate.hpp */,
 				058FABE31C2B1769009DD4DD /* NSMetadataQueryDelegate.hpp */,
 				058FABE41C2B1769009DD4DD /* NSMutableCopying.hpp */,
 				058FABE51C2B1769009DD4DD /* NSNetServiceBrowserDelegate.hpp */,
 				058FABE61C2B1769009DD4DD /* NSNetServiceDelegate.hpp */,
+				058FA8811C2B0ED5009DD4DD /* NSObject.hpp */,
 				058FABE71C2B1769009DD4DD /* NSPortDelegate.hpp */,
 				058FABE81C2B1769009DD4DD /* NSProgressReporting.hpp */,
 				058FABE91C2B1769009DD4DD /* NSScriptingComparisonMethods.hpp */,
@@ -1367,8 +1369,6 @@
 				058FABFD1C2B1769009DD4DD /* NSXMLParserDelegate.hpp */,
 				058FABFE1C2B1769009DD4DD /* NSXPCListenerDelegate.hpp */,
 				058FABFF1C2B1769009DD4DD /* NSXPCProxyCreating.hpp */,
-				058FA8521C2B0D5B009DD4DD /* NSLocking.hpp */,
-				058FA8811C2B0ED5009DD4DD /* NSObject.hpp */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
