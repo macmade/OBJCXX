@@ -31,12 +31,14 @@
 #define OBJCXX_FOUNDATION_FUNCTIONS_H
 
 #include <OBJCXX/Foundation/Types.hpp>
+#include <OBJCXX/Foundation/NSString.hpp>
 
 namespace Foundation
 {
     NSPoint NSMakePoint( CGFloat x, CGFloat y );
     NSSize  NSMakeSize( CGFloat w, CGFloat h );
     NSRect  NSMakeRect( CGFloat x, CGFloat y, CGFloat w, CGFloat h );
+    void    NSLog( NSString fmt, ... );
 }
 
 #endif /* OBJCXX_FOUNDATION_FUNCTIONS_H */

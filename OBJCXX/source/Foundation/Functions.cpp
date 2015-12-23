@@ -29,6 +29,11 @@
 
 #include <OBJCXX/Foundation/Functions.hpp>
 
+extern "C"
+{
+    OBJCXX_EXTERN void NSLogv( id format, va_list args );
+}
+
 namespace Foundation
 {
     NSPoint NSMakePoint( CGFloat x, CGFloat y )
@@ -44,5 +49,14 @@ namespace Foundation
     NSRect NSMakeRect( CGFloat x, CGFloat y, CGFloat w, CGFloat h )
     {
         return { NSMakePoint( x, y ), NSMakeSize( w, h ) };
+    }
+    
+    void NSLog( NSString fmt, ... )
+    {
+        va_list ap;
+        
+        va_start( ap, fmt );
+        NSLogv( fmt, ap );
+        va_end( ap );
     }
 }

@@ -95,5 +95,9 @@ int main( void )
         std::cout << o1.attributesOfItemAtPath( "/tmp/OBJCXX-Test.txt", e ) << std::endl;
     }
     
+    {
+        Foundation::NSLog( "hello, world %i %i", 42, 43 );
+    }
+    
     return 0;
 }
