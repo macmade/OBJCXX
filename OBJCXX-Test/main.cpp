@@ -103,6 +103,14 @@ int main( void )
         o.setName( "test" );
         
         std::cout << o << std::endl;
+        
+        o.lock();
+        
+        std::cout << o << std::endl;
+        
+        o.unlock();
+        
+        std::cout << o << std::endl;
     }
     
     {
