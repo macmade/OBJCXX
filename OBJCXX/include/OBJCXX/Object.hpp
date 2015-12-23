@@ -67,10 +67,10 @@ namespace OBJCXX
             id                      performSelector( SEL sel );
             id                      performSelector( SEL sel, id o1 );
             id                      performSelector( SEL sel, id o1, id o2 );
-            bool                    isProxy( void );
+            bool                    isProxy( void ) const;
             id                      retain( void );
             void                    release( void );
-            id                      autorelease( void );
+            id                      autorelease( void ) const;
             Foundation::NSUInteger  retainCount( void ) const;
             void                  * zone( void ) const;
             

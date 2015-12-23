@@ -167,7 +167,7 @@ namespace OBJCXX
         return this->sendMessage< id, SEL, id, id >( "performSelector:withObject:withObject:", sel, o1, o2 );
     }
     
-    bool Object::isProxy( void )
+    bool Object::isProxy( void ) const
     {
         return this->sendMessage< bool >( "isProxy" );
     }
@@ -182,7 +182,7 @@ namespace OBJCXX
         this->sendMessage< void >( "release" );
     }
     
-    id Object::autorelease( void )
+    id Object::autorelease( void ) const
     {
         return this->sendMessage< id >( "autorelease" );
     }
