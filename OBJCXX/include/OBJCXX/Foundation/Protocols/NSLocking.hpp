@@ -32,15 +32,18 @@
 
 namespace Foundation
 {
-    class NSLocking
+    namespace Protocols
     {
-        public:
-            
-            virtual ~NSLocking( void ) = default;
-            
-            virtual void lock( void )   = 0;
-            virtual void unlock( void ) = 0;
-    };
+        class NSLocking
+        {
+            public:
+                
+                virtual ~NSLocking( void ) = default;
+                
+                virtual void lock( void )   = 0;
+                virtual void unlock( void ) = 0;
+        };
+    }
 }
 
 #endif /* OBJCXX_FOUNDATION_PROTOCOLS_NS_LOCKING_H */

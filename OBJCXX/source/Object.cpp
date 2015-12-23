@@ -62,7 +62,7 @@ namespace OBJCXX
         )
     {}
     
-    Object::Object( const std::string & className, std::function< id( void ) > init ): XS::PIMPL::Object< Object >()
+    Object::Object( const std::string & className, std::function< id( void ) > init ): XS::PIMPL::Object< Object >(), Foundation::Protocols::NSObject()
     {
         this->impl->_className = className;
         this->impl->_class     = OBJCXX::RT::GetClass( this->impl->_className );
@@ -70,7 +70,7 @@ namespace OBJCXX
         this->impl->_object    = init();
     }
     
-    Object::Object( id object ): XS::PIMPL::Object< Object >( object )
+    Object::Object( id object ): XS::PIMPL::Object< Object >( object ), Foundation::Protocols::NSObject()
     {}
     
     bool Object::operator ==( const Object & o ) const

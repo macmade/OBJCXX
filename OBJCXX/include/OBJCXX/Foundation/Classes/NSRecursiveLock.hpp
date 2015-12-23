@@ -37,7 +37,7 @@
 
 namespace Foundation
 {
-    class NSRecursiveLock: public NSObject, NSLocking
+    class NSRecursiveLock: public NSObject, Protocols::NSLocking
     {
         public:
             

@@ -37,7 +37,7 @@
 
 namespace Foundation
 {
-    class NSLock: public NSObject, NSLocking
+    class NSLock: public NSObject, Protocols::NSLocking
     {
         public:
             

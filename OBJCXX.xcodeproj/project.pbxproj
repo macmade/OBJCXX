@@ -46,6 +46,7 @@
 		058FA87E1C2B0EA8009DD4DD /* NSRecursiveLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8701C2B0EA8009DD4DD /* NSRecursiveLock.cpp */; };
 		058FA87F1C2B0EA8009DD4DD /* NSString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8711C2B0EA8009DD4DD /* NSString.cpp */; };
 		058FA8801C2B0EA8009DD4DD /* Functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8721C2B0EA8009DD4DD /* Functions.cpp */; };
+		058FA8821C2B0ED5009DD4DD /* NSObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA8811C2B0ED5009DD4DD /* NSObject.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -101,6 +102,7 @@
 		058FA8701C2B0EA8009DD4DD /* NSRecursiveLock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSRecursiveLock.cpp; sourceTree = "<group>"; };
 		058FA8711C2B0EA8009DD4DD /* NSString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NSString.cpp; sourceTree = "<group>"; };
 		058FA8721C2B0EA8009DD4DD /* Functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Functions.cpp; sourceTree = "<group>"; };
+		058FA8811C2B0ED5009DD4DD /* NSObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NSObject.hpp; sourceTree = "<group>"; };
 		05FCC6B819DB3E7A00BC1FBE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				058FA8521C2B0D5B009DD4DD /* NSLocking.hpp */,
+				058FA8811C2B0ED5009DD4DD /* NSObject.hpp */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				058FA85B1C2B0D5B009DD4DD /* NSMutableArray.hpp in Headers */,
 				058FA85C1C2B0D5B009DD4DD /* NSMutableData.hpp in Headers */,
 				058FA8621C2B0D5B009DD4DD /* NSLocking.hpp in Headers */,
+				058FA8821C2B0ED5009DD4DD /* NSObject.hpp in Headers */,
 				058FA85F1C2B0D5B009DD4DD /* NSRecursiveLock.hpp in Headers */,
 				058FA8551C2B0D5B009DD4DD /* NSData.hpp in Headers */,
 				058FA85E1C2B0D5B009DD4DD /* NSObject.hpp in Headers */,

@@ -34,11 +34,12 @@
 #include <functional>
 #include <OBJCXX/RT.hpp>
 #include <OBJCXX/Foundation/Types.hpp>
+#include <OBJCXX/Foundation/Protocols/NSObject.hpp>
 #include <XS/PIMPL/Object.hpp>
 
 namespace OBJCXX
 {
-    class Object: XS::PIMPL::Object< Object >
+    class Object: XS::PIMPL::Object< Object >, Foundation::Protocols::NSObject
     {
         public:
             
@@ -53,26 +54,26 @@ namespace OBJCXX
             
             operator id( void ) const;
             
-            Class                   getClass( void ) const;
-            Class                   superclass( void ) const;
-            bool                    isEqual( const Object & o ) const;
-            Foundation::NSUInteger  hash( void ) const;
-            id                      self( void ) const;
-            bool                    isKindOfClass( Class cls ) const;
-            bool                    isMemberOfClass( Class cls ) const;
-            bool                    respondsToSelector( SEL sel ) const;
-            bool                    conformsToProtocol( void * protocol ) const;
-            std::string             description( void ) const;
-            std::string             debugDescription( void ) const;
-            id                      performSelector( SEL sel );
-            id                      performSelector( SEL sel, id o1 );
-            id                      performSelector( SEL sel, id o1, id o2 );
-            bool                    isProxy( void ) const;
-            id                      retain( void );
-            void                    release( void );
-            id                      autorelease( void ) const;
-            Foundation::NSUInteger  retainCount( void ) const;
-            void                  * zone( void ) const;
+            Class                   getClass( void )                      const override;
+            Class                   superclass( void )                    const override;
+            bool                    isEqual( const Object & o )           const override;
+            Foundation::NSUInteger  hash( void )                          const override;
+            id                      self( void )                          const override;
+            bool                    isKindOfClass( Class cls )            const override;
+            bool                    isMemberOfClass( Class cls )          const override;
+            bool                    respondsToSelector( SEL sel )         const override;
+            bool                    conformsToProtocol( void * protocol ) const override;
+            std::string             description( void )                   const override;
+            std::string             debugDescription( void )              const override;
+            id                      performSelector( SEL sel )                  override;
+            id                      performSelector( SEL sel, id o1 )           override;
+            id                      performSelector( SEL sel, id o1, id o2 )    override;
+            bool                    isProxy( void )                       const override;
+            id                      retain( void )                              override;
+            void                    release( void )                             override;
+            id                      autorelease( void )                   const override;
+            Foundation::NSUInteger  retainCount( void )                   const override;
+            void                  * zone( void )                          const override;
             
             friend std::ostream & operator << ( std::ostream & os, const Object & o );
             
