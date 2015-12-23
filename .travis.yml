@@ -1,0 +1,3 @@
+language: objective-c
+script:
+- xctool -project "OBJCXX.xcodeproj" -scheme "OBJCXX-Test" build
