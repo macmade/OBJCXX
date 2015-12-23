@@ -27,32 +27,21 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_RECURSIVE_LOCK_H
-#define OBJCXX_FOUNDATION_NS_RECURSIVE_LOCK_H
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_DATA_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_DATA_H
 
-#include <OBJCXX/Foundation/NSObject.hpp>
-#include <OBJCXX/Foundation/NSString.hpp>
-#include <OBJCXX/Foundation/NSDate.hpp>
-#include <OBJCXX/Foundation/NSLocking.hpp>
+#include <OBJCXX/Foundation/Classes/NSData.hpp>
 
 namespace Foundation
 {
-    class NSRecursiveLock: public NSObject, NSLocking
+    class NSMutableData: public NSData
     {
         public:
             
-            using NSObject::NSObject;
+            using NSData::NSData;
             
-            NSRecursiveLock( void );
-            
-            void lock( void )   override;
-            void unlock( void ) override;
-            
-            bool     lockBeforeDate( const NSDate & limit );
-            bool     tryLock( void );
-            NSString name( void );
-            void     setName( const NSString & name );
+            NSMutableData( void );
     };
 }
 
-#endif /* OBJCXX_FOUNDATION_NS_RECURSIVE_LOCK_H */
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_DATA_H */

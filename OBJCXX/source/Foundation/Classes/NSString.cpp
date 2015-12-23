@@ -27,21 +27,26 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_DICTIONARY_H
-#define OBJCXX_FOUNDATION_NS_DICTIONARY_H
-
-#include <OBJCXX/Foundation/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
 
 namespace Foundation
 {
-    class NSDictionary: public NSObject
+    NSString::NSString( void ): NSObject( "NSString" )
+    {}
+    
+    NSString::NSString( const char * utf8String ):
+        NSObject
+        (
+            "NSString",
+            [ this, utf8String ]
+            {
+                return this->sendMessage< id, const char * >( "initWithUTF8String:", utf8String );
+            }
+        )
+    {}
+    
+    const char * NSString::UTF8String( void ) const
     {
-        public:
-            
-            using NSObject::NSObject;
-            
-            NSDictionary( void );
-    };
+        return this->sendMessage< const char * >( "UTF8String" );
+    }
 }
-
-#endif /* OBJCXX_FOUNDATION_NS_DICTIONARY_H */

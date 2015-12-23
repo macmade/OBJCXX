@@ -27,21 +27,21 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_DATA_H
-#define OBJCXX_FOUNDATION_NS_DATA_H
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_ERROR_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_ERROR_H
 
-#include <OBJCXX/Foundation/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
 namespace Foundation
 {
-    class NSData: public NSObject
+    class NSError: public NSObject
     {
         public:
             
             using NSObject::NSObject;
             
-            NSData( void );
+            NSError( void );
     };
 }
 
-#endif /* OBJCXX_FOUNDATION_NS_DATA_H */
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_ERROR_H */

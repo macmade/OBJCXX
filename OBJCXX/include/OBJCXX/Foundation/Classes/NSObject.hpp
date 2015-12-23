@@ -27,10 +27,21 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSArray.hpp>
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_OBJECT_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_OBJECT_H
+
+#include <OBJCXX/Object.hpp>
 
 namespace Foundation
 {
-    NSArray::NSArray( void ): NSObject( "NSArray" )
-    {}
+    class NSObject: public OBJCXX::Object
+    {
+        public:
+            
+            using Object::Object;
+            
+            NSObject( void );
+    };
 }
+
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_OBJECT_H */

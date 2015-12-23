@@ -27,10 +27,10 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSError.hpp>
+#include <OBJCXX/Foundation/Classes/NSData.hpp>
 
 namespace Foundation
 {
-    NSError::NSError( void ): NSObject( "NSError" )
+    NSData::NSData( void ): NSObject( "NSData" )
     {}
 }

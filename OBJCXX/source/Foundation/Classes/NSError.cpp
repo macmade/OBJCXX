@@ -27,21 +27,10 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_DATE_H
-#define OBJCXX_FOUNDATION_NS_DATE_H
-
-#include <OBJCXX/Foundation/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSError.hpp>
 
 namespace Foundation
 {
-    class NSDate: public NSObject
-    {
-        public:
-            
-            using NSObject::NSObject;
-            
-            NSDate( void );
-    };
+    NSError::NSError( void ): NSObject( "NSError" )
+    {}
 }
-
-#endif /* OBJCXX_FOUNDATION_NS_DATE_H */

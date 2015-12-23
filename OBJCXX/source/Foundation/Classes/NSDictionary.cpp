@@ -27,32 +27,10 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_LOCK_H
-#define OBJCXX_FOUNDATION_NS_LOCK_H
-
-#include <OBJCXX/Foundation/NSObject.hpp>
-#include <OBJCXX/Foundation/NSString.hpp>
-#include <OBJCXX/Foundation/NSDate.hpp>
-#include <OBJCXX/Foundation/NSLocking.hpp>
+#include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
 
 namespace Foundation
 {
-    class NSLock: public NSObject, NSLocking
-    {
-        public:
-            
-            using NSObject::NSObject;
-            
-            NSLock( void );
-            
-            void lock( void )   override;
-            void unlock( void ) override;
-            
-            bool     lockBeforeDate( const NSDate & limit );
-            bool     tryLock( void );
-            NSString name( void );
-            void     setName( const NSString & name );
-    };
+    NSDictionary::NSDictionary( void ): NSObject( "NSDictionary" )
+    {}
 }
-
-#endif /* OBJCXX_FOUNDATION_NS_LOCK_H */

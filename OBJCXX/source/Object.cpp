@@ -28,7 +28,7 @@
  */
 
 #include <OBJCXX/Object.hpp>
-#include <OBJCXX/Foundation/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
 #include <iostream>
 
 template<>

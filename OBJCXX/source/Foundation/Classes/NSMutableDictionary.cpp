@@ -27,21 +27,15 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_OBJECT_H
-#define OBJCXX_FOUNDATION_NS_OBJECT_H
-
-#include <OBJCXX/Object.hpp>
+#include <OBJCXX/Foundation/Classes/NSMutableDictionary.hpp>
 
 namespace Foundation
 {
-    class NSObject: public OBJCXX::Object
+    NSMutableDictionary::NSMutableDictionary( void ): NSDictionary( "NSMutableDictionary" )
+    {}
+    
+    void NSMutableDictionary::setObjectForKey( const NSObject & object, const NSObject & key )
     {
-        public:
-            
-            using Object::Object;
-            
-            NSObject( void );
-    };
+        this->sendMessage< void, id, id >( "setObject:forKey:", object, key );
+    }
 }
-
-#endif /* OBJCXX_FOUNDATION_NS_OBJECT_H */

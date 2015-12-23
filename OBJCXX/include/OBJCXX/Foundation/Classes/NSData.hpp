@@ -27,21 +27,21 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_ARRAY_H
-#define OBJCXX_FOUNDATION_NS_ARRAY_H
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_DATA_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_DATA_H
 
-#include <OBJCXX/Foundation/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
 namespace Foundation
 {
-    class NSArray: public NSObject
+    class NSData: public NSObject
     {
         public:
             
             using NSObject::NSObject;
             
-            NSArray( void );
+            NSData( void );
     };
 }
 
-#endif /* OBJCXX_FOUNDATION_NS_ARRAY_H */
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_DATA_H */

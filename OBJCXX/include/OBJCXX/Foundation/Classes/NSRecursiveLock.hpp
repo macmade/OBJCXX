@@ -27,30 +27,32 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_FILE_MANAGER_H
-#define OBJCXX_FOUNDATION_NS_FILE_MANAGER_H
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_RECURSIVE_LOCK_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_RECURSIVE_LOCK_H
 
-#include <OBJCXX/Foundation/NSObject.hpp>
-#include <OBJCXX/Foundation/NSString.hpp>
-#include <OBJCXX/Foundation/NSData.hpp>
-#include <OBJCXX/Foundation/NSError.hpp>
-#include <OBJCXX/Foundation/NSDictionary.hpp>
+#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSDate.hpp>
+#include <OBJCXX/Foundation/Protocols/NSLocking.hpp>
 
 namespace Foundation
 {
-    class NSFileManager: public NSObject
+    class NSRecursiveLock: public NSObject, NSLocking
     {
         public:
             
             using NSObject::NSObject;
             
-            static NSFileManager defaultManager( void );
+            NSRecursiveLock( void );
             
-            NSFileManager( void );
+            void lock( void )   override;
+            void unlock( void ) override;
             
-            bool         createFileAtPath( const NSString & path, const NSData & contents, const NSDictionary & attributes ) const;
-            NSDictionary attributesOfItemAtPath( const NSString & path, NSError & error ) const;
+            bool     lockBeforeDate( const NSDate & limit );
+            bool     tryLock( void );
+            NSString name( void );
+            void     setName( const NSString & name );
     };
 }
 
-#endif /* OBJCXX_FOUNDATION_NS_FILE_MANAGER_H */
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_RECURSIVE_LOCK_H */

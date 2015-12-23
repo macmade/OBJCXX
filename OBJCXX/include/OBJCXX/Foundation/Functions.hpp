@@ -31,7 +31,7 @@
 #define OBJCXX_FOUNDATION_FUNCTIONS_H
 
 #include <OBJCXX/Foundation/Types.hpp>
-#include <OBJCXX/Foundation/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
 
 namespace Foundation
 {

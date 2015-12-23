@@ -27,10 +27,24 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSData.hpp>
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_STRING_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_STRING_H
+
+#include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
 namespace Foundation
 {
-    NSData::NSData( void ): NSObject( "NSData" )
-    {}
+    class NSString: public NSObject
+    {
+        public:
+            
+            using NSObject::NSObject;
+            
+            NSString( void );
+            NSString( const char * utf8String );
+            
+            const char * UTF8String( void ) const;
+    };
 }
+
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_STRING_H */

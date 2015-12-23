@@ -27,10 +27,32 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSMutableData.hpp>
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_LOCK_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_LOCK_H
+
+#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSDate.hpp>
+#include <OBJCXX/Foundation/Protocols/NSLocking.hpp>
 
 namespace Foundation
 {
-    NSMutableData::NSMutableData( void ): NSData( "NSMutableData" )
-    {}
+    class NSLock: public NSObject, NSLocking
+    {
+        public:
+            
+            using NSObject::NSObject;
+            
+            NSLock( void );
+            
+            void lock( void )   override;
+            void unlock( void ) override;
+            
+            bool     lockBeforeDate( const NSDate & limit );
+            bool     tryLock( void );
+            NSString name( void );
+            void     setName( const NSString & name );
+    };
 }
+
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_LOCK_H */

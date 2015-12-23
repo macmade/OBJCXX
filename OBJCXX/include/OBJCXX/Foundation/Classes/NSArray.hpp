@@ -27,15 +27,21 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSMutableDictionary.hpp>
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_ARRAY_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_ARRAY_H
+
+#include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
 namespace Foundation
 {
-    NSMutableDictionary::NSMutableDictionary( void ): NSDictionary( "NSMutableDictionary" )
-    {}
-    
-    void NSMutableDictionary::setObjectForKey( const NSObject & object, const NSObject & key )
+    class NSArray: public NSObject
     {
-        this->sendMessage< void, id, id >( "setObject:forKey:", object, key );
-    }
+        public:
+            
+            using NSObject::NSObject;
+            
+            NSArray( void );
+    };
 }
+
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_ARRAY_H */

@@ -27,23 +27,10 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_MUTABLE_ARRAY_H
-#define OBJCXX_FOUNDATION_NS_MUTABLE_ARRAY_H
-
-#include <OBJCXX/Foundation/NSArray.hpp>
+#include <OBJCXX/Foundation/Classes/NSArray.hpp>
 
 namespace Foundation
 {
-    class NSMutableArray: public NSArray
-    {
-        public:
-            
-            using NSArray::NSArray;
-            
-            NSMutableArray( void );
-            
-            void addObject( const NSObject & o );
-    };
+    NSArray::NSArray( void ): NSObject( "NSArray" )
+    {}
 }
-
-#endif /* OBJCXX_FOUNDATION_NS_MUTABLE_ARRAY_H */

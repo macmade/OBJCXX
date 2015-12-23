@@ -27,15 +27,10 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSMutableArray.hpp>
+#include <OBJCXX/Foundation/Classes/NSMutableData.hpp>
 
 namespace Foundation
 {
-    NSMutableArray::NSMutableArray( void ): NSArray( "NSMutableArray" )
+    NSMutableData::NSMutableData( void ): NSData( "NSMutableData" )
     {}
-    
-    void NSMutableArray::addObject( const NSObject & o )
-    {
-        this->sendMessage< void, id >( "addObject:", o );
-    }
 }

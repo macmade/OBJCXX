@@ -27,23 +27,10 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_MUTABLE_DICTIONARY_H
-#define OBJCXX_FOUNDATION_NS_MUTABLE_DICTIONARY_H
-
-#include <OBJCXX/Foundation/NSDictionary.hpp>
+#include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
 namespace Foundation
 {
-    class NSMutableDictionary: public NSDictionary
-    {
-        public:
-            
-            using NSDictionary::NSDictionary;
-            
-            NSMutableDictionary( void );
-            
-            void setObjectForKey( const NSObject & object, const NSObject & key );
-    };
+    NSObject::NSObject( void ): Object( "NSObject" )
+    {}
 }
-
-#endif /* OBJCXX_FOUNDATION_NS_MUTABLE_DICTIONARY_H */

@@ -27,21 +27,20 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_MUTABLE_DATA_H
-#define OBJCXX_FOUNDATION_NS_MUTABLE_DATA_H
-
-#include <OBJCXX/Foundation/NSData.hpp>
+#ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_LOCKING_H
+#define OBJCXX_FOUNDATION_PROTOCOLS_NS_LOCKING_H
 
 namespace Foundation
 {
-    class NSMutableData: public NSData
+    class NSLocking
     {
         public:
             
-            using NSData::NSData;
+            virtual ~NSLocking( void ) = default;
             
-            NSMutableData( void );
+            virtual void lock( void )   = 0;
+            virtual void unlock( void ) = 0;
     };
 }
 
-#endif /* OBJCXX_FOUNDATION_NS_MUTABLE_DATA_H */
+#endif /* OBJCXX_FOUNDATION_PROTOCOLS_NS_LOCKING_H */

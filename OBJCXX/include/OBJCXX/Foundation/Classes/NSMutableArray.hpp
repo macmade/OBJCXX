@@ -27,21 +27,23 @@
  * @brief       ...
  */
 
-#ifndef OBJCXX_FOUNDATION_NS_ERROR_H
-#define OBJCXX_FOUNDATION_NS_ERROR_H
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_ARRAY_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_ARRAY_H
 
-#include <OBJCXX/Foundation/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSArray.hpp>
 
 namespace Foundation
 {
-    class NSError: public NSObject
+    class NSMutableArray: public NSArray
     {
         public:
             
-            using NSObject::NSObject;
+            using NSArray::NSArray;
             
-            NSError( void );
+            NSMutableArray( void );
+            
+            void addObject( const NSObject & o );
     };
 }
 
-#endif /* OBJCXX_FOUNDATION_NS_ERROR_H */
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_ARRAY_H */

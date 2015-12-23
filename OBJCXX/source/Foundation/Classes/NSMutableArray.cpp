@@ -27,32 +27,15 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSFileManager.hpp>
-#include <OBJCXX/RT.hpp>
+#include <OBJCXX/Foundation/Classes/NSMutableArray.hpp>
 
 namespace Foundation
 {
-    NSFileManager NSFileManager::defaultManager( void )
-    {
-        id o;
-        
-        o = OBJCXX::RT::SendMessage( reinterpret_cast< id >( OBJCXX::RT::GetClass( "NSFileManager" ) ), OBJCXX::RT::GetSelector( "defaultManager" ) );
-        
-        return NSFileManager( o );
-    }
-    
-    NSFileManager::NSFileManager( void ): NSObject( "NSFileManager" )
+    NSMutableArray::NSMutableArray( void ): NSArray( "NSMutableArray" )
     {}
     
-    bool NSFileManager::createFileAtPath( const NSString & path, const NSData & contents, const NSDictionary & attributes ) const
+    void NSMutableArray::addObject( const NSObject & o )
     {
-        return this->sendMessage< bool, id, id, id >( "createFileAtPath:contents:attributes:", path, contents, attributes );
-    }
-    
-    NSDictionary NSFileManager::attributesOfItemAtPath( const NSString & path, NSError & error ) const
-    {
-        ( void )error;
-        
-        return this->sendMessage< id, id, id >( "attributesOfItemAtPath:error:", path, nullptr );
+        this->sendMessage< void, id >( "addObject:", o );
     }
 }

@@ -27,40 +27,21 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSRecursiveLock.hpp>
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_DATE_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_DATE_H
+
+#include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
 namespace Foundation
 {
-    NSRecursiveLock::NSRecursiveLock( void ): NSObject( "NSRecursiveLock" )
-    {}
-    
-    void NSRecursiveLock::lock( void )
+    class NSDate: public NSObject
     {
-        this->sendMessage< void >( "lock" );
-    }
-    
-    void NSRecursiveLock::unlock( void )
-    {
-        this->sendMessage< void >( "unlock" );
-    }
-    
-    bool NSRecursiveLock::lockBeforeDate( const NSDate & limit )
-    {
-        return this->sendMessage< bool, id >( "lockBeforeDate:", limit );
-    }
-    
-    bool NSRecursiveLock::tryLock( void )
-    {
-        return this->sendMessage< bool >( "tryLock" );
-    }
-    
-    NSString NSRecursiveLock::name( void )
-    {
-        return this->sendMessage< id >( "name" );
-    }
-    
-    void NSRecursiveLock::setName( const NSString & name )
-    {
-        this->sendMessage< void, id >( "setName:", name );
-    }
+        public:
+            
+            using NSObject::NSObject;
+            
+            NSDate( void );
+    };
 }
+
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_DATE_H */

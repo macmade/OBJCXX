@@ -27,11 +27,32 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSObject.hpp>
-#include <OBJCXX/Foundation/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSFileManager.hpp>
+#include <OBJCXX/RT.hpp>
 
 namespace Foundation
 {
-    NSObject::NSObject( void ): Object( "NSObject" )
+    NSFileManager NSFileManager::defaultManager( void )
+    {
+        id o;
+        
+        o = OBJCXX::RT::SendMessage( reinterpret_cast< id >( OBJCXX::RT::GetClass( "NSFileManager" ) ), OBJCXX::RT::GetSelector( "defaultManager" ) );
+        
+        return NSFileManager( o );
+    }
+    
+    NSFileManager::NSFileManager( void ): NSObject( "NSFileManager" )
     {}
+    
+    bool NSFileManager::createFileAtPath( const NSString & path, const NSData & contents, const NSDictionary & attributes ) const
+    {
+        return this->sendMessage< bool, id, id, id >( "createFileAtPath:contents:attributes:", path, contents, attributes );
+    }
+    
+    NSDictionary NSFileManager::attributesOfItemAtPath( const NSString & path, NSError & error ) const
+    {
+        ( void )error;
+        
+        return this->sendMessage< id, id, id >( "attributesOfItemAtPath:error:", path, nullptr );
+    }
 }

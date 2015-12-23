@@ -27,7 +27,7 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSDate.hpp>
+#include <OBJCXX/Foundation/Classes/NSDate.hpp>
 
 namespace Foundation
 {

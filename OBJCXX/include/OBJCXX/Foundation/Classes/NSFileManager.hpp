@@ -27,40 +27,30 @@
  * @brief       ...
  */
 
-#include <OBJCXX/Foundation/NSLock.hpp>
+#ifndef OBJCXX_FOUNDATION_CLASSES_NS_FILE_MANAGER_H
+#define OBJCXX_FOUNDATION_CLASSES_NS_FILE_MANAGER_H
+
+#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSData.hpp>
+#include <OBJCXX/Foundation/Classes/NSError.hpp>
+#include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
 
 namespace Foundation
 {
-    NSLock::NSLock( void ): NSObject( "NSLock" )
-    {}
-    
-    void NSLock::lock( void )
+    class NSFileManager: public NSObject
     {
-        this->sendMessage< void >( "lock" );
-    }
-    
-    void NSLock::unlock( void )
-    {
-        this->sendMessage< void >( "unlock" );
-    }
-    
-    bool NSLock::lockBeforeDate( const NSDate & limit )
-    {
-        return this->sendMessage< bool, id >( "lockBeforeDate:", limit );
-    }
-    
-    bool NSLock::tryLock( void )
-    {
-        return this->sendMessage< bool >( "tryLock" );
-    }
-    
-    NSString NSLock::name( void )
-    {
-        return this->sendMessage< id >( "name" );
-    }
-    
-    void NSLock::setName( const NSString & name )
-    {
-        this->sendMessage< void, id >( "setName:", name );
-    }
+        public:
+            
+            using NSObject::NSObject;
+            
+            static NSFileManager defaultManager( void );
+            
+            NSFileManager( void );
+            
+            bool         createFileAtPath( const NSString & path, const NSData & contents, const NSDictionary & attributes ) const;
+            NSDictionary attributesOfItemAtPath( const NSString & path, NSError & error ) const;
+    };
 }
+
+#endif /* OBJCXX_FOUNDATION_CLASSES_NS_FILE_MANAGER_H */

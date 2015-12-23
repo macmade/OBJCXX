@@ -34,19 +34,19 @@
 #include <OBJCXX/Object.hpp>
 #include <OBJCXX/Foundation/Types.hpp>
 #include <OBJCXX/Foundation/Functions.hpp>
-#include <OBJCXX/Foundation/NSObject.hpp>
-#include <OBJCXX/Foundation/NSString.hpp>
-#include <OBJCXX/Foundation/NSArray.hpp>
-#include <OBJCXX/Foundation/NSMutableArray.hpp>
-#include <OBJCXX/Foundation/NSDictionary.hpp>
-#include <OBJCXX/Foundation/NSMutableDictionary.hpp>
-#include <OBJCXX/Foundation/NSData.hpp>
-#include <OBJCXX/Foundation/NSDate.hpp>
-#include <OBJCXX/Foundation/NSError.hpp>
-#include <OBJCXX/Foundation/NSMutableData.hpp>
-#include <OBJCXX/Foundation/NSFileManager.hpp>
-#include <OBJCXX/Foundation/NSLocking.hpp>
-#include <OBJCXX/Foundation/NSLock.hpp>
-#include <OBJCXX/Foundation/NSRecursiveLock.hpp>
+#include <OBJCXX/Foundation/Protocols/NSLocking.hpp>
+#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSArray.hpp>
+#include <OBJCXX/Foundation/Classes/NSMutableArray.hpp>
+#include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
+#include <OBJCXX/Foundation/Classes/NSMutableDictionary.hpp>
+#include <OBJCXX/Foundation/Classes/NSData.hpp>
+#include <OBJCXX/Foundation/Classes/NSDate.hpp>
+#include <OBJCXX/Foundation/Classes/NSError.hpp>
+#include <OBJCXX/Foundation/Classes/NSMutableData.hpp>
+#include <OBJCXX/Foundation/Classes/NSFileManager.hpp>
+#include <OBJCXX/Foundation/Classes/NSLock.hpp>
+#include <OBJCXX/Foundation/Classes/NSRecursiveLock.hpp>
 
 #endif /* OBJCXX_H */
