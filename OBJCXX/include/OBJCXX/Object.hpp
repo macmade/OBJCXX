@@ -85,7 +85,7 @@ namespace OBJCXX
             template< typename _R_, typename ... _A_, typename = typename std::enable_if< !std::is_void< _R_ >::value >::type >
             _R_ sendMessage( const std::string & sel, _A_ ... args ) const
             {
-                return RT::cast< id, _R_ >( RT::SendMessage( *( this ), RT::GetSelector( sel ), args ... ) );
+                return RT::UnsafeCast< id, _R_ >( RT::SendMessage( *( this ), RT::GetSelector( sel ), args ... ) );
             }
     };
 }

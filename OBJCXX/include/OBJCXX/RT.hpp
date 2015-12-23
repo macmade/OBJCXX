@@ -67,7 +67,7 @@ namespace OBJCXX
         }
         
         template< typename _T_, typename _R_ >
-        _R_ cast( _T_ v )
+        _R_ UnsafeCast( _T_ v )
         {
             uintptr_t p;
             
