@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ADCA9195A868291B07F204C2B3711DB7BA58BF77",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ADCA9195A868291B07F204C2B3711DB7BA58BF77" : 0,
+    "5F4838C7A83B1ADE0F5BF4DE9B5E20ECCA89600B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "23651854-04EB-4575-A6A8-D2C149FA05BB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ADCA9195A868291B07F204C2B3711DB7BA58BF77" : "DDNAToolKit\/",
+    "5F4838C7A83B1ADE0F5BF4DE9B5E20ECCA89600B" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MBDB",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Subprojects\/MBDB\/MBDB.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:DigiDNA\/iMazing-Mac.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5F4838C7A83B1ADE0F5BF4DE9B5E20ECCA89600B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DigiDNA\/DDNAToolKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ADCA9195A868291B07F204C2B3711DB7BA58BF77"
+    }
+  ]
+}
