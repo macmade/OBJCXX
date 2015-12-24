@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MutableAttributedString::MutableAttributedString( void ): Object( "NSMutableAttributedString" )
+    MutableAttributedString::MutableAttributedString( void ): AttributedString( "NSMutableAttributedString" )
     {}
 }
 

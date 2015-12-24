@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_MIDDLE_SPECIFIER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_MIDDLE_SPECIFIER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSScriptObjectSpecifier.hpp>
 
 namespace NS
 {
-    class MiddleSpecifier: public Object
+    class MiddleSpecifier: public ScriptObjectSpecifier
     {
         public:
             
-            using Object::Object;
+            using ScriptObjectSpecifier::ScriptObjectSpecifier;
             
             MiddleSpecifier( void );
     };

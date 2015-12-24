@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_USER_AUTOMATOR_TASK_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_USER_AUTOMATOR_TASK_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSUserScriptTask.hpp>
 
 namespace NS
 {
-    class UserAutomatorTask: public Object
+    class UserAutomatorTask: public UserScriptTask
     {
         public:
             
-            using Object::Object;
+            using UserScriptTask::UserScriptTask;
             
             UserAutomatorTask( void );
     };

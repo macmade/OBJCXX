@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DeleteCommand::DeleteCommand( void ): Object( "NSDeleteCommand" )
+    DeleteCommand::DeleteCommand( void ): ScriptCommand( "NSDeleteCommand" )
     {}
 }
 

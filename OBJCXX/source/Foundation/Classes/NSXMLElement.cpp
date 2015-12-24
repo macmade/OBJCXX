@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    XMLElement::XMLElement( void ): Object( "NSXMLElement" )
+    XMLElement::XMLElement( void ): XMLNode( "NSXMLElement" )
     {}
 }
 

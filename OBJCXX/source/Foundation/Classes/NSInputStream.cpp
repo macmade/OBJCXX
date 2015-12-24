@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    InputStream::InputStream( void ): Object( "NSInputStream" )
+    InputStream::InputStream( void ): Stream( "NSInputStream" )
     {}
 }
 

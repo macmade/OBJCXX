@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_NUMBER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_NUMBER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSValue.hpp>
 
 namespace NS
 {
-    class Number: public Object
+    class Number: public Value
     {
         public:
             
-            using Object::Object;
+            using Value::Value;
             
             Number( void );
     };

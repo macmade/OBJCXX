@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_INDEX_SET_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_INDEX_SET_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSIndexSet.hpp>
 
 namespace NS
 {
-    class MutableIndexSet: public Object
+    class MutableIndexSet: public IndexSet
     {
         public:
             
-            using Object::Object;
+            using IndexSet::IndexSet;
             
             MutableIndexSet( void );
     };

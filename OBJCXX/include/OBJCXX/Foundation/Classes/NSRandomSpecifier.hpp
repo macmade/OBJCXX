@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_RANDOM_SPECIFIER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_RANDOM_SPECIFIER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSScriptObjectSpecifier.hpp>
 
 namespace NS
 {
-    class RandomSpecifier: public Object
+    class RandomSpecifier: public ScriptObjectSpecifier
     {
         public:
             
-            using Object::Object;
+            using ScriptObjectSpecifier::ScriptObjectSpecifier;
             
             RandomSpecifier( void );
     };

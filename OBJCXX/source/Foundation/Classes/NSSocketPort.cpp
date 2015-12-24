@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    SocketPort::SocketPort( void ): Object( "NSSocketPort" )
+    SocketPort::SocketPort( void ): Port( "NSSocketPort" )
     {}
 }
 

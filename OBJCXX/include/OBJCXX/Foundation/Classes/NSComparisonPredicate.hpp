@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_COMPARISON_PREDICATE_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_COMPARISON_PREDICATE_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSPredicate.hpp>
 
 namespace NS
 {
-    class ComparisonPredicate: public Object
+    class ComparisonPredicate: public Predicate
     {
         public:
             
-            using Object::Object;
+            using Predicate::Predicate;
             
             ComparisonPredicate( void );
     };

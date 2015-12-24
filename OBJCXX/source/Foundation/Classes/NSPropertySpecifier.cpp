@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PropertySpecifier::PropertySpecifier( void ): Object( "NSPropertySpecifier" )
+    PropertySpecifier::PropertySpecifier( void ): ScriptObjectSpecifier( "NSPropertySpecifier" )
     {}
 }
 

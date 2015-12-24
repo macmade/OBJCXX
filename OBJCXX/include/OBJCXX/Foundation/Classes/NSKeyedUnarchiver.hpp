@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_KEYED_UNARCHIVER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_KEYED_UNARCHIVER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSCoder.hpp>
 
 namespace NS
 {
-    class KeyedUnarchiver: public Object
+    class KeyedUnarchiver: public Coder
     {
         public:
             
-            using Object::Object;
+            using Coder::Coder;
             
             KeyedUnarchiver( void );
     };

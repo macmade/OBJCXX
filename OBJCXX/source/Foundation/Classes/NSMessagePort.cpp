@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MessagePort::MessagePort( void ): Object( "NSMessagePort" )
+    MessagePort::MessagePort( void ): Port( "NSMessagePort" )
     {}
 }
 

@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_SET_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_SET_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSSet.hpp>
 
 namespace NS
 {
-    class MutableSet: public Object
+    class MutableSet: public Set
     {
         public:
             
-            using Object::Object;
+            using Set::Set;
             
             MutableSet( void );
     };

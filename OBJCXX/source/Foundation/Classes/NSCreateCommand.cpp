@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    CreateCommand::CreateCommand( void ): Object( "NSCreateCommand" )
+    CreateCommand::CreateCommand( void ): ScriptCommand( "NSCreateCommand" )
     {}
 }
 

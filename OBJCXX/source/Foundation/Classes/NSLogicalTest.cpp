@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    LogicalTest::LogicalTest( void ): Object( "NSLogicalTest" )
+    LogicalTest::LogicalTest( void ): ScriptWhoseTest( "NSLogicalTest" )
     {}
 }
 

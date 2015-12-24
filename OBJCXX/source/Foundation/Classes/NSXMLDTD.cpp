@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    XMLDTD::XMLDTD( void ): Object( "NSXMLDTD" )
+    XMLDTD::XMLDTD( void ): XMLNode( "NSXMLDTD" )
     {}
 }
 

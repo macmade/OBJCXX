@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PersonNameComponentsFormatter::PersonNameComponentsFormatter( void ): Object( "NSPersonNameComponentsFormatter" )
+    PersonNameComponentsFormatter::PersonNameComponentsFormatter( void ): Formatter( "NSPersonNameComponentsFormatter" )
     {}
 }
 

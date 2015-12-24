@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_ATTRIBUTED_STRING_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_ATTRIBUTED_STRING_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSAttributedString.hpp>
 
 namespace NS
 {
-    class MutableAttributedString: public Object
+    class MutableAttributedString: public AttributedString
     {
         public:
             
-            using Object::Object;
+            using AttributedString::AttributedString;
             
             MutableAttributedString( void );
     };

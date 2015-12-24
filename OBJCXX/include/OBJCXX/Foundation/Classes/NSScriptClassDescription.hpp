@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_SCRIPT_CLASS_DESCRIPTION_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_SCRIPT_CLASS_DESCRIPTION_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSClassDescription.hpp>
 
 namespace NS
 {
-    class ScriptClassDescription: public Object
+    class ScriptClassDescription: public ClassDescription
     {
         public:
             
-            using Object::Object;
+            using ClassDescription::ClassDescription;
             
             ScriptClassDescription( void );
     };

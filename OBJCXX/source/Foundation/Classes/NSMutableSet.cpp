@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MutableSet::MutableSet( void ): Object( "NSMutableSet" )
+    MutableSet::MutableSet( void ): Set( "NSMutableSet" )
     {}
 }
 

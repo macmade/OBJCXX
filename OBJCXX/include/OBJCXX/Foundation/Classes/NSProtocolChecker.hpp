@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_PROTOCOL_CHECKER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_PROTOCOL_CHECKER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSProxy.hpp>
 
 namespace NS
 {
-    class ProtocolChecker: public Object
+    class ProtocolChecker: public Proxy
     {
         public:
             
-            using Object::Object;
+            using Proxy::Proxy;
             
             ProtocolChecker( void );
     };

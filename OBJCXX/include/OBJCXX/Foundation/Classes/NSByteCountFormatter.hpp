@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_BYTE_COUNT_FORMATTER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_BYTE_COUNT_FORMATTER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSFormatter.hpp>
 
 namespace NS
 {
-    class ByteCountFormatter: public Object
+    class ByteCountFormatter: public Formatter
     {
         public:
             
-            using Object::Object;
+            using Formatter::Formatter;
             
             ByteCountFormatter( void );
     };

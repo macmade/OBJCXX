@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DateIntervalFormatter::DateIntervalFormatter( void ): Object( "NSDateIntervalFormatter" )
+    DateIntervalFormatter::DateIntervalFormatter( void ): Formatter( "NSDateIntervalFormatter" )
     {}
 }
 

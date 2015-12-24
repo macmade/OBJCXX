@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    CalendarDate::CalendarDate( void ): Object( "NSCalendarDate" )
+    CalendarDate::CalendarDate( void ): Date( "NSCalendarDate" )
     {}
 }
 

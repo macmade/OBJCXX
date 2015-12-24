@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    KeyedUnarchiver::KeyedUnarchiver( void ): Object( "NSKeyedUnarchiver" )
+    KeyedUnarchiver::KeyedUnarchiver( void ): Coder( "NSKeyedUnarchiver" )
     {}
 }
 

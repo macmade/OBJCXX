@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_COUNTED_SET_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_COUNTED_SET_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSMutableSet.hpp>
 
 namespace NS
 {
-    class CountedSet: public Object
+    class CountedSet: public MutableSet
     {
         public:
             
-            using Object::Object;
+            using MutableSet::MutableSet;
             
             CountedSet( void );
     };

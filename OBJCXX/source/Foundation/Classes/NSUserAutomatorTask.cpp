@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    UserAutomatorTask::UserAutomatorTask( void ): Object( "NSUserAutomatorTask" )
+    UserAutomatorTask::UserAutomatorTask( void ): UserScriptTask( "NSUserAutomatorTask" )
     {}
 }
 

@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_MACH_BOOTSTRAP_SERVER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_MACH_BOOTSTRAP_SERVER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSPortNameServer.hpp>
 
 namespace NS
 {
-    class MachBootstrapServer: public Object
+    class MachBootstrapServer: public PortNameServer
     {
         public:
             
-            using Object::Object;
+            using PortNameServer::PortNameServer;
             
             MachBootstrapServer( void );
     };

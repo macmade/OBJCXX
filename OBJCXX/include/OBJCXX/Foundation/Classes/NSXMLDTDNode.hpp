@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_XMLDTDNODE_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_XMLDTDNODE_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSXMLNode.hpp>
 
 namespace NS
 {
-    class XMLDTDNode: public Object
+    class XMLDTDNode: public XMLNode
     {
         public:
             
-            using Object::Object;
+            using XMLNode::XMLNode;
             
             XMLDTDNode( void );
     };

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ScriptClassDescription::ScriptClassDescription( void ): Object( "NSScriptClassDescription" )
+    ScriptClassDescription::ScriptClassDescription( void ): ClassDescription( "NSScriptClassDescription" )
     {}
 }
 

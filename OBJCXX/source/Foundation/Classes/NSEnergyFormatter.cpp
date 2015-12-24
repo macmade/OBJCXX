@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    EnergyFormatter::EnergyFormatter( void ): Object( "NSEnergyFormatter" )
+    EnergyFormatter::EnergyFormatter( void ): Formatter( "NSEnergyFormatter" )
     {}
 }
 

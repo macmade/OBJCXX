@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    XMLDocument::XMLDocument( void ): Object( "NSXMLDocument" )
+    XMLDocument::XMLDocument( void ): XMLNode( "NSXMLDocument" )
     {}
 }
 

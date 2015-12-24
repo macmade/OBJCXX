@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_PORT_CODER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_PORT_CODER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSCoder.hpp>
 
 namespace NS
 {
-    class PortCoder: public Object
+    class PortCoder: public Coder
     {
         public:
             
-            using Object::Object;
+            using Coder::Coder;
             
             PortCoder( void );
     };

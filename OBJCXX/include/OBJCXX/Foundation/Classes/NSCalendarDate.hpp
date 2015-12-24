@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_CALENDAR_DATE_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_CALENDAR_DATE_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSDate.hpp>
 
 namespace NS
 {
-    class CalendarDate: public Object
+    class CalendarDate: public Date
     {
         public:
             
-            using Object::Object;
+            using Date::Date;
             
             CalendarDate( void );
     };

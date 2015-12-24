@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_MACH_PORT_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_MACH_PORT_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSPort.hpp>
 
 namespace NS
 {
-    class MachPort: public Object
+    class MachPort: public Port
     {
         public:
             
-            using Object::Object;
+            using Port::Port;
             
             MachPort( void );
     };

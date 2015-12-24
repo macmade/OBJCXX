@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Unarchiver::Unarchiver( void ): Object( "NSUnarchiver" )
+    Unarchiver::Unarchiver( void ): Coder( "NSUnarchiver" )
     {}
 }
 

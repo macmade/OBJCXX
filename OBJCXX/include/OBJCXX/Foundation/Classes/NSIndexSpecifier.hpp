@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_INDEX_SPECIFIER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_INDEX_SPECIFIER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSScriptObjectSpecifier.hpp>
 
 namespace NS
 {
-    class IndexSpecifier: public Object
+    class IndexSpecifier: public ScriptObjectSpecifier
     {
         public:
             
-            using Object::Object;
+            using ScriptObjectSpecifier::ScriptObjectSpecifier;
             
             IndexSpecifier( void );
     };

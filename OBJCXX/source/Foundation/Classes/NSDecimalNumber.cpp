@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DecimalNumber::DecimalNumber( void ): Object( "NSDecimalNumber" )
+    DecimalNumber::DecimalNumber( void ): Number( "NSDecimalNumber" )
     {}
 }
 

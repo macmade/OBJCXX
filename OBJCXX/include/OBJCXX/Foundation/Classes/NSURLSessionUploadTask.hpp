@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_URLSESSIONUPLOADTASK_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_URLSESSIONUPLOADTASK_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSURLSessionDataTask.hpp>
 
 namespace NS
 {
-    class URLSessionUploadTask: public Object
+    class URLSessionUploadTask: public URLSessionDataTask
     {
         public:
             
-            using Object::Object;
+            using URLSessionDataTask::URLSessionDataTask;
             
             URLSessionUploadTask( void );
     };

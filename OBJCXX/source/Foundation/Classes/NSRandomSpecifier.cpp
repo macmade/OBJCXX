@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    RandomSpecifier::RandomSpecifier( void ): Object( "NSRandomSpecifier" )
+    RandomSpecifier::RandomSpecifier( void ): ScriptObjectSpecifier( "NSRandomSpecifier" )
     {}
 }
 

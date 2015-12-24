@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_UNIQUE_IDSPECIFIER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_UNIQUE_IDSPECIFIER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSScriptObjectSpecifier.hpp>
 
 namespace NS
 {
-    class UniqueIDSpecifier: public Object
+    class UniqueIDSpecifier: public ScriptObjectSpecifier
     {
         public:
             
-            using Object::Object;
+            using ScriptObjectSpecifier::ScriptObjectSpecifier;
             
             UniqueIDSpecifier( void );
     };

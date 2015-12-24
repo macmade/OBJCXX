@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLSessionUploadTask::URLSessionUploadTask( void ): Object( "NSURLSessionUploadTask" )
+    URLSessionUploadTask::URLSessionUploadTask( void ): URLSessionDataTask( "NSURLSessionUploadTask" )
     {}
 }
 

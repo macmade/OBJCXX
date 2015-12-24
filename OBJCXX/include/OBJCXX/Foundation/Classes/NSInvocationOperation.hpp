@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_INVOCATION_OPERATION_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_INVOCATION_OPERATION_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSOperation.hpp>
 
 namespace NS
 {
-    class InvocationOperation: public Object
+    class InvocationOperation: public Operation
     {
         public:
             
-            using Object::Object;
+            using Operation::Operation;
             
             InvocationOperation( void );
     };

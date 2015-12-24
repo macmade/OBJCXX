@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_COMPOUND_PREDICATE_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_COMPOUND_PREDICATE_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSPredicate.hpp>
 
 namespace NS
 {
-    class CompoundPredicate: public Object
+    class CompoundPredicate: public Predicate
     {
         public:
             
-            using Object::Object;
+            using Predicate::Predicate;
             
             CompoundPredicate( void );
     };

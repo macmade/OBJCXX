@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_DATE_COMPONENTS_FORMATTER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_DATE_COMPONENTS_FORMATTER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSFormatter.hpp>
 
 namespace NS
 {
-    class DateComponentsFormatter: public Object
+    class DateComponentsFormatter: public Formatter
     {
         public:
             
-            using Object::Object;
+            using Formatter::Formatter;
             
             DateComponentsFormatter( void );
     };

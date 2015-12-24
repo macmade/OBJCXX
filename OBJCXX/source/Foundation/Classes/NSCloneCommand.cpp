@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    CloneCommand::CloneCommand( void ): Object( "NSCloneCommand" )
+    CloneCommand::CloneCommand( void ): ScriptCommand( "NSCloneCommand" )
     {}
 }
 

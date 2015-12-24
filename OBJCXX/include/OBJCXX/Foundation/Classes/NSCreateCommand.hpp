@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_CREATE_COMMAND_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_CREATE_COMMAND_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSScriptCommand.hpp>
 
 namespace NS
 {
-    class CreateCommand: public Object
+    class CreateCommand: public ScriptCommand
     {
         public:
             
-            using Object::Object;
+            using ScriptCommand::ScriptCommand;
             
             CreateCommand( void );
     };

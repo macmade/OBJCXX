@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_BLOCK_OPERATION_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_BLOCK_OPERATION_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSOperation.hpp>
 
 namespace NS
 {
-    class BlockOperation: public Object
+    class BlockOperation: public Operation
     {
         public:
             
-            using Object::Object;
+            using Operation::Operation;
             
             BlockOperation( void );
     };

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    OutputStream::OutputStream( void ): Object( "NSOutputStream" )
+    OutputStream::OutputStream( void ): Stream( "NSOutputStream" )
     {}
 }
 

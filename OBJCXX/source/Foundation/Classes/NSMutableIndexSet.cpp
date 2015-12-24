@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MutableIndexSet::MutableIndexSet( void ): Object( "NSMutableIndexSet" )
+    MutableIndexSet::MutableIndexSet( void ): IndexSet( "NSMutableIndexSet" )
     {}
 }
 

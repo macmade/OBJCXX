@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MassFormatter::MassFormatter( void ): Object( "NSMassFormatter" )
+    MassFormatter::MassFormatter( void ): Formatter( "NSMassFormatter" )
     {}
 }
 

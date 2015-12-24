@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_UNARCHIVER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_UNARCHIVER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSCoder.hpp>
 
 namespace NS
 {
-    class Unarchiver: public Object
+    class Unarchiver: public Coder
     {
         public:
             
-            using Object::Object;
+            using Coder::Coder;
             
             Unarchiver( void );
     };

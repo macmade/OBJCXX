@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_USER_APPLE_SCRIPT_TASK_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_USER_APPLE_SCRIPT_TASK_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSUserScriptTask.hpp>
 
 namespace NS
 {
-    class UserAppleScriptTask: public Object
+    class UserAppleScriptTask: public UserScriptTask
     {
         public:
             
-            using Object::Object;
+            using UserScriptTask::UserScriptTask;
             
             UserAppleScriptTask( void );
     };

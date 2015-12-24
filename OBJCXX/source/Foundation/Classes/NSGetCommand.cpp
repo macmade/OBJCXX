@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    GetCommand::GetCommand( void ): Object( "NSGetCommand" )
+    GetCommand::GetCommand( void ): ScriptCommand( "NSGetCommand" )
     {}
 }
 

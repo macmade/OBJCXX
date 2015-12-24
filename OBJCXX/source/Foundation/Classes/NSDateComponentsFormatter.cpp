@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DateComponentsFormatter::DateComponentsFormatter( void ): Object( "NSDateComponentsFormatter" )
+    DateComponentsFormatter::DateComponentsFormatter( void ): Formatter( "NSDateComponentsFormatter" )
     {}
 }
 

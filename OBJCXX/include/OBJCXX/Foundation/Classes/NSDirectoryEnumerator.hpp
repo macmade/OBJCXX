@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_DIRECTORY_ENUMERATOR_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_DIRECTORY_ENUMERATOR_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSEnumerator.hpp>
 
 namespace NS
 {
-    class DirectoryEnumerator: public Object
+    class DirectoryEnumerator: public Enumerator
     {
         public:
             
-            using Object::Object;
+            using Enumerator::Enumerator;
             
             DirectoryEnumerator( void );
     };

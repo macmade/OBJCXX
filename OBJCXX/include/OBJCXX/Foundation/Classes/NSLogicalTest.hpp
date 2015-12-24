@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_LOGICAL_TEST_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_LOGICAL_TEST_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSScriptWhoseTest.hpp>
 
 namespace NS
 {
-    class LogicalTest: public Object
+    class LogicalTest: public ScriptWhoseTest
     {
         public:
             
-            using Object::Object;
+            using ScriptWhoseTest::ScriptWhoseTest;
             
             LogicalTest( void );
     };

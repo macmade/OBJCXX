@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    CountCommand::CountCommand( void ): Object( "NSCountCommand" )
+    CountCommand::CountCommand( void ): ScriptCommand( "NSCountCommand" )
     {}
 }
 

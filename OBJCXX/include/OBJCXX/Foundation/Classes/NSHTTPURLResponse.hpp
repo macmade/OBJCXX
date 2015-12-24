@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_HTTPURLRESPONSE_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_HTTPURLRESPONSE_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSURLResponse.hpp>
 
 namespace NS
 {
-    class HTTPURLResponse: public Object
+    class HTTPURLResponse: public URLResponse
     {
         public:
             
-            using Object::Object;
+            using URLResponse::URLResponse;
             
             HTTPURLResponse( void );
     };

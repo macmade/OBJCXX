@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_DECIMAL_NUMBER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_DECIMAL_NUMBER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSNumber.hpp>
 
 namespace NS
 {
-    class DecimalNumber: public Object
+    class DecimalNumber: public Number
     {
         public:
             
-            using Object::Object;
+            using Number::Number;
             
             DecimalNumber( void );
     };

@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_URLSESSIONDOWNLOADTASK_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_URLSESSIONDOWNLOADTASK_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSURLSessionTask.hpp>
 
 namespace NS
 {
-    class URLSessionDownloadTask: public Object
+    class URLSessionDownloadTask: public URLSessionTask
     {
         public:
             
-            using Object::Object;
+            using URLSessionTask::URLSessionTask;
             
             URLSessionDownloadTask( void );
     };

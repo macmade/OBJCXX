@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_EXISTS_COMMAND_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_EXISTS_COMMAND_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSScriptCommand.hpp>
 
 namespace NS
 {
-    class ExistsCommand: public Object
+    class ExistsCommand: public ScriptCommand
     {
         public:
             
-            using Object::Object;
+            using ScriptCommand::ScriptCommand;
             
             ExistsCommand( void );
     };

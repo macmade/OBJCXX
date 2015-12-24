@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MoveCommand::MoveCommand( void ): Object( "NSMoveCommand" )
+    MoveCommand::MoveCommand( void ): ScriptCommand( "NSMoveCommand" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ByteCountFormatter::ByteCountFormatter( void ): Object( "NSByteCountFormatter" )
+    ByteCountFormatter::ByteCountFormatter( void ): Formatter( "NSByteCountFormatter" )
     {}
 }
 

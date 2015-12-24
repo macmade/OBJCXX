@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MachBootstrapServer::MachBootstrapServer( void ): Object( "NSMachBootstrapServer" )
+    MachBootstrapServer::MachBootstrapServer( void ): PortNameServer( "NSMachBootstrapServer" )
     {}
 }
 

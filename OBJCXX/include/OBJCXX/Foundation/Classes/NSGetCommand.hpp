@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_GET_COMMAND_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_GET_COMMAND_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSScriptCommand.hpp>
 
 namespace NS
 {
-    class GetCommand: public Object
+    class GetCommand: public ScriptCommand
     {
         public:
             
-            using Object::Object;
+            using ScriptCommand::ScriptCommand;
             
             GetCommand( void );
     };

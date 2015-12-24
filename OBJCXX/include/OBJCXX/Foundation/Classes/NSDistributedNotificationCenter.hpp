@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_DISTRIBUTED_NOTIFICATION_CENTER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_DISTRIBUTED_NOTIFICATION_CENTER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSNotificationCenter.hpp>
 
 namespace NS
 {
-    class DistributedNotificationCenter: public Object
+    class DistributedNotificationCenter: public NotificationCenter
     {
         public:
             
-            using Object::Object;
+            using NotificationCenter::NotificationCenter;
             
             DistributedNotificationCenter( void );
     };

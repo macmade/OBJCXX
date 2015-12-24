@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_DATA_DETECTOR_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_DATA_DETECTOR_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSRegularExpression.hpp>
 
 namespace NS
 {
-    class DataDetector: public Object
+    class DataDetector: public RegularExpression
     {
         public:
             
-            using Object::Object;
+            using RegularExpression::RegularExpression;
             
             DataDetector( void );
     };

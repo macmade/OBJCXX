@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DistantObject::DistantObject( void ): Object( "NSDistantObject" )
+    DistantObject::DistantObject( void ): Proxy( "NSDistantObject" )
     {}
 }
 

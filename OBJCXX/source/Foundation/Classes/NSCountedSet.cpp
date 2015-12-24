@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    CountedSet::CountedSet( void ): Object( "NSCountedSet" )
+    CountedSet::CountedSet( void ): MutableSet( "NSCountedSet" )
     {}
 }
 

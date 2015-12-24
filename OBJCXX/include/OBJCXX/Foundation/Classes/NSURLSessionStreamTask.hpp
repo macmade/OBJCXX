@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_URLSESSIONSTREAMTASK_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_URLSESSIONSTREAMTASK_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSURLSessionTask.hpp>
 
 namespace NS
 {
-    class URLSessionStreamTask: public Object
+    class URLSessionStreamTask: public URLSessionTask
     {
         public:
             
-            using Object::Object;
+            using URLSessionTask::URLSessionTask;
             
             URLSessionStreamTask( void );
     };

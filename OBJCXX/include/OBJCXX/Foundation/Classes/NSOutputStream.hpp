@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_OUTPUT_STREAM_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_OUTPUT_STREAM_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSStream.hpp>
 
 namespace NS
 {
-    class OutputStream: public Object
+    class OutputStream: public Stream
     {
         public:
             
-            using Object::Object;
+            using Stream::Stream;
             
             OutputStream( void );
     };

@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_KEYED_ARCHIVER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_KEYED_ARCHIVER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSCoder.hpp>
 
 namespace NS
 {
-    class KeyedArchiver: public Object
+    class KeyedArchiver: public Coder
     {
         public:
             
-            using Object::Object;
+            using Coder::Coder;
             
             KeyedArchiver( void );
     };

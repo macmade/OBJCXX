@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_URLREQUEST_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_URLREQUEST_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSURLRequest.hpp>
 
 namespace NS
 {
-    class MutableURLRequest: public Object
+    class MutableURLRequest: public URLRequest
     {
         public:
             
-            using Object::Object;
+            using URLRequest::URLRequest;
             
             MutableURLRequest( void );
     };

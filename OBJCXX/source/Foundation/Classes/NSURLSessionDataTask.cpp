@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLSessionDataTask::URLSessionDataTask( void ): Object( "NSURLSessionDataTask" )
+    URLSessionDataTask::URLSessionDataTask( void ): URLSessionTask( "NSURLSessionDataTask" )
     {}
 }
 

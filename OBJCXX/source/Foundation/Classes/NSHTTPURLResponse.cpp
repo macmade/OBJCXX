@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    HTTPURLResponse::HTTPURLResponse( void ): Object( "NSHTTPURLResponse" )
+    HTTPURLResponse::HTTPURLResponse( void ): URLResponse( "NSHTTPURLResponse" )
     {}
 }
 

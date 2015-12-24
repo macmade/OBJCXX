@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    NumberFormatter::NumberFormatter( void ): Object( "NSNumberFormatter" )
+    NumberFormatter::NumberFormatter( void ): Formatter( "NSNumberFormatter" )
     {}
 }
 

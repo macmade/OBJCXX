@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    KeyedArchiver::KeyedArchiver( void ): Object( "NSKeyedArchiver" )
+    KeyedArchiver::KeyedArchiver( void ): Coder( "NSKeyedArchiver" )
     {}
 }
 

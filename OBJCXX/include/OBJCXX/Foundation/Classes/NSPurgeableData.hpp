@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_PURGEABLE_DATA_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_PURGEABLE_DATA_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSMutableData.hpp>
 
 namespace NS
 {
-    class PurgeableData: public Object
+    class PurgeableData: public MutableData
     {
         public:
             
-            using Object::Object;
+            using MutableData::MutableData;
             
             PurgeableData( void );
     };

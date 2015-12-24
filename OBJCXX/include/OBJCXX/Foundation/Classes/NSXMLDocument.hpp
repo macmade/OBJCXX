@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_XMLDOCUMENT_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_XMLDOCUMENT_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSXMLNode.hpp>
 
 namespace NS
 {
-    class XMLDocument: public Object
+    class XMLDocument: public XMLNode
     {
         public:
             
-            using Object::Object;
+            using XMLNode::XMLNode;
             
             XMLDocument( void );
     };

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    NameSpecifier::NameSpecifier( void ): Object( "NSNameSpecifier" )
+    NameSpecifier::NameSpecifier( void ): ScriptObjectSpecifier( "NSNameSpecifier" )
     {}
 }
 

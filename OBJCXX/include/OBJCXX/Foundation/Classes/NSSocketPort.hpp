@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_SOCKET_PORT_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_SOCKET_PORT_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSPort.hpp>
 
 namespace NS
 {
-    class SocketPort: public Object
+    class SocketPort: public Port
     {
         public:
             
-            using Object::Object;
+            using Port::Port;
             
             SocketPort( void );
     };

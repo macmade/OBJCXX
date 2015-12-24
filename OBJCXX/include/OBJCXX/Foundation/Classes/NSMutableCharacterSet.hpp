@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_CHARACTER_SET_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_CHARACTER_SET_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSCharacterSet.hpp>
 
 namespace NS
 {
-    class MutableCharacterSet: public Object
+    class MutableCharacterSet: public CharacterSet
     {
         public:
             
-            using Object::Object;
+            using CharacterSet::CharacterSet;
             
             MutableCharacterSet( void );
     };

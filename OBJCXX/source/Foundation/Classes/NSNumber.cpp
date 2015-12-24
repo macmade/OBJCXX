@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Number::Number( void ): Object( "NSNumber" )
+    Number::Number( void ): Value( "NSNumber" )
     {}
 }
 

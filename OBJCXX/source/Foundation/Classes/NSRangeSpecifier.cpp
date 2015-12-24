@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    RangeSpecifier::RangeSpecifier( void ): Object( "NSRangeSpecifier" )
+    RangeSpecifier::RangeSpecifier( void ): ScriptObjectSpecifier( "NSRangeSpecifier" )
     {}
 }
 

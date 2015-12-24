@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_MESSAGE_PORT_NAME_SERVER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_MESSAGE_PORT_NAME_SERVER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSPortNameServer.hpp>
 
 namespace NS
 {
-    class MessagePortNameServer: public Object
+    class MessagePortNameServer: public PortNameServer
     {
         public:
             
-            using Object::Object;
+            using PortNameServer::PortNameServer;
             
             MessagePortNameServer( void );
     };

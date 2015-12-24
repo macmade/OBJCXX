@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_NUMBER_FORMATTER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_NUMBER_FORMATTER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSFormatter.hpp>
 
 namespace NS
 {
-    class NumberFormatter: public Object
+    class NumberFormatter: public Formatter
     {
         public:
             
-            using Object::Object;
+            using Formatter::Formatter;
             
             NumberFormatter( void );
     };

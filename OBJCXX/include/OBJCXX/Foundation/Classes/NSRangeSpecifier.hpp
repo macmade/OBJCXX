@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_RANGE_SPECIFIER_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_RANGE_SPECIFIER_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSScriptObjectSpecifier.hpp>
 
 namespace NS
 {
-    class RangeSpecifier: public Object
+    class RangeSpecifier: public ScriptObjectSpecifier
     {
         public:
             
-            using Object::Object;
+            using ScriptObjectSpecifier::ScriptObjectSpecifier;
             
             RangeSpecifier( void );
     };

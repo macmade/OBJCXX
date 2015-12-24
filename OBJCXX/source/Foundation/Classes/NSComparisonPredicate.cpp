@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ComparisonPredicate::ComparisonPredicate( void ): Object( "NSComparisonPredicate" )
+    ComparisonPredicate::ComparisonPredicate( void ): Predicate( "NSComparisonPredicate" )
     {}
 }
 

@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_ORDERED_SET_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_MUTABLE_ORDERED_SET_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSOrderedSet.hpp>
 
 namespace NS
 {
-    class MutableOrderedSet: public Object
+    class MutableOrderedSet: public OrderedSet
     {
         public:
             
-            using Object::Object;
+            using OrderedSet::OrderedSet;
             
             MutableOrderedSet( void );
     };

@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_CLASSES_NS_SPECIFIER_TEST_H
 #define OBJCXX_FOUNDATION_CLASSES_NS_SPECIFIER_TEST_H
 
-#include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSScriptWhoseTest.hpp>
 
 namespace NS
 {
-    class SpecifierTest: public Object
+    class SpecifierTest: public ScriptWhoseTest
     {
         public:
             
-            using Object::Object;
+            using ScriptWhoseTest::ScriptWhoseTest;
             
             SpecifierTest( void );
     };
