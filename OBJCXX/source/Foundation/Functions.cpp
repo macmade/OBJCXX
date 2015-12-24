@@ -34,24 +34,24 @@ extern "C"
     OBJCXX_EXTERN void NSLogv( id format, va_list args );
 }
 
-namespace Foundation
+namespace NS
 {
-    NSPoint NSMakePoint( CGFloat x, CGFloat y )
+    Point MakePoint( CGFloat x, CGFloat y )
     {
         return { x, y };
     }
     
-    NSSize NSMakeSize( CGFloat w, CGFloat h )
+    Size MakeSize( CGFloat w, CGFloat h )
     {
         return { w, h };
     }
     
-    NSRect NSMakeRect( CGFloat x, CGFloat y, CGFloat w, CGFloat h )
+    Rect MakeRect( CGFloat x, CGFloat y, CGFloat w, CGFloat h )
     {
-        return { NSMakePoint( x, y ), NSMakeSize( w, h ) };
+        return { MakePoint( x, y ), MakeSize( w, h ) };
     }
     
-    void NSLog( NSString fmt, ... )
+    void Log( String fmt, ... )
     {
         va_list ap;
         

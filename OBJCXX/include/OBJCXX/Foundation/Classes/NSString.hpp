@@ -32,16 +32,16 @@
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSString: public NSObject
+    class String: public Object
     {
         public:
             
-            using NSObject::NSObject;
+            using Object::Object;
             
-            NSString( void );
-            NSString( const char * utf8String );
+            String( void );
+            String( const char * utf8String );
             
             const char * UTF8String( void ) const;
     };

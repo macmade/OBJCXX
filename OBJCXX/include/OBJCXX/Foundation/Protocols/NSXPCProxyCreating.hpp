@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_XPC_PROXY_CREATING_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_XPC_PROXY_CREATING_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSXPCProxyCreating
+        class XPCProxyCreating
         {};
     }
 }

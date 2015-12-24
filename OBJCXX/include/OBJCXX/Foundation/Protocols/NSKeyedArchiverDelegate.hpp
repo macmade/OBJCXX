@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_KEYED_ARCHIVER_DELEGATE_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_KEYED_ARCHIVER_DELEGATE_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSKeyedArchiverDelegate
+        class KeyedArchiverDelegate
         {};
     }
 }

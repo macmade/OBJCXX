@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_ERROR_RECOVERY_ATTEMPTING_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_ERROR_RECOVERY_ATTEMPTING_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSErrorRecoveryAttempting
+        class ErrorRecoveryAttempting
         {};
     }
 }

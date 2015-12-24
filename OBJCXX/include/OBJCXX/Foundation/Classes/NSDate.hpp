@@ -32,15 +32,15 @@
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSDate: public NSObject
+    class Date: public Object
     {
         public:
             
-            using NSObject::NSObject;
+            using Object::Object;
             
-            NSDate( void );
+            Date( void );
     };
 }
 

@@ -29,8 +29,8 @@
 
 #include <OBJCXX/Foundation/Classes/NSMutableData.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSMutableData::NSMutableData( void ): NSData( "NSMutableData" )
+    MutableData::MutableData( void ): Data( "NSMutableData" )
     {}
 }

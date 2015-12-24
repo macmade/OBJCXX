@@ -30,26 +30,26 @@
 #include <OBJCXX/Foundation/Classes/NSFileManager.hpp>
 #include <OBJCXX/RT.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSFileManager NSFileManager::defaultManager( void )
+    FileManager FileManager::defaultManager( void )
     {
         id o;
         
         o = OBJCXX::RT::SendMessage( reinterpret_cast< id >( OBJCXX::RT::GetClass( "NSFileManager" ) ), OBJCXX::RT::GetSelector( "defaultManager" ) );
         
-        return NSFileManager( o );
+        return FileManager( o );
     }
     
-    NSFileManager::NSFileManager( void ): NSObject( "NSFileManager" )
+    FileManager::FileManager( void ): Object( "NSFileManager" )
     {}
     
-    bool NSFileManager::createFileAtPath( const NSString & path, const NSData & contents, const NSDictionary & attributes ) const
+    bool FileManager::createFileAtPath( const String & path, const Data & contents, const Dictionary & attributes ) const
     {
         return this->sendMessage< bool, id, id, id >( "createFileAtPath:contents:attributes:", path, contents, attributes );
     }
     
-    NSDictionary NSFileManager::attributesOfItemAtPath( const NSString & path, NSError & error ) const
+    Dictionary FileManager::attributesOfItemAtPath( const String & path, Error & error ) const
     {
         ( void )error;
         

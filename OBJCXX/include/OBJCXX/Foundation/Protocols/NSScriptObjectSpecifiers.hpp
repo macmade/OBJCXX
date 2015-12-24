@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_SCRIPT_OBJECT_SPECIFIERS_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_SCRIPT_OBJECT_SPECIFIERS_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSScriptObjectSpecifiers
+        class ScriptObjectSpecifiers
         {};
     }
 }

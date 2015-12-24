@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_KEY_VALUE_CODING_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_KEY_VALUE_CODING_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSKeyValueCoding
+        class KeyValueCoding
         {};
     }
 }

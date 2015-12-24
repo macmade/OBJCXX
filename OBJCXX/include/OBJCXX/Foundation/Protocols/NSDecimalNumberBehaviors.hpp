@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_DECIMAL_NUMBER_BEHAVIORS_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_DECIMAL_NUMBER_BEHAVIORS_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSDecimalNumberBehaviors
+        class DecimalNumberBehaviors
         {};
     }
 }

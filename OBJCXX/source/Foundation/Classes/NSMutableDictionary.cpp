@@ -29,12 +29,12 @@
 
 #include <OBJCXX/Foundation/Classes/NSMutableDictionary.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSMutableDictionary::NSMutableDictionary( void ): NSDictionary( "NSMutableDictionary" )
+    MutableDictionary::MutableDictionary( void ): Dictionary( "NSMutableDictionary" )
     {}
     
-    void NSMutableDictionary::setObjectForKey( const NSObject & object, const NSObject & key )
+    void MutableDictionary::setObjectForKey( const Object & object, const Object & key )
     {
         this->sendMessage< void, id, id >( "setObject:forKey:", object, key );
     }

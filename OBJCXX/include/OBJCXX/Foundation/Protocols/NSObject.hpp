@@ -35,38 +35,38 @@ namespace OBJCXX
     class Object;
 }
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSObject
+        class Object
         {
             public:
                 
-                NSObject( void )                = default;
-                NSObject( const NSObject & o )  = default;
-                virtual ~NSObject( void )       = default;
+                Object( void )              = default;
+                Object( const Object & o )  = default;
+                virtual ~Object( void )     = default;
                 
-                virtual Class                   getClass( void )                      const = 0;
-                virtual Class                   superclass( void )                    const = 0;
-                virtual bool                    isEqual( const OBJCXX::Object & o )   const = 0;
-                virtual Foundation::NSUInteger  hash( void )                          const = 0;
-                virtual id                      self( void )                          const = 0;
-                virtual bool                    isKindOfClass( Class cls )            const = 0;
-                virtual bool                    isMemberOfClass( Class cls )          const = 0;
-                virtual bool                    respondsToSelector( SEL sel )         const = 0;
-                virtual bool                    conformsToProtocol( void * protocol ) const = 0;
-                virtual std::string             description( void )                   const = 0;
-                virtual std::string             debugDescription( void )              const = 0;
-                virtual id                      performSelector( SEL sel )                  = 0;
-                virtual id                      performSelector( SEL sel, id o1 )           = 0;
-                virtual id                      performSelector( SEL sel, id o1, id o2 )    = 0;
-                virtual bool                    isProxy( void )                       const = 0;
-                virtual id                      retain( void )                              = 0;
-                virtual void                    release( void )                             = 0;
-                virtual id                      autorelease( void )                   const = 0;
-                virtual Foundation::NSUInteger  retainCount( void )                   const = 0;
-                virtual void                  * zone( void )                          const = 0;
+                virtual Class           getClass( void )                      const = 0;
+                virtual Class           superclass( void )                    const = 0;
+                virtual bool            isEqual( const OBJCXX::Object & o )   const = 0;
+                virtual UInteger        hash( void )                          const = 0;
+                virtual id              self( void )                          const = 0;
+                virtual bool            isKindOfClass( Class cls )            const = 0;
+                virtual bool            isMemberOfClass( Class cls )          const = 0;
+                virtual bool            respondsToSelector( SEL sel )         const = 0;
+                virtual bool            conformsToProtocol( void * protocol ) const = 0;
+                virtual std::string     description( void )                   const = 0;
+                virtual std::string     debugDescription( void )              const = 0;
+                virtual id              performSelector( SEL sel )                  = 0;
+                virtual id              performSelector( SEL sel, id o1 )           = 0;
+                virtual id              performSelector( SEL sel, id o1, id o2 )    = 0;
+                virtual bool            isProxy( void )                       const = 0;
+                virtual id              retain( void )                              = 0;
+                virtual void            release( void )                             = 0;
+                virtual id              autorelease( void )                   const = 0;
+                virtual UInteger        retainCount( void )                   const = 0;
+                virtual void          * zone( void )                          const = 0;
         };
     }
 }

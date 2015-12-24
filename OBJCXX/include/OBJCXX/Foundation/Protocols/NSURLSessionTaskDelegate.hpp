@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_URL_SESSION_TASK_DELEGATE_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_URL_SESSION_TASK_DELEGATE_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSURLSessionTaskDelegate
+        class URLSessionTaskDelegate
         {};
     }
 }

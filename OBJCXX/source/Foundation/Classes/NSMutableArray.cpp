@@ -29,12 +29,12 @@
 
 #include <OBJCXX/Foundation/Classes/NSMutableArray.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSMutableArray::NSMutableArray( void ): NSArray( "NSMutableArray" )
+    MutableArray::MutableArray( void ): Array( "NSMutableArray" )
     {}
     
-    void NSMutableArray::addObject( const NSObject & o )
+    void MutableArray::addObject( const Object & o )
     {
         this->sendMessage< void, id >( "addObject:", o );
     }

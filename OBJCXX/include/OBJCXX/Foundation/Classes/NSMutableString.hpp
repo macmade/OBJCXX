@@ -32,15 +32,15 @@
 
 #include <OBJCXX/Foundation/Classes/NSString.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSMutableString: public NSString
+    class MutableString: public String
     {
         public:
             
-            using NSString::NSString;
+            using String::String;
             
-            NSMutableString( void );
+            MutableString( void );
     };
 }
 

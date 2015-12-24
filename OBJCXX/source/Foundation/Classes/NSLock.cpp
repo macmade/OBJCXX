@@ -29,37 +29,37 @@
 
 #include <OBJCXX/Foundation/Classes/NSLock.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSLock::NSLock( void ): NSObject( "NSLock" )
+    Lock::Lock( void ): Object( "NSLock" )
     {}
     
-    void NSLock::lock( void )
+    void Lock::lock( void )
     {
         this->sendMessage< void >( "lock" );
     }
     
-    void NSLock::unlock( void )
+    void Lock::unlock( void )
     {
         this->sendMessage< void >( "unlock" );
     }
     
-    bool NSLock::lockBeforeDate( const NSDate & limit )
+    bool Lock::lockBeforeDate( const Date & limit )
     {
         return this->sendMessage< bool, id >( "lockBeforeDate:", limit );
     }
     
-    bool NSLock::tryLock( void )
+    bool Lock::tryLock( void )
     {
         return this->sendMessage< bool >( "tryLock" );
     }
     
-    NSString NSLock::name( void )
+    String Lock::name( void )
     {
         return this->sendMessage< id >( "name" );
     }
     
-    void NSLock::setName( const NSString & name )
+    void Lock::setName( const String & name )
     {
         this->sendMessage< void, id >( "setName:", name );
     }

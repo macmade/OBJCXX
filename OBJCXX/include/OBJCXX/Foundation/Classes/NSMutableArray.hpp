@@ -32,17 +32,17 @@
 
 #include <OBJCXX/Foundation/Classes/NSArray.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSMutableArray: public NSArray
+    class MutableArray: public Array
     {
         public:
             
-            using NSArray::NSArray;
+            using Array::Array;
             
-            NSMutableArray( void );
+            MutableArray( void );
             
-            void addObject( const NSObject & o );
+            void addObject( const Object & o );
     };
 }
 

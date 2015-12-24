@@ -32,15 +32,15 @@
 
 #include <OBJCXX/Object.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSObject: public OBJCXX::Object
+    class Object: public OBJCXX::Object
     {
         public:
             
-            using Object::Object;
+            using OBJCXX::Object::Object;
             
-            NSObject( void );
+            Object( void );
     };
 }
 

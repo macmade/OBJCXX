@@ -32,15 +32,15 @@
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSDictionary: public NSObject
+    class Dictionary: public Object
     {
         public:
             
-            using NSObject::NSObject;
+            using Object::Object;
             
-            NSDictionary( void );
+            Dictionary( void );
     };
 }
 

@@ -29,8 +29,8 @@
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSObject::NSObject( void ): Object( "NSObject" )
+    Object::Object( void ): Object( "NSObject" )
     {}
 }

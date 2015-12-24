@@ -62,7 +62,7 @@ namespace OBJCXX
         )
     {}
     
-    Object::Object( const std::string & className, std::function< id( void ) > init ): XS::PIMPL::Object< Object >(), Foundation::Protocols::NSObject()
+    Object::Object( const std::string & className, std::function< id( void ) > init ): XS::PIMPL::Object< Object >(), NS::Protocols::Object()
     {
         this->impl->_className = className;
         this->impl->_class     = OBJCXX::RT::GetClass( this->impl->_className );
@@ -70,7 +70,7 @@ namespace OBJCXX
         this->impl->_object    = init();
     }
     
-    Object::Object( id object ): XS::PIMPL::Object< Object >( object ), Foundation::Protocols::NSObject()
+    Object::Object( id object ): XS::PIMPL::Object< Object >( object ), NS::Protocols::Object()
     {}
     
     bool Object::operator ==( const Object & o ) const
@@ -103,9 +103,9 @@ namespace OBJCXX
         return this->sendMessage< bool, id >( "isEqual:", o );
     }
     
-    Foundation::NSUInteger Object::hash( void ) const
+    NS::UInteger Object::hash( void ) const
     {
-        return this->sendMessage< Foundation::NSUInteger >( "hash" );
+        return this->sendMessage< NS::UInteger >( "hash" );
     }
     
     id Object::self( void ) const
@@ -135,8 +135,8 @@ namespace OBJCXX
     
     std::string Object::description( void ) const
     {
-        const char         * cp;
-        Foundation::NSString s( this->sendMessage< id >( "description" ) );
+        const char * cp;
+        NS::String   s( this->sendMessage< id >( "description" ) );
         
         cp = s.UTF8String();
         
@@ -145,8 +145,8 @@ namespace OBJCXX
     
     std::string Object::debugDescription( void ) const
     {
-        const char         * cp;
-        Foundation::NSString s( this->sendMessage< id >( "debugDescription" ) );
+        const char * cp;
+        NS::String   s( this->sendMessage< id >( "debugDescription" ) );
         
         cp = s.UTF8String();
         
@@ -188,9 +188,9 @@ namespace OBJCXX
         return this->sendMessage< id >( "autorelease" );
     }
     
-    Foundation::NSUInteger Object::retainCount( void ) const
+    NS::UInteger Object::retainCount( void ) const
     {
-        return this->sendMessage< Foundation::NSUInteger >( "retainCount" );
+        return this->sendMessage< NS::UInteger >( "retainCount" );
     }
     
     void * Object::zone( void ) const

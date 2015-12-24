@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_FAST_ENUMERATION_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_FAST_ENUMERATION_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSFastEnumeration
+        class FastEnumeration
         {};
     }
 }

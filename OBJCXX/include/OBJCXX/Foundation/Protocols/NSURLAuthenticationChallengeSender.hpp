@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_URL_AUTHENTICATION_CHALLENGE_SENDER_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_URL_AUTHENTICATION_CHALLENGE_SENDER_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSURLAuthenticationChallengeSender
+        class URLAuthenticationChallengeSender
         {};
     }
 }

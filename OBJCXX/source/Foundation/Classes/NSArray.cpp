@@ -29,8 +29,8 @@
 
 #include <OBJCXX/Foundation/Classes/NSArray.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSArray::NSArray( void ): NSObject( "NSArray" )
+    Array::Array( void ): Object( "NSArray" )
     {}
 }

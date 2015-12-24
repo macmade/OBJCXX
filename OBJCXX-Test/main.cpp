@@ -33,43 +33,43 @@
 int main( void )
 {
     {
-        Foundation::NSObject o;
+        NS::Object o;
         
         std::cout << o << std::endl;
     }
     
     {
-        Foundation::NSString o( "hello, world" );
+        NS::String o( "hello, world" );
         
         std::cout << o << std::endl;
         std::cout << o.UTF8String() << std::endl;
     }
     
     {
-        Foundation::NSMutableArray o;
+        NS::MutableArray o;
         
         std::cout << o << std::endl;
         
-        o.addObject( Foundation::NSString( "hello, world" ) );
-        o.addObject( Foundation::NSString( "hello, universe" ) );
-        
-        std::cout << o << std::endl;
-    }
-    
-    {
-        Foundation::NSMutableDictionary o;
-        
-        std::cout << o << std::endl;
-        
-        o.setObjectForKey( Foundation::NSString( "hello, world" ), Foundation::NSString( "key-1" ) );
-        o.setObjectForKey( Foundation::NSString( "hello, universe" ), Foundation::NSString( "key-2" ) );
+        o.addObject( NS::String( "hello, world" ) );
+        o.addObject( NS::String( "hello, universe" ) );
         
         std::cout << o << std::endl;
     }
     
     {
-        Foundation::NSString o1( "hello, world" );
-        Foundation::NSString o2( o1 );
+        NS::MutableDictionary o;
+        
+        std::cout << o << std::endl;
+        
+        o.setObjectForKey( NS::String( "hello, world" ), NS::String( "key-1" ) );
+        o.setObjectForKey( NS::String( "hello, universe" ), NS::String( "key-2" ) );
+        
+        std::cout << o << std::endl;
+    }
+    
+    {
+        NS::String o1( "hello, world" );
+        NS::String o2( o1 );
         
         std::cout << o1 << std::endl;
         std::cout << o1.UTF8String() << std::endl;
@@ -82,12 +82,12 @@ int main( void )
     }
     
     {
-        Foundation::NSFileManager o1;
-        Foundation::NSFileManager o2;
-        Foundation::NSError       e;
+        NS::FileManager o1;
+        NS::FileManager o2;
+        NS::Error       e;
         
-        o1 = Foundation::NSFileManager::defaultManager();
-        o2 = Foundation::NSFileManager::defaultManager();
+        o1 = NS::FileManager::defaultManager();
+        o2 = NS::FileManager::defaultManager();
         
         std::cout << o1 << std::endl;
         std::cout << o2 << std::endl;
@@ -96,7 +96,7 @@ int main( void )
     }
     
     {
-        Foundation::NSLock o;
+        NS::Lock o;
         
         std::cout << o << std::endl;
         
@@ -114,11 +114,11 @@ int main( void )
     }
     
     {
-        std::cout << Foundation::NSDate() << std::endl;
+        std::cout << NS::Date() << std::endl;
     }
     
     {
-        Foundation::NSLog( "hello, world %i %i", 42, 43 );
+        NS::Log( "hello, world %i %i", 42, 43 );
     }
     
     return 0;

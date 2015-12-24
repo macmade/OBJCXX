@@ -30,19 +30,19 @@
 #ifndef OBJCXX_FOUNDATION_TYPES_H
 #define OBJCXX_FOUNDATION_TYPES_H
 
-namespace Foundation
+namespace NS
 {
     #if defined( _WIN64 )
-        typedef          long long      NSInteger;
-        typedef unsigned long long      NSUInteger;
+        typedef          long long      Integer;
+        typedef unsigned long long      UInteger;
         typedef               double    CGFloat;
     #elif defined( __LP64__ )
-        typedef          long           NSInteger;
-        typedef unsigned long           NSUInteger;
+        typedef          long           Integer;
+        typedef unsigned long           UInteger;
         typedef          double         CGFloat;
     #else
-        typedef          int            NSInteger;
-        typedef unsigned int            NSUInteger;
+        typedef          int            Integer;
+        typedef unsigned int            UInteger;
         typedef          float          CGFloat;
     #endif
     
@@ -67,9 +67,9 @@ namespace Foundation
     }
     CGRect;
     
-    typedef CGPoint NSPoint;
-    typedef CGSize  NSSize;
-    typedef CGRect  NSRect;
+    typedef CGPoint Point;
+    typedef CGSize  Size;
+    typedef CGRect  Rect;
 }
 
 #endif /* OBJCXX_FOUNDATION_TYPES_H */

@@ -29,8 +29,8 @@
 
 #include <OBJCXX/Foundation/Classes/NSData.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSData::NSData( void ): NSObject( "NSData" )
+    Data::Data( void ): Object( "NSData" )
     {}
 }

@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_MACH_PORT_DELEGATE_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_MACH_PORT_DELEGATE_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSMachPortDelegate
+        class MachPortDelegate
         {};
     }
 }

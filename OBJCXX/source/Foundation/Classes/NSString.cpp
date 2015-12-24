@@ -29,13 +29,13 @@
 
 #include <OBJCXX/Foundation/Classes/NSString.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSString::NSString( void ): NSObject( "NSString" )
+    String::String( void ): Object( "NSString" )
     {}
     
-    NSString::NSString( const char * utf8String ):
-        NSObject
+    String::String( const char * utf8String ):
+        Object
         (
             "NSString",
             [ this, utf8String ]
@@ -45,7 +45,7 @@ namespace Foundation
         )
     {}
     
-    const char * NSString::UTF8String( void ) const
+    const char * String::UTF8String( void ) const
     {
         return this->sendMessage< const char * >( "UTF8String" );
     }

@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_FILE_PRESENTER_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_FILE_PRESENTER_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSFilePresenter
+        class FilePresenter
         {};
     }
 }

@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_NET_SERVICE_BROWSER_DELEGATE_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_NET_SERVICE_BROWSER_DELEGATE_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSNetServiceBrowserDelegate
+        class NetServiceBrowserDelegate
         {};
     }
 }

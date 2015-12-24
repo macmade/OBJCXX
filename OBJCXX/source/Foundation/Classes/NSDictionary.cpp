@@ -29,8 +29,8 @@
 
 #include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSDictionary::NSDictionary( void ): NSObject( "NSDictionary" )
+    Dictionary::Dictionary( void ): Object( "NSDictionary" )
     {}
 }

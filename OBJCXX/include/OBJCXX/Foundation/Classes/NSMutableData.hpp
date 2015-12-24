@@ -32,15 +32,15 @@
 
 #include <OBJCXX/Foundation/Classes/NSData.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSMutableData: public NSData
+    class MutableData: public Data
     {
         public:
             
-            using NSData::NSData;
+            using Data::Data;
             
-            NSMutableData( void );
+            MutableData( void );
     };
 }
 

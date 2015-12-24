@@ -33,12 +33,12 @@
 #include <OBJCXX/Foundation/Types.hpp>
 #include <OBJCXX/Foundation/Classes/NSString.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSPoint NSMakePoint( CGFloat x, CGFloat y );
-    NSSize  NSMakeSize( CGFloat w, CGFloat h );
-    NSRect  NSMakeRect( CGFloat x, CGFloat y, CGFloat w, CGFloat h );
-    void    NSLog( NSString fmt, ... );
+    Point MakePoint( CGFloat x, CGFloat y );
+    Size  MakeSize( CGFloat w, CGFloat h );
+    Rect  MakeRect( CGFloat x, CGFloat y, CGFloat w, CGFloat h );
+    void  Log( String fmt, ... );
 }
 
 #endif /* OBJCXX_FOUNDATION_FUNCTIONS_H */

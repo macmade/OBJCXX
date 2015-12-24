@@ -35,23 +35,23 @@
 #include <OBJCXX/Foundation/Classes/NSDate.hpp>
 #include <OBJCXX/Foundation/Protocols/NSLocking.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSLock: public NSObject, Protocols::NSLocking
+    class Lock: public Object, Protocols::Locking
     {
         public:
             
-            using NSObject::NSObject;
+            using Object::Object;
             
-            NSLock( void );
+            Lock( void );
             
             void lock( void )   override;
             void unlock( void ) override;
             
-            bool     lockBeforeDate( const NSDate & limit );
-            bool     tryLock( void );
-            NSString name( void );
-            void     setName( const NSString & name );
+            bool   lockBeforeDate( const Date & limit );
+            bool   tryLock( void );
+            String name( void );
+            void   setName( const String & name );
     };
 }
 

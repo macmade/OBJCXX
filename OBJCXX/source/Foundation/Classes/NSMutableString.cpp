@@ -29,8 +29,8 @@
 
 #include <OBJCXX/Foundation/Classes/NSMutableString.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSMutableString::NSMutableString( void ): NSString( "NSMutableString" )
+    MutableString::MutableString( void ): String( "NSMutableString" )
     {}
 }

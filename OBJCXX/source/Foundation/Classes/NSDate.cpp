@@ -29,8 +29,8 @@
 
 #include <OBJCXX/Foundation/Classes/NSDate.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSDate::NSDate( void ): NSObject( "NSDate" )
+    Date::Date( void ): Object( "NSDate" )
     {}
 }

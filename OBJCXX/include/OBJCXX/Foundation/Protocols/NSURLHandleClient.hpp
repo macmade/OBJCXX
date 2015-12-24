@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_URL_HANDLE_CLIENT_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_URL_HANDLE_CLIENT_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSURLHandleClient
+        class URLHandleClient
         {};
     }
 }

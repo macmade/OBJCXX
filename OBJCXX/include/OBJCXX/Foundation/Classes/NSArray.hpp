@@ -32,15 +32,15 @@
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSArray: public NSObject
+    class Array: public Object
     {
         public:
             
-            using NSObject::NSObject;
+            using Object::Object;
             
-            NSArray( void );
+            Array( void );
     };
 }
 

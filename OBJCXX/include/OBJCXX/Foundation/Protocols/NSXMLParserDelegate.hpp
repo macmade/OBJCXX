@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_XML_PARSER_DELEGATE_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_XML_PARSER_DELEGATE_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSXMLParserDelegate
+        class XMLParserDelegate
         {};
     }
 }

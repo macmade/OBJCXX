@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_KEY_VALUE_OBSERVING_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_KEY_VALUE_OBSERVING_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSKeyValueObserving
+        class KeyValueObserving
         {};
     }
 }

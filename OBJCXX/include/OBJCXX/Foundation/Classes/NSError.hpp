@@ -32,15 +32,15 @@
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSError: public NSObject
+    class Error: public Object
     {
         public:
             
-            using NSObject::NSObject;
+            using Object::Object;
             
-            NSError( void );
+            Error( void );
     };
 }
 

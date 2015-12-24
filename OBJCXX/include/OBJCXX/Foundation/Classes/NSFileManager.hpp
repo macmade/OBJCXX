@@ -36,20 +36,20 @@
 #include <OBJCXX/Foundation/Classes/NSError.hpp>
 #include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSFileManager: public NSObject
+    class FileManager: public Object
     {
         public:
             
-            using NSObject::NSObject;
+            using Object::Object;
             
-            static NSFileManager defaultManager( void );
+            static FileManager defaultManager( void );
             
-            NSFileManager( void );
+            FileManager( void );
             
-            bool         createFileAtPath( const NSString & path, const NSData & contents, const NSDictionary & attributes ) const;
-            NSDictionary attributesOfItemAtPath( const NSString & path, NSError & error ) const;
+            bool       createFileAtPath( const String & path, const Data & contents, const Dictionary & attributes ) const;
+            Dictionary attributesOfItemAtPath( const String & path, Error & error ) const;
     };
 }
 

@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_MUTABLE_COPYING_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_MUTABLE_COPYING_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSMutableCopying
+        class MutableCopying
         {};
     }
 }

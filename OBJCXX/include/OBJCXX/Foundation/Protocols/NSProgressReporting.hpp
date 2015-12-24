@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_PROGRESS_REPORTING_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_PROGRESS_REPORTING_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSProgressReporting
+        class ProgressReporting
         {};
     }
 }

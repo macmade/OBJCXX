@@ -32,15 +32,15 @@
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSData: public NSObject
+    class Data: public Object
     {
         public:
             
-            using NSObject::NSObject;
+            using Object::Object;
             
-            NSData( void );
+            Data( void );
     };
 }
 

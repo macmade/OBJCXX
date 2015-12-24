@@ -30,15 +30,15 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_LOCKING_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_LOCKING_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSLocking
+        class Locking
         {
             public:
                 
-                virtual ~NSLocking( void ) = default;
+                virtual ~Locking( void ) = default;
                 
                 virtual void lock( void )   = 0;
                 virtual void unlock( void ) = 0;

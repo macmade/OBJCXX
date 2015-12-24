@@ -32,17 +32,17 @@
 
 #include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
 
-namespace Foundation
+namespace NS
 {
-    class NSMutableDictionary: public NSDictionary
+    class MutableDictionary: public Dictionary
     {
         public:
             
-            using NSDictionary::NSDictionary;
+            using Dictionary::Dictionary;
             
-            NSMutableDictionary( void );
+            MutableDictionary( void );
             
-            void setObjectForKey( const NSObject & object, const NSObject & key );
+            void setObjectForKey( const Object & object, const Object & key );
     };
 }
 

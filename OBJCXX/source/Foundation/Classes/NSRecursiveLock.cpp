@@ -29,37 +29,37 @@
 
 #include <OBJCXX/Foundation/Classes/NSRecursiveLock.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSRecursiveLock::NSRecursiveLock( void ): NSObject( "NSRecursiveLock" )
+    RecursiveLock::RecursiveLock( void ): Object( "NSRecursiveLock" )
     {}
     
-    void NSRecursiveLock::lock( void )
+    void RecursiveLock::lock( void )
     {
         this->sendMessage< void >( "lock" );
     }
     
-    void NSRecursiveLock::unlock( void )
+    void RecursiveLock::unlock( void )
     {
         this->sendMessage< void >( "unlock" );
     }
     
-    bool NSRecursiveLock::lockBeforeDate( const NSDate & limit )
+    bool RecursiveLock::lockBeforeDate( const Date & limit )
     {
         return this->sendMessage< bool, id >( "lockBeforeDate:", limit );
     }
     
-    bool NSRecursiveLock::tryLock( void )
+    bool RecursiveLock::tryLock( void )
     {
         return this->sendMessage< bool >( "tryLock" );
     }
     
-    NSString NSRecursiveLock::name( void )
+    String RecursiveLock::name( void )
     {
         return this->sendMessage< id >( "name" );
     }
     
-    void NSRecursiveLock::setName( const NSString & name )
+    void RecursiveLock::setName( const String & name )
     {
         this->sendMessage< void, id >( "setName:", name );
     }

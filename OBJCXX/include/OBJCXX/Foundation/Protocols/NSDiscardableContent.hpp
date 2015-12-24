@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_DISCARDABLE_CONTENT_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_DISCARDABLE_CONTENT_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSDiscardableContent
+        class DiscardableContent
         {};
     }
 }

@@ -30,11 +30,11 @@
 #ifndef OBJCXX_FOUNDATION_PROTOCOLS_NS_COMPARISON_METHODS_H
 #define OBJCXX_FOUNDATION_PROTOCOLS_NS_COMPARISON_METHODS_H
 
-namespace Foundation
+namespace NS
 {
     namespace Protocols
     {
-        class NSComparisonMethods
+        class ComparisonMethods
         {};
     }
 }

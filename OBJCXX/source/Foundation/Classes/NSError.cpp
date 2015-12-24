@@ -29,8 +29,8 @@
 
 #include <OBJCXX/Foundation/Classes/NSError.hpp>
 
-namespace Foundation
+namespace NS
 {
-    NSError::NSError( void ): NSObject( "NSError" )
+    Error::Error( void ): Object( "NSError" )
     {}
 }
