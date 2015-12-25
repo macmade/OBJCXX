@@ -56,14 +56,20 @@ namespace OBJCXX
             
             if( name.length() == 0 )
             {
-                throw std::runtime_error( "" );
+                throw std::runtime_error( "Empty class name" );
             }
             
             ret = objc_getClass( name.c_str() );
             
             if( ret == nullptr )
             {
-                throw std::runtime_error( "" );
+                {
+                    std::string msg;
+                    
+                    msg = "No class named '" + name + "'";
+                    
+                    throw std::runtime_error( msg );
+                }
             }
             
             return ret;
@@ -99,14 +105,20 @@ namespace OBJCXX
             
             if( name.length() == 0 )
             {
-                throw std::runtime_error( "" );
+                throw std::runtime_error( "Empty selector name" );
             }
             
             ret = sel_registerName( name.c_str() );
             
             if( ret == nullptr )
             {
-                throw std::runtime_error( "" );
+                {
+                    std::string msg;
+                    
+                    msg = "No selector named '" + name + "'";
+                    
+                    throw std::runtime_error( msg );
+                }
             }
             
             return ret;
