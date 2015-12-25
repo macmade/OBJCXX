@@ -44,6 +44,8 @@ extern "C"
 
     OBJCXX_EXTERN Class         objc_getClass( const char * name );
     OBJCXX_EXTERN id            objc_msgSend( id object, SEL selector, ... );
+    OBJCXX_EXTERN double        objc_msgSend_fpret( id object, SEL selector, ... );
+    OBJCXX_EXTERN void          objc_msgSend_stret( void * addr, id object, SEL selector, ... );
     OBJCXX_EXTERN SEL           sel_registerName( const char * name );
     OBJCXX_EXTERN Class         object_getClass( id object );
     OBJCXX_EXTERN const char *  class_getName( Class object );
@@ -97,8 +99,13 @@ namespace OBJCXX
                 Message & operator =( const Message && )    = delete;
         };
         
+        template< class _U_ > struct IsVoidReturnType:   public std::integral_constant< bool, std::is_void< _U_ >::value > {};
+        template< class _U_ > struct IsStructReturnType: public std::integral_constant< bool, std::is_floating_point< _U_ >::value > {};
+        template< class _U_ > struct IsFloatReturnType:  public std::integral_constant< bool, std::is_class< _U_ >::value > {};
+        template< class _U_ > struct IsSimpleReturnType: public std::integral_constant< bool, !IsVoidReturnType< _U_ >::value && !IsStructReturnType< _U_ >::value && !IsFloatReturnType< _U_ >::value > {};
+        
         template< typename _T_ >
-        class Message< _T_, typename std::enable_if< !std::is_void< _T_ >::value >::type >: public MessageBase
+        class Message< _T_, typename std::enable_if< IsSimpleReturnType< _T_ >::value >::type >: public MessageBase
         {
             public:
                 
@@ -112,7 +119,7 @@ namespace OBJCXX
         };
         
         template< typename _T_ >
-        class Message< _T_, typename std::enable_if< std::is_void< _T_ >::value >::type >: public MessageBase
+        class Message< _T_, typename std::enable_if< IsVoidReturnType< _T_ >::value >::type >: public MessageBase
         {
             public:
                 
@@ -122,6 +129,38 @@ namespace OBJCXX
                 void send( A ... args )
                 {
                     objc_msgSend( this->object(), this->selector(), args ... );
+                }
+        };
+        
+        template< typename _T_ >
+        class Message< _T_, typename std::enable_if< IsFloatReturnType< _T_ >::value >::type >: public MessageBase
+        {
+            public:
+                
+                using MessageBase::MessageBase;
+                   
+                template< typename ... A >
+                _T_ send( A ... args )
+                {
+                    static_cast< _T_ >( objc_msgSend_fpret( this->object(), this->selector(), args ... ) );
+                }
+        };
+        
+        template< typename _T_ >
+        class Message< _T_, typename std::enable_if< IsStructReturnType< _T_ >::value >::type >: public MessageBase
+        {
+            public:
+                
+                using MessageBase::MessageBase;
+                   
+                template< typename ... A >
+                _T_ send( A ... args )
+                {
+                    _T_ s;
+                    
+                    static_cast< _T_ >( objc_msgSend_stret( &s, this->object(), this->selector(), args ... ) );
+                    
+                    return s;
                 }
         };
     }
