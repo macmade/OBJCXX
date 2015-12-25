@@ -49,8 +49,10 @@ namespace OBJCXX
             Object( const std::string & className );
             Object( const std::string & className, std::function< id( void ) > init );
             Object( id object );
+            Object( const Object & o );
+            Object( Object && o );
             
-            Object & operator =( id o );
+            Object & operator =( Object o );
             
             bool operator ==( const Object & o ) const;
             bool operator !=( const Object & o ) const;

@@ -121,5 +121,24 @@ int main( void )
         NS::Log( "hello, world %i %i", 42, 43 );
     }
     
+    {
+        NS::Data        o1{};
+        NS::Data        o2{};
+        NS::MutableData o3{};
+        NS::String      o4{};
+        
+        o1 = static_cast< id >( o2 );
+        o1 = static_cast< id >( o3 );
+        
+        try
+        {
+            o1 = static_cast< id >( o4 );
+        }
+        catch( const std::runtime_error & e )
+        {
+            std::cout << "Caught exception: " << e.what() << std::endl; 
+        }
+    }
+    
     return 0;
 }

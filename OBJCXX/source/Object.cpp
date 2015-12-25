@@ -73,16 +73,28 @@ namespace OBJCXX
     Object::Object( id object ): XS::PIMPL::Object< Object >( object ), NS::Protocols::Object()
     {}
     
-    Object & Object::operator =( id o )
+    Object::Object( const Object & o ) = default;
+    
+    Object::Object( Object && o ) = default;
+    
+    Object & Object::operator =( Object o )
     {
-        if( !RT::SendMessage( o, RT::GetSelector( "isKindOfClass:" ), RT::GetClass( this->impl->_className ) ) )
+        using std::swap;
+        
+        if( o.sendMessage< bool, Class >( "isKindOfClass:", this->impl->_class ) == false )
         {
-            throw std::runtime_error( "" );
+            std::string msg;
+            
+            msg = "Cannot assign object of incompatible class '"
+                + o.impl->_className
+                + "' to object of class '"
+                + this->impl->_className
+                + "'";
+            
+            throw std::runtime_error( msg );
         }
         
-        this->release();
-        
-        this->impl->_object = RT::SendMessage( o, RT::GetSelector( "retain" ) );
+        swap( this->impl->_object, o.impl->_object );
         
         return *( this );
     }
