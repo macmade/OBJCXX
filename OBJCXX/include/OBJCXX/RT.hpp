@@ -142,7 +142,7 @@ namespace OBJCXX
                 template< typename ... A >
                 _T_ send( A ... args )
                 {
-                    static_cast< _T_ >( objc_msgSend_fpret( this->object(), this->selector(), args ... ) );
+                    return static_cast< _T_ >( objc_msgSend_fpret( this->object(), this->selector(), args ... ) );
                 }
         };
         
