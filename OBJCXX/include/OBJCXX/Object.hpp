@@ -65,6 +65,8 @@ namespace OBJCXX
             
             operator id( void ) const;
             
+            id * operator &( void ) const;
+            
             template < typename _T_ >
             RT::Message< _T_ > message( const std::string & selector ) const
             {
