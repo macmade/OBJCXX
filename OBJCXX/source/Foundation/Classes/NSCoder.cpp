@@ -49,49 +49,77 @@ namespace NS
         this->message< void >( "encodeArrayOfObjCType:count:at:" ).send< const char *, UInteger, const void * >( type, count, array );
     }
     
-    /*
     void Coder::encodeBool( bool boolv, const String & key )
-    {}
+    {
+        this->message< void >( "encodeBool:forKey:" ).send< bool, id >( boolv, key );
+    }
 
     void Coder::encodeBycopyObject( id anObject )
-    {}
+    {
+        this->message< void >( "encodeBycopyObject:" ).send< id >( anObject );
+    }
 
     void Coder::encodeByrefObject( id anObject )
-    {}
+    {
+        this->message< void >( "encodeByrefObject:" ).send< id >( anObject );
+    }
 
     void Coder::encodeBytes( const void * byteaddr, UInteger length )
-    {}
+    {
+        this->message< void >( "encodeBytes:length:" ).send< const void *, UInteger >( byteaddr, length );
+    }
 
     void Coder::encodeBytes( const uint8_t * bytesp, UInteger lenv, const String & key )
-    {}
+    {
+        this->message< void >( "encodeBytes:length:forKey:" ).send< const uint8_t *, UInteger, id >( bytesp, lenv, key );
+    }
 
     void Coder::encodeConditionalObject( id object )
-    {}
+    {
+        this->message< void >( "encodeConditionalObject:" ).send< id >( object );
+    }
 
     void Coder::encodeConditionalObject( id objv, const String & key )
-    {}
+    {
+        this->message< void >( "encodeConditionalObject:forKey:" ).send< id, id >( objv, key );
+    }
 
     void Coder::encodeDataObject( const Data & data )
-    {}
+    {
+        this->message< void >( "encodeDataObject:" ).send< id >( data );
+    }
 
     void Coder::encodeDouble( double realv, const String & key )
-    {}
+    {
+        this->message< void >( "encodeDouble:forKey:" ).send< double, id >( realv, key );
+    }
 
     void Coder::encodeFloat( float realv, const String & key )
-    {}
+    {
+        this->message< void >( "encodeFloat:forKey:" ).send< float, id >( realv, key );
+    }
 
     void Coder::encodeInt( int intv, const String & key )
-    {}
+    {
+        this->message< void >( "encodeInt:forKey:" ).send< int, id >( intv, key );
+    }
 
     void Coder::encodeInteger( Integer intv, const String & key )
-    {}
+    {
+        this->message< void >( "encodeInteger:forKey:" ).send< Integer, id >( intv, key );
+    }
 
     void Coder::encodeInt32( int32_t intv, const String & key )
-    {}
+    {
+        this->message< void >( "encodeInt32:forKey:" ).send< int32_t, id >( intv, key );
+    }
 
     void Coder::encodeInt64( int64_t intv, const String & key )
-    {}
+    {
+        this->message< void >( "encodeInt64:forKey:" ).send< int64_t, id >( intv, key );
+    }
 
+    /*
     void Coder::encodeNXObject( id object )
     {}
 

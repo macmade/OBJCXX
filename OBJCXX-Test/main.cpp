@@ -32,6 +32,8 @@
 
 int main( void )
 {
+    NS::AutoreleasePool ap;
+    
     {
         NS::Object o;
         
