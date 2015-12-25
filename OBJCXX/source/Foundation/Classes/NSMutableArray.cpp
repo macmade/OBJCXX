@@ -36,6 +36,6 @@ namespace NS
     
     void MutableArray::addObject( const Object & o )
     {
-        this->message< void >( "addObject:" ).Send< id >( o );
+        this->message< void >( "addObject:" ).send< id >( o );
     }
 }

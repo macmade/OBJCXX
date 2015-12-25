@@ -40,13 +40,13 @@ namespace NS
             "NSString",
             [ this, utf8String ]
             {
-                return this->message< id >( "initWithUTF8String:" ).Send< const char * >( utf8String );
+                return this->message< id >( "initWithUTF8String:" ).send< const char * >( utf8String );
             }
         )
     {}
     
     const char * String::UTF8String( void ) const
     {
-        return this->message< const char * >( "UTF8String" ).Send();
+        return this->message< const char * >( "UTF8String" ).send();
     }
 }

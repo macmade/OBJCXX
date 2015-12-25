@@ -79,6 +79,7 @@ namespace OBJCXX
                 
                 MessageBase( id object, const std::string & selector );
                 MessageBase( Class cls, const std::string & selector );
+                MessageBase( const std::string & cls, const std::string & selector );
                 
                 id object( void );
                 SEL selector( void );
@@ -104,7 +105,7 @@ namespace OBJCXX
                 using MessageBase::MessageBase;
                    
                 template< typename ... A >
-                _T_ Send( A ... args )
+                _T_ send( A ... args )
                 {
                     return UnsafeCast< id, _T_ >( objc_msgSend( this->object(), this->selector(), args ... ) );
                 }
@@ -118,7 +119,7 @@ namespace OBJCXX
                 using MessageBase::MessageBase;
                    
                 template< typename ... A >
-                void Send( A ... args )
+                void send( A ... args )
                 {
                     objc_msgSend( this->object(), this->selector(), args ... );
                 }

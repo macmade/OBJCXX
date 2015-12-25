@@ -36,17 +36,17 @@ namespace NS
     
     bool Coder::allowsKeyedCoding( void )
     {
-        return this->message< bool >( "allowsKeyedCoding:" ).Send();
+        return this->message< bool >( "allowsKeyedCoding:" ).send();
     }
 
     bool Coder::containsValueForKey( const String & key )
     {
-        return this->message< bool >( "containsValueForKey:" ).Send< id >( key );
+        return this->message< bool >( "containsValueForKey:" ).send< id >( key );
     }
     
     void Coder::encodeArrayOfObjCType( const char * type, UInteger count, const void * array )
     {
-        this->message< void >( "encodeArrayOfObjCType:count:at:" ).Send< const char *, UInteger, const void * >( type, count, array );
+        this->message< void >( "encodeArrayOfObjCType:count:at:" ).send< const char *, UInteger, const void * >( type, count, array );
     }
     
     /*

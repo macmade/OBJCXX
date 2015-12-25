@@ -36,31 +36,31 @@ namespace NS
     
     void RecursiveLock::lock( void )
     {
-        this->message< void >( "lock" ).Send();
+        this->message< void >( "lock" ).send();
     }
     
     void RecursiveLock::unlock( void )
     {
-        this->message< void >( "unlock" ).Send();
+        this->message< void >( "unlock" ).send();
     }
     
     bool RecursiveLock::lockBeforeDate( const Date & limit )
     {
-        return this->message< bool >( "lockBeforeDate:" ).Send< id >( limit );
+        return this->message< bool >( "lockBeforeDate:" ).send< id >( limit );
     }
     
     bool RecursiveLock::tryLock( void )
     {
-        return this->message< bool >( "tryLock" ).Send();
+        return this->message< bool >( "tryLock" ).send();
     }
     
     String RecursiveLock::name( void )
     {
-        return this->message< id >( "name" ).Send();
+        return this->message< id >( "name" ).send();
     }
     
     void RecursiveLock::setName( const String & name )
     {
-        this->message< void >( "setName:" ).Send< id >( name );
+        this->message< void >( "setName:" ).send< id >( name );
     }
 }

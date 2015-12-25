@@ -36,6 +36,6 @@ namespace NS
     
     void MutableDictionary::setObjectForKey( const Object & object, const Object & key )
     {
-        this->message< void >( "setObject:forKey:" ).Send< id, id >( object, key );
+        this->message< void >( "setObject:forKey:" ).send< id, id >( object, key );
     }
 }

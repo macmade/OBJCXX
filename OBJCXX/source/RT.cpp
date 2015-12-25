@@ -120,6 +120,10 @@ namespace OBJCXX
             XS::PIMPL::Object< MessageBase >( reinterpret_cast< id >( cls ), selector )
         {}
         
+        MessageBase::MessageBase( const std::string & cls, const std::string & selector ):
+            MessageBase( GetClass( cls ), selector )
+        {}
+        
         id MessageBase::object( void )
         {
             return this->impl->_object;

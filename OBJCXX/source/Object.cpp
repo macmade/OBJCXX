@@ -57,7 +57,7 @@ namespace OBJCXX
             className,
             [ this ]
             {
-                return this->message< id >( "init" ).Send();
+                return this->message< id >( "init" ).send();
             }
         )
     {}
@@ -66,7 +66,7 @@ namespace OBJCXX
     {
         this->impl->_className = className;
         this->impl->_class     = OBJCXX::RT::GetClass( this->impl->_className );
-        this->impl->_object    = OBJCXX::RT::Message< id >( this->impl->_class, "alloc" ).Send();
+        this->impl->_object    = OBJCXX::RT::Message< id >( this->impl->_class, "alloc" ).send();
         this->impl->_object    = init();
     }
     
@@ -81,7 +81,7 @@ namespace OBJCXX
     {
         using std::swap;
         
-        if( o.message< bool >( "isKindOfClass:" ).Send< Class >( this->impl->_class ) == false )
+        if( o.message< bool >( "isKindOfClass:" ).send< Class >( this->impl->_class ) == false )
         {
             std::string msg;
             
@@ -116,53 +116,53 @@ namespace OBJCXX
          
     Class Object::getClass( void ) const
     {
-        return this->message< Class >( "class" ).Send();
+        return this->message< Class >( "class" ).send();
     }
     
     Class Object::superclass( void ) const
     {
-        return this->message< Class >( "superclass" ).Send();
+        return this->message< Class >( "superclass" ).send();
     }
     
     bool Object::isEqual( const Object & o ) const
     {
-        return this->message< bool >( "isEqual:" ).Send< id >( o );
+        return this->message< bool >( "isEqual:" ).send< id >( o );
     }
     
     NS::UInteger Object::hash( void ) const
     {
-        return this->message< NS::UInteger >( "hash" ).Send();
+        return this->message< NS::UInteger >( "hash" ).send();
     }
     
     id Object::self( void ) const
     {
-        return this->message< id >( "self" ).Send();
+        return this->message< id >( "self" ).send();
     }
     
     bool Object::isKindOfClass( Class cls ) const
     {
-        return this->message< bool >( "isKindOfClass:" ).Send< Class >( cls );
+        return this->message< bool >( "isKindOfClass:" ).send< Class >( cls );
     }
     
     bool Object::isMemberOfClass( Class cls ) const
     {
-        return this->message< bool >( "isMemberOfClass:" ).Send< Class >( cls );
+        return this->message< bool >( "isMemberOfClass:" ).send< Class >( cls );
     }
     
     bool Object::respondsToSelector( SEL sel ) const
     {
-        return this->message< bool >( "respondsToSelector:" ).Send< SEL >( sel );
+        return this->message< bool >( "respondsToSelector:" ).send< SEL >( sel );
     }
     
     bool Object::conformsToProtocol( void * protocol ) const
     {
-        return this->message< bool >( "conformsToProtocol:" ).Send< void * >( protocol );
+        return this->message< bool >( "conformsToProtocol:" ).send< void * >( protocol );
     }
     
     std::string Object::description( void ) const
     {
         const char * cp;
-        NS::String   s( this->message< id >( "description" ).Send() );
+        NS::String   s( this->message< id >( "description" ).send() );
         
         cp = s.UTF8String();
         
@@ -172,7 +172,7 @@ namespace OBJCXX
     std::string Object::debugDescription( void ) const
     {
         const char * cp;
-        NS::String   s( this->message< id >( "debugDescription" ).Send() );
+        NS::String   s( this->message< id >( "debugDescription" ).send() );
         
         cp = s.UTF8String();
         
@@ -181,47 +181,47 @@ namespace OBJCXX
     
     id Object::performSelector( SEL sel )
     {
-        return this->message< id >( "performSelector:" ).Send< SEL >( sel );
+        return this->message< id >( "performSelector:" ).send< SEL >( sel );
     }
     
     id Object::performSelector( SEL sel, id o1 )
     {
-        return this->message< id >( "performSelector:withObject:" ).Send< SEL, id >( sel, o1 );
+        return this->message< id >( "performSelector:withObject:" ).send< SEL, id >( sel, o1 );
     }
     
     id Object::performSelector( SEL sel, id o1, id o2 )
     {
-        return this->message< id >( "performSelector:withObject:" ).Send< SEL, id, id >( sel, o1, o2 );
+        return this->message< id >( "performSelector:withObject:" ).send< SEL, id, id >( sel, o1, o2 );
     }
     
     bool Object::isProxy( void ) const
     {
-        return this->message< bool >( "isProxy" ).Send();
+        return this->message< bool >( "isProxy" ).send();
     }
     
     id Object::retain( void )
     {
-        return this->message< id >( "retain" ).Send();
+        return this->message< id >( "retain" ).send();
     }
     
     void Object::release( void )
     {
-        this->message< void >( "release" ).Send();
+        this->message< void >( "release" ).send();
     }
     
     id Object::autorelease( void ) const
     {
-        return this->message< id >( "autorelease" ).Send();
+        return this->message< id >( "autorelease" ).send();
     }
     
     NS::UInteger Object::retainCount( void ) const
     {
-        return this->message< NS::UInteger >( "retainCount" ).Send();
+        return this->message< NS::UInteger >( "retainCount" ).send();
     }
     
     void * Object::zone( void ) const
     {
-        return this->message< void * >( "zone" ).Send();
+        return this->message< void * >( "zone" ).send();
     }
     
     std::ostream & operator << ( std::ostream & os, const Object & o )
@@ -245,7 +245,7 @@ XS::PIMPL::Object< OBJCXX::Object >::IMPL::IMPL( id o ): IMPL()
         this->_className = OBJCXX::RT::GetClassName( OBJCXX::RT::GetClass( o ) );
         this->_class     = OBJCXX::RT::GetClass( this->_className );
         this->_object    = o;
-        this->_object    = OBJCXX::RT::Message< id >( this->_object, "retain" ).Send();
+        this->_object    = OBJCXX::RT::Message< id >( this->_object, "retain" ).send();
     }
 }
 
@@ -254,10 +254,10 @@ XS::PIMPL::Object< OBJCXX::Object >::IMPL::IMPL( const IMPL & o ):
     _class( o._class ),
     _object( o._object )
 {
-    this->_object = OBJCXX::RT::Message< id >( this->_object, "retain" ).Send();
+    this->_object = OBJCXX::RT::Message< id >( this->_object, "retain" ).send();
 }
 
 XS::PIMPL::Object< OBJCXX::Object >::IMPL::~IMPL( void )
 {
-    OBJCXX::RT::Message< void >( this->_object, "release" ).Send();
+    OBJCXX::RT::Message< void >( this->_object, "release" ).send();
 }
