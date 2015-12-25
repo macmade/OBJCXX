@@ -32,6 +32,8 @@
 
 namespace NS
 {
+    typedef struct _Zone Zone;
+    
     #if defined( _WIN64 )
         typedef          long long      Integer;
         typedef unsigned long long      UInteger;
