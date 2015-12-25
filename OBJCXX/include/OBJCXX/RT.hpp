@@ -50,6 +50,7 @@ extern "C"
 }
 
 #include <string>
+#include <XS/PIMPL/Object.hpp>
 
 namespace OBJCXX
 {
@@ -60,12 +61,6 @@ namespace OBJCXX
         std::string GetClassName( Class cls );
         SEL         GetSelector( const std::string & name );
         
-        template< typename ... _A_ >
-        id SendMessage( id object, _A_ ... args )
-        {
-            return objc_msgSend( object, args ... );
-        }
-        
         template< typename _T_, typename _R_ >
         _R_ UnsafeCast( _T_ v )
         {
@@ -75,6 +70,60 @@ namespace OBJCXX
             
             return *( reinterpret_cast< _R_ * >( &p ) );
         }
+        
+        template< typename _T_ >
+        class Message
+        {
+            public:
+                
+                Message( id object, const std::string & selector ):
+                    _object( object ),
+                    _selector( RT::GetSelector( selector ) )
+                {}
+                
+                Message( Class cls, const std::string & selector ):
+                    _object( reinterpret_cast< id >( cls ) ),
+                    _selector( RT::GetSelector( selector ) )
+                {}
+                
+                template< typename ... A >
+                _T_ Send( A ... args )
+                {
+                    return UnsafeCast< id, _T_ >( objc_msgSend( this->_object, _selector, args ... ) );
+                }
+                
+            private:
+                
+                id  _object;
+                SEL _selector;
+        };
+        
+        template<>
+        class Message< void >
+        {
+            public:
+                
+                Message( id object, const std::string & selector ):
+                    _object( object ),
+                    _selector( RT::GetSelector( selector ) )
+                {}
+                
+                Message( Class cls, const std::string & selector ):
+                    _object( reinterpret_cast< id >( cls ) ),
+                    _selector( RT::GetSelector( selector ) )
+                {}
+                
+                template< typename ... A >
+                void Send( A ... args )
+                {
+                    objc_msgSend( this->_object, _selector, args ... );
+                }
+                
+            private:
+                
+                id  _object;
+                SEL _selector;
+        };
     }
 }
 

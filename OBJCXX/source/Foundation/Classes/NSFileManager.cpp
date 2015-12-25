@@ -36,7 +36,7 @@ namespace NS
     {
         id o;
         
-        o = OBJCXX::RT::SendMessage( reinterpret_cast< id >( OBJCXX::RT::GetClass( "NSFileManager" ) ), OBJCXX::RT::GetSelector( "defaultManager" ) );
+        o = OBJCXX::RT::Message< id >( OBJCXX::RT::GetClass( "NSFileManager" ), "defaultManager" ).Send();
         
         return FileManager( o );
     }
@@ -46,13 +46,13 @@ namespace NS
     
     bool FileManager::createFileAtPath( const String & path, const Data & contents, const Dictionary & attributes ) const
     {
-        return this->sendMessage< bool, id, id, id >( "createFileAtPath:contents:attributes:", path, contents, attributes );
+        return this->message< bool >( "createFileAtPath:contents:attributes:" ).Send< id, id, id >( path, contents, attributes );
     }
     
     Dictionary FileManager::attributesOfItemAtPath( const String & path, Error & error ) const
     {
         ( void )error;
         
-        return this->sendMessage< id, id, id >( "attributesOfItemAtPath:error:", path, nullptr );
+        return this->message< id >( "attributesOfItemAtPath:error:" ).Send< id, id >( path, nullptr );
     }
 }

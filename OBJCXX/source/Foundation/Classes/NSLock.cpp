@@ -36,31 +36,31 @@ namespace NS
     
     void Lock::lock( void )
     {
-        this->sendMessage< void >( "lock" );
+        this->message< void >( "lock" ).Send();
     }
     
     void Lock::unlock( void )
     {
-        this->sendMessage< void >( "unlock" );
+        this->message< void >( "unlock" ).Send();
     }
     
     bool Lock::lockBeforeDate( const Date & limit )
     {
-        return this->sendMessage< bool, id >( "lockBeforeDate:", limit );
+        return this->message< bool >( "lockBeforeDate:" ).Send< id >( limit );
     }
     
     bool Lock::tryLock( void )
     {
-        return this->sendMessage< bool >( "tryLock" );
+        return this->message< bool >( "tryLock" ).Send();
     }
     
     String Lock::name( void )
     {
-        return this->sendMessage< id >( "name" );
+        return this->message< id >( "name" ).Send();
     }
     
     void Lock::setName( const String & name )
     {
-        this->sendMessage< void, id >( "setName:", name );
+        this->message< void >( "setName:" ).Send< id >( name );
     }
 }

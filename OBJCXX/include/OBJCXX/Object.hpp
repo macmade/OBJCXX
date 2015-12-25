@@ -59,6 +59,14 @@ namespace OBJCXX
             
             operator id( void ) const;
             
+            template < typename _T_ >
+            RT::Message< _T_ > message( const std::string & selector ) const
+            {
+                return RT::Message< _T_ >( *( this ), selector );
+            }
+            
+            friend std::ostream & operator << ( std::ostream & os, const Object & o );
+            
             Class           getClass( void )                      const override;
             Class           superclass( void )                    const override;
             bool            isEqual( const Object & o )           const override;
@@ -80,19 +88,6 @@ namespace OBJCXX
             NS::UInteger    retainCount( void )                   const override;
             void          * zone( void )                          const override;
             
-            friend std::ostream & operator << ( std::ostream & os, const Object & o );
-            
-            template< typename _R_, typename ... _A_, typename = typename std::enable_if< std::is_void< _R_ >::value >::type >
-            void sendMessage( const std::string & sel, _A_ ... args ) const
-            {
-                RT::SendMessage( *( this ), RT::GetSelector( sel ), args ... );
-            }
-            
-            template< typename _R_, typename ... _A_, typename = typename std::enable_if< !std::is_void< _R_ >::value >::type >
-            _R_ sendMessage( const std::string & sel, _A_ ... args ) const
-            {
-                return RT::UnsafeCast< id, _R_ >( RT::SendMessage( *( this ), RT::GetSelector( sel ), args ... ) );
-            }
     };
 }
 
