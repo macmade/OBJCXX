@@ -135,12 +135,7 @@ namespace OBJCXX
     {
         return this->impl->_object;
     }
-    
-    id * Object::operator &( void ) const
-    {
-        return &( this->impl->_object );
-    }
-    
+         
     Class Object::getClass( void ) const
     {
         return this->message< Class >( "class" ).send();
