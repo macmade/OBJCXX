@@ -32,6 +32,7 @@
 
 #include <string>
 #include <functional>
+#include <type_traits>
 #include <OBJCXX/RT.hpp>
 #include <OBJCXX/Foundation/Types.hpp>
 #include <OBJCXX/Foundation/Protocols/NSObject.hpp>
@@ -48,6 +49,8 @@ namespace OBJCXX
             Object( const std::string & className );
             Object( const std::string & className, std::function< id( void ) > init );
             Object( id object );
+            
+            Object & operator =( id o );
             
             bool operator ==( const Object & o ) const;
             bool operator !=( const Object & o ) const;

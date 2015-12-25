@@ -73,6 +73,20 @@ namespace OBJCXX
     Object::Object( id object ): XS::PIMPL::Object< Object >( object ), NS::Protocols::Object()
     {}
     
+    Object & Object::operator =( id o )
+    {
+        if( !RT::SendMessage( o, RT::GetSelector( "isKindOfClass:" ), RT::GetClass( this->impl->_className ) ) )
+        {
+            throw std::runtime_error( "" );
+        }
+        
+        this->release();
+        
+        this->impl->_object = RT::SendMessage( o, RT::GetSelector( "retain" ) );
+        
+        return *( this );
+    }
+    
     bool Object::operator ==( const Object & o ) const
     {
         return this->isEqual( o );
