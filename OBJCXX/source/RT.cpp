@@ -29,6 +29,23 @@
 
 #include <OBJCXX/RT.hpp>
 
+template<>
+class XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL
+{
+    public:
+        
+        IMPL( void );
+        IMPL( id object, const std::string & selector );
+        IMPL( const IMPL & o );
+        ~IMPL( void );
+        
+        id  _object;
+        SEL _selector;
+};
+
+#define XS_PIMPL_CLASS OBJCXX::RT::MessageBase
+#include <XS/PIMPL/Object-IMPL.hpp>
+
 namespace OBJCXX
 {
     namespace RT
@@ -94,5 +111,41 @@ namespace OBJCXX
             
             return ret;
         }
+              
+        MessageBase::MessageBase( id object, const std::string & selector ):
+            XS::PIMPL::Object< MessageBase >( object, selector )
+        {}
+        
+        MessageBase::MessageBase( Class cls, const std::string & selector ):
+            XS::PIMPL::Object< MessageBase >( reinterpret_cast< id >( cls ), selector )
+        {}
+        
+        id MessageBase::object( void )
+        {
+            return this->impl->_object;
+        }
+        
+        SEL MessageBase::selector( void )
+        {
+            return this->impl->_selector;
+        }
     }
 }
+
+XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL( void ):
+    _object( nullptr ),
+    _selector( nullptr )
+{}
+
+XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL( id object, const std::string & selector ):
+    _object( object ),
+    _selector( OBJCXX::RT::GetSelector( selector ) )
+{}
+
+XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL( const IMPL & o ):
+    _object( o._object ),
+    _selector( o._selector )
+{}
+
+XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::~IMPL( void )
+{}

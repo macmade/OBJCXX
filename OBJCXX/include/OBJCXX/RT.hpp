@@ -71,58 +71,57 @@ namespace OBJCXX
             return *( reinterpret_cast< _R_ * >( &p ) );
         }
         
-        template< typename _T_ >
-        class Message
+        class MessageBase: XS::PIMPL::Object< MessageBase >
         {
             public:
                 
-                Message( id object, const std::string & selector ):
-                    _object( object ),
-                    _selector( RT::GetSelector( selector ) )
-                {}
+                using XS::PIMPL::Object< MessageBase >::impl;
                 
-                Message( Class cls, const std::string & selector ):
-                    _object( reinterpret_cast< id >( cls ) ),
-                    _selector( RT::GetSelector( selector ) )
-                {}
+                MessageBase( id object, const std::string & selector );
+                MessageBase( Class cls, const std::string & selector );
                 
+                id object( void );
+                SEL selector( void );
+        };
+        
+        template< typename _T_, class _E_ = void >
+        class Message: MessageBase
+        {
+            private:
+                
+                Message( void )                             = delete;
+                Message( const Message & )                  = delete;
+                Message( Message && )                       = delete;
+                Message & operator =( const Message & )     = delete;
+                Message & operator =( const Message && )    = delete;
+        };
+        
+        template< typename _T_ >
+        class Message< _T_, typename std::enable_if< !std::is_void< _T_ >::value >::type >: public MessageBase
+        {
+            public:
+                
+                using MessageBase::MessageBase;
+                   
                 template< typename ... A >
                 _T_ Send( A ... args )
                 {
-                    return UnsafeCast< id, _T_ >( objc_msgSend( this->_object, _selector, args ... ) );
+                    return UnsafeCast< id, _T_ >( objc_msgSend( this->object(), this->selector(), args ... ) );
                 }
-                
-            private:
-                
-                id  _object;
-                SEL _selector;
         };
         
-        template<>
-        class Message< void >
+        template< typename _T_ >
+        class Message< _T_, typename std::enable_if< std::is_void< _T_ >::value >::type >: public MessageBase
         {
             public:
                 
-                Message( id object, const std::string & selector ):
-                    _object( object ),
-                    _selector( RT::GetSelector( selector ) )
-                {}
-                
-                Message( Class cls, const std::string & selector ):
-                    _object( reinterpret_cast< id >( cls ) ),
-                    _selector( RT::GetSelector( selector ) )
-                {}
-                
+                using MessageBase::MessageBase;
+                   
                 template< typename ... A >
                 void Send( A ... args )
                 {
-                    objc_msgSend( this->_object, _selector, args ... );
+                    objc_msgSend( this->object(), this->selector(), args ... );
                 }
-                
-            private:
-                
-                id  _object;
-                SEL _selector;
         };
     }
 }
