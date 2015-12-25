@@ -51,8 +51,12 @@ namespace NS
     
     Dictionary FileManager::attributesOfItemAtPath( const String & path, Error & error ) const
     {
-        ( void )error;
+        id e{};
+        id d{};
         
-        return this->message< id >( "attributesOfItemAtPath:error:" ).send< id, id >( path, nullptr );
+        d     = this->message< id >( "attributesOfItemAtPath:error:" ).send< id, id * >( path, &e );
+        error = e;
+        
+        return d;
     }
 }

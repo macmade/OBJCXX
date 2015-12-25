@@ -31,6 +31,14 @@
 
 namespace NS
 {
-    Error::Error( void ): Object( "NSError" )
+    Error::Error( void ):
+        Object
+        (
+            "NSError",
+            []
+            {
+                return nullptr;
+            }
+        )
     {}
 }

@@ -81,7 +81,7 @@ namespace OBJCXX
     {
         using std::swap;
         
-        if( o.message< bool >( "isKindOfClass:" ).send< Class >( this->impl->_class ) == false )
+        if( o != nullptr && o.message< bool >( "isKindOfClass:" ).send< Class >( this->impl->_class ) == false )
         {
             std::string msg;
             
@@ -101,12 +101,34 @@ namespace OBJCXX
     
     bool Object::operator ==( const Object & o ) const
     {
-        return this->isEqual( o );
+        return this->message< bool >( "isEqual:" ).send< id >( o );
     }
     
     bool Object::operator !=( const Object & o ) const
     {
-        return !operator==( o );
+        return !operator ==( o );
+    }
+    
+    bool Object::operator ==( id object ) const
+    {
+        return this->message< bool >( "isEqual:" ).send< id >( object );
+    }
+    
+    bool Object::operator !=( id object ) const
+    {
+        return !operator ==( object );
+    }
+    
+    bool Object::operator ==( std::nullptr_t n ) const
+    {
+        ( void )n;
+        
+        return static_cast< id >( *( this ) ) == nullptr;
+    }
+    
+    bool Object::operator !=( std::nullptr_t n ) const
+    {
+        return !operator ==( n );
     }
     
     Object::operator id( void ) const
@@ -242,10 +264,10 @@ XS::PIMPL::Object< OBJCXX::Object >::IMPL::IMPL( id o ): IMPL()
 {
     if( o )
     {
-        this->_className = OBJCXX::RT::GetClassName( OBJCXX::RT::GetClass( o ) );
-        this->_class     = OBJCXX::RT::GetClass( this->_className );
-        this->_object    = o;
-        this->_object    = OBJCXX::RT::Message< id >( this->_object, "retain" ).send();
+        this->_className = ( o ) ? OBJCXX::RT::GetClassName( OBJCXX::RT::GetClass( o ) ) : "";
+        this->_class     = ( o ) ? OBJCXX::RT::GetClass( this->_className ): nullptr;
+        this->_object    = ( o ) ? o : nullptr;
+        this->_object    = ( o ) ? OBJCXX::RT::Message< id >( this->_object, "retain" ).send() : nullptr;
     }
 }
 

@@ -57,6 +57,12 @@ namespace OBJCXX
             bool operator ==( const Object & o ) const;
             bool operator !=( const Object & o ) const;
             
+            bool operator ==( id object ) const;
+            bool operator !=( id object ) const;
+            
+            bool operator ==( std::nullptr_t n ) const;
+            bool operator !=( std::nullptr_t n ) const;
+            
             operator id( void ) const;
             
             template < typename _T_ >

@@ -93,6 +93,26 @@ int main( void )
         std::cout << o2 << std::endl;
         std::cout << o1.createFileAtPath( "/tmp/OBJCXX-Test.txt", nullptr, nullptr ) << std::endl;
         std::cout << o1.attributesOfItemAtPath( "/tmp/OBJCXX-Test.txt", e ) << std::endl;
+        
+        if( e == nullptr )
+        {
+            std::cout << "No error" << std::endl;
+        }
+        else
+        {
+            std::cout << "Error: " << e << std::endl;
+        }
+        
+        std::cout << o1.attributesOfItemAtPath( "/tmp/OBJCXX-Test-2.txt", e ) << std::endl;
+        
+        if( e == nullptr )
+        {
+            std::cout << "No error" << std::endl;
+        }
+        else
+        {
+            std::cout << "Error: " << e << std::endl;
+        }
     }
     
     {
