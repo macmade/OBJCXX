@@ -28,15 +28,21 @@
  */
 
 #include <OBJCXX/Foundation/Classes/NSAttributedString.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
 
 namespace NS
 {
     AttributedString::AttributedString( void ): Object( "NSAttributedString" )
     {}
     
-    id AttributedString::attributeKeys( void )
+    id AttributedString::attributesAtIndex( UInteger index, Range * outRange )
     {
-        return this->message< id >( "attributeKeys" ).send();
+        return this->message< id >( "attributesAtIndex:effectiveRange:" ).send< UInteger, Range * >( index, outRange );
+    }
+    
+    id AttributedString::attributeValueAtIndex( NS::String attributeName, UInteger index, Range * outRange )
+    {
+        return this->message< id >( "attribute:atIndex:effectiveRange:" ).send< id, UInteger, Range * >( attributeName, index, outRange );
     }
     
     id AttributedString::string( void )

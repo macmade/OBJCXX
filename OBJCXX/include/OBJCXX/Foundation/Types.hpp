@@ -69,6 +69,13 @@ namespace NS
     }
     CGRect;
     
+    typedef struct
+    {
+        UInteger location;
+        UInteger length;
+    }
+    Range;
+    
     typedef CGPoint Point;
     typedef CGSize  Size;
     typedef CGRect  Rect;

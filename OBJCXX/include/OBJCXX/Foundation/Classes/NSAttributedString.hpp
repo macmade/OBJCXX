@@ -34,6 +34,8 @@
 
 namespace NS
 {
+    class String;
+    
     class AttributedString: public Object
     {
         public:
@@ -42,8 +44,11 @@ namespace NS
             
             AttributedString( void );
         
-            id attributeKeys( void );
             id string( void );
+        
+            id attributesAtIndex( UInteger index, Range * outRange );
+            id attributeValueAtIndex( NS::String attributeName, UInteger index, Range * outRange );
+    
     };
 }
 

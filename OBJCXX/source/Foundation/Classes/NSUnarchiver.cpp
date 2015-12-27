@@ -34,9 +34,9 @@ namespace NS
     Unarchiver::Unarchiver( void ): Coder( "NSUnarchiver" )
     {}
     
-    Unarchiver::Unarchiver( void * data ) : Coder( "NSUnarchiver", [this, data]
+    Unarchiver::Unarchiver( NS::Data data ) : Coder( "NSUnarchiver", [this, data]
                                                   {
-                                                      id obj = this->message< id >( "initForReadingWithData:" ).send< void * >( data );
+                                                      id obj = this->message< id >( "initForReadingWithData:" ).send< id >( data );
                                                       return obj;
                                                   } )
     {
