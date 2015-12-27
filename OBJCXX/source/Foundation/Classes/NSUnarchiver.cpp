@@ -44,7 +44,6 @@ namespace NS
     
     id Unarchiver::decodeObject( void )
     {
-        
         return this->message< id >( "decodeObject" ).send();
     }
 }

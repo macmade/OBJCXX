@@ -44,6 +44,7 @@ namespace NS
             String( const char * utf8String );
             
             const char * UTF8String( void ) const;
+            NS::UInteger length( void );
     };
 }
 

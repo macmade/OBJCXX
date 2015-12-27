@@ -29,13 +29,14 @@
 
 #include <OBJCXX/Foundation/Classes/NSAttributedString.hpp>
 #include <OBJCXX/Foundation/Classes/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
 
 namespace NS
 {
     AttributedString::AttributedString( void ): Object( "NSAttributedString" )
     {}
     
-    id AttributedString::attributesAtIndex( UInteger index, Range * outRange )
+    NS::Dictionary AttributedString::attributesAtIndex( UInteger index, Range * outRange )
     {
         return this->message< id >( "attributesAtIndex:effectiveRange:" ).send< UInteger, Range * >( index, outRange );
     }
@@ -45,9 +46,41 @@ namespace NS
         return this->message< id >( "attribute:atIndex:effectiveRange:" ).send< id, UInteger, Range * >( attributeName, index, outRange );
     }
     
-    id AttributedString::string( void )
+    NS::String AttributedString::string( void )
     {
         return this->message<id>( "string" ).send();
+    }
+    
+    void AttributedString::enumerateAttributes( std::function< void( NS::Dictionary attributes, NS::Range range, bool * stop ) > callback )
+    {
+        if( callback == nullptr )
+        {
+            return;
+        }
+        
+        NS::UInteger length = this->string().length();
+        NS::Range range;
+        NS::UInteger index = 0;
+        bool stop = false;
+        
+        while( true )
+        {
+            NS::Dictionary attributes = this->attributesAtIndex( index, &range );
+            
+            callback( attributes, range, &stop );
+            
+            if( stop )
+            {
+                break;
+            }
+            
+            index = range.location + range.length;
+            
+            if( index >= length - 1 )
+            {
+                break;
+            }
+        }
     }
 }
 
