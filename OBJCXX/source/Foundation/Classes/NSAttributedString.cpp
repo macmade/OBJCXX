@@ -33,5 +33,15 @@ namespace NS
 {
     AttributedString::AttributedString( void ): Object( "NSAttributedString" )
     {}
+    
+    id AttributedString::attributeKeys( void )
+    {
+        return this->message< id >( "attributeKeys" ).send();
+    }
+    
+    id AttributedString::string( void )
+    {
+        return this->message<id>( "string" ).send();
+    }
 }
 

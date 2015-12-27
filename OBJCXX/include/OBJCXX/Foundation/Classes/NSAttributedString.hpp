@@ -41,6 +41,9 @@ namespace NS
             using Object::Object;
             
             AttributedString( void );
+        
+            id attributeKeys( void );
+            id string( void );
     };
 }
 

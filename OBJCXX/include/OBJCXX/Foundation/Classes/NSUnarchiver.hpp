@@ -41,6 +41,9 @@ namespace NS
             using Coder::Coder;
             
             Unarchiver( void );
+            Unarchiver( void * data );
+        
+            id decodeObject( void );
     };
 }
 
