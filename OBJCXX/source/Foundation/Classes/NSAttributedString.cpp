@@ -59,6 +59,12 @@ namespace NS
         }
         
         NS::UInteger length = this->string().length();
+        
+        if( length == 0 )
+        {
+            return;
+        }
+        
         NS::Range range;
         NS::UInteger index = 0;
         bool stop = false;
@@ -74,7 +80,19 @@ namespace NS
                 break;
             }
             
-            index = range.location + range.length;
+            if( length == 0 )
+            {
+                break;
+            }
+            
+            if( range.length == 0 )
+            {
+                index = range.location + 1;
+            }
+            else
+            {
+                index = range.location + range.length;
+            }
             
             if( index >= length - 1 )
             {
