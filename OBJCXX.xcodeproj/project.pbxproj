@@ -504,6 +504,16 @@
 		058FAC2D1C2B1769009DD4DD /* NSXPCProxyCreating.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FABFF1C2B1769009DD4DD /* NSXPCProxyCreating.hpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		058862091C73BBCB000BB563 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 056C87C618C8B0F8006260B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 056C881118C8B85F006260B3;
+			remoteInfo = OBJCXX;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		058FA78B1C29F62C009DD4DD /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -1948,6 +1958,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0588620A1C73BBCB000BB563 /* PBXTargetDependency */,
 			);
 			name = "OBJCXX-Test";
 			productName = "OBJCXX-Test";
@@ -2223,6 +2234,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0588620A1C73BBCB000BB563 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 056C881118C8B85F006260B3 /* OBJCXX */;
+			targetProxy = 058862091C73BBCB000BB563 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		056C87D518C8B0F8006260B3 /* Debug */ = {
