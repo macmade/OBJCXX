@@ -34,6 +34,9 @@
 
 namespace NS
 {
+    class String;
+    class Dictionary;
+    
     class AttributedString: public Object
     {
         public:
@@ -41,6 +44,15 @@ namespace NS
             using Object::Object;
             
             AttributedString( void );
+        
+            NS::String string( void );
+        
+            NS::Dictionary attributesAtIndex( UInteger index, Range * outRange );
+            id attributeValueAtIndex( NS::String attributeName, UInteger index, Range * outRange );
+        
+            //Convenience
+            void enumerateAttributes( std::function< void( NS::Dictionary attributes, NS::Range range, bool * stop ) > callback );
+    
     };
 }
 

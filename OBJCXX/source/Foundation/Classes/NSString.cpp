@@ -49,4 +49,9 @@ namespace NS
     {
         return this->message< const char * >( "UTF8String" ).send();
     }
+    
+    NS::UInteger String::length( void )
+    {
+        return this->message< NS::UInteger >( "length" ).send();
+    }
 }

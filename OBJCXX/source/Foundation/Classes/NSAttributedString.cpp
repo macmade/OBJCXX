@@ -28,10 +28,77 @@
  */
 
 #include <OBJCXX/Foundation/Classes/NSAttributedString.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
 
 namespace NS
 {
     AttributedString::AttributedString( void ): Object( "NSAttributedString" )
     {}
+    
+    NS::Dictionary AttributedString::attributesAtIndex( UInteger index, Range * outRange )
+    {
+        return this->message< id >( "attributesAtIndex:effectiveRange:" ).send< UInteger, Range * >( index, outRange );
+    }
+    
+    id AttributedString::attributeValueAtIndex( NS::String attributeName, UInteger index, Range * outRange )
+    {
+        return this->message< id >( "attribute:atIndex:effectiveRange:" ).send< id, UInteger, Range * >( attributeName, index, outRange );
+    }
+    
+    NS::String AttributedString::string( void )
+    {
+        return this->message<id>( "string" ).send();
+    }
+    
+    void AttributedString::enumerateAttributes( std::function< void( NS::Dictionary attributes, NS::Range range, bool * stop ) > callback )
+    {
+        if( callback == nullptr )
+        {
+            return;
+        }
+        
+        NS::UInteger length = this->string().length();
+        
+        if( length == 0 )
+        {
+            return;
+        }
+        
+        NS::Range range;
+        NS::UInteger index = 0;
+        bool stop = false;
+        
+        while( true )
+        {
+            NS::Dictionary attributes = this->attributesAtIndex( index, &range );
+            
+            callback( attributes, range, &stop );
+            
+            if( stop )
+            {
+                break;
+            }
+            
+            if( length == 0 )
+            {
+                break;
+            }
+            
+            if( range.length == 0 )
+            {
+                index = range.location + 1;
+            }
+            else
+            {
+                index = range.location + range.length;
+            }
+            
+            if( index >= length - 1 )
+            {
+                break;
+            }
+        }
+    }
 }
 
