@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MutableOrderedSet: public OrderedSet
+    class OBJCXX_EXPORT MutableOrderedSet: public OrderedSet
     {
         public:
             

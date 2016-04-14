@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class PurgeableData: public MutableData
+    class OBJCXX_EXPORT PurgeableData: public MutableData
     {
         public:
             

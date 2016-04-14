@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class UserScriptTask: public Object
+    class OBJCXX_EXPORT UserScriptTask: public Object
     {
         public:
             

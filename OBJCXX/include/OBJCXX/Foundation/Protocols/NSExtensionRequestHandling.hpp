@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class ExtensionRequestHandling
+        class OBJCXX_EXPORT ExtensionRequestHandling
         {};
     }
 }

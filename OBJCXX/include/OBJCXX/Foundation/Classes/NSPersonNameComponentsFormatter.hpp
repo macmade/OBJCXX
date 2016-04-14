@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class PersonNameComponentsFormatter: public Formatter
+    class OBJCXX_EXPORT PersonNameComponentsFormatter: public Formatter
     {
         public:
             

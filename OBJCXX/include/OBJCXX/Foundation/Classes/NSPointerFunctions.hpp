@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class PointerFunctions: public Object
+    class OBJCXX_EXPORT PointerFunctions: public Object
     {
         public:
             

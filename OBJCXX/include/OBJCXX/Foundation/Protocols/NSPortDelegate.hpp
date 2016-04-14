@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class PortDelegate
+        class OBJCXX_EXPORT PortDelegate
         {};
     }
 }

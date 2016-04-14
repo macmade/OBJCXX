@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class PropertySpecifier: public ScriptObjectSpecifier
+    class OBJCXX_EXPORT PropertySpecifier: public ScriptObjectSpecifier
     {
         public:
             

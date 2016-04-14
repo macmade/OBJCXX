@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class SecureCoding
+        class OBJCXX_EXPORT SecureCoding
         {};
     }
 }

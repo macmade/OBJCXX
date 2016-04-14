@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ScriptCoercionHandler: public Object
+    class OBJCXX_EXPORT ScriptCoercionHandler: public Object
     {
         public:
             

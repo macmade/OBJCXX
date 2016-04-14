@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ProcessInfo: public Object
+    class OBJCXX_EXPORT ProcessInfo: public Object
     {
         public:
             

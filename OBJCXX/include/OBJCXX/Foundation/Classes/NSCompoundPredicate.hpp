@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class CompoundPredicate: public Predicate
+    class OBJCXX_EXPORT CompoundPredicate: public Predicate
     {
         public:
             

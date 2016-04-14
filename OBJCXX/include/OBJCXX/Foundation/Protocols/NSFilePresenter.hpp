@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class FilePresenter
+        class OBJCXX_EXPORT FilePresenter
         {};
     }
 }

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MachBootstrapServer: public PortNameServer
+    class OBJCXX_EXPORT MachBootstrapServer: public PortNameServer
     {
         public:
             

@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class URLAuthenticationChallengeSender
+        class OBJCXX_EXPORT URLAuthenticationChallengeSender
         {};
     }
 }

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class CharacterSet: public Object
+    class OBJCXX_EXPORT CharacterSet: public Object
     {
         public:
             

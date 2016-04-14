@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class CacheDelegate
+        class OBJCXX_EXPORT CacheDelegate
         {};
     }
 }

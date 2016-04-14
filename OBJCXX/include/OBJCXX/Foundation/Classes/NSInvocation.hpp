@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Invocation: public Object
+    class OBJCXX_EXPORT Invocation: public Object
     {
         public:
             

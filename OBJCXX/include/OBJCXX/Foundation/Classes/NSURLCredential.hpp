@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URLCredential: public Object
+    class OBJCXX_EXPORT URLCredential: public Object
     {
         public:
             

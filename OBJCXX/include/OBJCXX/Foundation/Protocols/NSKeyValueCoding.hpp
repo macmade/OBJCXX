@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class KeyValueCoding
+        class OBJCXX_EXPORT KeyValueCoding
         {};
     }
 }

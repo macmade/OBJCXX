@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MethodSignature: public Object
+    class OBJCXX_EXPORT MethodSignature: public Object
     {
         public:
             

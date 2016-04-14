@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Timer: public Object
+    class OBJCXX_EXPORT Timer: public Object
     {
         public:
             

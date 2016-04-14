@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class FileAccessIntent: public Object
+    class OBJCXX_EXPORT FileAccessIntent: public Object
     {
         public:
             

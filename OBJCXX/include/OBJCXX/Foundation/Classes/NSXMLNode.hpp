@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class XMLNode: public Object
+    class OBJCXX_EXPORT XMLNode: public Object
     {
         public:
             

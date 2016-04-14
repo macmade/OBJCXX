@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class MetadataQueryDelegate
+        class OBJCXX_EXPORT MetadataQueryDelegate
         {};
     }
 }

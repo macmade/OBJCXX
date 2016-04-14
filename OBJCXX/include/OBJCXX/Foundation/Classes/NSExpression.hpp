@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Expression: public Object
+    class OBJCXX_EXPORT Expression: public Object
     {
         public:
             

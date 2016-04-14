@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class IndexPath: public Object
+    class OBJCXX_EXPORT IndexPath: public Object
     {
         public:
             

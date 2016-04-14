@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class TextCheckingResult: public Object
+    class OBJCXX_EXPORT TextCheckingResult: public Object
     {
         public:
             

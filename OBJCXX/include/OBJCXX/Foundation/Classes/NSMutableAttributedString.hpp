@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MutableAttributedString: public AttributedString
+    class OBJCXX_EXPORT MutableAttributedString: public AttributedString
     {
         public:
             

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Progress: public Object
+    class OBJCXX_EXPORT Progress: public Object
     {
         public:
             

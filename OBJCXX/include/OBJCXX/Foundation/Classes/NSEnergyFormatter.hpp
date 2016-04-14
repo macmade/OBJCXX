@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class EnergyFormatter: public Formatter
+    class OBJCXX_EXPORT EnergyFormatter: public Formatter
     {
         public:
             

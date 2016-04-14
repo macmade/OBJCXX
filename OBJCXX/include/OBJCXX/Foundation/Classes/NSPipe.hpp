@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Pipe: public Object
+    class OBJCXX_EXPORT Pipe: public Object
     {
         public:
             

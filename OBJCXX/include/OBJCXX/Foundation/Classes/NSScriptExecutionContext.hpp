@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ScriptExecutionContext: public Object
+    class OBJCXX_EXPORT ScriptExecutionContext: public Object
     {
         public:
             

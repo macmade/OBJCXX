@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class UniqueIDSpecifier: public ScriptObjectSpecifier
+    class OBJCXX_EXPORT UniqueIDSpecifier: public ScriptObjectSpecifier
     {
         public:
             

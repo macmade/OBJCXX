@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class AffineTransform: public Object
+    class OBJCXX_EXPORT AffineTransform: public Object
     {
         public:
             

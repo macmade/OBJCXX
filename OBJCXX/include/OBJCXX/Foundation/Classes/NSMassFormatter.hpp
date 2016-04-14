@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MassFormatter: public Formatter
+    class OBJCXX_EXPORT MassFormatter: public Formatter
     {
         public:
             

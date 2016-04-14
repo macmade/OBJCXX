@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Operation: public Object
+    class OBJCXX_EXPORT Operation: public Object
     {
         public:
             

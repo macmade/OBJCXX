@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class LinguisticTagger: public Object
+    class OBJCXX_EXPORT LinguisticTagger: public Object
     {
         public:
             

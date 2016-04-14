@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MetadataQueryAttributeValueTuple: public Object
+    class OBJCXX_EXPORT MetadataQueryAttributeValueTuple: public Object
     {
         public:
             

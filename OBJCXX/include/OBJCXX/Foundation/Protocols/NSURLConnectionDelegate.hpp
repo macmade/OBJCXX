@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class URLConnectionDelegate
+        class OBJCXX_EXPORT URLConnectionDelegate
         {};
     }
 }

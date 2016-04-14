@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class FileVersion: public Object
+    class OBJCXX_EXPORT FileVersion: public Object
     {
         public:
             

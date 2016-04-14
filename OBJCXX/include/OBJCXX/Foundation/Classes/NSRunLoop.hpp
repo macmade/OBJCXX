@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class RunLoop: public Object
+    class OBJCXX_EXPORT RunLoop: public Object
     {
         public:
             

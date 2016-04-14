@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class KeyedArchiverDelegate
+        class OBJCXX_EXPORT KeyedArchiverDelegate
         {};
     }
 }

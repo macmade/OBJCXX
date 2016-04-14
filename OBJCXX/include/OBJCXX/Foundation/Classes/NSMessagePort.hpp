@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MessagePort: public Port
+    class OBJCXX_EXPORT MessagePort: public Port
     {
         public:
             

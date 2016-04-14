@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class XMLDTD: public XMLNode
+    class OBJCXX_EXPORT XMLDTD: public XMLNode
     {
         public:
             

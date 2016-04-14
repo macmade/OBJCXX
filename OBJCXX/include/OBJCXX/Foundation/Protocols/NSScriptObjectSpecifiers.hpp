@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class ScriptObjectSpecifiers
+        class OBJCXX_EXPORT ScriptObjectSpecifiers
         {};
     }
 }

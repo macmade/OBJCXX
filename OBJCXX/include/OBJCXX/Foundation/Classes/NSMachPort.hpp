@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MachPort: public Port
+    class OBJCXX_EXPORT MachPort: public Port
     {
         public:
             

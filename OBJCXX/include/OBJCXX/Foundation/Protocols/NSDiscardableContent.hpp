@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class DiscardableContent
+        class OBJCXX_EXPORT DiscardableContent
         {};
     }
 }

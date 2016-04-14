@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class UbiquitousKeyValueStore: public Object
+    class OBJCXX_EXPORT UbiquitousKeyValueStore: public Object
     {
         public:
             

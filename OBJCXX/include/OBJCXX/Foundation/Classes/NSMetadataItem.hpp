@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MetadataItem: public Object
+    class OBJCXX_EXPORT MetadataItem: public Object
     {
         public:
             

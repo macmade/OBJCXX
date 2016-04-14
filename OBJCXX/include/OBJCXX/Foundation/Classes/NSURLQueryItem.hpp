@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URLQueryItem: public Object
+    class OBJCXX_EXPORT URLQueryItem: public Object
     {
         public:
             

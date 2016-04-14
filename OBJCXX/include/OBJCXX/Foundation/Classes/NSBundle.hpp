@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Bundle: public Object
+    class OBJCXX_EXPORT Bundle: public Object
     {
         public:
             

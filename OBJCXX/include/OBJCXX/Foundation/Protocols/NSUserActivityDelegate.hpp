@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class UserActivityDelegate
+        class OBJCXX_EXPORT UserActivityDelegate
         {};
     }
 }

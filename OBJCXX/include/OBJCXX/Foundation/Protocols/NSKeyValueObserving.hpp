@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class KeyValueObserving
+        class OBJCXX_EXPORT KeyValueObserving
         {};
     }
 }

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class FileCoordinator: public Object
+    class OBJCXX_EXPORT FileCoordinator: public Object
     {
         public:
             

@@ -37,7 +37,7 @@
 
 namespace NS
 {
-    class Lock: public Object, Protocols::Locking
+    class OBJCXX_EXPORT Lock: public Object, Protocols::Locking
     {
         public:
             

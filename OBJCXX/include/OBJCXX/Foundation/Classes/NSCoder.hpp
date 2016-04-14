@@ -37,7 +37,7 @@
 
 namespace NS
 {
-    class Coder: public Object
+    class OBJCXX_EXPORT Coder: public Object
     {
         public:
             

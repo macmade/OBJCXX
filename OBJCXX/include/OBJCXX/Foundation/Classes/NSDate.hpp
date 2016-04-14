@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Date: public Object
+    class OBJCXX_EXPORT Date: public Object
     {
         public:
             

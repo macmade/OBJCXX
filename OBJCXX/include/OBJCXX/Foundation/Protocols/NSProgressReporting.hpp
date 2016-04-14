@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class ProgressReporting
+        class OBJCXX_EXPORT ProgressReporting
         {};
     }
 }

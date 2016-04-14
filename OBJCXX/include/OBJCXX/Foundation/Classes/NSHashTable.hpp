@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class HashTable: public Object
+    class OBJCXX_EXPORT HashTable: public Object
     {
         public:
             

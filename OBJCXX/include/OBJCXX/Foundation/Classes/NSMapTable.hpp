@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MapTable: public Object
+    class OBJCXX_EXPORT MapTable: public Object
     {
         public:
             

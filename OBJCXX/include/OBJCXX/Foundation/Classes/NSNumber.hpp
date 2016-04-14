@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Number: public Value
+    class OBJCXX_EXPORT Number: public Value
     {
         public:
             

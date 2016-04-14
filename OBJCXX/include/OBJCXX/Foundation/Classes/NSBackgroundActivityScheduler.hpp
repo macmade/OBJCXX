@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class BackgroundActivityScheduler: public Object
+    class OBJCXX_EXPORT BackgroundActivityScheduler: public Object
     {
         public:
             

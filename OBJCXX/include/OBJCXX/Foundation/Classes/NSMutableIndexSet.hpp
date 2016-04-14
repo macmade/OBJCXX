@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MutableIndexSet: public IndexSet
+    class OBJCXX_EXPORT MutableIndexSet: public IndexSet
     {
         public:
             

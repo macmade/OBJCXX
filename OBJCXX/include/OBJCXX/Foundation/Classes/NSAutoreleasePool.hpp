@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class AutoreleasePool: public Object
+    class OBJCXX_EXPORT AutoreleasePool: public Object
     {
         public:
             

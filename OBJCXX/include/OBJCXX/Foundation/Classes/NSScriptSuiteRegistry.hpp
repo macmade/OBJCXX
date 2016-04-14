@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ScriptSuiteRegistry: public Object
+    class OBJCXX_EXPORT ScriptSuiteRegistry: public Object
     {
         public:
             

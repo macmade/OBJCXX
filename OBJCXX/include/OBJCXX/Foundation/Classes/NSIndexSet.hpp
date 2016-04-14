@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class IndexSet: public Object
+    class OBJCXX_EXPORT IndexSet: public Object
     {
         public:
             

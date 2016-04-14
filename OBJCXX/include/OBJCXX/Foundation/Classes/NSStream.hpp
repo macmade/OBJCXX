@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Stream: public Object
+    class OBJCXX_EXPORT Stream: public Object
     {
         public:
             

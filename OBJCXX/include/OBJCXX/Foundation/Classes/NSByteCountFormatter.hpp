@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ByteCountFormatter: public Formatter
+    class OBJCXX_EXPORT ByteCountFormatter: public Formatter
     {
         public:
             

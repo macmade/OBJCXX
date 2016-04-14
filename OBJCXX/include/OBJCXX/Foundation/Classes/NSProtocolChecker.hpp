@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ProtocolChecker: public Proxy
+    class OBJCXX_EXPORT ProtocolChecker: public Proxy
     {
         public:
             

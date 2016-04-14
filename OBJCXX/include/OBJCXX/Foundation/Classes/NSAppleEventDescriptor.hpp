@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class AppleEventDescriptor: public Object
+    class OBJCXX_EXPORT AppleEventDescriptor: public Object
     {
         public:
             

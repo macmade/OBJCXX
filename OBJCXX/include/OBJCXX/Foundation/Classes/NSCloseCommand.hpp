@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class CloseCommand: public ScriptCommand
+    class OBJCXX_EXPORT CloseCommand: public ScriptCommand
     {
         public:
             

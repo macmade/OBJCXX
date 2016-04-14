@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class String;
+    class OBJCXX_EXPORT String;
     class Dictionary;
     
     class AttributedString: public Object

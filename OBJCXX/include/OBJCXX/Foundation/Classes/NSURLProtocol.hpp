@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URLProtocol: public Object
+    class OBJCXX_EXPORT URLProtocol: public Object
     {
         public:
             

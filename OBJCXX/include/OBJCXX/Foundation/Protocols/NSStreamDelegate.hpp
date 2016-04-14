@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class StreamDelegate
+        class OBJCXX_EXPORT StreamDelegate
         {};
     }
 }

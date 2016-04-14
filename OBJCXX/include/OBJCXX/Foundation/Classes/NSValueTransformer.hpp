@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ValueTransformer: public Object
+    class OBJCXX_EXPORT ValueTransformer: public Object
     {
         public:
             

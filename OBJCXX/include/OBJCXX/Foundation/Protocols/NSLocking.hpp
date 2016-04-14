@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class Locking
+        class OBJCXX_EXPORT Locking
         {
             public:
                 

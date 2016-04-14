@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class DecimalNumberHandler: public Object
+    class OBJCXX_EXPORT DecimalNumberHandler: public Object
     {
         public:
             

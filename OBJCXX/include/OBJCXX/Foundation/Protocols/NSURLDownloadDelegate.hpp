@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class URLDownloadDelegate
+        class OBJCXX_EXPORT URLDownloadDelegate
         {};
     }
 }

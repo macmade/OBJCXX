@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class DistributedNotificationCenter: public NotificationCenter
+    class OBJCXX_EXPORT DistributedNotificationCenter: public NotificationCenter
     {
         public:
             

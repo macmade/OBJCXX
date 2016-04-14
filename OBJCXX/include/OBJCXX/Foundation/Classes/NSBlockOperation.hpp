@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class BlockOperation: public Operation
+    class OBJCXX_EXPORT BlockOperation: public Operation
     {
         public:
             

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Thread: public Object
+    class OBJCXX_EXPORT Thread: public Object
     {
         public:
             

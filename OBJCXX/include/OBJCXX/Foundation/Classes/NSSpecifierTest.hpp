@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class SpecifierTest: public ScriptWhoseTest
+    class OBJCXX_EXPORT SpecifierTest: public ScriptWhoseTest
     {
         public:
             

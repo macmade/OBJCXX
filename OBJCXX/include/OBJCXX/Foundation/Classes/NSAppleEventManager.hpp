@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class AppleEventManager: public Object
+    class OBJCXX_EXPORT AppleEventManager: public Object
     {
         public:
             

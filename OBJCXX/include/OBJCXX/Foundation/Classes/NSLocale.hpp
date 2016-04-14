@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Locale: public Object
+    class OBJCXX_EXPORT Locale: public Object
     {
         public:
             

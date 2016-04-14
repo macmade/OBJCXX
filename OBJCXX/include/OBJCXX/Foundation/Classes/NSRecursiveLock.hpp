@@ -37,7 +37,7 @@
 
 namespace NS
 {
-    class RecursiveLock: public Object, Protocols::Locking
+    class OBJCXX_EXPORT RecursiveLock: public Object, Protocols::Locking
     {
         public:
             

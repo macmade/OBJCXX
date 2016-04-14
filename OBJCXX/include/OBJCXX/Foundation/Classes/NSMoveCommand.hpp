@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MoveCommand: public ScriptCommand
+    class OBJCXX_EXPORT MoveCommand: public ScriptCommand
     {
         public:
             

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class CountedSet: public MutableSet
+    class OBJCXX_EXPORT CountedSet: public MutableSet
     {
         public:
             

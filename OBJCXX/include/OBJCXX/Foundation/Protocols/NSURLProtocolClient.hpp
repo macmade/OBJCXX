@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class URLProtocolClient
+        class OBJCXX_EXPORT URLProtocolClient
         {};
     }
 }

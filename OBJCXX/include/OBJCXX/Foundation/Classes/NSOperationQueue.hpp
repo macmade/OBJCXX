@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class OperationQueue: public Object
+    class OBJCXX_EXPORT OperationQueue: public Object
     {
         public:
             

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ComparisonPredicate: public Predicate
+    class OBJCXX_EXPORT ComparisonPredicate: public Predicate
     {
         public:
             

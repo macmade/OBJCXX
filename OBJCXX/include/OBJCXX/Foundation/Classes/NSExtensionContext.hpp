@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ExtensionContext: public Object
+    class OBJCXX_EXPORT ExtensionContext: public Object
     {
         public:
             

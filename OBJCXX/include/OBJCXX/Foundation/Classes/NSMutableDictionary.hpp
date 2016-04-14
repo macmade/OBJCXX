@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MutableDictionary: public Dictionary
+    class OBJCXX_EXPORT MutableDictionary: public Dictionary
     {
         public:
             

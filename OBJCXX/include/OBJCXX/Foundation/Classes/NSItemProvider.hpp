@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ItemProvider: public Object
+    class OBJCXX_EXPORT ItemProvider: public Object
     {
         public:
             

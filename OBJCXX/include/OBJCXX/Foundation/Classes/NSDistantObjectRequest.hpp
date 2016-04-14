@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class DistantObjectRequest: public Object
+    class OBJCXX_EXPORT DistantObjectRequest: public Object
     {
         public:
             

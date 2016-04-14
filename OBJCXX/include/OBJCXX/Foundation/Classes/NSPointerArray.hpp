@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class PointerArray: public Object
+    class OBJCXX_EXPORT PointerArray: public Object
     {
         public:
             

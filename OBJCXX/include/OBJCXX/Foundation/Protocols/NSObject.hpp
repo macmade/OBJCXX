@@ -39,7 +39,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class Object
+        class OBJCXX_EXPORT Object
         {
             public:
                 

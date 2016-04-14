@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class GarbageCollector: public Object
+    class OBJCXX_EXPORT GarbageCollector: public Object
     {
         public:
             

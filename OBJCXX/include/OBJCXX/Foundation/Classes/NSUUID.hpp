@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class UUID: public Object
+    class OBJCXX_EXPORT UUID: public Object
     {
         public:
             

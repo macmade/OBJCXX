@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Formatter: public Object
+    class OBJCXX_EXPORT Formatter: public Object
     {
         public:
             

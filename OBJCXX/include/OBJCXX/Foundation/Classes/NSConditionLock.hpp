@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ConditionLock: public Object
+    class OBJCXX_EXPORT ConditionLock: public Object
     {
         public:
             

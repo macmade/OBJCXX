@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Connection: public Object
+    class OBJCXX_EXPORT Connection: public Object
     {
         public:
             

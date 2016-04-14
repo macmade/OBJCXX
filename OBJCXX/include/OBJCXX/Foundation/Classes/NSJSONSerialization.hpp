@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class JSONSerialization: public Object
+    class OBJCXX_EXPORT JSONSerialization: public Object
     {
         public:
             

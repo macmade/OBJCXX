@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class KeyedArchiver: public Coder
+    class OBJCXX_EXPORT KeyedArchiver: public Coder
     {
         public:
             

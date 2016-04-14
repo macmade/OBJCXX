@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class FileManagerDelegate
+        class OBJCXX_EXPORT FileManagerDelegate
         {};
     }
 }

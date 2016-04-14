@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class PositionalSpecifier: public Object
+    class OBJCXX_EXPORT PositionalSpecifier: public Object
     {
         public:
             

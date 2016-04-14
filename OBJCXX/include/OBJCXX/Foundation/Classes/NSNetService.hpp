@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class NetService: public Object
+    class OBJCXX_EXPORT NetService: public Object
     {
         public:
             

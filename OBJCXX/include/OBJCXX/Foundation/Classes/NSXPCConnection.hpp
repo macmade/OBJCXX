@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class XPCConnection: public Object
+    class OBJCXX_EXPORT XPCConnection: public Object
     {
         public:
             

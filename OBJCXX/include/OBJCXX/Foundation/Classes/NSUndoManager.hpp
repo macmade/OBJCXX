@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class UndoManager: public Object
+    class OBJCXX_EXPORT UndoManager: public Object
     {
         public:
             

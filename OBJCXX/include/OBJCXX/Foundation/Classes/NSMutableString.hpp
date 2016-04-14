@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MutableString: public String
+    class OBJCXX_EXPORT MutableString: public String
     {
         public:
             

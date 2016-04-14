@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Object: public OBJCXX::Object
+    class OBJCXX_EXPORT Object: public OBJCXX::Object
     {
         public:
             

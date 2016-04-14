@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class Coding
+        class OBJCXX_EXPORT Coding
         {};
     }
 }

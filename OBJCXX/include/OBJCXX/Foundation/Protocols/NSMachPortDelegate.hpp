@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class MachPortDelegate
+        class OBJCXX_EXPORT MachPortDelegate
         {};
     }
 }

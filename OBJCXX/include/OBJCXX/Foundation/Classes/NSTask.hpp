@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Task: public Object
+    class OBJCXX_EXPORT Task: public Object
     {
         public:
             

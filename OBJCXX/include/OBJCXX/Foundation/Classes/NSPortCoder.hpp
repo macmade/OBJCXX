@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class PortCoder: public Coder
+    class OBJCXX_EXPORT PortCoder: public Coder
     {
         public:
             

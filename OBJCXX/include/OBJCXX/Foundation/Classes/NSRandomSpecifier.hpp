@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class RandomSpecifier: public ScriptObjectSpecifier
+    class OBJCXX_EXPORT RandomSpecifier: public ScriptObjectSpecifier
     {
         public:
             

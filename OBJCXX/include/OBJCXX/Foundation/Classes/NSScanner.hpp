@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Scanner: public Object
+    class OBJCXX_EXPORT Scanner: public Object
     {
         public:
             

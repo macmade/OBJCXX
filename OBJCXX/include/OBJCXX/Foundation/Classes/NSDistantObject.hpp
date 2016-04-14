@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class DistantObject: public Proxy
+    class OBJCXX_EXPORT DistantObject: public Proxy
     {
         public:
             

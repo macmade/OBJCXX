@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class HTTPCookie: public Object
+    class OBJCXX_EXPORT HTTPCookie: public Object
     {
         public:
             

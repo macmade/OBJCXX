@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class XMLParser: public Object
+    class OBJCXX_EXPORT XMLParser: public Object
     {
         public:
             

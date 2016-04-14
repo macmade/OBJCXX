@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class CalendarDate: public Date
+    class OBJCXX_EXPORT CalendarDate: public Date
     {
         public:
             

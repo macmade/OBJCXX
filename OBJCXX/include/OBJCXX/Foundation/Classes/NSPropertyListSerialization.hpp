@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class PropertyListSerialization: public Object
+    class OBJCXX_EXPORT PropertyListSerialization: public Object
     {
         public:
             

@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class XMLParserDelegate
+        class OBJCXX_EXPORT XMLParserDelegate
         {};
     }
 }

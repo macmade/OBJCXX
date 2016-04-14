@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URLProtectionSpace: public Object
+    class OBJCXX_EXPORT URLProtectionSpace: public Object
     {
         public:
             

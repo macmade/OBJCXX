@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class ScriptKeyValueCoding
+        class OBJCXX_EXPORT ScriptKeyValueCoding
         {};
     }
 }

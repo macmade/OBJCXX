@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class AppleScript: public Object
+    class OBJCXX_EXPORT AppleScript: public Object
     {
         public:
             

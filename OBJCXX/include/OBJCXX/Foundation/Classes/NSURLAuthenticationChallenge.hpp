@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URLAuthenticationChallenge: public Object
+    class OBJCXX_EXPORT URLAuthenticationChallenge: public Object
     {
         public:
             

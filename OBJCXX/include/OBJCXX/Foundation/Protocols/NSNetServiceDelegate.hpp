@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class NetServiceDelegate
+        class OBJCXX_EXPORT NetServiceDelegate
         {};
     }
 }

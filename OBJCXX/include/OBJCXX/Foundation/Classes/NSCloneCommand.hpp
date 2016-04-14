@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class CloneCommand: public ScriptCommand
+    class OBJCXX_EXPORT CloneCommand: public ScriptCommand
     {
         public:
             

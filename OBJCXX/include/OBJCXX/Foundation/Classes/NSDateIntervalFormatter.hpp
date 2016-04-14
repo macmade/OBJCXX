@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class DateIntervalFormatter: public Formatter
+    class OBJCXX_EXPORT DateIntervalFormatter: public Formatter
     {
         public:
             

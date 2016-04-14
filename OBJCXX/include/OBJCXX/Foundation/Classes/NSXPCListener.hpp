@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class XPCListener: public Object
+    class OBJCXX_EXPORT XPCListener: public Object
     {
         public:
             

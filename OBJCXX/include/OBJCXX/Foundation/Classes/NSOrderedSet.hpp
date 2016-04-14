@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class OrderedSet: public Object
+    class OBJCXX_EXPORT OrderedSet: public Object
     {
         public:
             

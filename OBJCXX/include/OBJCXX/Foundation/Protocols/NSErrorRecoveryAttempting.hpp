@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class ErrorRecoveryAttempting
+        class OBJCXX_EXPORT ErrorRecoveryAttempting
         {};
     }
 }

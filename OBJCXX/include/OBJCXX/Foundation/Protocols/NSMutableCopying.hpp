@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class MutableCopying
+        class OBJCXX_EXPORT MutableCopying
         {};
     }
 }

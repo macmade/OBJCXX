@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class PersonNameComponents: public Object
+    class OBJCXX_EXPORT PersonNameComponents: public Object
     {
         public:
             

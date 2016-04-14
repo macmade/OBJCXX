@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class DecimalNumberBehaviors
+        class OBJCXX_EXPORT DecimalNumberBehaviors
         {};
     }
 }

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Predicate: public Object
+    class OBJCXX_EXPORT Predicate: public Object
     {
         public:
             

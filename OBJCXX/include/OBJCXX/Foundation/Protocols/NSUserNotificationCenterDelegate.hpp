@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class UserNotificationCenterDelegate
+        class OBJCXX_EXPORT UserNotificationCenterDelegate
         {};
     }
 }

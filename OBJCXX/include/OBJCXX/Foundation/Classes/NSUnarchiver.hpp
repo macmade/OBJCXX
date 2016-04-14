@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Unarchiver: public Coder
+    class OBJCXX_EXPORT Unarchiver: public Coder
     {
         public:
             

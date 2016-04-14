@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Orthography: public Object
+    class OBJCXX_EXPORT Orthography: public Object
     {
         public:
             

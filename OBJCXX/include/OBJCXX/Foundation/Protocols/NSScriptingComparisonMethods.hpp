@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class ScriptingComparisonMethods
+        class OBJCXX_EXPORT ScriptingComparisonMethods
         {};
     }
 }

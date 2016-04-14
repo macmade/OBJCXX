@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class DirectoryEnumerator: public Enumerator
+    class OBJCXX_EXPORT DirectoryEnumerator: public Enumerator
     {
         public:
             

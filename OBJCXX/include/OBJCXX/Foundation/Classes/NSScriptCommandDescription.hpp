@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ScriptCommandDescription: public Object
+    class OBJCXX_EXPORT ScriptCommandDescription: public Object
     {
         public:
             

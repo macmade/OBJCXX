@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class DeleteCommand: public ScriptCommand
+    class OBJCXX_EXPORT DeleteCommand: public ScriptCommand
     {
         public:
             

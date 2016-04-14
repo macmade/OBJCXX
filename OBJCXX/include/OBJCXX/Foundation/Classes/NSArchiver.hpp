@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Archiver: public Coder
+    class OBJCXX_EXPORT Archiver: public Coder
     {
         public:
             

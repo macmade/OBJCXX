@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Dictionary: public Object
+    class OBJCXX_EXPORT Dictionary: public Object
     {
         public:
             

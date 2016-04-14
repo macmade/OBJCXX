@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Exception: public Object
+    class OBJCXX_EXPORT Exception: public Object
     {
         public:
             

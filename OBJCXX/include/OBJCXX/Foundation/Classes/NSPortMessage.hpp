@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class PortMessage: public Object
+    class OBJCXX_EXPORT PortMessage: public Object
     {
         public:
             

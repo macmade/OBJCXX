@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class NotificationQueue: public Object
+    class OBJCXX_EXPORT NotificationQueue: public Object
     {
         public:
             

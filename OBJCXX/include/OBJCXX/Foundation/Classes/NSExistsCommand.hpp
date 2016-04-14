@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class ExistsCommand: public ScriptCommand
+    class OBJCXX_EXPORT ExistsCommand: public ScriptCommand
     {
         public:
             

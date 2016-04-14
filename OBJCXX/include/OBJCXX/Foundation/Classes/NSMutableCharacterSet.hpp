@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MutableCharacterSet: public CharacterSet
+    class OBJCXX_EXPORT MutableCharacterSet: public CharacterSet
     {
         public:
             

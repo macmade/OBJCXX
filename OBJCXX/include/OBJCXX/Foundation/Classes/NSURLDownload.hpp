@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URLDownload: public Object
+    class OBJCXX_EXPORT URLDownload: public Object
     {
         public:
             

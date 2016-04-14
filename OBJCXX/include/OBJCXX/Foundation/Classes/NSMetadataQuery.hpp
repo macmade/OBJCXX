@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MetadataQuery: public Object
+    class OBJCXX_EXPORT MetadataQuery: public Object
     {
         public:
             

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class CachedURLResponse: public Object
+    class OBJCXX_EXPORT CachedURLResponse: public Object
     {
         public:
             

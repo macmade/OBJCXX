@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class SpellServer: public Object
+    class OBJCXX_EXPORT SpellServer: public Object
     {
         public:
             

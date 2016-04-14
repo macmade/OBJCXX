@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Cache: public Object
+    class OBJCXX_EXPORT Cache: public Object
     {
         public:
             

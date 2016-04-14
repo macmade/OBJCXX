@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class FileSecurity: public Object
+    class OBJCXX_EXPORT FileSecurity: public Object
     {
         public:
             

@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class XPCProxyCreating
+        class OBJCXX_EXPORT XPCProxyCreating
         {};
     }
 }

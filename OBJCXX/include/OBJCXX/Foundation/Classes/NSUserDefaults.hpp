@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class UserDefaults: public Object
+    class OBJCXX_EXPORT UserDefaults: public Object
     {
         public:
             

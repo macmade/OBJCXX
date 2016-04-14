@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Notification: public Object
+    class OBJCXX_EXPORT Notification: public Object
     {
         public:
             

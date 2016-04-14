@@ -30,14 +30,33 @@
 #ifndef OBJCXX_RT_H
 #define OBJCXX_RT_H
 
+/*
+ * Disable warnings about class members not having DLL-interface.
+ * Eg: std::shared_ptr
+ */
+#ifdef _WIN32
+    #pragma warning( push )
+    #pragma warning( disable: 4251 )
+#endif
+
+#ifdef _WIN32
+    #ifdef OBJCXX_DLL_BUILD
+        #define OBJCXX_EXPORT __declspec( dllexport )
+    #else
+        #define OBJCXX_EXPORT __declspec( dllimport )
+    #endif
+#else
+        #define OBJCXX_EXPORT     
+#endif
+
+#ifdef WIN32
+    #define OBJCXX_EXTERN __declspec( dllimport )
+#else
+    #define OBJCXX_EXTERN extern
+#endif
+
 extern "C"
 {
-    #ifdef WIN32
-    #define OBJCXX_EXTERN __declspec( dllimport )
-    #else
-    #define OBJCXX_EXTERN extern
-    #endif
-
     typedef struct objc_class    * Class;
     typedef struct objc_object   * id;
     typedef struct objc_selector * SEL;

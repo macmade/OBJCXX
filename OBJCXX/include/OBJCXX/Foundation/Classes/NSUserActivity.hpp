@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class UserActivity: public Object
+    class OBJCXX_EXPORT UserActivity: public Object
     {
         public:
             

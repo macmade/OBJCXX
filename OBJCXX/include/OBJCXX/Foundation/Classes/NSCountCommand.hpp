@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class CountCommand: public ScriptCommand
+    class OBJCXX_EXPORT CountCommand: public ScriptCommand
     {
         public:
             

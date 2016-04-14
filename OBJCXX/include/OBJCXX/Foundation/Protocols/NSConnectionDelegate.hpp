@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class ConnectionDelegate
+        class OBJCXX_EXPORT ConnectionDelegate
         {};
     }
 }

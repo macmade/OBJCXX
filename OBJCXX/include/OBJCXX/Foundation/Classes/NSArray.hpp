@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Array: public Object
+    class OBJCXX_EXPORT Array: public Object
     {
         public:
             

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class RegularExpression: public Object
+    class OBJCXX_EXPORT RegularExpression: public Object
     {
         public:
             

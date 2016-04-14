@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class TimeZone: public Object
+    class OBJCXX_EXPORT TimeZone: public Object
     {
         public:
             

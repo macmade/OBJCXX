@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class Copying
+        class OBJCXX_EXPORT Copying
         {};
     }
 }

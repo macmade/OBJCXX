@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class DistributedLock: public Object
+    class OBJCXX_EXPORT DistributedLock: public Object
     {
         public:
             

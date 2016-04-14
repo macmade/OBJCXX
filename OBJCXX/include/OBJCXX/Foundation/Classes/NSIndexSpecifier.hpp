@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class IndexSpecifier: public ScriptObjectSpecifier
+    class OBJCXX_EXPORT IndexSpecifier: public ScriptObjectSpecifier
     {
         public:
             

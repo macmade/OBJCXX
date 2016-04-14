@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URLHandle: public Object
+    class OBJCXX_EXPORT URLHandle: public Object
     {
         public:
             

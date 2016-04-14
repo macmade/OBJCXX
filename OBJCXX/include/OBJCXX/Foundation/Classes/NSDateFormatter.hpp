@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class DateFormatter: public Formatter
+    class OBJCXX_EXPORT DateFormatter: public Formatter
     {
         public:
             

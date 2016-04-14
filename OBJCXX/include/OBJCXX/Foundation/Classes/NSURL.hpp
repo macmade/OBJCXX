@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URL: public Object
+    class OBJCXX_EXPORT URL: public Object
     {
         public:
             

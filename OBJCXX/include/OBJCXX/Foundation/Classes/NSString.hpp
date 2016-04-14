@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class String: public Object
+    class OBJCXX_EXPORT String: public Object
     {
         public:
             

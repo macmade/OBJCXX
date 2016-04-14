@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class FastEnumeration
+        class OBJCXX_EXPORT FastEnumeration
         {};
     }
 }

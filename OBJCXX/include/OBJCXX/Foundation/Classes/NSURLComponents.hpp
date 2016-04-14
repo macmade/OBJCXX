@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URLComponents: public Object
+    class OBJCXX_EXPORT URLComponents: public Object
     {
         public:
             

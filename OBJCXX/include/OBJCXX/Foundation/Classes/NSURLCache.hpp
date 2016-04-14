@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URLCache: public Object
+    class OBJCXX_EXPORT URLCache: public Object
     {
         public:
             

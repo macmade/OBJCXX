@@ -38,7 +38,7 @@
 
 namespace NS
 {
-    class FileManager: public Object
+    class OBJCXX_EXPORT FileManager: public Object
     {
         public:
             

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class AssertionHandler: public Object
+    class OBJCXX_EXPORT AssertionHandler: public Object
     {
         public:
             

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class NetServiceBrowser: public Object
+    class OBJCXX_EXPORT NetServiceBrowser: public Object
     {
         public:
             

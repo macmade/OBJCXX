@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MessagePortNameServer: public PortNameServer
+    class OBJCXX_EXPORT MessagePortNameServer: public PortNameServer
     {
         public:
             

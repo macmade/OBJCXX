@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MutableData: public Data
+    class OBJCXX_EXPORT MutableData: public Data
     {
         public:
             

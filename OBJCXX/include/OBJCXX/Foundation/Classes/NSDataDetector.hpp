@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class DataDetector: public RegularExpression
+    class OBJCXX_EXPORT DataDetector: public RegularExpression
     {
         public:
             

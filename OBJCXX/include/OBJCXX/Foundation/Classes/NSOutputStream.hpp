@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class OutputStream: public Stream
+    class OBJCXX_EXPORT OutputStream: public Stream
     {
         public:
             

@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class HTTPURLResponse: public URLResponse
+    class OBJCXX_EXPORT HTTPURLResponse: public URLResponse
     {
         public:
             

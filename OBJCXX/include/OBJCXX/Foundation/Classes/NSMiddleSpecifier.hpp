@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MiddleSpecifier: public ScriptObjectSpecifier
+    class OBJCXX_EXPORT MiddleSpecifier: public ScriptObjectSpecifier
     {
         public:
             

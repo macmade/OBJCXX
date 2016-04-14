@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class FileWrapper: public Object
+    class OBJCXX_EXPORT FileWrapper: public Object
     {
         public:
             

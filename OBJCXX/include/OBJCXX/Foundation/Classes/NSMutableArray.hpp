@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MutableArray: public Array
+    class OBJCXX_EXPORT MutableArray: public Array
     {
         public:
             

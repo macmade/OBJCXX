@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Condition: public Object
+    class OBJCXX_EXPORT Condition: public Object
     {
         public:
             

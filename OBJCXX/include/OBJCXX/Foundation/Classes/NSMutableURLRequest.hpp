@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class MutableURLRequest: public URLRequest
+    class OBJCXX_EXPORT MutableURLRequest: public URLRequest
     {
         public:
             

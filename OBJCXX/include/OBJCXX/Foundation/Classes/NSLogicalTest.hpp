@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class LogicalTest: public ScriptWhoseTest
+    class OBJCXX_EXPORT LogicalTest: public ScriptWhoseTest
     {
         public:
             

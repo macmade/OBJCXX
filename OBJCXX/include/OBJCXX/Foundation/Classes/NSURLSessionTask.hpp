@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class URLSessionTask: public Object
+    class OBJCXX_EXPORT URLSessionTask: public Object
     {
         public:
             

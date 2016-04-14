@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class HTTPCookieStorage: public Object
+    class OBJCXX_EXPORT HTTPCookieStorage: public Object
     {
         public:
             

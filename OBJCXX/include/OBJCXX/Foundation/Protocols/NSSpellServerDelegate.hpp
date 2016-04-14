@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class SpellServerDelegate
+        class OBJCXX_EXPORT SpellServerDelegate
         {};
     }
 }

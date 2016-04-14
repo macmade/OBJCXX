@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class SortDescriptor: public Object
+    class OBJCXX_EXPORT SortDescriptor: public Object
     {
         public:
             

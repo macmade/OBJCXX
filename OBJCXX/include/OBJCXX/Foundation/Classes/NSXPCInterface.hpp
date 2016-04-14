@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class XPCInterface: public Object
+    class OBJCXX_EXPORT XPCInterface: public Object
     {
         public:
             

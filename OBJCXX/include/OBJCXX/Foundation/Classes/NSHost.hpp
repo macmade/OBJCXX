@@ -34,7 +34,7 @@
 
 namespace NS
 {
-    class Host: public Object
+    class OBJCXX_EXPORT Host: public Object
     {
         public:
             

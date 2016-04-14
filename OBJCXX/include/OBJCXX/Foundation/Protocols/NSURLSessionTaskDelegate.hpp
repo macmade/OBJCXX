@@ -34,7 +34,7 @@ namespace NS
 {
     namespace Protocols
     {
-        class URLSessionTaskDelegate
+        class OBJCXX_EXPORT URLSessionTaskDelegate
         {};
     }
 }
