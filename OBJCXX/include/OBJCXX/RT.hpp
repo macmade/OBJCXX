@@ -120,7 +120,14 @@ namespace OBJCXX
         {
             public:
                 
-                using MessageBase::MessageBase;
+                Message( id object, const std::string & selector ): MessageBase( object, selector )
+                {}
+                
+                Message( Class cls, const std::string & selector ): MessageBase( cls, selector )
+                {}
+                
+                Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
+                {}
                    
                 template< typename ... A >
                 _T_ send( A ... args )
@@ -134,7 +141,14 @@ namespace OBJCXX
         {
             public:
                 
-                using MessageBase::MessageBase;
+                Message( id object, const std::string & selector ): MessageBase( object, selector )
+                {}
+                
+                Message( Class cls, const std::string & selector ): MessageBase( cls, selector )
+                {}
+                
+                Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
+                {}
                    
                 template< typename ... A >
                 void send( A ... args )
@@ -148,7 +162,14 @@ namespace OBJCXX
         {
             public:
                 
-                using MessageBase::MessageBase;
+                Message( id object, const std::string & selector ): MessageBase( object, selector )
+                {}
+                
+                Message( Class cls, const std::string & selector ): MessageBase( cls, selector )
+                {}
+                
+                Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
+                {}
                    
                 template< typename ... A >
                 _T_ send( A ... args )
@@ -162,7 +183,14 @@ namespace OBJCXX
         {
             public:
                 
-                using MessageBase::MessageBase;
+                Message( id object, const std::string & selector ): MessageBase( object, selector )
+                {}
+                
+                Message( Class cls, const std::string & selector ): MessageBase( cls, selector )
+                {}
+                
+                Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
+                {}
                    
                 template< typename ... A >
                 _T_ send( A ... args )
