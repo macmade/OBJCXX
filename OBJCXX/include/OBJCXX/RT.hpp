@@ -70,6 +70,7 @@ extern "C"
     OBJCXX_EXTERN const char *  class_getName( Class object );
 }
 
+#include <type_traits>
 #include <string>
 #include <XS/PIMPL/Object.hpp>
 
@@ -92,7 +93,7 @@ namespace OBJCXX
             return *( reinterpret_cast< _R_ * >( &p ) );
         }
         
-        class MessageBase: XS::PIMPL::Object< MessageBase >
+        class OBJCXX_EXPORT MessageBase: public XS::PIMPL::Object< MessageBase >
         {
             public:
                 
@@ -107,24 +108,15 @@ namespace OBJCXX
         };
         
         template< typename _T_, class _E_ = void >
-        class Message: MessageBase
-        {
-            private:
-                
-                Message( void )                             = delete;
-                Message( const Message & )                  = delete;
-                Message( Message && )                       = delete;
-                Message & operator =( const Message & )     = delete;
-                Message & operator =( const Message && )    = delete;
-        };
+        class Message;
         
         template< class _U_ > struct IsVoidReturnType:   public std::integral_constant< bool, std::is_void< _U_ >::value > {};
-        template< class _U_ > struct IsStructReturnType: public std::integral_constant< bool, std::is_floating_point< _U_ >::value > {};
-        template< class _U_ > struct IsFloatReturnType:  public std::integral_constant< bool, std::is_class< _U_ >::value > {};
+        template< class _U_ > struct IsFloatReturnType:  public std::integral_constant< bool, std::is_floating_point< _U_ >::value > {};
+        template< class _U_ > struct IsStructReturnType: public std::integral_constant< bool, std::is_class< _U_ >::value > {};
         template< class _U_ > struct IsSimpleReturnType: public std::integral_constant< bool, !IsVoidReturnType< _U_ >::value && !IsStructReturnType< _U_ >::value && !IsFloatReturnType< _U_ >::value > {};
         
         template< typename _T_ >
-        class Message< _T_, typename std::enable_if< IsSimpleReturnType< _T_ >::value >::type >: public MessageBase
+        class OBJCXX_EXPORT Message< _T_, typename std::enable_if< IsSimpleReturnType< _T_ >::value >::type >: public MessageBase
         {
             public:
                 
@@ -138,7 +130,7 @@ namespace OBJCXX
         };
         
         template< typename _T_ >
-        class Message< _T_, typename std::enable_if< IsVoidReturnType< _T_ >::value >::type >: public MessageBase
+        class OBJCXX_EXPORT Message< _T_, typename std::enable_if< IsVoidReturnType< _T_ >::value >::type >: public MessageBase
         {
             public:
                 
@@ -152,7 +144,7 @@ namespace OBJCXX
         };
         
         template< typename _T_ >
-        class Message< _T_, typename std::enable_if< IsFloatReturnType< _T_ >::value >::type >: public MessageBase
+        class OBJCXX_EXPORT Message< _T_, typename std::enable_if< IsFloatReturnType< _T_ >::value >::type >: public MessageBase
         {
             public:
                 
@@ -166,7 +158,7 @@ namespace OBJCXX
         };
         
         template< typename _T_ >
-        class Message< _T_, typename std::enable_if< IsStructReturnType< _T_ >::value >::type >: public MessageBase
+        class OBJCXX_EXPORT Message< _T_, typename std::enable_if< IsStructReturnType< _T_ >::value >::type >: public MessageBase
         {
             public:
                 

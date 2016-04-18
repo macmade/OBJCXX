@@ -40,7 +40,7 @@
 
 namespace OBJCXX
 {
-    class Object: XS::PIMPL::Object< Object >, NS::Protocols::Object
+    class OBJCXX_EXPORT Object: public XS::PIMPL::Object< Object >, public NS::Protocols::Object
     {
         public:
             
