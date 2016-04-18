@@ -73,9 +73,11 @@ namespace OBJCXX
     Object::Object( id object ): XS::PIMPL::Object< Object >( object ), NS::Protocols::Object()
     {}
     
-    Object::Object( const Object & o ) = default;
+    Object::Object( const Object & o ): XS::PIMPL::Object< Object >( std::forward< const XS::PIMPL::Object< OBJCXX::Object > & >( o ) ), NS::Protocols::Object()
+    {}
     
-    Object::Object( Object && o ) = default;
+    Object::Object( Object && o ): XS::PIMPL::Object< Object >( std::forward< const XS::PIMPL::Object< OBJCXX::Object > && >( o ) ), NS::Protocols::Object()
+    {}
     
     Object & Object::operator =( Object o )
     {
