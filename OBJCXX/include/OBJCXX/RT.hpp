@@ -129,8 +129,8 @@ namespace OBJCXX
                 Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
                 {}
                    
-                template< typename ... A >
-                _T_ send( A ... args )
+                template< typename ... _A_ >
+                _T_ send( _A_ ... args )
                 {
                     return UnsafeCast< id, _T_ >( objc_msgSend( this->object(), this->selector(), args ... ) );
                 }
@@ -150,8 +150,8 @@ namespace OBJCXX
                 Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
                 {}
                    
-                template< typename ... A >
-                void send( A ... args )
+                template< typename ... _A_ >
+                void send( _A_ ... args )
                 {
                     objc_msgSend( this->object(), this->selector(), args ... );
                 }
@@ -171,8 +171,8 @@ namespace OBJCXX
                 Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
                 {}
                    
-                template< typename ... A >
-                _T_ send( A ... args )
+                template< typename ... _A_ >
+                _T_ send( _A_ ... args )
                 {
                     return static_cast< _T_ >( objc_msgSend_fpret( this->object(), this->selector(), args ... ) );
                 }
@@ -192,10 +192,10 @@ namespace OBJCXX
                 Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
                 {}
                    
-                template< typename ... A >
-                _T_ send( A ... args )
+                template< typename ... _A_ >
+                _T_ send( _A_ ... args )
                 {
-                    _T_ s;
+                    _T_ s {};
                     
                     static_cast< _T_ >( objc_msgSend_stret( &s, this->object(), this->selector(), args ... ) );
                     
