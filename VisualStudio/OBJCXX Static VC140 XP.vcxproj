@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\OBJCXX\include\OBJCXX.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAffineTransform.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAppleEventDescriptor.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAppleEventManager.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAppleScript.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSArchiver.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSArray.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAssertionHandler.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAttributedString.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAutoreleasePool.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSBackgroundActivityScheduler.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSBlockOperation.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSBundle.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSByteCountFormatter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCache.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCachedURLResponse.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCalendar.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCalendarDate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCharacterSet.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSClassDescription.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCloneCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCloseCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCoder.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSComparisonPredicate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCompoundPredicate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCondition.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSConditionLock.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSConnection.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCountCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCountedSet.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSCreateCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSData.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDataDetector.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDateComponents.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDateComponentsFormatter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDateFormatter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDateIntervalFormatter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDecimalNumber.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDecimalNumberHandler.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDeleteCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDictionary.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDirectoryEnumerator.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDistantObject.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDistantObjectRequest.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDistributedLock.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSDistributedNotificationCenter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSEnergyFormatter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSEnumerator.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSError.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSException.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSExistsCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSExpression.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSExtensionContext.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSExtensionItem.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSFileAccessIntent.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSFileCoordinator.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSFileHandle.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSFileManager.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSFileSecurity.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSFileVersion.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSFileWrapper.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSFormatter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSGarbageCollector.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSGetCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSHashTable.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSHost.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSHTTPCookie.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSHTTPCookieStorage.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSHTTPURLResponse.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSIndexPath.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSIndexSet.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSIndexSpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSInputStream.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSInvocation.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSInvocationOperation.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSItemProvider.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSJSONSerialization.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSKeyedArchiver.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSKeyedUnarchiver.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSLengthFormatter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSLinguisticTagger.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSLocale.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSLock.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSLogicalTest.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMachBootstrapServer.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMachPort.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMapTable.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMassFormatter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMessagePort.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMessagePortNameServer.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMetadataItem.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMetadataQuery.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMetadataQueryAttributeValueTuple.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMetadataQueryResultGroup.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMethodSignature.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMiddleSpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMoveCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMutableArray.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMutableAttributedString.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMutableCharacterSet.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMutableData.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMutableDictionary.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMutableIndexSet.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMutableOrderedSet.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMutableSet.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMutableString.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSMutableURLRequest.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSNameSpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSNetService.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSNetServiceBrowser.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSNotification.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSNotificationCenter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSNotificationQueue.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSNull.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSNumber.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSNumberFormatter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSObject.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSOperation.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSOperationQueue.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSOrderedSet.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSOrthography.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSOutputStream.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPersonNameComponents.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPersonNameComponentsFormatter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPipe.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPointerArray.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPointerFunctions.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPort.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPortCoder.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPortMessage.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPortNameServer.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPositionalSpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPredicate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSProcessInfo.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSProgress.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPropertyListSerialization.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPropertySpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSProtocolChecker.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSProxy.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSPurgeableData.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSQuitCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSRandomSpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSRangeSpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSRecursiveLock.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSRegularExpression.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSRelativeSpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSRunLoop.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSScanner.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSScriptClassDescription.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSScriptCoercionHandler.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSScriptCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSScriptCommandDescription.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSScriptExecutionContext.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSScriptObjectSpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSScriptSuiteRegistry.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSScriptWhoseTest.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSSet.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSSetCommand.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSSocketPort.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSSocketPortNameServer.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSSortDescriptor.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSSpecifierTest.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSSpellServer.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSStream.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSString.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSTask.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSTextCheckingResult.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSThread.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSTimer.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSTimeZone.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUbiquitousKeyValueStore.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUnarchiver.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUndoManager.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUniqueIDSpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURL.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLAuthenticationChallenge.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLCache.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLComponents.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLConnection.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLCredential.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLCredentialStorage.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLDownload.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLHandle.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLProtectionSpace.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLProtocol.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLQueryItem.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLRequest.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLResponse.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLSession.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLSessionConfiguration.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLSessionDataTask.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLSessionDownloadTask.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLSessionStreamTask.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLSessionTask.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSURLSessionUploadTask.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUserActivity.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUserAppleScriptTask.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUserAutomatorTask.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUserDefaults.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUserNotification.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUserNotificationAction.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUserNotificationCenter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUserScriptTask.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUserUnixTask.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSUUID.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSValue.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSValueTransformer.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSWhoseSpecifier.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSXMLDocument.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSXMLDTD.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSXMLDTDNode.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSXMLElement.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSXMLNode.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSXMLParser.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSXPCConnection.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSXPCInterface.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSXPCListener.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSXPCListenerEndpoint.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Functions.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSCacheDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSCoding.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSComparisonMethods.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSConnectionDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSCopying.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSDecimalNumberBehaviors.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSDiscardableContent.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSErrorRecoveryAttempting.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSExtensionRequestHandling.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSFastEnumeration.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSFileManagerDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSFilePresenter.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSKeyedArchiverDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSKeyedUnarchiverDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSKeyValueCoding.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSKeyValueObserving.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSLocking.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSMachPortDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSMetadataQueryDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSMutableCopying.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSNetServiceBrowserDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSNetServiceDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSObject.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSPortDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSProgressReporting.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSScriptingComparisonMethods.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSScriptKeyValueCoding.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSScriptObjectSpecifiers.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSSecureCoding.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSSpellServerDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSStreamDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLAuthenticationChallengeSender.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLConnectionDataDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLConnectionDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLConnectionDownloadDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLDownloadDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLHandleClient.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLProtocolClient.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLSessionDataDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLSessionDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLSessionDownloadDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLSessionStreamDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSURLSessionTaskDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSUserActivityDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSUserNotificationCenterDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSXMLParserDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSXPCListenerDelegate.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSXPCProxyCreating.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Types.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\Object.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\RT.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAffineTransform.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAppleEventDescriptor.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAppleEventManager.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAppleScript.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSArchiver.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSArray.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAssertionHandler.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAttributedString.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAutoreleasePool.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSBackgroundActivityScheduler.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSBlockOperation.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSBundle.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSByteCountFormatter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCache.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCachedURLResponse.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCalendar.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCalendarDate.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCharacterSet.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSClassDescription.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCloneCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCloseCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCoder.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSComparisonPredicate.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCompoundPredicate.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCondition.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSConditionLock.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSConnection.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCountCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCountedSet.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSCreateCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSData.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDataDetector.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDate.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDateComponents.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDateComponentsFormatter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDateFormatter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDateIntervalFormatter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDecimalNumber.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDecimalNumberHandler.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDeleteCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDictionary.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDirectoryEnumerator.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDistantObject.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDistantObjectRequest.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDistributedLock.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSDistributedNotificationCenter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSEnergyFormatter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSEnumerator.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSError.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSException.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSExistsCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSExpression.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSExtensionContext.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSExtensionItem.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSFileAccessIntent.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSFileCoordinator.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSFileHandle.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSFileManager.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSFileSecurity.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSFileVersion.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSFileWrapper.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSFormatter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSGarbageCollector.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSGetCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSHashTable.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSHost.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSHTTPCookie.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSHTTPCookieStorage.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSHTTPURLResponse.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSIndexPath.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSIndexSet.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSIndexSpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSInputStream.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSInvocation.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSInvocationOperation.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSItemProvider.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSJSONSerialization.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSKeyedArchiver.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSKeyedUnarchiver.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSLengthFormatter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSLinguisticTagger.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSLocale.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSLock.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSLogicalTest.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMachBootstrapServer.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMachPort.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMapTable.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMassFormatter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMessagePort.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMessagePortNameServer.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMetadataItem.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMetadataQuery.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMetadataQueryAttributeValueTuple.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMetadataQueryResultGroup.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMethodSignature.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMiddleSpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMoveCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMutableArray.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMutableAttributedString.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMutableCharacterSet.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMutableData.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMutableDictionary.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMutableIndexSet.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMutableOrderedSet.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMutableSet.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMutableString.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSMutableURLRequest.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSNameSpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSNetService.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSNetServiceBrowser.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSNotification.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSNotificationCenter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSNotificationQueue.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSNull.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSNumber.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSNumberFormatter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSObject.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSOperation.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSOperationQueue.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSOrderedSet.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSOrthography.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSOutputStream.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPersonNameComponents.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPersonNameComponentsFormatter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPipe.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPointerArray.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPointerFunctions.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPort.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPortCoder.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPortMessage.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPortNameServer.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPositionalSpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPredicate.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSProcessInfo.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSProgress.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPropertyListSerialization.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPropertySpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSProtocolChecker.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSProxy.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSPurgeableData.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSQuitCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSRandomSpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSRangeSpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSRecursiveLock.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSRegularExpression.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSRelativeSpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSRunLoop.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSScanner.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSScriptClassDescription.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSScriptCoercionHandler.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSScriptCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSScriptCommandDescription.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSScriptExecutionContext.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSScriptObjectSpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSScriptSuiteRegistry.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSScriptWhoseTest.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSSet.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSSetCommand.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSSocketPort.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSSocketPortNameServer.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSSortDescriptor.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSSpecifierTest.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSSpellServer.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSStream.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSString.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSTask.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSTextCheckingResult.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSThread.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSTimer.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSTimeZone.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUbiquitousKeyValueStore.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUnarchiver.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUndoManager.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUniqueIDSpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURL.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLAuthenticationChallenge.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLCache.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLComponents.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLConnection.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLCredential.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLCredentialStorage.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLDownload.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLHandle.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLProtectionSpace.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLProtocol.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLQueryItem.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLRequest.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLResponse.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLSession.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLSessionConfiguration.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLSessionDataTask.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLSessionDownloadTask.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLSessionStreamTask.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLSessionTask.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSURLSessionUploadTask.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUserActivity.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUserAppleScriptTask.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUserAutomatorTask.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUserDefaults.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUserNotification.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUserNotificationAction.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUserNotificationCenter.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUserScriptTask.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUserUnixTask.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSUUID.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSValue.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSValueTransformer.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSWhoseSpecifier.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXMLDocument.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXMLDTD.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXMLDTDNode.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXMLElement.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXMLNode.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXMLParser.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXPCConnection.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXPCInterface.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXPCListenerEndpoint.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Foundation\Functions.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Object.cpp" />
+    <ClCompile Include="..\OBJCXX\source\RT.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CD8F16DB-7A6D-4968-AD40-10214184B501}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CF</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>OBJCXX Static VC140 XP</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir)Build\32\$(Configuration)\Temp\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)Build\32\$(Configuration)\</OutDir>
+    <TargetName>OBJCXX_Static_V140XP</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Build\64\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\64\$(Configuration)\Temp\$(ProjectName)\</IntDir>
+    <TargetName>OBJCXX_Static_V140XP</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir)Build\32\$(Configuration)\Temp\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)Build\32\$(Configuration)\</OutDir>
+    <TargetName>OBJCXX_Static_V140XP</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\64\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\64\$(Configuration)\Temp\$(ProjectName)\</IntDir>
+    <TargetName>OBJCXX_Static_V140XP</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;XS_PIMPL_EXPORTS;OBJCXX_DLL_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;..\Submodules\PIMPL\PIMPL\include;..\OBJCXX\include;..\Apple\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;XS_PIMPL_EXPORTS;OBJCXX_DLL_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;..\Submodules\PIMPL\PIMPL\include;..\OBJCXX\include;..\Apple\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;XS_PIMPL_EXPORTS;OBJCXX_DLL_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;..\Submodules\PIMPL\PIMPL\include;..\OBJCXX\include;..\Apple\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;XS_PIMPL_EXPORTS;OBJCXX_DLL_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;..\Submodules\PIMPL\PIMPL\include;..\OBJCXX\include;..\Apple\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
