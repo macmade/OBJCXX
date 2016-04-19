@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Coder::Coder;
+            OBJCXX_USING_BASE( KeyedUnarchiver, Coder )
             
             KeyedUnarchiver( void );
     };

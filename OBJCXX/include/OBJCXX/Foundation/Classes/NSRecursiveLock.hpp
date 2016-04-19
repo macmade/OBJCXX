@@ -41,7 +41,7 @@ namespace NS
     {
         public:
             
-            using Object::Object;
+            OBJCXX_USING_BASE( RecursiveLock, Object )
             
             RecursiveLock( void );
             

@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using XMLNode::XMLNode;
+            OBJCXX_USING_BASE( XMLDTDNode, XMLNode )
             
             XMLDTDNode( void );
     };

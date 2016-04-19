@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Array::Array;
+            OBJCXX_USING_BASE( MutableArray, Array )
             
             MutableArray( void );
             

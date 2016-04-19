@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using MutableSet::MutableSet;
+            OBJCXX_USING_BASE( CountedSet, MutableSet )
             
             CountedSet( void );
     };

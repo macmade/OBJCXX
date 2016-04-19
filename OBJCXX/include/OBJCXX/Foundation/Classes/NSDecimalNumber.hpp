@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Number::Number;
+            OBJCXX_USING_BASE( DecimalNumber, Number )
             
             DecimalNumber( void );
     };

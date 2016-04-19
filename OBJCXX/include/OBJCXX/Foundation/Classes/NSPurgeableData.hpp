@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using MutableData::MutableData;
+            OBJCXX_USING_BASE( PurgeableData, MutableData )
             
             PurgeableData( void );
     };

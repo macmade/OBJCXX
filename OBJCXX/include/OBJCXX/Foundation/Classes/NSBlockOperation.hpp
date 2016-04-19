@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Operation::Operation;
+            OBJCXX_USING_BASE( BlockOperation, Operation )
             
             BlockOperation( void );
     };

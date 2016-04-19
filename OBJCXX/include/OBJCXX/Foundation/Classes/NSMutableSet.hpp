@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Set::Set;
+            OBJCXX_USING_BASE( MutableSet, Set )
             
             MutableSet( void );
     };

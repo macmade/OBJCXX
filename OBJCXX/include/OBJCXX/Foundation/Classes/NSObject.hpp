@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using OBJCXX::Object::Object;
+            OBJCXX_USING_BASE( Object, OBJCXX::Object )
             
             Object( void );
     };

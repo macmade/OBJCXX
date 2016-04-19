@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using URLRequest::URLRequest;
+            OBJCXX_USING_BASE( MutableURLRequest, URLRequest )
             
             MutableURLRequest( void );
     };

@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using PortNameServer::PortNameServer;
+            OBJCXX_USING_BASE( MessagePortNameServer, PortNameServer )
             
             MessagePortNameServer( void );
     };

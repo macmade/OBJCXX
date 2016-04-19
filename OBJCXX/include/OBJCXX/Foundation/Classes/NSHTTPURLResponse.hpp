@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using URLResponse::URLResponse;
+            OBJCXX_USING_BASE( HTTPURLResponse, URLResponse )
             
             HTTPURLResponse( void );
     };

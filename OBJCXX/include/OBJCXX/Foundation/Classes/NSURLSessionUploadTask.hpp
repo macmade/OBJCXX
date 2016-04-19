@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using URLSessionDataTask::URLSessionDataTask;
+            OBJCXX_USING_BASE( URLSessionUploadTask, URLSessionDataTask )
             
             URLSessionUploadTask( void );
     };

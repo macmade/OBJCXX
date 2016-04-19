@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using IndexSet::IndexSet;
+            OBJCXX_USING_BASE( MutableIndexSet, IndexSet )
             
             MutableIndexSet( void );
     };

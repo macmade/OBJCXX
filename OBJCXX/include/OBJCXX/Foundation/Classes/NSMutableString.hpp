@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using String::String;
+            OBJCXX_USING_BASE( MutableString, String )
             
             MutableString( void );
     };

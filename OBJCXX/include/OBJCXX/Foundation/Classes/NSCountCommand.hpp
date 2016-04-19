@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using ScriptCommand::ScriptCommand;
+            OBJCXX_USING_BASE( CountCommand, ScriptCommand )
             
             CountCommand( void );
     };

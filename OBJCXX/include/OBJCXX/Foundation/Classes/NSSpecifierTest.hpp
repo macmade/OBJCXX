@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using ScriptWhoseTest::ScriptWhoseTest;
+            OBJCXX_USING_BASE( SpecifierTest, ScriptWhoseTest )
             
             SpecifierTest( void );
     };

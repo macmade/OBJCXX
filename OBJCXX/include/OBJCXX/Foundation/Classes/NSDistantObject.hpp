@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Proxy::Proxy;
+            OBJCXX_USING_BASE( DistantObject, Proxy )
             
             DistantObject( void );
     };

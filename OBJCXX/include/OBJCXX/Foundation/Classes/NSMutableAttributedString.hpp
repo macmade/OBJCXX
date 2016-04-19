@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using AttributedString::AttributedString;
+            OBJCXX_USING_BASE( MutableAttributedString, AttributedString )
             
             MutableAttributedString( void );
     };

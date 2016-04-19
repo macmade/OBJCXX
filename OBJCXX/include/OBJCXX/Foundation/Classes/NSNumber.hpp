@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Value::Value;
+            OBJCXX_USING_BASE( Number, Value )
             
             Number( void );
     };

@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Port::Port;
+            OBJCXX_USING_BASE( MachPort, Port )
             
             MachPort( void );
     };

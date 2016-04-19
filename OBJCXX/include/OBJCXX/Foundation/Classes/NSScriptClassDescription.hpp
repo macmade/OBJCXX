@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using ClassDescription::ClassDescription;
+            OBJCXX_USING_BASE( ScriptClassDescription, ClassDescription )
             
             ScriptClassDescription( void );
     };

@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Enumerator::Enumerator;
+            OBJCXX_USING_BASE( DirectoryEnumerator, Enumerator )
             
             DirectoryEnumerator( void );
     };

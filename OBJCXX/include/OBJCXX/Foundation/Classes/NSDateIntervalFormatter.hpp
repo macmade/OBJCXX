@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Formatter::Formatter;
+            OBJCXX_USING_BASE( DateIntervalFormatter, Formatter )
             
             DateIntervalFormatter( void );
     };

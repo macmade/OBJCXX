@@ -38,6 +38,34 @@
 #include <OBJCXX/Foundation/Protocols/NSObject.hpp>
 #include <XS/PIMPL/Object.hpp>
 
+/* Can't inherit constructors with VisualStudio / V120 */
+#define OBJCXX_USING_BASE( _class_, _base_ )                                                                \
+                                                                                                            \
+    _class_( const std::string & className ): _base_( className )                                           \
+    {}                                                                                                      \
+                                                                                                            \
+    _class_( const std::string & className, std::function< id( void ) > init ): _base_( className, init )   \
+    {}                                                                                                      \
+                                                                                                            \
+    _class_( id object ): _base_( object )                                                                  \
+    {}                                                                                                      \
+                                                                                                            \
+    _class_( const _class_ & o ): _base_( std::forward< const _class_ & >( o ) )                            \
+    {}                                                                                                      \
+                                                                                                            \
+    _class_( _class_ && o ): _base_( std::forward< _class_ && >( o ) )                                      \
+    {}                                                                                                      \
+                                                                                                            \
+    ~_class_( void )                                                                                        \
+    {}                                                                                                      \
+                                                                                                            \
+    _class_ & operator =( _class_ o )                                                                       \
+    {                                                                                                       \
+       _base_::operator=( o );                                                                              \
+                                                                                                            \
+       return *( this );                                                                                    \
+    }
+
 namespace OBJCXX
 {
     class OBJCXX_EXPORT Object: public XS::PIMPL::Object< Object >, public NS::Protocols::Object
@@ -51,6 +79,8 @@ namespace OBJCXX
             Object( id object );
             Object( const Object & o );
             Object( Object && o );
+            
+            ~Object( void );
             
             Object & operator =( Object o );
             

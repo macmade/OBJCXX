@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using OrderedSet::OrderedSet;
+            OBJCXX_USING_BASE( MutableOrderedSet, OrderedSet )
             
             MutableOrderedSet( void );
     };

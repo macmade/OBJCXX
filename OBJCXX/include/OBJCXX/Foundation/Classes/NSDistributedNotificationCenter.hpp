@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using NotificationCenter::NotificationCenter;
+            OBJCXX_USING_BASE( DistributedNotificationCenter, NotificationCenter )
             
             DistributedNotificationCenter( void );
     };

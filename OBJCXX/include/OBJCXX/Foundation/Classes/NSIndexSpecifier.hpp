@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using ScriptObjectSpecifier::ScriptObjectSpecifier;
+            OBJCXX_USING_BASE( IndexSpecifier, ScriptObjectSpecifier )
             
             IndexSpecifier( void );
     };

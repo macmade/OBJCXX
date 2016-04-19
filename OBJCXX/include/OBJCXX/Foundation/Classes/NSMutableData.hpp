@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Data::Data;
+            OBJCXX_USING_BASE( MutableData, Data )
             
             MutableData( void );
     };

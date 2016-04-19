@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Stream::Stream;
+            OBJCXX_USING_BASE( InputStream, Stream )
             
             InputStream( void );
     };

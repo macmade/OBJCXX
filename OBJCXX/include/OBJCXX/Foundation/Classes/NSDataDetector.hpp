@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using RegularExpression::RegularExpression;
+            OBJCXX_USING_BASE( DataDetector, RegularExpression )
             
             DataDetector( void );
     };

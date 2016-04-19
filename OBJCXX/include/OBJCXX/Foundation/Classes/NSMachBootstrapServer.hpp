@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using PortNameServer::PortNameServer;
+            OBJCXX_USING_BASE( MachBootstrapServer, PortNameServer )
             
             MachBootstrapServer( void );
     };

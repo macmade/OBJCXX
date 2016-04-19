@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Dictionary::Dictionary;
+            OBJCXX_USING_BASE( MutableDictionary, Dictionary )
             
             MutableDictionary( void );
             

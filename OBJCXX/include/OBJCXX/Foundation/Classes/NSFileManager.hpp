@@ -42,7 +42,7 @@ namespace NS
     {
         public:
             
-            using Object::Object;
+            OBJCXX_USING_BASE( FileManager, Object )
             
             static FileManager defaultManager( void );
             

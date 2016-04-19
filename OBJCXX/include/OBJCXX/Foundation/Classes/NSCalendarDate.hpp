@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Date::Date;
+            OBJCXX_USING_BASE( CalendarDate, Date )
             
             CalendarDate( void );
     };

@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Port::Port;
+            OBJCXX_USING_BASE( SocketPort, Port )
             
             SocketPort( void );
     };

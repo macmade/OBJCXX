@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Object::Object;
+            OBJCXX_USING_BASE( NotificationCenter, Object )
             
             NotificationCenter( void );
     };

@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using Predicate::Predicate;
+            OBJCXX_USING_BASE( CompoundPredicate, Predicate )
             
             CompoundPredicate( void );
     };

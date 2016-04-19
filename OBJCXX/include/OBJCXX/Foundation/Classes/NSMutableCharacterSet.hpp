@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using CharacterSet::CharacterSet;
+            OBJCXX_USING_BASE( MutableCharacterSet, CharacterSet )
             
             MutableCharacterSet( void );
     };

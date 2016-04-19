@@ -79,6 +79,9 @@ namespace OBJCXX
     Object::Object( Object && o ): XS::PIMPL::Object< Object >( std::forward< const XS::PIMPL::Object< OBJCXX::Object > && >( o ) ), NS::Protocols::Object()
     {}
     
+    Object::~Object( void )
+    {}
+    
     Object & Object::operator =( Object o )
     {
         using std::swap;

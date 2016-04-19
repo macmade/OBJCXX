@@ -38,7 +38,7 @@ namespace NS
     {
         public:
             
-            using UserScriptTask::UserScriptTask;
+            OBJCXX_USING_BASE( UserUnixTask, UserScriptTask )
             
             UserUnixTask( void );
     };
