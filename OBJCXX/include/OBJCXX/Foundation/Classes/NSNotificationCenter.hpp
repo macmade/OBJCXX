@@ -31,6 +31,9 @@
 #define OBJCXX_FOUNDATION_CLASSES_NS_NOTIFICATION_CENTER_H
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
+#include <OBJCXX/Foundation/Classes/NSNotification.hpp>
 
 namespace NS
 {
@@ -40,7 +43,17 @@ namespace NS
             
             OBJCXX_USING_BASE( NotificationCenter, Object )
             
+            static NotificationCenter defaultCenter( void );
+            
             NotificationCenter( void );
+            
+            void addObserver( id notificationObserver, SEL notificationSelector, const String & notificationName, id notificationSender );
+            void removeObserver( id notificationObserver );
+            void removeObserver( id notificationObserver, const String & notificationName, id notificationSender );
+            
+            void postNotification( const Notification & notification );
+            void postNotificationName( const String & notificationName, id notificationSender );
+            void postNotificationName( const String & notificationName, id notificationSender, const Dictionary & userInfo );
     };
 }
 

@@ -31,7 +31,45 @@
 
 namespace NS
 {
+    NotificationCenter NotificationCenter::defaultCenter( void )
+    {
+        id o;
+        
+        o = OBJCXX::RT::Message< id >( "NSNotificationCenter", "defaultCenter" ).send();
+        
+        return NotificationCenter( o );
+    }
+    
     NotificationCenter::NotificationCenter( void ): Object( "NSNotificationCenter" )
     {}
+    
+    void NotificationCenter::addObserver( id notificationObserver, SEL notificationSelector, const String & notificationName, id notificationSender )
+    {
+        this->message< void >( "addObserver:selector:name:object:" ).send< id, SEL, id, id >( notificationObserver, notificationSelector, notificationName, notificationSender );
+    }
+    
+    void NotificationCenter::removeObserver( id notificationObserver )
+    {
+        this->message< void >( "removeObserver:" ).send< id >( notificationObserver );
+    }
+    
+    void NotificationCenter::removeObserver( id notificationObserver, const String & notificationName, id notificationSender )
+    {
+        this->message< void >( "removeObserver:name:object:" ).send< id, id, id >( notificationObserver, notificationName, notificationSender );
+    }
+    
+    void NotificationCenter::postNotification( const Notification & notification )
+    {
+        this->message< void >( "postNotification:" ).send< id >( notification );
+    }
+    
+    void NotificationCenter::postNotificationName( const String & notificationName, id notificationSender )
+    {
+        this->message< void >( "postNotificationName:object:" ).send< id, id >( notificationName, notificationSender );
+    }
+    
+    void NotificationCenter::postNotificationName( const String & notificationName, id notificationSender, const Dictionary & userInfo )
+    {
+        this->message< void >( "postNotificationName:object:userInfo:" ).send< id, id, id >( notificationName, notificationSender, userInfo );
+    }
 }
-
