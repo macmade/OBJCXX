@@ -28,6 +28,7 @@
  */
 
 #include <OBJCXX/Foundation/Functions.hpp>
+#include <cstdarg>
 
 extern "C"
 {

@@ -73,6 +73,7 @@ extern "C"
 #include <type_traits>
 #include <string>
 #include <XS/PIMPL/Object.hpp>
+#include <cstdint>
 
 namespace OBJCXX
 {

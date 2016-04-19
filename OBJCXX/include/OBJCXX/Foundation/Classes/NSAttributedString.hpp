@@ -34,10 +34,10 @@
 
 namespace NS
 {
-    class OBJCXX_EXPORT String;
+    class String;
     class Dictionary;
     
-    class AttributedString: public Object
+    class OBJCXX_EXPORT AttributedString: public Object
     {
         public:
             
