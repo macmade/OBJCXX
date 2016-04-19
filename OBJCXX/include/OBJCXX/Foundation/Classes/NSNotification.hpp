@@ -31,6 +31,8 @@
 #define OBJCXX_FOUNDATION_CLASSES_NS_NOTIFICATION_H
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
 
 namespace NS
 {
@@ -40,7 +42,11 @@ namespace NS
             
             OBJCXX_USING_BASE( Notification, Object )
             
-            Notification( void );
+            Notification( const String & name, id object, const Dictionary & userInfo );
+            
+            String     name( void );
+            id         object( void );
+            Dictionary userInfo( void );
     };
 }
 

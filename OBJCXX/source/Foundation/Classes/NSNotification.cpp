@@ -31,7 +31,30 @@
 
 namespace NS
 {
-    Notification::Notification( void ): Object( "NSNotification" )
+    Notification::Notification( const String & name, id object, const Dictionary & userInfo ):
+        Object
+        (
+            "NSNotification",
+            [ this, name, object, userInfo ]
+            {
+                return this->message< id >( "initWithName:object:userInfo:" ).send< id, id, id >( name, object, userInfo );
+            }
+        )
     {}
+    
+    String Notification::name( void )
+    {
+        return this->message< id >( "name" ).send();
+    }
+    
+    id Notification::object( void )
+    {
+        return this->message< id >( "object" ).send();
+    }
+    
+    Dictionary Notification::userInfo( void )
+    {
+        return this->message< id >( "userInfo" ).send();
+    }
 }
 
