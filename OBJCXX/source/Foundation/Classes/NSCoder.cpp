@@ -96,7 +96,7 @@ namespace NS
 
     void Coder::encodeFloat( float realv, const String & key )
     {
-        this->message< void >( "encodeFloat:forKey:" ).send< float, id >( realv, key );
+        this->message< void >( "encodeFloat:forKey:" ).send< double, id >( static_cast< double >( realv ), key );
     }
 
     void Coder::encodeInt( int intv, const String & key )

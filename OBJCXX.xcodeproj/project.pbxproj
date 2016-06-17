@@ -2352,6 +2352,7 @@
 					OBJCXX/include,
 					Submodules/PIMPL/PIMPL/include,
 				);
+				LLVM_LTO = YES_THIN;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -2463,6 +2464,7 @@
 					OBJCXX/include,
 					Submodules/PIMPL/PIMPL/include,
 				);
+				LLVM_LTO = YES_THIN;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = NO;
 				RUN_CLANG_STATIC_ANALYZER = YES;
