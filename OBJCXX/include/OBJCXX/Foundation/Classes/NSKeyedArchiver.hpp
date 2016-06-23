@@ -40,6 +40,8 @@ namespace NS
             
             OBJCXX_USING_BASE( KeyedArchiver, Coder )
             
+            static Data archivedDataWithRootObject( const Object & object );
+            
             KeyedArchiver( void );
     };
 }

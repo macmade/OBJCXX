@@ -31,6 +31,15 @@
 
 namespace NS
 {
+    id KeyedUnarchiver::unarchiveObjectWithData( const Data & data )
+    {
+        id o;
+        
+        o = OBJCXX::RT::Message< id >( "NSKeyedUnarchiver", "unarchiveObjectWithData:" ).send< id >( data );
+        
+        return o;
+    }
+    
     KeyedUnarchiver::KeyedUnarchiver( void ): Coder( "NSKeyedUnarchiver" )
     {}
 }

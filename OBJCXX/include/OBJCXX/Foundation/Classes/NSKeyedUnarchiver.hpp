@@ -40,6 +40,8 @@ namespace NS
             
             OBJCXX_USING_BASE( KeyedUnarchiver, Coder )
             
+            static id unarchiveObjectWithData( const Data & data );
+            
             KeyedUnarchiver( void );
     };
 }
