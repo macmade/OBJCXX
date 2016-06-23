@@ -31,6 +31,15 @@
 
 namespace NS
 {
+    Data KeyedArchiver::archivedDataWithRootObject( const Object & object )
+    {
+        id o;
+        
+        o = OBJCXX::RT::Message< id >( "NSKeyedArchiver", "archivedDataWithRootObject:" ).send< id >( object );
+        
+        return Data( o );
+    }
+    
     KeyedArchiver::KeyedArchiver( void ): Coder( "NSKeyedArchiver" )
     {}
 }
