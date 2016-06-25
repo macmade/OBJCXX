@@ -64,25 +64,27 @@ namespace NS
             void encodeInt64( int64_t intv, const String & key );
             void encodeNXObject( id object );
             void encodeObject( id object );
-            void encodeObject( id objv, const String & key );
-            void encodePoint( Point point );
-            void encodePoint( Point point, const String & key );
-            void encodePropertyList( id aPropertyList );
-            void encodeRect( Rect rect );
-            void encodeRect( Rect rect, const String & key );
+            void encodeObject( id object, const String & key );
+            void encodePropertyList( id plist );
             void encodeRootObject( id rootObject );
-            void encodeSize( Size size );
-            void encodeSize( Size size, const String & key );
-            void encodeValueOfObjCType( const char * type, const void * addr );
-            void encodeValuesOfObjCTypes( const char * types, ... );
             
             /*
+            void encodePoint( Point point );
+            void encodePoint( Point point, const String & key );
+            void encodeRect( Rect rect );
+            void encodeRect( Rect rect, const String & key );
+            void encodeSize( Size size );
+            void encodeSize( Size size, const String & key );
+            */
+            
+            /*
+            void encodeValueOfObjCType( const char * type, const void * addr );
+            void encodeValuesOfObjCTypes( const char * types, ... );
             void encodeCMTime( CMTime time, const String & key );
             void encodeCMTimeRange( CMTimeRange timeRange, const String & key );
             void encodeCMTimeMapping( CMTimeMapping timeMapping, const String & key );
             */
             
-            void            decodeArrayOfObjCType( const char * itemType, Integer count, void * array );
             bool            decodeBoolForKey( const String & key );
             const uint8_t * decodeBytesForKey( const String & key, UInteger * lengthp );
             void          * decodeBytesWithReturnedLength( UInteger * lengthp );
@@ -96,19 +98,23 @@ namespace NS
             id              decodeNXObject( void );
             id              decodeObject( void );
             id              decodeObjectForKey( const String & key );
+            id              decodePropertyListForKey( const String & key );
+            
+            /*
             Point           decodePoint( void );
             Point           decodePointForKey( const String & key );
             Rect            decodeRect( void );
             Rect            decodeRectForKey( const String & key );
             Size            decodeSize( void );
             Size            decodeSizeForKey( const String & key );
+            */
+            
+            /*
+            void            decodeArrayOfObjCType( const char * itemType, Integer count, void * array );
             void            decodeValueOfObjCType( const char * type, void * data );
             void            decodeValuesOfObjCTypes( const char * types, ... );
             id              decodeObjectOfClass( Class aClass, const String & key );
             id              decodeObjectOfClasses( const Set & classes, const String & key );
-            id              decodePropertyListForKey( const String & key );
-            
-            /*
             CMTime          decodeCMTimeForKey( const String & key );
             CMTimeRange     decodeCMTimeRangeForKey( const String & key );
             CMTimeMapping   decodeCMTimeMappingForKey( const String & key );
