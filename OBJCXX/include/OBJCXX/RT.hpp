@@ -55,25 +55,58 @@
     #define OBJCXX_EXTERN extern
 #endif
 
+#include <type_traits>
+#include <string>
+#include <XS/PIMPL/Object.hpp>
+#include <cstdint>
+#include <cstdlib>
+
 extern "C"
 {
     typedef struct objc_class    * Class;
     typedef struct objc_object   * id;
     typedef struct objc_selector * SEL;
-
-    OBJCXX_EXTERN Class         objc_getClass( const char * name );
-    OBJCXX_EXTERN id            objc_msgSend( id object, SEL selector, ... );
-    OBJCXX_EXTERN double        objc_msgSend_fpret( id object, SEL selector, ... );
-    OBJCXX_EXTERN void          objc_msgSend_stret( void * addr, id object, SEL selector, ... );
-    OBJCXX_EXTERN SEL           sel_registerName( const char * name );
-    OBJCXX_EXTERN Class         object_getClass( id object );
-    OBJCXX_EXTERN const char *  class_getName( Class object );
+    typedef struct objc_method   * Method;
+    typedef struct objc_ivar     * Ivar;
+    typedef struct objc_object     Protocol;
+    
+    typedef id ( * IMP )( id self, SEL _cmd, ... );
+    
+    struct objc_super
+    {
+        id    receiver;
+        Class super_class;
+    };
+    
+    OBJCXX_EXTERN Class      objc_getClass( const char * name );
+    OBJCXX_EXTERN Class      objc_getMetaClass( const char * name );
+    OBJCXX_EXTERN Protocol * objc_getProtocol( const char * name );
+    OBJCXX_EXTERN id         objc_msgSend( id object, SEL selector, ... );
+    OBJCXX_EXTERN double     objc_msgSend_fpret( id object, SEL selector, ... );
+    OBJCXX_EXTERN void       objc_msgSend_stret( void * addr, id object, SEL selector, ... );
+    OBJCXX_EXTERN id         objc_msgSendSuper( struct objc_super * super, SEL selector, ... );
+    
+    OBJCXX_EXTERN Class  objc_allocateClassPair( Class superclass, const char * name, size_t extraBytes );
+    OBJCXX_EXTERN void   objc_registerClassPair( Class cls ); 
+    
+    OBJCXX_EXTERN SEL          sel_registerName( const char * name );
+    OBJCXX_EXTERN const char * sel_getName( SEL selector );
+    
+    OBJCXX_EXTERN Class object_getClass( id object );
+    
+    OBJCXX_EXTERN IMP method_getImplementation( Method method );
+    OBJCXX_EXTERN SEL method_getName( Method method );
+    
+    OBJCXX_EXTERN Class        class_getSuperclass( Class cls ); 
+    OBJCXX_EXTERN const char * class_getName( Class object );
+    OBJCXX_EXTERN Method     * class_copyMethodList( Class cls, unsigned int * outCount );
+    OBJCXX_EXTERN bool         class_addIvar( Class cls, const char * name, size_t size, uint8_t alignment, const char * types );
+    OBJCXX_EXTERN bool         class_addMethod( Class cls, SEL name, IMP imp, const char * types );
+    OBJCXX_EXTERN bool         class_addProtocol( Class cls, Protocol * protocol );
+    OBJCXX_EXTERN Ivar         class_getInstanceVariable( Class cls, const char * name );
+    
+    OBJCXX_EXTERN ptrdiff_t ivar_getOffset( Ivar v ); 
 }
-
-#include <type_traits>
-#include <string>
-#include <XS/PIMPL/Object.hpp>
-#include <cstdint>
 
 namespace OBJCXX
 {

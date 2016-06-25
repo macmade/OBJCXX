@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "47D72078F94709CA3BEE832692D4CE96B65AFFF3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ADCA9195A868291B07F204C2B3711DB7BA58BF77" : 0,
+    "5F4838C7A83B1ADE0F5BF4DE9B5E20ECCA89600B" : 0,
+    "47D72078F94709CA3BEE832692D4CE96B65AFFF3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "460CF0C0-D364-4BF4-B431-391A44F12C52",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ADCA9195A868291B07F204C2B3711DB7BA58BF77" : "..",
+    "5F4838C7A83B1ADE0F5BF4DE9B5E20ECCA89600B" : "..\/..",
+    "47D72078F94709CA3BEE832692D4CE96B65AFFF3" : "OBJCXX\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "OBJCXX",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OBJCXX.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DigiDNA\/OBJCXX.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "47D72078F94709CA3BEE832692D4CE96B65AFFF3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:DigiDNA\/iMazing-Mac.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5F4838C7A83B1ADE0F5BF4DE9B5E20ECCA89600B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DigiDNA\/DDNAToolKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ADCA9195A868291B07F204C2B3711DB7BA58BF77"
+    }
+  ]
+}
