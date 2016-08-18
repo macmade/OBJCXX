@@ -516,7 +516,7 @@
     <ClInclude Include="..\OBJCXX\include\OBJCXX\RT.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F13AD617-6E12-4A08-8730-C4CE926CD2F8}</ProjectGuid>
+    <ProjectGuid>{34740942-6D88-410C-9316-D1E05B862E33}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>CF</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
