@@ -30,11 +30,6 @@
 #include <OBJCXX/Foundation/Functions.hpp>
 #include <cstdarg>
 
-extern "C"
-{
-    OBJCXX_EXTERN void NSLogv( id format, va_list args );
-}
-
 namespace NS
 {
     Point MakePoint( CGFloat x, CGFloat y )

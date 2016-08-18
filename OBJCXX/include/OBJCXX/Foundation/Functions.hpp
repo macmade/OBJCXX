@@ -35,10 +35,10 @@
 
 namespace NS
 {
-    Point MakePoint( CGFloat x, CGFloat y );
-    Size  MakeSize( CGFloat w, CGFloat h );
-    Rect  MakeRect( CGFloat x, CGFloat y, CGFloat w, CGFloat h );
-    void  Log( String fmt, ... );
+    OBJCXX_EXPORT Point MakePoint( CGFloat x, CGFloat y );
+    OBJCXX_EXPORT Size  MakeSize( CGFloat w, CGFloat h );
+    OBJCXX_EXPORT Rect  MakeRect( CGFloat x, CGFloat y, CGFloat w, CGFloat h );
+    OBJCXX_EXPORT void  Log( String fmt, ... );
 }
 
 #endif /* OBJCXX_FOUNDATION_FUNCTIONS_H */

@@ -101,7 +101,7 @@ namespace OBJCXX
                 return RT::Message< _T_ >( *( this ), selector );
             }
             
-            friend std::ostream & operator << ( std::ostream & os, const Object & o );
+            friend OBJCXX_EXPORT std::ostream & operator << ( std::ostream & os, const Object & o );
             
             Class           getClass( void )                      const override;
             Class           superclass( void )                    const override;

@@ -33,5 +33,5 @@ xcuserdata
 *.opendb
 *.vcxproj.user
 *.csproj.user
+*.VC.db
 ipch
-
