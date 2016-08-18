@@ -119,46 +119,70 @@ namespace NS
         this->message< void >( "encodeInt64:forKey:" ).send< int64_t, id >( intv, key );
     }
 
-    /*
     void Coder::encodeNXObject( id object )
-    {}
+    {
+        this->message< void >( "encodeNXObject:" ).send< id >( object );
+    }
 
     void Coder::encodeObject( id object )
-    {}
+    {
+        this->message< void >( "encodeObject:" ).send< id >( object );
+    }
 
-    void Coder::encodeObject( id objv, const String & key )
-    {}
+    void Coder::encodeObject( id object, const String & key )
+    {
+        this->message< void >( "encodeObject:forKey:" ).send< id, id >( object, key );
+    }
 
-    void Coder::encodePoint( Point point )
-    {}
-
-    void Coder::encodePoint( Point point, const String & key )
-    {}
-
-    void Coder::encodePropertyList( id aPropertyList )
-    {}
-
-    void Coder::encodeRect( Rect rect )
-    {}
-
-    void Coder::encodeRect( Rect rect, const String & key )
-    {}
+    void Coder::encodePropertyList( id plist )
+    {
+        this->message< void >( "encodePropertyList:" ).send< id >( plist );
+    }
 
     void Coder::encodeRootObject( id rootObject )
-    {}
+    {
+        this->message< void >( "encodeRootObject:" ).send< id >( rootObject );
+    }
+    
+    /*
+    void Coder::encodePoint( Point point )
+    {
+        this->message< void >( "encodePoint:" ).send< Point >( point );
+    }
+
+    void Coder::encodePoint( Point point, const String & key )
+    {
+        this->message< void >( "encodePoint:forKey:" ).send< Point, id >( point, key );
+    }
+
+    void Coder::encodeRect( Rect rect )
+    {
+        this->message< void >( "encodeRect:" ).send< Rect >( rect );
+    }
+
+    void Coder::encodeRect( Rect rect, const String & key )
+    {
+        this->message< void >( "encodeRect:forKey:" ).send< Rect, id >( rect, key );
+    }
 
     void Coder::encodeSize( Size size )
-    {}
+    {
+        this->message< void >( "encodeSize:" ).send< Size >( size );
+    }
 
     void Coder::encodeSize( Size size, const String & key )
-    {}
-
+    {
+        this->message< void >( "encodeSize:forKey:" ).send< Size, id >( size, key );
+    }
+    */
+    
+    /*
     void Coder::encodeValueOfObjCType( const char * type, const void * addr )
     {}
 
     void Coder::encodeValuesOfObjCTypes( const char * types, ... )
     {}
-
+    
     void Coder::encodeCMTime( CMTime time, const String & key )
     {}
 
@@ -167,67 +191,114 @@ namespace NS
 
     void Coder::encodeCMTimeMapping( CMTimeMapping timeMapping, const String & key )
     {}
+    */
     
-    void Coder::decodeArrayOfObjCType( const char * itemType, Integer count, void * array )
-    {}
-
     bool Coder::decodeBoolForKey( const String & key )
-    {}
+    {
+        return this->message< bool >( "decodeBoolForKey:" ).send< id >( key );
+    }
 
     const uint8_t * Coder::decodeBytesForKey( const String & key, UInteger * lengthp )
-    {}
+    {
+        return this->message< const uint8_t * >( "decodeBytesForKey:returnedLength:" ).send< id, UInteger * >( key, lengthp );
+    }
 
     void * Coder::decodeBytesWithReturnedLength( UInteger * lengthp )
-    {}
+    {
+        return this->message< void * >( "decodeBytesWithReturnedLength:" ).send< UInteger * >( lengthp );
+    }
 
     Data Coder::decodeDataObject( void )
-    {}
+    {
+        return this->message< id >( "decodeDataObject:" ).send();
+    }
 
     double Coder::decodeDoubleForKey( const String & key )
-    {}
+    {
+        return this->message< double >( "decodeDoubleForKey:" ).send< id >( key );
+    }
 
     float Coder::decodeFloatForKey( const String & key )
-    {}
+    {
+        return this->message< float >( "decodeFloatForKey:" ).send< id >( key );
+    }
 
     int Coder::decodeIntForKey( const String & key )
-    {}
+    {
+        return this->message< int >( "decodeIntForKey:" ).send< id >( key );
+    }
 
     Integer Coder::decodeIntegerForKey( const String & key )
-    {}
+    {
+        return this->message< Integer >( "decodeIntegerForKey:" ).send< id >( key );
+    }
 
     int32_t Coder::decodeInt32ForKey( const String & key )
-    {}
+    {
+        return this->message< int32_t >( "decodeInt32ForKey:" ).send< id >( key );
+    }
 
     int64_t Coder::decodeInt64ForKey( const String & key )
-    {}
+    {
+        return this->message< int64_t >( "decodeInt64ForKey:" ).send< id >( key );
+    }
 
     id Coder::decodeNXObject( void )
-    {}
+    {
+        return this->message< id >( "decodeNXObject" ).send();
+    }
 
     id Coder::decodeObject( void )
-    {}
+    {
+        return this->message< id >( "decodeObject" ).send();
+    }
 
     id Coder::decodeObjectForKey( const String & key )
-    {}
+    {
+        return this->message< id >( "decodeObjectForKey:" ).send< id >( key );
+    }
 
+    id Coder::decodePropertyListForKey( const String & key )
+    {
+        return this->message< id >( "decodePropertyListForKey:" ).send< id >( key );
+    }
+    
+    /*
     Point Coder::decodePoint( void )
-    {}
+    {
+        return this->message< Point >( "decodePoint" ).send();
+    }
 
     Point Coder::decodePointForKey( const String & key )
-    {}
+    {
+        return this->message< Point >( "decodePointForKey:" ).send< id >( key );
+    }
 
     Rect Coder::decodeRect( void )
-    {}
+    {
+        return this->message< Rect >( "decodeRect" ).send();
+    }
 
     Rect Coder::decodeRectForKey( const String & key )
-    {}
+    {
+        return this->message< Rect >( "decodeRectForKey:" ).send< id >( key );
+    }
 
     Size Coder::decodeSize( void )
-    {}
+    {
+        return this->message< Size >( "decodeSize" ).send();
+    }
 
     Size Coder::decodeSizeForKey( const String & key )
+    {
+        return this->message< Size >( "decodeSizeForKey:" ).send< id >( key );
+    }
+    */
+    
+    /*
+    void Coder::decodeArrayOfObjCType( const char * itemType, Integer count, void * array )
     {}
-
+    
     void Coder::decodeValueOfObjCType( const char * type, void * data )
     {}
 
@@ -239,9 +310,6 @@ namespace NS
 
     id Coder::decodeObjectOfClasses( const Set & classes, const String & key )
     {}
-
-    id Coder::decodePropertyListForKey( const String & key )
-    {}
     
     CMTime Coder::decodeCMTimeForKey( const String & key )
     {}
@@ -251,27 +319,41 @@ namespace NS
 
     CMTimeMapping Coder::decodeCMTimeMappingForKey( const String & key )
     {}
+    */
     
     bool Coder::requiresSecureCoding( void )
-    {}
+    {
+        return this->message< bool >( "requiresSecureCoding" ).send();
+    }
 
     Set Coder::allowedClasses( void )
-    {}
+    {
+        return this->message< id >( "allowedClasses" ).send();
+    }
 
     void Coder::setAllowedClasses( const Set & allowedClasses )
-    {}
+    {
+        this->message< void >( "setAllowedClasses:" ).send< id >( allowedClasses );
+    }
 
-    unsigned int systemVersion( void )
-    {}
+    unsigned int Coder::systemVersion( void )
+    {
+        return this->message< unsigned int >( "systemVersion" ).send();
+    }
 
     Integer Coder::versionForClassName( const String & className )
-    {}
+    {
+        return this->message< Integer >( "versionForClassName" ).send< id >( className );
+    }
 
     Zone * Coder::objectZone( void )
-    {}
+    {
+        return this->message< Zone * >( "objectZone" ).send();
+    }
 
     void Coder::setObjectZone( Zone * zone )
-    {}
-    */
+    {
+        this->message< void >( "setObjectZone:" ).send< Zone * >( zone );
+    }
 }
 

@@ -165,3 +165,87 @@ XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL( const IMPL & o ):
 
 XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::~IMPL( void )
 {}
+
+#ifdef _WIN32
+
+#include <Windows.h>
+
+Class         ( * objc_getClass )( const char * name )                              = nullptr;
+id            ( * objc_msgSend )( id object, SEL selector, ... )                    = nullptr;
+double        ( * objc_msgSend_fpret )( id object, SEL selector, ... )              = nullptr;
+void          ( * objc_msgSend_stret )( void * addr, id object, SEL selector, ... ) = nullptr;
+SEL           ( * sel_registerName )( const char * name )                           = nullptr;
+Class         ( * object_getClass )( id object )                                    = nullptr;
+const char *  ( * class_getName )( Class object )                                   = nullptr;
+void          ( * NSLogv )( id format, va_list ap )                                 = nullptr;
+
+#pragma section( ".CRT$XCU", read )
+    
+static void __cdecl win32_init( void );
+
+__declspec( allocate( ".CRT$XCU" ) ) void ( __cdecl * win32_init_ )( void ) = win32_init;
+
+#include <iostream>
+
+static void __cdecl win32_init( void )
+{
+    char       * common;
+    std::string  apple;
+    wchar_t    * ws;
+    int          n;
+    HMODULE      objc;
+    HMODULE      foundation;
+    
+    #ifdef _WIN64
+    common = nullptr;
+    #else
+    common = getenv( "COMMONPROGRAMFILES(x86)" );
+    #endif
+    
+    if( common == nullptr )
+    {
+        common = getenv( "COMMONPROGRAMFILES" );
+    }
+    
+    apple = std::string( common ) + "\\Apple\\Apple Application Support";
+    n     = MultiByteToWideChar( CP_UTF8, 0, apple.c_str(), -1, NULL, 0 );
+    ws    = ( wchar_t * )malloc( ( ( size_t )n * sizeof( wchar_t ) ) + sizeof( wchar_t ) );
+    
+    if( ws != NULL )
+    {
+        MultiByteToWideChar( CP_UTF8, 0, apple.c_str(), -1, ws, n );
+        SetDllDirectory( ws );
+    }
+
+    objc = LoadLibrary( ( std::wstring( ws ) + L"\\objc.dll" ).c_str() );
+
+    if( objc == nullptr )
+    {
+        free( ws );
+
+        return;
+    }
+
+    objc_getClass      = ( Class        ( * )( const char * )         )GetProcAddress( objc, "objc_getClass" );
+    objc_msgSend       = ( id           ( * )( id, SEL, ... )         )GetProcAddress( objc, "objc_msgSend" );
+    objc_msgSend_fpret = ( double       ( * )( id, SEL, ... )         )GetProcAddress( objc, "objc_msgSend_fpret" );
+    objc_msgSend_stret = ( void         ( * )( void *, id, SEL, ... ) )GetProcAddress( objc, "objc_msgSend_stret" );
+    sel_registerName   = ( SEL          ( * )( const char * )         )GetProcAddress( objc, "sel_registerName" );
+    object_getClass    = ( Class        ( * )( id )                   )GetProcAddress( objc, "object_getClass" );
+    class_getName      = ( const char * ( * )( Class )                )GetProcAddress( objc, "class_getName" );
+
+    foundation = LoadLibrary( ( std::wstring( ws ) + L"\\Foundation.dll" ).c_str() );
+
+    if( objc == nullptr )
+    {
+        free( ws );
+
+        return;
+    }
+
+    NSLogv = ( void ( * )( id, va_list ) )GetProcAddress( foundation, "NSLogv" );
+
+    free( ws );
+}
+
+#endif

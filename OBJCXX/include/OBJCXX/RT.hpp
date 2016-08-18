@@ -55,25 +55,44 @@
     #define OBJCXX_EXTERN extern
 #endif
 
+#include <type_traits>
+#include <string>
+#include <XS/PIMPL/Object.hpp>
+#include <cstdint>
+#include <cstdarg>
+
 extern "C"
 {
     typedef struct objc_class    * Class;
     typedef struct objc_object   * id;
     typedef struct objc_selector * SEL;
 
-    OBJCXX_EXTERN Class         objc_getClass( const char * name );
-    OBJCXX_EXTERN id            objc_msgSend( id object, SEL selector, ... );
-    OBJCXX_EXTERN double        objc_msgSend_fpret( id object, SEL selector, ... );
-    OBJCXX_EXTERN void          objc_msgSend_stret( void * addr, id object, SEL selector, ... );
-    OBJCXX_EXTERN SEL           sel_registerName( const char * name );
-    OBJCXX_EXTERN Class         object_getClass( id object );
-    OBJCXX_EXTERN const char *  class_getName( Class object );
-}
+    typedef id ( * IMP )( id object, SEL selector, ... );
 
-#include <type_traits>
-#include <string>
-#include <XS/PIMPL/Object.hpp>
-#include <cstdint>
+    #ifdef _WIN32
+    
+    extern Class         ( * objc_getClass      )( const char * name );
+    extern id            ( * objc_msgSend       )( id object, SEL selector, ... );
+    extern double        ( * objc_msgSend_fpret )( id object, SEL selector, ... );
+    extern void          ( * objc_msgSend_stret )( void * addr, id object, SEL selector, ... );
+    extern SEL           ( * sel_registerName   )( const char * name );
+    extern Class         ( * object_getClass    )( id object );
+    extern const char *  ( * class_getName      )( Class object );
+    extern void          ( * NSLogv             )( id format, va_list ap );
+    
+    #else
+    
+    extern Class         objc_getClass( const char * name );
+    extern id            objc_msgSend( id object, SEL selector, ... );
+    extern double        objc_msgSend_fpret( id object, SEL selector, ... );
+    extern void          objc_msgSend_stret( void * addr, id object, SEL selector, ... );
+    extern SEL           sel_registerName( const char * name );
+    extern Class         object_getClass( id object );
+    extern const char *  class_getName( Class object );
+    extern void          NSLogv( id format, va_list ap );
+    
+    #endif
+}
 
 namespace OBJCXX
 {

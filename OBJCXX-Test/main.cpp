@@ -161,6 +161,10 @@ int main( void )
             std::cout << "Caught exception: " << e.what() << std::endl; 
         }
     }
+
+    #ifdef _WIN32
+    getchar();
+    #endif
     
     return 0;
 }
