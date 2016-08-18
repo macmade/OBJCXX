@@ -79,35 +79,59 @@ extern "C"
         Class super_class;
     };
     
-    extern Class      objc_getClass( const char * name );
-    extern Class      objc_getMetaClass( const char * name );
-    extern Protocol * objc_getProtocol( const char * name );
-    extern id         objc_msgSend( id object, SEL selector, ... );
-    extern double     objc_msgSend_fpret( id object, SEL selector, ... );
-    extern void       objc_msgSend_stret( void * addr, id object, SEL selector, ... );
-    extern id         objc_msgSendSuper( struct objc_super * super, SEL selector, ... );
+    #ifdef _WIN32
     
-    extern Class  objc_allocateClassPair( Class superclass, const char * name, size_t extraBytes );
-    extern void   objc_registerClassPair( Class cls ); 
+    extern Class        ( * objc_getClass             )( const char * );
+    extern Class        ( * objc_getMetaClass         )( const char * );
+    extern Protocol *   ( * objc_getProtocol          )( const char * );
+    extern id           ( * objc_msgSend              )( id, SEL, ... );
+    extern double       ( * objc_msgSend_fpret        )( id, SEL, ... );
+    extern void         ( * objc_msgSend_stret        )( void *, id, SEL, ... );
+    extern id           ( * objc_msgSendSuper         )( struct objc_super *, SEL, ... );
+    extern Class        ( * objc_allocateClassPair    )( Class, const char *, size_t );
+    extern void         ( * objc_registerClassPair    )( Class );
+    extern SEL          ( * sel_registerName          )( const char * );
+    extern const char * ( * sel_getName               )( SEL );
+    extern Class        ( * object_getClass           )( id );
+    extern IMP          ( * method_getImplementation  )( Method );
+    extern SEL          ( * method_getName            )( Method );
+    extern Class        ( * class_getSuperclass       )( Class );
+    extern const char * ( * class_getName             )( Class );
+    extern Method     * ( * class_copyMethodList      )( Class, unsigned int * );
+    extern bool         ( * class_addIvar             )( Class, const char *, size_t, uint8_t, const char * );
+    extern bool         ( * class_addMethod           )( Class, SEL, IMP, const char * );
+    extern bool         ( * class_addProtocol         )( Class, Protocol * );
+    extern Ivar         ( * class_getInstanceVariable )( Class, const char * );
+    extern ptrdiff_t    ( * ivar_getOffset            )( Ivar );
+    extern void         ( * NSLogv                    )( id, va_list );
     
-    extern SEL          sel_registerName( const char * name );
-    extern const char * sel_getName( SEL selector );
+    #else
     
-    extern Class object_getClass( id object );
+    extern Class        objc_getClass             ( const char * );
+    extern Class        objc_getMetaClass         ( const char * );
+    extern Protocol *   objc_getProtocol          ( const char * );
+    extern id           objc_msgSend              ( id, SEL, ... );
+    extern double       objc_msgSend_fpret        ( id, SEL, ... );
+    extern void         objc_msgSend_stret        ( void *, id, SEL, ... );
+    extern id           objc_msgSendSuper         ( struct objc_super *, SEL, ... );
+    extern Class        objc_allocateClassPair    ( Class, const char *, size_t );
+    extern void         objc_registerClassPair    ( Class );
+    extern SEL          sel_registerName          ( const char * );
+    extern const char * sel_getName               ( SEL );
+    extern Class        object_getClass           ( id );
+    extern IMP          method_getImplementation  ( Method );
+    extern SEL          method_getName            ( Method );
+    extern Class        class_getSuperclass       ( Class );
+    extern const char * class_getName             ( Class );
+    extern Method     * class_copyMethodList      ( Class, unsigned int * );
+    extern bool         class_addIvar             ( Class, const char *, size_t, uint8_t, const char * );
+    extern bool         class_addMethod           ( Class, SEL, IMP, const char * );
+    extern bool         class_addProtocol         ( Class, Protocol * );
+    extern Ivar         class_getInstanceVariable ( Class, const char * );
+    extern ptrdiff_t    ivar_getOffset            ( Ivar );
+    extern void         NSLogv                    ( id, va_list );
     
-    extern IMP method_getImplementation( Method method );
-    extern SEL method_getName( Method method );
-    
-    extern Class        class_getSuperclass( Class cls ); 
-    extern const char * class_getName( Class object );
-    extern Method     * class_copyMethodList( Class cls, unsigned int * outCount );
-    extern bool         class_addIvar( Class cls, const char * name, size_t size, uint8_t alignment, const char * types );
-    extern bool         class_addMethod( Class cls, SEL name, IMP imp, const char * types );
-    extern bool         class_addProtocol( Class cls, Protocol * protocol );
-    extern Ivar         class_getInstanceVariable( Class cls, const char * name );
-    
-    extern ptrdiff_t ivar_getOffset( Ivar v );
-    extern void          NSLogv( id format, va_list ap );
+    #endif
 }
 
 namespace OBJCXX
