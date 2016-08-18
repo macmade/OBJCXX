@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\OBJCXX\source\ClassBuilder.cpp" />
     <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAffineTransform.cpp" />
     <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAppleEventDescriptor.cpp" />
     <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAppleEventManager.cpp" />
@@ -242,6 +243,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\OBJCXX\include\OBJCXX.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\ClassBuilder.hpp" />
     <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAffineTransform.hpp" />
     <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAppleEventDescriptor.hpp" />
     <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAppleEventManager.hpp" />
