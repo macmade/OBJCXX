@@ -31,6 +31,7 @@
 #include <OBJCXX/Foundation/Classes/NSString.hpp>
 #include <iostream>
 #include <cmath>
+#include <cctype>
 
 /* We'll obviously do nasty casts because of the Objective-C runtime... : ) */
 #ifdef __clang__
@@ -132,6 +133,10 @@ namespace OBJCXX
             case TypeClass:             return sizeof( Class );
             case TypeSelector:          return sizeof( SEL );
         }
+
+        #ifdef _WIN32
+        return 0;
+        #endif
     }
     
     uint8_t ClassBuilder::alignmentForType( Type type ) const
@@ -161,6 +166,10 @@ namespace OBJCXX
             case TypeClass:             return "#";
             case TypeSelector:          return ":";
         }
+
+        #ifdef _WIN32
+        return "";
+        #endif
     }
     
     bool ClassBuilder::addProtocol( const std::string & name )
@@ -370,6 +379,10 @@ namespace OBJCXX
                 setTypes = "v24@0:8:16";
                 
                 break;
+
+            #ifdef _WIN32
+            default: return false;
+            #endif
         }
         
         if( this->addInstanceMethod( name, get, getTypes ) == false )

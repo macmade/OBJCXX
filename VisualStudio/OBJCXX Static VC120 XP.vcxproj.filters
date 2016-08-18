@@ -671,6 +671,9 @@
     <ClCompile Include="..\OBJCXX\source\RT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\OBJCXX\source\ClassBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAffineTransform.hpp">
@@ -1484,6 +1487,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\OBJCXX\include\OBJCXX.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\ClassBuilder.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
