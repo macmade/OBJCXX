@@ -194,15 +194,9 @@ Ivar         ( * class_getInstanceVariable )( Class, const char * )             
 ptrdiff_t    ( * ivar_getOffset            )( Ivar )                                                = nullptr;
 void         ( * NSLogv                    )( id, va_list )                                         = nullptr;
 
-#pragma section( ".CRT$XCU", read )
-    
-static void __cdecl win32_init( void );
+static LONG inited = 0;
 
-__declspec( allocate( ".CRT$XCU" ) ) void ( __cdecl * win32_init_ )( void ) = win32_init;
-
-#include <iostream>
-
-static void __cdecl win32_init( void )
+void OBJCXX::RT::Win32Init( void )
 {
     char       * common;
     std::string  apple;
@@ -211,6 +205,11 @@ static void __cdecl win32_init( void )
     HMODULE      objc;
     HMODULE      foundation;
     
+    if( InterlockedCompareExchange( &inited, 1, 0 ) == false )
+    {
+        return;
+    }
+
     #ifdef _WIN64
     common = nullptr;
     #else
@@ -225,12 +224,14 @@ static void __cdecl win32_init( void )
     apple = std::string( common ) + "\\Apple\\Apple Application Support";
     n     = MultiByteToWideChar( CP_UTF8, 0, apple.c_str(), -1, NULL, 0 );
     ws    = ( wchar_t * )malloc( ( ( size_t )n * sizeof( wchar_t ) ) + sizeof( wchar_t ) );
-    
+
     if( ws == NULL )
     {
         return;
     }
-    
+
+    MultiByteToWideChar( CP_UTF8, 0, apple.c_str(), -1, ws, n );
+
     objc       = LoadLibrary( ( std::wstring( ws ) + L"\\objc.dll" ).c_str() );
     foundation = LoadLibrary( ( std::wstring( ws ) + L"\\Foundation.dll" ).c_str() );
     

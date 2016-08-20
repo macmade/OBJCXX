@@ -138,11 +138,15 @@ namespace OBJCXX
 {
     namespace RT
     {
-        Class       GetClass( const std::string & name );
-        Class       GetClass( id object );
-        std::string GetClassName( Class cls );
-        SEL         GetSelector( const std::string & name );
-        
+        #ifdef _WIN32
+        OBJCXX_EXPORT void Win32Init( void );
+        #endif
+
+        OBJCXX_EXPORT Class       GetClass( const std::string & name );
+        OBJCXX_EXPORT Class       GetClass( id object );
+        OBJCXX_EXPORT std::string GetClassName( Class cls );
+        OBJCXX_EXPORT SEL         GetSelector( const std::string & name );
+
         template< typename _T_, typename _R_ >
         _R_ UnsafeCast( _T_ v )
         {
