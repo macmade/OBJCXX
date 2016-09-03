@@ -30,6 +30,22 @@
 #include <iostream>
 #include <OBJCXX.hpp>
 
+static bool IMP_Foo_supportsSecureCoding( Class cls, SEL _cmd );
+static id   IMP_Foo_initWithCoder( id self, SEL _cmd, id coder );
+static void IMP_Foo_encodeWithCoder( id self, SEL _cmd, id coder );
+
+class Foo: public NS::Object
+{
+    public:
+        
+        OBJCXX_USING_BASE( Foo, Object )
+        
+        Foo( void );
+        
+        NS::String text( void );
+        void       text( const NS::String & text );
+};
+
 int main( void )
 {
     NS::AutoreleasePool ap;
@@ -162,9 +178,100 @@ int main( void )
         }
     }
 
+	{
+		NS::String s1( "hello, world" );
+		NS::String s2;
+		NS::Data   d;
+
+		NS::Log( "Original string: %@", static_cast< id >( s1 ) );
+
+		d = NS::KeyedArchiver::archivedDataWithRootObject( s1 );
+
+		NS::Log( "Archived data: %@", static_cast< id >( d ) );
+
+		s2 = NS::KeyedUnarchiver::unarchiveObjectWithData( d );
+
+		NS::Log( "Unarchived string: %@", static_cast< id >( s2 ) );
+	}
+    
+    {
+        OBJCXX::ClassBuilder cls( "Foo", "NSObject" );
+        
+        cls.addProtocol( "NSSecureCoding" );
+        
+        cls.addInstanceMethod( "initWithCoder:", reinterpret_cast< IMP >( IMP_Foo_initWithCoder ), "@24@0:8@16" );
+        cls.addInstanceMethod( "encodeWithCoder:", reinterpret_cast< IMP >( IMP_Foo_encodeWithCoder ), "v24@0:8@16" );
+        cls.addProperty( "text", OBJCXX::ClassBuilder::TypeObject );
+        cls.registerClass();
+        cls.addClassMethod( "supportsSecureCoding", reinterpret_cast< IMP >( IMP_Foo_supportsSecureCoding ), "c16@0:8" );
+        
+        {
+            Foo      f1;
+            Foo      f2;
+            NS::Data d;
+            
+            NS::Log( "%@", static_cast< id >( f1.text() ) );
+            f1.text( "hello, universe" );
+            NS::Log( "%@", static_cast< id >( f1.text() ) );
+            
+            d = NS::KeyedArchiver::archivedDataWithRootObject( f1 );
+            
+            NS::Log( "%@", static_cast< id >( d ) );
+            
+            f2 = NS::KeyedUnarchiver::unarchiveObjectWithData( d );
+            
+            NS::Log( "%@", static_cast< id >( f2.text() ) );
+        }
+    }
+
     #ifdef _WIN32
     getchar();
     #endif
     
     return 0;
+}
+
+Foo::Foo( void ): Object( "Foo" )
+{}
+
+NS::String Foo::text( void )
+{
+    return this->message< id >( "text" ).send();
+}
+
+void Foo::text( const NS::String & text )
+{
+    this->message< void >( "setText:" ).send< id >( text );
+}
+
+static bool IMP_Foo_supportsSecureCoding( Class cls, SEL _cmd )
+{
+    ( void )cls;
+    ( void )_cmd;
+    
+    return true;
+}
+
+static id IMP_Foo_initWithCoder( id self, SEL _cmd, id coder )
+{
+    Foo       foo( self );
+    NS::Coder archiver( coder );
+    
+    ( void )_cmd;
+    
+    foo = foo.message< id >( "init" ).send();
+    
+    foo.text( archiver.decodeObjectForKey( "text" ) );
+    
+    return foo;
+}
+
+static void IMP_Foo_encodeWithCoder( id self, SEL _cmd, id coder )
+{
+    Foo       foo( self );
+    NS::Coder archiver( coder );
+    
+    ( void )_cmd;
+    
+    archiver.encodeObject( foo.text(), "text" );
 }
