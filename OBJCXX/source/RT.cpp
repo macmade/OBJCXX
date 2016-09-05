@@ -169,6 +169,7 @@ XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::~IMPL( void )
 #ifdef _WIN32
 
 #include <Windows.h>
+#include <codecvt>
 
 Class        ( * objc_getClass             )( const char * )                                        = nullptr;
 Class        ( * objc_getMetaClass         )( const char * )                                        = nullptr;
@@ -194,18 +195,16 @@ Ivar         ( * class_getInstanceVariable )( Class, const char * )             
 ptrdiff_t    ( * ivar_getOffset            )( Ivar )                                                = nullptr;
 void         ( * NSLogv                    )( id, va_list )                                         = nullptr;
 
-static LONG inited = 0;
+static volatile LONG inited = 0;
 
 void OBJCXX::RT::Win32Init( void )
 {
     char       * common;
     std::string  apple;
-    wchar_t    * ws;
-    int          n;
     HMODULE      objc;
     HMODULE      foundation;
-    
-    if( InterlockedCompareExchange( &inited, 1, 0 ) == false )
+
+    if( InterlockedCompareExchange( &inited, 1, 0 ) != 0 )
     {
         return;
     }
@@ -215,30 +214,21 @@ void OBJCXX::RT::Win32Init( void )
     #else
     common = getenv( "COMMONPROGRAMFILES(x86)" );
     #endif
-    
+
     if( common == nullptr )
     {
         common = getenv( "COMMONPROGRAMFILES" );
     }
     
     apple = std::string( common ) + "\\Apple\\Apple Application Support";
-    n     = MultiByteToWideChar( CP_UTF8, 0, apple.c_str(), -1, NULL, 0 );
-    ws    = ( wchar_t * )malloc( ( ( size_t )n * sizeof( wchar_t ) ) + sizeof( wchar_t ) );
 
-    if( ws == NULL )
-    {
-        return;
-    }
+	SetDllDirectoryA( apple.c_str() );
 
-    MultiByteToWideChar( CP_UTF8, 0, apple.c_str(), -1, ws, n );
+    objc       = LoadLibraryA( ( apple + "\\objc.dll" ).c_str() );
+    foundation = LoadLibraryA( ( apple + "\\Foundation.dll" ).c_str() );
 
-    objc       = LoadLibrary( ( std::wstring( ws ) + L"\\objc.dll" ).c_str() );
-    foundation = LoadLibrary( ( std::wstring( ws ) + L"\\Foundation.dll" ).c_str() );
-    
     if( objc == nullptr || foundation == nullptr )
     {
-        free( ws );
-    
         return;
     }
     
@@ -265,8 +255,6 @@ void OBJCXX::RT::Win32Init( void )
     class_getInstanceVariable   = ( Ivar         ( * )( Class, const char * )                                )GetProcAddress( objc, "class_getInstanceVariable" );
     ivar_getOffset              = ( ptrdiff_t    ( * )( Ivar )                                               )GetProcAddress( objc, "ivar_getOffset" );
     NSLogv                      = ( void         ( * )( id, va_list )                                        )GetProcAddress( foundation, "NSLogv" );
-    
-    free( ws );
 }
 
 #endif
