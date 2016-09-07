@@ -31,6 +31,8 @@
 #define OBJCXX_FOUNDATION_CLASSES_NS_TASK_H
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSArray.hpp>
 
 namespace NS
 {
@@ -41,6 +43,15 @@ namespace NS
             OBJCXX_USING_BASE( Task, Object )
             
             Task( void );
+            
+            NS::String launchPath( void ) const;
+            NS::Array  arguments( void ) const;
+            
+            void setLaunchPath( const NS::String & value );
+            void setArguments( const NS::Array & value );
+            
+            void launch( void ) const;
+            void waitUntilExit( void ) const;
     };
 }
 
