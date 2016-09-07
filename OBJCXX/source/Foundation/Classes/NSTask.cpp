@@ -33,5 +33,35 @@ namespace NS
 {
     Task::Task( void ): Object( "NSTask" )
     {}
+    
+    NS::String Task::launchPath( void ) const
+    {
+        return this->message< id >( "launchPath" ).send();
+    }
+    
+    NS::Array Task::arguments( void ) const
+    {
+        return this->message< id >( "arguments" ).send();
+    }
+    
+    void Task::setLaunchPath( const NS::String & value )
+    {
+        this->message< void >( "setLaunchPath:" ).send< id >( value );
+    }
+    
+    void Task::setArguments( const NS::Array & value )
+    {
+        this->message< void >( "setArguments:" ).send< id >( value );
+    }
+    
+    void Task::launch( void ) const
+    {
+        this->message< void >( "launch" ).send();
+    }
+    
+    void Task::waitUntilExit( void ) const
+    {
+        this->message< void >( "waitUntilExit" ).send();
+    }
 }
 
