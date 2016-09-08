@@ -62,6 +62,8 @@
 #include <cstdlib>
 #include <cstdarg>
 
+#ifndef __OBJC__
+
 extern "C"
 {
     typedef struct objc_class    * Class;
@@ -78,69 +80,46 @@ extern "C"
         id    receiver;
         Class super_class;
     };
-    
-    #ifdef _WIN32
-    
-    extern Class        ( * objc_getClass             )( const char * );
-    extern Class        ( * objc_getMetaClass         )( const char * );
-    extern Protocol *   ( * objc_getProtocol          )( const char * );
-    extern id           ( * objc_msgSend              )( id, SEL, ... );
-    extern double       ( * objc_msgSend_fpret        )( id, SEL, ... );
-    extern void         ( * objc_msgSend_stret        )( void *, id, SEL, ... );
-    extern id           ( * objc_msgSendSuper         )( struct objc_super *, SEL, ... );
-    extern Class        ( * objc_allocateClassPair    )( Class, const char *, size_t );
-    extern void         ( * objc_registerClassPair    )( Class );
-    extern SEL          ( * sel_registerName          )( const char * );
-    extern const char * ( * sel_getName               )( SEL );
-    extern Class        ( * object_getClass           )( id );
-    extern IMP          ( * method_getImplementation  )( Method );
-    extern SEL          ( * method_getName            )( Method );
-    extern Class        ( * class_getSuperclass       )( Class );
-    extern const char * ( * class_getName             )( Class );
-    extern Method     * ( * class_copyMethodList      )( Class, unsigned int * );
-    extern bool         ( * class_addIvar             )( Class, const char *, size_t, uint8_t, const char * );
-    extern bool         ( * class_addMethod           )( Class, SEL, IMP, const char * );
-    extern bool         ( * class_addProtocol         )( Class, Protocol * );
-    extern Ivar         ( * class_getInstanceVariable )( Class, const char * );
-    extern ptrdiff_t    ( * ivar_getOffset            )( Ivar );
-    extern void         ( * NSLogv                    )( id, va_list );
-    
-    #else
-    
-    extern Class        objc_getClass             ( const char * );
-    extern Class        objc_getMetaClass         ( const char * );
-    extern Protocol *   objc_getProtocol          ( const char * );
-    extern id           objc_msgSend              ( id, SEL, ... );
-    extern double       objc_msgSend_fpret        ( id, SEL, ... );
-    extern void         objc_msgSend_stret        ( void *, id, SEL, ... );
-    extern id           objc_msgSendSuper         ( struct objc_super *, SEL, ... );
-    extern Class        objc_allocateClassPair    ( Class, const char *, size_t );
-    extern void         objc_registerClassPair    ( Class );
-    extern SEL          sel_registerName          ( const char * );
-    extern const char * sel_getName               ( SEL );
-    extern Class        object_getClass           ( id );
-    extern IMP          method_getImplementation  ( Method );
-    extern SEL          method_getName            ( Method );
-    extern Class        class_getSuperclass       ( Class );
-    extern const char * class_getName             ( Class );
-    extern Method     * class_copyMethodList      ( Class, unsigned int * );
-    extern bool         class_addIvar             ( Class, const char *, size_t, uint8_t, const char * );
-    extern bool         class_addMethod           ( Class, SEL, IMP, const char * );
-    extern bool         class_addProtocol         ( Class, Protocol * );
-    extern Ivar         class_getInstanceVariable ( Class, const char * );
-    extern ptrdiff_t    ivar_getOffset            ( Ivar );
-    extern void         NSLogv                    ( id, va_list );
-    
-    #endif
 }
+
+#endif
 
 namespace OBJCXX
 {
     namespace RT
     {
-        #ifdef _WIN32
-        OBJCXX_EXPORT void Win32Init( void );
-        #endif
+        class OBJCXX_EXPORT Internal
+        {
+            public:
+                
+                Internal( void ) = delete;
+                
+                static Class        ( * objc_getClass             )( const char * );
+                static Class        ( * objc_getMetaClass         )( const char * );
+                static Protocol *   ( * objc_getProtocol          )( const char * );
+                static id           ( * objc_msgSend              )( id, SEL, ... );
+                static double       ( * objc_msgSend_fpret        )( id, SEL, ... );
+                static void         ( * objc_msgSend_stret        )( void *, id, SEL, ... );
+                static id           ( * objc_msgSendSuper         )( struct objc_super *, SEL, ... );
+                static Class        ( * objc_allocateClassPair    )( Class, const char *, size_t );
+                static void         ( * objc_registerClassPair    )( Class );
+                static SEL          ( * sel_registerName          )( const char * );
+                static const char * ( * sel_getName               )( SEL );
+                static Class        ( * object_getClass           )( id );
+                static IMP          ( * method_getImplementation  )( Method );
+                static SEL          ( * method_getName            )( Method );
+                static Class        ( * class_getSuperclass       )( Class );
+                static const char * ( * class_getName             )( Class );
+                static Method     * ( * class_copyMethodList      )( Class, unsigned int * );
+                static bool         ( * class_addIvar             )( Class, const char *, size_t, uint8_t, const char * );
+                static bool         ( * class_addMethod           )( Class, SEL, IMP, const char * );
+                static bool         ( * class_addProtocol         )( Class, Protocol * );
+                static Ivar         ( * class_getInstanceVariable )( Class, const char * );
+                static ptrdiff_t    ( * ivar_getOffset            )( Ivar );
+                static void         ( * NSLogv                    )( id, va_list );
+        };
+        
+        OBJCXX_EXPORT void Init( void );
 
         OBJCXX_EXPORT Class       GetClass( const std::string & name );
         OBJCXX_EXPORT Class       GetClass( id object );
@@ -196,7 +175,7 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
-                    return UnsafeCast< id, _T_ >( objc_msgSend( this->object(), this->selector(), args ... ) );
+                    return UnsafeCast< id, _T_ >( Internal::objc_msgSend( this->object(), this->selector(), args ... ) );
                 }
         };
         
@@ -217,7 +196,7 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 void send( _A_ ... args )
                 {
-                    objc_msgSend( this->object(), this->selector(), args ... );
+                    Internal::objc_msgSend( this->object(), this->selector(), args ... );
                 }
         };
         
@@ -238,7 +217,7 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
-                    return static_cast< _T_ >( objc_msgSend_fpret( this->object(), this->selector(), args ... ) );
+                    return static_cast< _T_ >( Internal::objc_msgSend_fpret( this->object(), this->selector(), args ... ) );
                 }
         };
         
@@ -261,7 +240,7 @@ namespace OBJCXX
                 {
                     _T_ s {};
                     
-                    static_cast< _T_ >( objc_msgSend_stret( &s, this->object(), this->selector(), args ... ) );
+                    static_cast< _T_ >( Internal::objc_msgSend_stret( &s, this->object(), this->selector(), args ... ) );
                     
                     return s;
                 }

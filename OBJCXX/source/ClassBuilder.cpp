@@ -108,7 +108,7 @@ namespace OBJCXX
     
     ClassBuilder::ClassBuilder( const std::string & name, const std::string & super, size_t extraBytes ): XS::PIMPL::Object< ClassBuilder >( name, super )
     {
-        this->impl->_cls = objc_allocateClassPair( objc_getClass( super.c_str() ), name.c_str(), extraBytes );
+        this->impl->_cls = RT::Internal::objc_allocateClassPair( RT::Internal::objc_getClass( super.c_str() ), name.c_str(), extraBytes );
     }
     
     size_t ClassBuilder::sizeForType( Type type ) const
@@ -174,7 +174,7 @@ namespace OBJCXX
     
     bool ClassBuilder::addProtocol( const std::string & name )
     {
-        return class_addProtocol( this->impl->_cls, objc_getProtocol( name.c_str() ) );
+        return RT::Internal::class_addProtocol( this->impl->_cls, RT::Internal::objc_getProtocol( name.c_str() ) );
     }
         
     bool ClassBuilder::addInstanceVariable( const std::string & name, Type type ) const
@@ -200,7 +200,7 @@ namespace OBJCXX
             throw new std::runtime_error( std::string( "Class " ) + this->impl->_name + " is already registered. Instance variables can only be added before the class is registered." );
         }
         
-        return class_addIvar( this->impl->_cls, name.c_str(), size, alignment, types.c_str() );
+        return RT::Internal::class_addIvar( this->impl->_cls, name.c_str(), size, alignment, types.c_str() );
     }
     
     bool ClassBuilder::addProperty( const std::string & name, Type type )
@@ -412,9 +412,9 @@ namespace OBJCXX
             throw new std::runtime_error( std::string( "Class " ) + this->impl->_name + " is not registered. Class methods can only be added after the class is registered" );
         }
         
-        cls = objc_getMetaClass( this->impl->_name.c_str() );
+        cls = RT::Internal::objc_getMetaClass( this->impl->_name.c_str() );
                 
-        return class_addMethod( cls, sel_registerName( name.c_str() ), implementation, types.c_str() );
+        return RT::Internal::class_addMethod( cls, RT::Internal::sel_registerName( name.c_str() ), implementation, types.c_str() );
     }
     
     bool ClassBuilder::addInstanceMethod( const std::string & name, IMP implementation, const std::string & types )
@@ -429,7 +429,7 @@ namespace OBJCXX
             this->impl->_hasCustomDealloc = true;
         }
         
-        return class_addMethod( this->impl->_cls, sel_registerName( name.c_str() ), implementation, types.c_str() );
+        return RT::Internal::class_addMethod( this->impl->_cls, RT::Internal::sel_registerName( name.c_str() ), implementation, types.c_str() );
     }
     
     void ClassBuilder::registerClass( void )
@@ -444,7 +444,7 @@ namespace OBJCXX
             this->addInstanceMethod( "dealloc", reinterpret_cast< IMP >( OBJCXX_IMP_dealloc ), "v16@0:8" );
         }
         
-        objc_registerClassPair( this->impl->_cls );
+        RT::Internal::objc_registerClassPair( this->impl->_cls );
         
         this->impl->_registered = true;
     }
@@ -485,19 +485,19 @@ void OBJCXX_IMP_dealloc( id self, SEL _cmd )
     IMP          imp;
     id           object;
     
-    methods = class_copyMethodList( object_getClass( self ), &count );
+    methods = OBJCXX::RT::Internal::class_copyMethodList( OBJCXX::RT::Internal::object_getClass( self ), &count );
     
     if( methods )
     {
         for( i = 0; i < count; i++ )
         {
-            imp = method_getImplementation( methods[ i ] );
+            imp = OBJCXX::RT::Internal::method_getImplementation( methods[ i ] );
             
             if( imp == reinterpret_cast< IMP >( OBJCXX_IMP_Object_Get ) )
             {
-                object = imp( self, method_getName( methods[ i ] ) );
+                object = imp( self, OBJCXX::RT::Internal::method_getName( methods[ i ] ) );
                 
-                objc_msgSend( object, sel_registerName( "release" ) );
+                OBJCXX::RT::Internal::objc_msgSend( object, OBJCXX::RT::Internal::sel_registerName( "release" ) );
             }
         }
     }
@@ -507,10 +507,10 @@ void OBJCXX_IMP_dealloc( id self, SEL _cmd )
         
         memset( &sup, 0, sizeof( struct objc_super ) );
         
-        sup.super_class = class_getSuperclass( object_getClass( self ) );
+        sup.super_class = OBJCXX::RT::Internal::class_getSuperclass( OBJCXX::RT::Internal::object_getClass( self ) );
         sup.receiver    = self;
         
-        objc_msgSendSuper( &sup, _cmd );
+        OBJCXX::RT::Internal::objc_msgSendSuper( &sup, _cmd );
     }
 }
 
@@ -521,10 +521,10 @@ signed char OBJCXX_IMP_SignedChar_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< signed char * >( p ) );
 }
@@ -536,10 +536,10 @@ signed short OBJCXX_IMP_SignedShort_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< signed short * >( p ) );
 }
@@ -551,10 +551,10 @@ signed int OBJCXX_IMP_SignedInt_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< signed int * >( p ) );
 }
@@ -566,10 +566,10 @@ signed long OBJCXX_IMP_SignedLong_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< signed long * >( p ) );
 }
@@ -581,10 +581,10 @@ signed long long OBJCXX_IMP_SignedLongLong_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< signed long long * >( p ) );
 }
@@ -596,10 +596,10 @@ unsigned char OBJCXX_IMP_UnsignedChar_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< unsigned char * >( p ) );
 }
@@ -611,10 +611,10 @@ unsigned short OBJCXX_IMP_UnsignedShort_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< unsigned short * >( p ) );
 }
@@ -626,10 +626,10 @@ unsigned int OBJCXX_IMP_UnsignedInt_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< unsigned int * >( p ) );
 }
@@ -641,10 +641,10 @@ unsigned long OBJCXX_IMP_UnsignedLong_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< unsigned long * >( p ) );
 }
@@ -656,10 +656,10 @@ unsigned long long OBJCXX_IMP_UnsignedLongLong_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< unsigned long long * >( p ) );
 }
@@ -671,10 +671,10 @@ float OBJCXX_IMP_Float_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< float * >( p ) );
 }
@@ -686,10 +686,10 @@ double OBJCXX_IMP_Double_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< double * >( p ) );
 }
@@ -701,10 +701,10 @@ bool OBJCXX_IMP_Bool_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< bool * >( p ) );
 }
@@ -716,10 +716,10 @@ char * OBJCXX_IMP_CharPointer_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< char ** >( p ) );
 }
@@ -731,10 +731,10 @@ id OBJCXX_IMP_Object_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< id * >( p ) );
 }
@@ -746,10 +746,10 @@ Class OBJCXX_IMP_Class_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< Class * >( p ) );
 }
@@ -761,10 +761,10 @@ SEL OBJCXX_IMP_Selector_Get( id self, SEL _cmd )
     char      * p;
     std::string n;
     
-    n = std::string( "_" ) + sel_getName( _cmd );
-    c = object_getClass( self );
-    v = class_getInstanceVariable( c, n.c_str() );
-    p = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    n = std::string( "_" ) + OBJCXX::RT::Internal::sel_getName( _cmd );
+    c = OBJCXX::RT::Internal::object_getClass( self );
+    v = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     return *( reinterpret_cast< SEL * >( p ) );
 }
@@ -776,14 +776,14 @@ void OBJCXX_IMP_SignedChar_Set( id self, SEL _cmd, signed char value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< signed char * >( p ) ) = value;
 }
@@ -795,14 +795,14 @@ void OBJCXX_IMP_SignedShort_Set( id self, SEL _cmd, signed short value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< signed short * >( p ) ) = value;
 }
@@ -814,14 +814,14 @@ void OBJCXX_IMP_SignedInt_Set( id self, SEL _cmd, signed int value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< signed int * >( p ) ) = value;
 }
@@ -833,14 +833,14 @@ void OBJCXX_IMP_SignedLong_Set( id self, SEL _cmd, signed long value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< signed long * >( p ) ) = value;
 }
@@ -852,14 +852,14 @@ void OBJCXX_IMP_SignedLongLong_Set( id self, SEL _cmd, signed long long value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< signed long long * >( p ) ) = value;
 }
@@ -871,14 +871,14 @@ void OBJCXX_IMP_UnsignedChar_Set( id self, SEL _cmd, unsigned char value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< unsigned char * >( p ) ) = value;
 }
@@ -890,14 +890,14 @@ void OBJCXX_IMP_UnsignedShort_Set( id self, SEL _cmd, unsigned short value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< unsigned short * >( p ) ) = value;
 }
@@ -909,14 +909,14 @@ void OBJCXX_IMP_UnsignedInt_Set( id self, SEL _cmd, unsigned int value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< unsigned int * >( p ) ) = value;
 }
@@ -928,14 +928,14 @@ void OBJCXX_IMP_UnsignedLong_Set( id self, SEL _cmd, unsigned long value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< unsigned long * >( p ) ) = value;
 }
@@ -947,14 +947,14 @@ void OBJCXX_IMP_UnsignedLongLong_Set( id self, SEL _cmd, unsigned long long valu
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< unsigned long long * >( p ) ) = value;
 }
@@ -966,14 +966,14 @@ void OBJCXX_IMP_Float_Set( id self, SEL _cmd, float value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< float * >( p ) ) = value;
 }
@@ -985,14 +985,14 @@ void OBJCXX_IMP_Double_Set( id self, SEL _cmd, double value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< double * >( p ) ) = value;
 }
@@ -1004,14 +1004,14 @@ void OBJCXX_IMP_Bool_Set( id self, SEL _cmd, bool value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< bool * >( p ) ) = value;
 }
@@ -1023,14 +1023,14 @@ void OBJCXX_IMP_CharPointer_Set( id self, SEL _cmd, char * value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< char ** >( p ) ) = value;
 }
@@ -1043,22 +1043,22 @@ void OBJCXX_IMP_Object_Set( id self, SEL _cmd, id value )
     std::string n;
     id          o;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     o      = *( reinterpret_cast< id * >( p ) );
     
     if( o != value )
     {
-        objc_msgSend( o, sel_registerName( "release" ) );
+        OBJCXX::RT::Internal::objc_msgSend( o, OBJCXX::RT::Internal::sel_registerName( "release" ) );
     }
     
-    value = objc_msgSend( value, sel_registerName( "retain" ) );
+    value = OBJCXX::RT::Internal::objc_msgSend( value, OBJCXX::RT::Internal::sel_registerName( "retain" ) );
     
     *( reinterpret_cast< id * >( p ) ) = value;
 }
@@ -1070,14 +1070,14 @@ void OBJCXX_IMP_Class_Set( id self, SEL _cmd, Class value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< Class * >( p ) ) = value;
 }
@@ -1089,14 +1089,14 @@ void OBJCXX_IMP_Selector_Set( id self, SEL _cmd, SEL value )
     char      * p;
     std::string n;
     
-    n      = sel_getName( _cmd );
+    n      = OBJCXX::RT::Internal::sel_getName( _cmd );
     n      = n.substr( 3 );
     n      = n.substr( 0, n.length() - 1 );
     n[ 0 ] = static_cast< char >( std::tolower( n[ 0 ] ) );
     n      = std::string( "_" ) + n;
-    c      = object_getClass( self );
-    v      = class_getInstanceVariable( c, n.c_str() );
-    p      = reinterpret_cast< char * >( self ) + ivar_getOffset( v );
+    c      = OBJCXX::RT::Internal::object_getClass( self );
+    v      = OBJCXX::RT::Internal::class_getInstanceVariable( c, n.c_str() );
+    p      = reinterpret_cast< char * >( self ) + OBJCXX::RT::Internal::ivar_getOffset( v );
     
     *( reinterpret_cast< SEL * >( p ) ) = value;
 }

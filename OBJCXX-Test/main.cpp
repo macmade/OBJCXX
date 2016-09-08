@@ -48,9 +48,7 @@ class Foo: public NS::Object
 
 int main( void )
 {
-    #ifdef _WIN32
-    OBJCXX::RT::Win32Init();
-    #endif
+    OBJCXX::RT::Init();
     
     {
         NS::AutoreleasePool ap;
