@@ -11,7 +11,110 @@ OBJCXX
 About
 -----
 
-C++ wrapper for Objective-C.
+OBJCXX is a C++ wrapper library for the Objective-C language and the Apple's Foundation framework.
+
+It allows you to use the complete Foundation framework using C++ on macOS and Windows without the need of an Objective-C compiler.
+
+### Technical Details
+
+This library uses the Objective-C runtime to interact with the Foundation framework's classes.  
+As the Objective-C runtime is a C API, an Objective-C compiler is not required.
+
+All Foundation classes are wrapped by C++ counterparts, which can be used with automatic allocation.  
+Memory is automatically managed. Objective-C instances are retained by their C++ counterparts, and released when necessary.
+
+Example
+-------
+
+Here's an hello world example using OBJCXX:
+    
+    #include <OBJCXX.h>
+    
+    int main( void )
+    {
+        NS::Log( "%@", NS::String( "hello, world" ) );
+        
+        return 0;
+    }
+    
+Here's a more complex example:
+
+    #include <OBJCXX.h>
+    
+    int main( void )
+    {
+        /* Equivalent to @autoreleasepool */
+        NS::AutoreleasePool ap;
+        
+        /* NSMutableArray */
+        {
+            NS::MutableArray o;
+            
+            std::cout << o << std::endl;
+            
+            o.addObject( NS::String( "hello, world" ) );
+            o.addObject( NS::String( "hello, universe" ) );
+            
+            std::cout << o << std::endl;
+        }
+        
+        /* NSMutableDictionary */
+        {
+            NS::MutableDictionary o;
+            
+            std::cout << o << std::endl;
+            
+            o.setObjectForKey( NS::String( "hello, world" ),    NS::String( "key-1" ) );
+            o.setObjectForKey( NS::String( "hello, universe" ), NS::String( "key-2" ) );
+            
+            std::cout << o << std::endl;
+        }
+        
+        /* NSFileManager */
+        {
+            NS::Error e;
+            
+            std::cout << NS::FileManager::defaultManager().attributesOfItemAtPath( "/~/Desktop/", e ) << std::endl;
+        }
+        
+        return 0;
+    }
+
+### Creating Objective-C classes from C++
+
+OBJCXX also allows you to dynamically create Objective-C classes at runtime.  
+While this is of course possible using the Objective-C runtime, OBJCXX makes this process much more simpler.
+
+As an example:
+
+
+    #include <OBJCXX.h>
+    
+    int main( void )
+    {
+        /* Class Foo inheriting from NSObject */
+        OBJCXX::ClassBuilder cls( "Foo", "NSObject" );
+        
+        /* Adds properties - Getters and setters are automatically generated */
+        cls.addProperty( "title",     OBJCXX::ClassBuilder::TypeObject );
+        cls.addProperty( "isEnabled", OBJCXX::ClassBuilder::TypeBool );
+        cls.addProperty( "index",     OBJCXX::ClassBuilder::TypeSignedInt );
+        
+        /* Registers the class so it can be used */
+        cls.registerClass();
+        
+        return 0;
+    }
+    
+The above example creates and registers a fully working Objective-C class similar to:
+
+    @interface Foo: NSObject
+    
+    @property( nonatomic, readwrite, strong ) id   title;
+    @property( nonatomic, readwrite, assign ) BOOL isEnabled;
+    @property( nonatomic, readwrite, assign ) int  index;
+    
+    @end
 
 License
 -------
