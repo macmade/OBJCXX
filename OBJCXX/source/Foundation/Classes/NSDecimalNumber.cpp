@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DecimalNumber::DecimalNumber( void ): Number( "NSDecimalNumber" )
+    DecimalNumber::DecimalNumber( void ): Number( std::string( "NSDecimalNumber" ) )
     {}
 }
 

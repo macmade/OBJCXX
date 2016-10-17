@@ -33,5 +33,215 @@ namespace NS
 {
     Number::Number( void ): Value( "NSNumber" )
     {}
+    
+    Number::Number( bool value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithBool:" ).send< bool >( value );
+            }
+        )
+    {}
+    
+    Number::Number( char value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithChar:" ).send< char >( value );
+            }
+        )
+    {}
+    
+    Number::Number( short value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithShort:" ).send< short >( value );
+            }
+        )
+    {}
+    
+    Number::Number( int value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithInt:" ).send< int >( value );
+            }
+        )
+    {}
+    
+    Number::Number( long value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithLong:" ).send< long >( value );
+            }
+        )
+    {}
+    
+    Number::Number( long long value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithLongLong:" ).send< long long >( value );
+            }
+        )
+    {}
+    
+    Number::Number( unsigned char value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithUnsignedChar:" ).send< unsigned char >( value );
+            }
+        )
+    {}
+    
+    Number::Number( unsigned short value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithUnsignedShort:" ).send< unsigned short >( value );
+            }
+        )
+    {}
+    
+    Number::Number( unsigned int value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithUnsignedInt:" ).send< unsigned int >( value );
+            }
+        )
+    {}
+    
+    Number::Number( unsigned long value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithUnsignedLong:" ).send< unsigned long >( value );
+            }
+        )
+    {}
+    
+    Number::Number( unsigned long long value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithUnsignedLongLong:" ).send< unsigned long long >( value );
+            }
+        )
+    {}
+    
+    Number::Number( float value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                /* Double - Fixes issues with variadic... */
+                return this->message< id >( "initWithDouble:" ).send< double >( static_cast< double >( value ) );
+            }
+        )
+    {}
+    
+    Number::Number( double value ):
+        Value
+        (
+            "NSNumber",
+            [ this, value ]
+            {
+                return this->message< id >( "initWithDouble:" ).send< double >( value );
+            }
+        )
+    {}
+    
+    bool Number::boolValue( void )
+    {
+        return this->message< bool >( "boolValue" ).send();
+    }
+    
+    char Number::charValue( void )
+    {
+        return this->message< char >( "charValue" ).send();
+    }
+    
+    short Number::shortValue( void )
+    {
+        return this->message< short >( "shortValue" ).send();
+    }
+    
+    int Number::intValue( void )
+    {
+        return this->message< int >( "intValue" ).send();
+    }
+    
+    long Number::longValue( void )
+    {
+        return this->message< long >( "longValue" ).send();
+    }
+    
+    long long Number::longlongValue( void )
+    {
+        return this->message< long long >( "longlongValue" ).send();
+    }
+    
+    unsigned char Number::unsignedCharValue( void )
+    {
+        return this->message< unsigned char >( "unsignedCharValue" ).send();
+    }
+    
+    unsigned short Number::unsignedShortValue( void )
+    {
+        return this->message< unsigned short >( "unsignedShortValue" ).send();
+    }
+    
+    unsigned int Number::unsignedIntValue( void )
+    {
+        return this->message< unsigned int >( "unsignedIntValue" ).send();
+    }
+    
+    unsigned long Number::unsignedLongValue( void )
+    {
+        return this->message< unsigned long >( "unsignedLongValue" ).send();
+    }
+    
+    unsigned long long Number::unsignedLonLongValue( void )
+    {
+        return this->message< unsigned long long >( "unsignedLonLongValue" ).send();
+    }
+    
+    float Number::floatValue( void )
+    {
+        return this->message< float >( "floatValue" ).send();
+    }
+    
+    double Number::doubleValue( void )
+    {
+        return this->message< double >( "doubleValue" ).send();
+    }
+    
 }
 
