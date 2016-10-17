@@ -228,7 +228,7 @@ namespace NS
         return this->message< unsigned long >( "unsignedLongValue" ).send();
     }
     
-    unsigned long long Number::unsignedLonLongValue( void )
+    unsigned long long Number::unsignedLongLongValue( void )
     {
         return this->message< unsigned long long >( "unsignedLonLongValue" ).send();
     }
