@@ -65,7 +65,7 @@ namespace NS
             unsigned short      unsignedShortValue( void );
             unsigned int        unsignedIntValue( void );
             unsigned long       unsignedLongValue( void );
-            unsigned long long  unsignedLonLongValue( void );
+            unsigned long long  unsignedLongLongValue( void );
             float               floatValue( void );
             double              doubleValue( void );
     };
