@@ -171,7 +171,7 @@ namespace OBJCXX
                 
                 Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
                 {}
-                   
+
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
@@ -192,7 +192,7 @@ namespace OBJCXX
                 
                 Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
                 {}
-                   
+
                 template< typename ... _A_ >
                 void send( _A_ ... args )
                 {
@@ -213,7 +213,7 @@ namespace OBJCXX
                 
                 Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
                 {}
-                   
+
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
@@ -234,7 +234,7 @@ namespace OBJCXX
                 
                 Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
                 {}
-                   
+
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {

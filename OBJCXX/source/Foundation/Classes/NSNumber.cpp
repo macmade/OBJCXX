@@ -203,9 +203,9 @@ namespace NS
         return this->message< long >( "longValue" ).send();
     }
     
-    long long Number::longlongValue( void )
+    long long Number::longLongValue( void )
     {
-        return this->message< long long >( "longlongValue" ).send();
+        return this->message< long long >( "longLongValue" ).send();
     }
     
     unsigned char Number::unsignedCharValue( void )
@@ -230,7 +230,7 @@ namespace NS
     
     unsigned long long Number::unsignedLongLongValue( void )
     {
-        return this->message< unsigned long long >( "unsignedLonLongValue" ).send();
+        return this->message< unsigned long long >( "unsignedLongLongValue" ).send();
     }
     
     float Number::floatValue( void )

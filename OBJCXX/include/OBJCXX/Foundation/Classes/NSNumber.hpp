@@ -60,7 +60,7 @@ namespace NS
             short               shortValue( void );
             int                 intValue( void );
             long                longValue( void );
-            long long           longlongValue( void );
+            long long           longLongValue( void );
             unsigned char       unsignedCharValue( void );
             unsigned short      unsignedShortValue( void );
             unsigned int        unsignedIntValue( void );
