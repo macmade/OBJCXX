@@ -31,14 +31,49 @@
 
 namespace NS
 {
-    Error::Error( void ):
+    Error::Error( NS::String domain, NS::Integer code, NS::Dictionary userInfo ):
         Object
         (
             "NSError",
-            []
+            [ = ]
             {
-                return nullptr;
+                return this->message< id >( "initWithDomain:code:userInfo:" ).send< id, NS::Integer, id >( domain, code, userInfo );
             }
         )
     {}
+    
+    NS::Integer Error::code( void ) const
+    {
+        return this->message< NS::Integer >( "code" ).send();
+    }
+    
+    NS::String Error::domain( void ) const
+    {
+        return this->message< id >( "domain" ).send();
+    }
+    
+    NS::Dictionary Error::userInfo( void ) const
+    {
+        return this->message< id >( "userInfo" ).send();
+    }
+    
+    NS::String Error::localizedDescription( void ) const
+    {
+        return this->message< id >( "localizedDescription" ).send();
+    }
+    
+    NS::Array Error::localizedRecoveryOptions( void ) const
+    {
+        return this->message< id >( "localizedRecoveryOptions" ).send();
+    }
+    
+    NS::String Error::localizedRecoverySuggestion( void ) const
+    {
+        return this->message< id >( "localizedRecoverySuggestion" ).send();
+    }
+    
+    NS::String Error::localizedFailureReason( void ) const
+    {
+        return this->message< id >( "localizedFailureReason" ).send();
+    }
 }

@@ -43,6 +43,8 @@ namespace NS
             String( void );
             String( const char * utf8String );
             
+            operator std::string () const;
+            
             const char * UTF8String( void ) const;
             NS::UInteger length( void );
     };

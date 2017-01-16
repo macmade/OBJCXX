@@ -35,7 +35,7 @@ namespace NS
         Object
         (
             "NSNotification",
-            [ this, name, object, userInfo ]
+            [ = ]
             {
                 return this->message< id >( "initWithName:object:userInfo:" ).send< id, id, id >( name, object, userInfo );
             }
