@@ -38,7 +38,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithBool:" ).send< bool >( value );
             }
@@ -49,7 +49,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithChar:" ).send< char >( value );
             }
@@ -60,7 +60,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithShort:" ).send< short >( value );
             }
@@ -71,7 +71,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithInt:" ).send< int >( value );
             }
@@ -82,7 +82,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithLong:" ).send< long >( value );
             }
@@ -93,7 +93,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithLongLong:" ).send< long long >( value );
             }
@@ -104,7 +104,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithUnsignedChar:" ).send< unsigned char >( value );
             }
@@ -115,7 +115,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithUnsignedShort:" ).send< unsigned short >( value );
             }
@@ -126,7 +126,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithUnsignedInt:" ).send< unsigned int >( value );
             }
@@ -137,7 +137,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithUnsignedLong:" ).send< unsigned long >( value );
             }
@@ -148,7 +148,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithUnsignedLongLong:" ).send< unsigned long long >( value );
             }
@@ -159,7 +159,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 /* Double - Fixes issues with variadic... */
                 return this->message< id >( "initWithDouble:" ).send< double >( static_cast< double >( value ) );
@@ -171,7 +171,7 @@ namespace NS
         Value
         (
             "NSNumber",
-            [ this, value ]
+            [ = ]
             {
                 return this->message< id >( "initWithDouble:" ).send< double >( value );
             }

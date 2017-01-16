@@ -55,7 +55,7 @@ namespace OBJCXX
         Object
         (
             className,
-            [ this ]
+            [ = ]
             {
                 return this->message< id >( "init" ).send();
             }
