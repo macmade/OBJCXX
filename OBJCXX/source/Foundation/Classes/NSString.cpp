@@ -38,12 +38,26 @@ namespace NS
         Object
         (
             "NSString",
-            [ this, utf8String ]
+            [ = ]
             {
                 return this->message< id >( "initWithUTF8String:" ).send< const char * >( utf8String );
             }
         )
     {}
+    
+    String::operator std::string () const
+    {
+        const char * cp;
+        
+        cp = this->UTF8String();
+        
+        if( cp )
+        {
+            return std::string( cp );
+        }
+        
+        return "";
+    }
     
     const char * String::UTF8String( void ) const
     {
