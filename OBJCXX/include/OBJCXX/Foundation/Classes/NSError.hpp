@@ -31,6 +31,9 @@
 #define OBJCXX_FOUNDATION_CLASSES_NS_ERROR_H
 
 #include <OBJCXX/Foundation/Classes/NSObject.hpp>
+#include <OBJCXX/Foundation/Classes/NSString.hpp>
+#include <OBJCXX/Foundation/Classes/NSDictionary.hpp>
+#include <OBJCXX/Foundation/Classes/NSArray.hpp>
 
 namespace NS
 {
@@ -40,7 +43,15 @@ namespace NS
             
             OBJCXX_USING_BASE( Error, Object )
             
-            Error( void );
+            Error( NS::String domain, NS::Integer code, NS::Dictionary userInfo );
+            
+            NS::Integer    code( void )                        const;
+            NS::String     domain( void )                      const;
+            NS::Dictionary userInfo( void )                    const;
+            NS::String     localizedDescription( void )        const;
+            NS::Array      localizedRecoveryOptions( void )    const;
+            NS::String     localizedRecoverySuggestion( void ) const;
+            NS::String     localizedFailureReason( void )      const;
     };
 }
 
