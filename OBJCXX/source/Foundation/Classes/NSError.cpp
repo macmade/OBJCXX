@@ -31,6 +31,17 @@
 
 namespace NS
 {
+    Error::Error( void ):
+        Object
+        (
+            "NSError",
+            [ = ]
+            {
+                return nullptr;
+            }
+        )
+    {}
+    
     Error::Error( NS::String domain, NS::Integer code, NS::Dictionary userInfo ):
         Object
         (
