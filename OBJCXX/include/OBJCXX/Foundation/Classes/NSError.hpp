@@ -43,6 +43,7 @@ namespace NS
             
             OBJCXX_USING_BASE( Error, Object )
             
+            Error( void );
             Error( NS::String domain, NS::Integer code, NS::Dictionary userInfo );
             
             NS::Integer    code( void )                        const;
