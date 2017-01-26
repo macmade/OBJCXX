@@ -31,7 +31,45 @@
 
 namespace NS
 {
-    Exception::Exception( void ): Object( "NSException" )
+    Exception::Exception( const NS::String & name, const NS::String & reason, const NS::Dictionary & userInfo ):
+        Object
+        (
+            "NSException",
+            [ = ]
+            {
+                return this->message< id >( "initWithName:reason:userInfo:" ).send< id, id, id >( name, reason, userInfo );
+            }
+        )
     {}
+    
+    void Exception::raise( void ) const
+    {
+        this->message< void >( "raise" ).send();
+    }
+    
+    NS::String Exception::name( void ) const
+    {
+        return this->message< id >( "name" ).send();
+    }
+    
+    NS::String Exception::reason( void ) const
+    {
+        return this->message< id >( "reason" ).send();
+    }
+    
+    NS::Dictionary Exception::userInfo( void ) const
+    {
+        return this->message< id >( "userInfo" ).send();
+    }
+    
+    NS::Array Exception::callStackReturnAddresses( void ) const
+    {
+        return this->message< id >( "callStackReturnAddresses" ).send();
+    }
+    
+    NS::Array Exception::callStackSymbols( void ) const
+    {
+        return this->message< id >( "callStackSymbols" ).send();
+    }
 }
 
