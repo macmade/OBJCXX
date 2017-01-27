@@ -282,7 +282,7 @@ namespace OBJCXX
             Internal::class_getInstanceVariable     = ( Ivar                          ( * )( Class, const char * )                                )GetProcAddress( objc, "class_getInstanceVariable" );
             Internal::ivar_getOffset                = ( ptrdiff_t                     ( * )( Ivar )                                               )GetProcAddress( objc, "ivar_getOffset" );
             Internal::NSLogv                        = ( void                          ( * )( id, va_list )                                        )GetProcAddress( foundation, "NSLogv" );
-            Internal::objc_setExceptionPreprocessor = ( objc_setExceptionPreprocessor ( * )( objc_setExceptionPreprocessor )                      )GetProcAddress( foundation, "objc_setExceptionPreprocessor" );
+            Internal::objc_setExceptionPreprocessor = ( objc_exception_preprocessor   ( * )( objc_exception_preprocessor )                        )GetProcAddress( objc, "objc_setExceptionPreprocessor" );
 
             #else
             

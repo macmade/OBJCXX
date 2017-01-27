@@ -1492,5 +1492,8 @@
     <ClCompile Include="..\OBJCXX\source\ClassBuilder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\OBJCXX\source\Exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -294,6 +294,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\OBJCXX\source\ClassBuilder.cpp" />
+    <ClCompile Include="..\OBJCXX\source\Exception.cpp" />
     <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAffineTransform.cpp" />
     <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAppleEventDescriptor.cpp" />
     <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSAppleEventManager.cpp" />

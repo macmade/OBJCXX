@@ -30,7 +30,11 @@
 #include <OBJCXX/RT.hpp>
 #include <OBJCXX/Foundation/Classes/NSException.hpp>
 
+#ifdef _WIN32
+static __declspec( thread ) id exception = nullptr;
+#else
 static thread_local id exception = nullptr;
+#endif
 
 id OBJCXX_Exception_Preprocessor( id e )
 {
