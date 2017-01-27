@@ -44,29 +44,30 @@
 
 extern "C"
 {
-    extern Class        objc_getClass             ( const char * );
-    extern Class        objc_getMetaClass         ( const char * );
-    extern Protocol *   objc_getProtocol          ( const char * );
-    extern id           objc_msgSend              ( id, SEL, ... );
-    extern double       objc_msgSend_fpret        ( id, SEL, ... );
-    extern void         objc_msgSend_stret        ( void *, id, SEL, ... );
-    extern id           objc_msgSendSuper         ( struct objc_super *, SEL, ... );
-    extern Class        objc_allocateClassPair    ( Class, const char *, size_t );
-    extern void         objc_registerClassPair    ( Class );
-    extern SEL          sel_registerName          ( const char * );
-    extern const char * sel_getName               ( SEL );
-    extern Class        object_getClass           ( id );
-    extern IMP          method_getImplementation  ( Method );
-    extern SEL          method_getName            ( Method );
-    extern Class        class_getSuperclass       ( Class );
-    extern const char * class_getName             ( Class );
-    extern Method     * class_copyMethodList      ( Class, unsigned int * );
-    extern bool         class_addIvar             ( Class, const char *, size_t, uint8_t, const char * );
-    extern bool         class_addMethod           ( Class, SEL, IMP, const char * );
-    extern bool         class_addProtocol         ( Class, Protocol * );
-    extern Ivar         class_getInstanceVariable ( Class, const char * );
-    extern ptrdiff_t    ivar_getOffset            ( Ivar );
-    extern void         NSLogv                    ( id, va_list );
+    extern Class                       objc_getClass                ( const char * );
+    extern Class                       objc_getMetaClass            ( const char * );
+    extern Protocol                *   objc_getProtocol             ( const char * );
+    extern id                          objc_msgSend                 ( id, SEL, ... );
+    extern double                      objc_msgSend_fpret           ( id, SEL, ... );
+    extern void                        objc_msgSend_stret           ( void *, id, SEL, ... );
+    extern id                          objc_msgSendSuper            ( struct objc_super *, SEL, ... );
+    extern Class                       objc_allocateClassPair       ( Class, const char *, size_t );
+    extern void                        objc_registerClassPair       ( Class );
+    extern SEL                         sel_registerName             ( const char * );
+    extern const char                * sel_getName                  ( SEL );
+    extern Class                       object_getClass              ( id );
+    extern IMP                         method_getImplementation     ( Method );
+    extern SEL                         method_getName               ( Method );
+    extern Class                       class_getSuperclass          ( Class );
+    extern const char                * class_getName                ( Class );
+    extern Method                    * class_copyMethodList         ( Class, unsigned int * );
+    extern bool                        class_addIvar                ( Class, const char *, size_t, uint8_t, const char * );
+    extern bool                        class_addMethod              ( Class, SEL, IMP, const char * );
+    extern bool                        class_addProtocol            ( Class, Protocol * );
+    extern Ivar                        class_getInstanceVariable    ( Class, const char * );
+    extern ptrdiff_t                   ivar_getOffset               ( Ivar );
+    extern void                        NSLogv                       ( id, va_list );
+    extern objc_exception_preprocessor objc_setExceptionPreprocessor( objc_exception_preprocessor );
 }
 
 static void init( void ) __attribute__( ( constructor ) );
@@ -173,7 +174,7 @@ namespace OBJCXX
             
             return ret;
         }
-              
+            
         MessageBase::MessageBase( id object, const std::string & selector ):
             XS::PIMPL::Object< MessageBase >( object, selector )
         {}
@@ -196,29 +197,30 @@ namespace OBJCXX
             return this->impl->_selector;
         }
         
-        Class        ( * Internal::objc_getClass             )( const char * )                                        = nullptr;
-        Class        ( * Internal::objc_getMetaClass         )( const char * )                                        = nullptr;
-        Protocol *   ( * Internal::objc_getProtocol          )( const char * )                                        = nullptr;
-        id           ( * Internal::objc_msgSend              )( id, SEL, ... )                                        = nullptr;
-        double       ( * Internal::objc_msgSend_fpret        )( id, SEL, ... )                                        = nullptr;
-        void         ( * Internal::objc_msgSend_stret        )( void *, id, SEL, ... )                                = nullptr;
-        id           ( * Internal::objc_msgSendSuper         )( struct objc_super *, SEL, ... )                       = nullptr;
-        Class        ( * Internal::objc_allocateClassPair    )( Class, const char *, size_t )                         = nullptr;
-        void         ( * Internal::objc_registerClassPair    )( Class )                                               = nullptr;
-        SEL          ( * Internal::sel_registerName          )( const char * )                                        = nullptr;
-        const char * ( * Internal::sel_getName               )( SEL )                                                 = nullptr;
-        Class        ( * Internal::object_getClass           )( id )                                                  = nullptr;
-        IMP          ( * Internal::method_getImplementation  )( Method )                                              = nullptr;
-        SEL          ( * Internal::method_getName            )( Method )                                              = nullptr;
-        Class        ( * Internal::class_getSuperclass       )( Class )                                               = nullptr;
-        const char * ( * Internal::class_getName             )( Class )                                               = nullptr;
-        Method     * ( * Internal::class_copyMethodList      )( Class, unsigned int * )                               = nullptr;
-        bool         ( * Internal::class_addIvar             )( Class, const char *, size_t, uint8_t, const char * )  = nullptr;
-        bool         ( * Internal::class_addMethod           )( Class, SEL, IMP, const char * )                       = nullptr;
-        bool         ( * Internal::class_addProtocol         )( Class, Protocol * )                                   = nullptr;
-        Ivar         ( * Internal::class_getInstanceVariable )( Class, const char * )                                 = nullptr;
-        ptrdiff_t    ( * Internal::ivar_getOffset            )( Ivar )                                                = nullptr;
-        void         ( * Internal::NSLogv                    )( id, va_list )                                         = nullptr;
+        Class                       ( * Internal::objc_getClass                 )( const char * )                                        = nullptr;
+        Class                       ( * Internal::objc_getMetaClass             )( const char * )                                        = nullptr;
+        Protocol                *   ( * Internal::objc_getProtocol              )( const char * )                                        = nullptr;
+        id                          ( * Internal::objc_msgSend                  )( id, SEL, ... )                                        = nullptr;
+        double                      ( * Internal::objc_msgSend_fpret            )( id, SEL, ... )                                        = nullptr;
+        void                        ( * Internal::objc_msgSend_stret            )( void *, id, SEL, ... )                                = nullptr;
+        id                          ( * Internal::objc_msgSendSuper             )( struct objc_super *, SEL, ... )                       = nullptr;
+        Class                       ( * Internal::objc_allocateClassPair        )( Class, const char *, size_t )                         = nullptr;
+        void                        ( * Internal::objc_registerClassPair        )( Class )                                               = nullptr;
+        SEL                         ( * Internal::sel_registerName              )( const char * )                                        = nullptr;
+        const char                * ( * Internal::sel_getName                   )( SEL )                                                 = nullptr;
+        Class                       ( * Internal::object_getClass               )( id )                                                  = nullptr;
+        IMP                         ( * Internal::method_getImplementation      )( Method )                                              = nullptr;
+        SEL                         ( * Internal::method_getName                )( Method )                                              = nullptr;
+        Class                       ( * Internal::class_getSuperclass           )( Class )                                               = nullptr;
+        const char                * ( * Internal::class_getName                 )( Class )                                               = nullptr;
+        Method                    * ( * Internal::class_copyMethodList          )( Class, unsigned int * )                               = nullptr;
+        bool                        ( * Internal::class_addIvar                 )( Class, const char *, size_t, uint8_t, const char * )  = nullptr;
+        bool                        ( * Internal::class_addMethod               )( Class, SEL, IMP, const char * )                       = nullptr;
+        bool                        ( * Internal::class_addProtocol             )( Class, Protocol * )                                   = nullptr;
+        Ivar                        ( * Internal::class_getInstanceVariable     )( Class, const char * )                                 = nullptr;
+        ptrdiff_t                   ( * Internal::ivar_getOffset                )( Ivar )                                                = nullptr;
+        void                        ( * Internal::NSLogv                        )( id, va_list )                                         = nullptr;
+        objc_exception_preprocessor ( * Internal::objc_setExceptionPreprocessor )( objc_exception_preprocessor )                         = nullptr;
         
         void Init( void )
         {
@@ -257,30 +259,31 @@ namespace OBJCXX
                 return;
             }
             
-            Internal::objc_getClass               = ( Class        ( * )( const char * )                                       )GetProcAddress( objc, "objc_getClass" );
-            Internal::objc_getMetaClass           = ( Class        ( * )( const char * )                                       )GetProcAddress( objc, "objc_getMetaClass" );
-            Internal::objc_getProtocol            = ( Protocol *   ( * )( const char * )                                       )GetProcAddress( objc, "objc_getProtocol" );
-            Internal::objc_msgSend                = ( id           ( * )( id, SEL, ... )                                       )GetProcAddress( objc, "objc_msgSend" );
-            Internal::objc_msgSend_fpret          = ( double       ( * )( id, SEL, ... )                                       )GetProcAddress( objc, "objc_msgSend_fpret" );
-            Internal::objc_msgSend_stret          = ( void         ( * )( void *, id, SEL, ... )                               )GetProcAddress( objc, "objc_msgSend_stret" );
-            Internal::objc_msgSendSuper           = ( id           ( * )( struct objc_super *, SEL, ... )                      )GetProcAddress( objc, "objc_msgSendSuper" );
-            Internal::objc_allocateClassPair      = ( Class        ( * )( Class, const char *, size_t )                        )GetProcAddress( objc, "objc_allocateClassPair" );
-            Internal::objc_registerClassPair      = ( void         ( * )( Class )                                              )GetProcAddress( objc, "objc_registerClassPair" );
-            Internal::sel_registerName            = ( SEL          ( * )( const char * )                                       )GetProcAddress( objc, "sel_registerName" );
-            Internal::sel_getName                 = ( const char * ( * )( SEL )                                                )GetProcAddress( objc, "sel_getName" );
-            Internal::object_getClass             = ( Class        ( * )( id )                                                 )GetProcAddress( objc, "object_getClass" );
-            Internal::method_getImplementation    = ( IMP          ( * )( Method )                                             )GetProcAddress( objc, "method_getImplementation" );
-            Internal::method_getName              = ( SEL          ( * )( Method )                                             )GetProcAddress( objc, "method_getName" );
-            Internal::class_getSuperclass         = ( Class        ( * )( Class )                                              )GetProcAddress( objc, "class_getSuperclass" );
-            Internal::class_getName               = ( const char * ( * )( Class )                                              )GetProcAddress( objc, "class_getName" );
-            Internal::class_copyMethodList        = ( Method     * ( * )( Class, unsigned int * )                              )GetProcAddress( objc, "class_copyMethodList" );
-            Internal::class_addIvar               = ( bool         ( * )( Class, const char *, size_t, uint8_t, const char * ) )GetProcAddress( objc, "class_addIvar" );
-            Internal::class_addMethod             = ( bool         ( * )( Class, SEL, IMP, const char * )                      )GetProcAddress( objc, "class_addMethod" );
-            Internal::class_addProtocol           = ( bool         ( * )( Class, Protocol * )                                  )GetProcAddress( objc, "class_addProtocol" );
-            Internal::class_getInstanceVariable   = ( Ivar         ( * )( Class, const char * )                                )GetProcAddress( objc, "class_getInstanceVariable" );
-            Internal::ivar_getOffset              = ( ptrdiff_t    ( * )( Ivar )                                               )GetProcAddress( objc, "ivar_getOffset" );
-            Internal::NSLogv                      = ( void         ( * )( id, va_list )                                        )GetProcAddress( foundation, "NSLogv" );
-            
+            Internal::objc_getClass                 = ( Class                         ( * )( const char * )                                       )GetProcAddress( objc, "objc_getClass" );
+            Internal::objc_getMetaClass             = ( Class                         ( * )( const char * )                                       )GetProcAddress( objc, "objc_getMetaClass" );
+            Internal::objc_getProtocol              = ( Protocol                  *   ( * )( const char * )                                       )GetProcAddress( objc, "objc_getProtocol" );
+            Internal::objc_msgSend                  = ( id                            ( * )( id, SEL, ... )                                       )GetProcAddress( objc, "objc_msgSend" );
+            Internal::objc_msgSend_fpret            = ( double                        ( * )( id, SEL, ... )                                       )GetProcAddress( objc, "objc_msgSend_fpret" );
+            Internal::objc_msgSend_stret            = ( void                          ( * )( void *, id, SEL, ... )                               )GetProcAddress( objc, "objc_msgSend_stret" );
+            Internal::objc_msgSendSuper             = ( id                            ( * )( struct objc_super *, SEL, ... )                      )GetProcAddress( objc, "objc_msgSendSuper" );
+            Internal::objc_allocateClassPair        = ( Class                         ( * )( Class, const char *, size_t )                        )GetProcAddress( objc, "objc_allocateClassPair" );
+            Internal::objc_registerClassPair        = ( void                          ( * )( Class )                                              )GetProcAddress( objc, "objc_registerClassPair" );
+            Internal::sel_registerName              = ( SEL                           ( * )( const char * )                                       )GetProcAddress( objc, "sel_registerName" );
+            Internal::sel_getName                   = ( const char                  * ( * )( SEL )                                                )GetProcAddress( objc, "sel_getName" );
+            Internal::object_getClass               = ( Class                         ( * )( id )                                                 )GetProcAddress( objc, "object_getClass" );
+            Internal::method_getImplementation      = ( IMP                           ( * )( Method )                                             )GetProcAddress( objc, "method_getImplementation" );
+            Internal::method_getName                = ( SEL                           ( * )( Method )                                             )GetProcAddress( objc, "method_getName" );
+            Internal::class_getSuperclass           = ( Class                         ( * )( Class )                                              )GetProcAddress( objc, "class_getSuperclass" );
+            Internal::class_getName                 = ( const char                  * ( * )( Class )                                              )GetProcAddress( objc, "class_getName" );
+            Internal::class_copyMethodList          = ( Method                      * ( * )( Class, unsigned int * )                              )GetProcAddress( objc, "class_copyMethodList" );
+            Internal::class_addIvar                 = ( bool                          ( * )( Class, const char *, size_t, uint8_t, const char * ) )GetProcAddress( objc, "class_addIvar" );
+            Internal::class_addMethod               = ( bool                          ( * )( Class, SEL, IMP, const char * )                      )GetProcAddress( objc, "class_addMethod" );
+            Internal::class_addProtocol             = ( bool                          ( * )( Class, Protocol * )                                  )GetProcAddress( objc, "class_addProtocol" );
+            Internal::class_getInstanceVariable     = ( Ivar                          ( * )( Class, const char * )                                )GetProcAddress( objc, "class_getInstanceVariable" );
+            Internal::ivar_getOffset                = ( ptrdiff_t                     ( * )( Ivar )                                               )GetProcAddress( objc, "ivar_getOffset" );
+            Internal::NSLogv                        = ( void                          ( * )( id, va_list )                                        )GetProcAddress( foundation, "NSLogv" );
+            Internal::objc_setExceptionPreprocessor = ( objc_setExceptionPreprocessor ( * )( objc_setExceptionPreprocessor )                      )GetProcAddress( foundation, "objc_setExceptionPreprocessor" );
+
             #else
             
             if( OSAtomicCompareAndSwap32( 0, 1, &inited ) == false )
@@ -288,31 +291,34 @@ namespace OBJCXX
                 return;
             }
             
-            Internal::objc_getClass               = ::objc_getClass;
-            Internal::objc_getMetaClass           = ::objc_getMetaClass;
-            Internal::objc_getProtocol            = ::objc_getProtocol;
-            Internal::objc_msgSend                = ::objc_msgSend;
-            Internal::objc_msgSend_fpret          = ::objc_msgSend_fpret;
-            Internal::objc_msgSend_stret          = ::objc_msgSend_stret;
-            Internal::objc_msgSendSuper           = ::objc_msgSendSuper;
-            Internal::objc_allocateClassPair      = ::objc_allocateClassPair;
-            Internal::objc_registerClassPair      = ::objc_registerClassPair;
-            Internal::sel_registerName            = ::sel_registerName;
-            Internal::sel_getName                 = ::sel_getName;
-            Internal::object_getClass             = ::object_getClass;
-            Internal::method_getImplementation    = ::method_getImplementation;
-            Internal::method_getName              = ::method_getName;
-            Internal::class_getSuperclass         = ::class_getSuperclass;
-            Internal::class_getName               = ::class_getName;
-            Internal::class_copyMethodList        = ::class_copyMethodList;
-            Internal::class_addIvar               = ::class_addIvar;
-            Internal::class_addMethod             = ::class_addMethod;
-            Internal::class_addProtocol           = ::class_addProtocol;
-            Internal::class_getInstanceVariable   = ::class_getInstanceVariable;
-            Internal::ivar_getOffset              = ::ivar_getOffset;
-            Internal::NSLogv                      = ::NSLogv;
+            Internal::objc_getClass                 = ::objc_getClass;
+            Internal::objc_getMetaClass             = ::objc_getMetaClass;
+            Internal::objc_getProtocol              = ::objc_getProtocol;
+            Internal::objc_msgSend                  = ::objc_msgSend;
+            Internal::objc_msgSend_fpret            = ::objc_msgSend_fpret;
+            Internal::objc_msgSend_stret            = ::objc_msgSend_stret;
+            Internal::objc_msgSendSuper             = ::objc_msgSendSuper;
+            Internal::objc_allocateClassPair        = ::objc_allocateClassPair;
+            Internal::objc_registerClassPair        = ::objc_registerClassPair;
+            Internal::sel_registerName              = ::sel_registerName;
+            Internal::sel_getName                   = ::sel_getName;
+            Internal::object_getClass               = ::object_getClass;
+            Internal::method_getImplementation      = ::method_getImplementation;
+            Internal::method_getName                = ::method_getName;
+            Internal::class_getSuperclass           = ::class_getSuperclass;
+            Internal::class_getName                 = ::class_getName;
+            Internal::class_copyMethodList          = ::class_copyMethodList;
+            Internal::class_addIvar                 = ::class_addIvar;
+            Internal::class_addMethod               = ::class_addMethod;
+            Internal::class_addProtocol             = ::class_addProtocol;
+            Internal::class_getInstanceVariable     = ::class_getInstanceVariable;
+            Internal::ivar_getOffset                = ::ivar_getOffset;
+            Internal::NSLogv                        = ::NSLogv;
+            Internal::objc_setExceptionPreprocessor = ::objc_setExceptionPreprocessor;
             
             #endif
+            
+            Internal::objc_setExceptionPreprocessor( OBJCXX_Exception_Preprocessor );
         }
     }
 }
@@ -334,5 +340,3 @@ XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL( const IMPL & o ):
 
 XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::~IMPL( void )
 {}
-
-

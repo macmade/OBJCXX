@@ -80,6 +80,10 @@ extern "C"
         id    receiver;
         Class super_class;
     };
+    
+    typedef id ( * objc_exception_preprocessor )( id exception );
+    
+    OBJCXX_EXPORT id OBJCXX_Exception_Preprocessor( id e );
 }
 
 #endif
@@ -94,29 +98,30 @@ namespace OBJCXX
                 
                 Internal( void ) = delete;
                 
-                static Class        ( * objc_getClass             )( const char * );
-                static Class        ( * objc_getMetaClass         )( const char * );
-                static Protocol *   ( * objc_getProtocol          )( const char * );
-                static id           ( * objc_msgSend              )( id, SEL, ... );
-                static double       ( * objc_msgSend_fpret        )( id, SEL, ... );
-                static void         ( * objc_msgSend_stret        )( void *, id, SEL, ... );
-                static id           ( * objc_msgSendSuper         )( struct objc_super *, SEL, ... );
-                static Class        ( * objc_allocateClassPair    )( Class, const char *, size_t );
-                static void         ( * objc_registerClassPair    )( Class );
-                static SEL          ( * sel_registerName          )( const char * );
-                static const char * ( * sel_getName               )( SEL );
-                static Class        ( * object_getClass           )( id );
-                static IMP          ( * method_getImplementation  )( Method );
-                static SEL          ( * method_getName            )( Method );
-                static Class        ( * class_getSuperclass       )( Class );
-                static const char * ( * class_getName             )( Class );
-                static Method     * ( * class_copyMethodList      )( Class, unsigned int * );
-                static bool         ( * class_addIvar             )( Class, const char *, size_t, uint8_t, const char * );
-                static bool         ( * class_addMethod           )( Class, SEL, IMP, const char * );
-                static bool         ( * class_addProtocol         )( Class, Protocol * );
-                static Ivar         ( * class_getInstanceVariable )( Class, const char * );
-                static ptrdiff_t    ( * ivar_getOffset            )( Ivar );
-                static void         ( * NSLogv                    )( id, va_list );
+                static Class                        ( * objc_getClass                 )( const char * );
+                static Class                        ( * objc_getMetaClass             )( const char * );
+                static Protocol                 *   ( * objc_getProtocol              )( const char * );
+                static id                           ( * objc_msgSend                  )( id, SEL, ... );
+                static double                       ( * objc_msgSend_fpret            )( id, SEL, ... );
+                static void                         ( * objc_msgSend_stret            )( void *, id, SEL, ... );
+                static id                           ( * objc_msgSendSuper             )( struct objc_super *, SEL, ... );
+                static Class                        ( * objc_allocateClassPair        )( Class, const char *, size_t );
+                static void                         ( * objc_registerClassPair        )( Class );
+                static SEL                          ( * sel_registerName              )( const char * );
+                static const char                 * ( * sel_getName                   )( SEL );
+                static Class                        ( * object_getClass               )( id );
+                static IMP                          ( * method_getImplementation      )( Method );
+                static SEL                          ( * method_getName                )( Method );
+                static Class                        ( * class_getSuperclass           )( Class );
+                static const char                 * ( * class_getName                 )( Class );
+                static Method                     * ( * class_copyMethodList          )( Class, unsigned int * );
+                static bool                         ( * class_addIvar                 )( Class, const char *, size_t, uint8_t, const char * );
+                static bool                         ( * class_addMethod               )( Class, SEL, IMP, const char * );
+                static bool                         ( * class_addProtocol             )( Class, Protocol * );
+                static Ivar                         ( * class_getInstanceVariable     )( Class, const char * );
+                static ptrdiff_t                    ( * ivar_getOffset                )( Ivar );
+                static void                         ( * NSLogv                        )( id, va_list );
+                static objc_exception_preprocessor  ( * objc_setExceptionPreprocessor )( objc_exception_preprocessor );
         };
         
         OBJCXX_EXPORT void Init( void );
@@ -125,7 +130,9 @@ namespace OBJCXX
         OBJCXX_EXPORT Class       GetClass( id object );
         OBJCXX_EXPORT std::string GetClassName( Class cls );
         OBJCXX_EXPORT SEL         GetSelector( const std::string & name );
-
+        OBJCXX_EXPORT id          GetLastException( void );
+        OBJCXX_EXPORT void        RethrowLastException( void );
+        
         template< typename _T_, typename _R_ >
         _R_ UnsafeCast( _T_ v )
         {
@@ -175,7 +182,16 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
-                    return UnsafeCast< id, _T_ >( Internal::objc_msgSend( this->object(), this->selector(), args ... ) );
+                    try
+                    {
+                        return UnsafeCast< id, _T_ >( Internal::objc_msgSend( this->object(), this->selector(), args ... ) );
+                    }
+                    catch( ... )
+                    {
+                        RethrowLastException();
+                        
+                        return UnsafeCast< id, _T_ >( nullptr );
+                    }
                 }
         };
         
@@ -196,7 +212,14 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 void send( _A_ ... args )
                 {
-                    Internal::objc_msgSend( this->object(), this->selector(), args ... );
+                    try
+                    {
+                        Internal::objc_msgSend( this->object(), this->selector(), args ... );
+                    }
+                    catch( ... )
+                    {
+                        RethrowLastException();
+                    }
                 }
         };
         
@@ -217,7 +240,16 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
-                    return static_cast< _T_ >( Internal::objc_msgSend_fpret( this->object(), this->selector(), args ... ) );
+                    try
+                    {
+                        return static_cast< _T_ >( Internal::objc_msgSend_fpret( this->object(), this->selector(), args ... ) );
+                    }
+                    catch( ... )
+                    {
+                        RethrowLastException();
+                        
+                        return static_cast< _T_ >( 0 );
+                    }
                 }
         };
         
@@ -240,7 +272,14 @@ namespace OBJCXX
                 {
                     _T_ s {};
                     
-                    static_cast< _T_ >( Internal::objc_msgSend_stret( &s, this->object(), this->selector(), args ... ) );
+                    try
+                    {
+                        static_cast< _T_ >( Internal::objc_msgSend_stret( &s, this->object(), this->selector(), args ... ) );
+                    }
+                    catch( ... )
+                    {
+                        RethrowLastException();
+                    }
                     
                     return s;
                 }

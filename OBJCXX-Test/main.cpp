@@ -227,6 +227,26 @@ int main( void )
             }
         }
         
+        {
+            try
+            {
+                NS::Exception e( "foo", "bar", nullptr );
+            
+                e.raise();
+            }
+            catch( const NS::Exception & e )
+            {
+                std::cout << "Caught Objective-C exception:"
+                          << std::endl
+                          << "    - Name:   "
+                          << e.name().UTF8String()
+                          << std::endl
+                          << "    - Reason: "
+                          << e.reason().UTF8String()
+                          << std::endl;
+            }
+        }
+        
         #ifdef _WIN32
         getchar();
         #endif
