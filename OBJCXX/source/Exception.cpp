@@ -30,17 +30,49 @@
 #include <OBJCXX/RT.hpp>
 #include <OBJCXX/Foundation/Classes/NSException.hpp>
 
-#ifdef _WIN32
+#if defined( __APPLE__ )
+
+#include <pthread.h>
+
+static pthread_key_t  exception;
+static pthread_once_t once = PTHREAD_ONCE_INIT;
+
+extern "C"
+{
+    static void OBJCXX_Exception_MakeKey( void );
+    static void OBJCXX_Exception_MakeKey( void )
+    {
+        pthread_key_create( &exception, NULL );
+        pthread_setspecific( exception, nullptr );
+    }
+}
+
+#elif defined( _WIN32 )
+
 static __declspec( thread ) id exception = nullptr;
+
 #else
+
 static thread_local id exception = nullptr;
+
 #endif
 
 id OBJCXX_Exception_Preprocessor( id e )
 {
+    #if defined( __APPLE__ )
+    
+    pthread_once( &once, OBJCXX_Exception_MakeKey );
+    
+    OBJCXX::RT::Message< id >( static_cast< id >( pthread_getspecific( exception ) ), "release" ).send();
+    pthread_setspecific( exception, OBJCXX::RT::Message< id >( e, "retain" ).send() );
+    
+    #else
+    
     OBJCXX::RT::Message< id >( exception, "release" ).send();
     
     exception = OBJCXX::RT::Message< id >( e, "retain" ).send();
+    
+    #endif
     
     return e;
 }
@@ -51,7 +83,11 @@ namespace OBJCXX
     {
         id GetLastException( void )
         {
+            #if defined( __APPLE__ )
+            return static_cast< id >( pthread_getspecific( exception ) );
+            #else
             return exception;
+            #endif
         }
         
         void RethrowLastException( void )
