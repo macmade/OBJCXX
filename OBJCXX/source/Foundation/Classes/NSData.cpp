@@ -33,4 +33,25 @@ namespace NS
 {
     Data::Data( void ): Object( "NSData" )
     {}
+    
+    Data::Data( const void * bytes, NS::UInteger length ):
+        Object
+        (
+            "NSData",
+            [ = ]
+            {
+                return this->message< id >( "initWithBytes:length:" ).send< const void *, NS::UInteger >( bytes, length );
+            }
+        )
+    {}
+    
+    const void * Data::bytes( void ) const
+    {
+        return this->message< const void * >( "bytes" ).send();
+    }
+    
+    NS::UInteger Data::length( void ) const
+    {
+        return this->message< NS::UInteger >( "length" ).send();
+    }
 }
