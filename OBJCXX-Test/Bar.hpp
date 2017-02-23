@@ -43,6 +43,9 @@ class Bar: public NS::Object
         Bar( void );
         
         void method1( int x, int y );
+        void method2( void );
+        int  method3( int x, int y );
+        int  method4( void );
 };
 
 #endif /* BAR_HPP */

@@ -43,6 +43,7 @@ void Bar::test( void )
             OBJCXX::ClassBuilder cls( "Bar", "NSObject" );
             
             cls.addInstanceMethod< Bar, void, int, int >( "method1", &Bar::method1, "" );
+            cls.addInstanceMethod< Bar, void           >( "method2", &Bar::method2, "" );
             cls.registerClass();
         }
     );
@@ -51,6 +52,7 @@ void Bar::test( void )
         Bar b;
         
         b.message< void >( "method1" ).send< int, int >( 42, -1 );
+        b.message< void >( "method2" ).send();
     }
 }
 
@@ -59,5 +61,24 @@ Bar::Bar( void ): Object( "Bar" )
 
 void Bar::method1( int x, int y )
 {
-    std::cout << "Bar::method1( " << x << ", " << y << " ): " << static_cast< id >( *( this ) ) << std::endl;
+    std::cout << "Bar::method1( " << x << ", " << y << " ): self = " << static_cast< id >( *( this ) ) << std::endl;
+}
+
+void Bar::method2( void )
+{
+    std::cout << "Bar::method2(): self = " << static_cast< id >( *( this ) ) << std::endl;
+}
+
+int Bar::method3( int x, int y )
+{
+    std::cout << "Bar::method3( " << x << ", " << y << " ): self = " << static_cast< id >( *( this ) ) << std::endl;
+    
+    return 21;
+}
+
+int Bar::method4( void )
+{
+    std::cout << "Bar::method4(): self = " << static_cast< id >( *( this ) ) << std::endl;
+    
+    return 21;
 }
