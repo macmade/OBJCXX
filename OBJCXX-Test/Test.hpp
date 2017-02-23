@@ -27,40 +27,20 @@
  * @brief       ...
  */
 
-#include <iostream>
-#include <OBJCXX.hpp>
-#include "Test.hpp"
-#include "Foo.hpp"
+#ifndef TEST_HPP
+#define TEST_HPP
 
-int main( void )
-{
-    OBJCXX::RT::Init();
-    
-    {
-        NS::AutoreleasePool ap;
-        
-        {
-            testDescription();
-            testString();
-            testMutableArray();
-            testMutableDictionary();
-            testIDCast();
-            testFileManager();
-            testLock();
-            testDate();
-            testBadCast();
-            testArchiver();
-            testExceptions();
-        }
-        
-        {
-            Foo::test();
-        }
-    }
-    
-    #ifdef _WIN32
-    getchar();
-    #endif
-    
-    return 0;
-}
+void testDescription( void );
+void testString( void );
+void testMutableArray( void );
+void testMutableDictionary( void );
+void testIDCast( void );
+void testFileManager( void );
+void testLock( void );
+void testDate( void );
+void testLog( void );
+void testBadCast( void );
+void testArchiver( void );
+void testExceptions( void );
+
+#endif /* TEST_HPP */

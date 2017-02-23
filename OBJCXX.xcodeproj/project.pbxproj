@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0558F96D1E5F7E70009FAC3A /* Foo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0558F96B1E5F7E70009FAC3A /* Foo.cpp */; };
 		058FA76E1C29E3CA009DD4DD /* Object.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA76A1C29E3CA009DD4DD /* Object.hpp */; };
 		058FA76F1C29E3CA009DD4DD /* RT.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA76B1C29E3CA009DD4DD /* RT.hpp */; };
 		058FA7761C29E3FB009DD4DD /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA7731C29E3FB009DD4DD /* Object.cpp */; };
@@ -503,6 +504,7 @@
 		058FAC2C1C2B1769009DD4DD /* NSXPCListenerDelegate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FABFE1C2B1769009DD4DD /* NSXPCListenerDelegate.hpp */; };
 		058FAC2D1C2B1769009DD4DD /* NSXPCProxyCreating.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FABFF1C2B1769009DD4DD /* NSXPCProxyCreating.hpp */; };
 		05E382361D1D8CCB00E9EDAF /* ClassBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05E382351D1D8CCB00E9EDAF /* ClassBuilder.cpp */; };
+		05E4952E1E5F807E003A9DC4 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05E4952C1E5F807E003A9DC4 /* Test.cpp */; };
 		05F527EF1E3BAEFA00E21B6B /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05F527EE1E3BAEFA00E21B6B /* Exception.cpp */; };
 /* End PBXBuildFile section */
 
@@ -529,6 +531,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0558F96B1E5F7E70009FAC3A /* Foo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Foo.cpp; sourceTree = "<group>"; };
+		0558F96C1E5F7E70009FAC3A /* Foo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Foo.hpp; sourceTree = "<group>"; };
 		056C881218C8B85F006260B3 /* libOBJCXX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOBJCXX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		058FA76A1C29E3CA009DD4DD /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		058FA76B1C29E3CA009DD4DD /* RT.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RT.hpp; sourceTree = "<group>"; };
@@ -1028,6 +1032,8 @@
 		05D4BB681D91E2CD008043BC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		05E382341D1D8CBA00E9EDAF /* ClassBuilder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ClassBuilder.hpp; sourceTree = "<group>"; };
 		05E382351D1D8CCB00E9EDAF /* ClassBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClassBuilder.cpp; sourceTree = "<group>"; };
+		05E4952C1E5F807E003A9DC4 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		05E4952D1E5F807E003A9DC4 /* Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
 		05F527EE1E3BAEFA00E21B6B /* Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
 		05FCC6B819DB3E7A00BC1FBE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1106,6 +1112,10 @@
 			isa = PBXGroup;
 			children = (
 				058FA78F1C29F62C009DD4DD /* main.cpp */,
+				05E4952C1E5F807E003A9DC4 /* Test.cpp */,
+				05E4952D1E5F807E003A9DC4 /* Test.hpp */,
+				0558F96B1E5F7E70009FAC3A /* Foo.cpp */,
+				0558F96C1E5F7E70009FAC3A /* Foo.hpp */,
 			);
 			path = "OBJCXX-Test";
 			sourceTree = "<group>";
@@ -2241,6 +2251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E4952E1E5F807E003A9DC4 /* Test.cpp in Sources */,
+				0558F96D1E5F7E70009FAC3A /* Foo.cpp in Sources */,
 				058FA7901C29F62C009DD4DD /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

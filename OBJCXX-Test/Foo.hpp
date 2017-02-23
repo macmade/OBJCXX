@@ -27,40 +27,23 @@
  * @brief       ...
  */
 
-#include <iostream>
-#include <OBJCXX.hpp>
-#include "Test.hpp"
-#include "Foo.hpp"
+#ifndef FOO_HPP
+#define FOO_HPP
 
-int main( void )
+#include <OBJCXX.hpp>
+
+class Foo: public NS::Object
 {
-    OBJCXX::RT::Init();
-    
-    {
-        NS::AutoreleasePool ap;
+    public:
         
-        {
-            testDescription();
-            testString();
-            testMutableArray();
-            testMutableDictionary();
-            testIDCast();
-            testFileManager();
-            testLock();
-            testDate();
-            testBadCast();
-            testArchiver();
-            testExceptions();
-        }
+        OBJCXX_USING_BASE( Foo, Object )
         
-        {
-            Foo::test();
-        }
-    }
-    
-    #ifdef _WIN32
-    getchar();
-    #endif
-    
-    return 0;
-}
+        static void test( void );
+        
+        Foo( void );
+        
+        NS::String text( void );
+        void       text( const NS::String & text );
+};
+
+#endif /* FOO_HPP */
