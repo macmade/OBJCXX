@@ -19,7 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\OBJCXX-Test\Bar.cpp" />
+    <ClCompile Include="..\OBJCXX-Test\Foo.cpp" />
     <ClCompile Include="..\OBJCXX-Test\main.cpp" />
+    <ClCompile Include="..\OBJCXX-Test\Test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\OBJCXX-Test\Bar.hpp" />
+    <ClInclude Include="..\OBJCXX-Test\Foo.hpp" />
+    <ClInclude Include="..\OBJCXX-Test\Test.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{136630AE-85C6-4C68-B8B7-9541FB2529C7}</ProjectGuid>
