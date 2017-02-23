@@ -44,15 +44,26 @@ void Bar::test( void )
             
             cls.addInstanceMethod< Bar, void, int, int >( "method1", &Bar::method1, "" );
             cls.addInstanceMethod< Bar, void           >( "method2", &Bar::method2, "" );
+            cls.addInstanceMethod< Bar, int, int, int  >( "method3", &Bar::method3, "" );
+            cls.addInstanceMethod< Bar, int            >( "method4", &Bar::method4, "" );
             cls.registerClass();
         }
     );
     
     {
         Bar b;
+        int x;
         
         b.message< void >( "method1" ).send< int, int >( 42, -1 );
         b.message< void >( "method2" ).send();
+        
+        x = b.message< int >( "method3" ).send< int, int >( 42, -1 );
+        
+        std::cout << "    -> " << x << std::endl;
+        
+        x = b.message< int >( "method4" ).send();
+        
+        std::cout << "    -> " << x << std::endl;
     }
 }
 
@@ -73,12 +84,12 @@ int Bar::method3( int x, int y )
 {
     std::cout << "Bar::method3( " << x << ", " << y << " ): self = " << static_cast< id >( *( this ) ) << std::endl;
     
-    return 21;
+    return 10;
 }
 
 int Bar::method4( void )
 {
     std::cout << "Bar::method4(): self = " << static_cast< id >( *( this ) ) << std::endl;
     
-    return 21;
+    return 20;
 }
