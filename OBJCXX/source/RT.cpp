@@ -53,6 +53,8 @@ extern "C"
     extern id                          objc_msgSendSuper            ( struct objc_super *, SEL, ... );
     extern Class                       objc_allocateClassPair       ( Class, const char *, size_t );
     extern void                        objc_registerClassPair       ( Class );
+    extern void                        objc_setAssociatedObject     ( id, const void *, id, OBJCXX::RT::Internal::AssociationPolicy );
+    extern id                          objc_getAssociatedObject     ( id, const void * );
     extern SEL                         sel_registerName             ( const char * );
     extern const char                * sel_getName                  ( SEL );
     extern Class                       object_getClass              ( id );
@@ -206,6 +208,8 @@ namespace OBJCXX
         id                          ( * Internal::objc_msgSendSuper             )( struct objc_super *, SEL, ... )                       = nullptr;
         Class                       ( * Internal::objc_allocateClassPair        )( Class, const char *, size_t )                         = nullptr;
         void                        ( * Internal::objc_registerClassPair        )( Class )                                               = nullptr;
+        void                        ( * Internal::objc_setAssociatedObject      )( id, const void *, id, AssociationPolicy )             = nullptr;
+        id                          ( * Internal::objc_getAssociatedObject      )( id, const void * )                                    = nullptr;
         SEL                         ( * Internal::sel_registerName              )( const char * )                                        = nullptr;
         const char                * ( * Internal::sel_getName                   )( SEL )                                                 = nullptr;
         Class                       ( * Internal::object_getClass               )( id )                                                  = nullptr;
@@ -268,6 +272,8 @@ namespace OBJCXX
             Internal::objc_msgSendSuper             = ( id                            ( * )( struct objc_super *, SEL, ... )                      )GetProcAddress( objc, "objc_msgSendSuper" );
             Internal::objc_allocateClassPair        = ( Class                         ( * )( Class, const char *, size_t )                        )GetProcAddress( objc, "objc_allocateClassPair" );
             Internal::objc_registerClassPair        = ( void                          ( * )( Class )                                              )GetProcAddress( objc, "objc_registerClassPair" );
+            Internal::objc_setAssociatedObject      = ( void                          ( * )( id, const void *, id, Internal::AssociationPolicy )  )GetProcAddress( objc, "objc_setAssociatedObject" );
+            Internal::objc_getAssociatedObject      = ( id                            ( * )( id, const void * )                                   )GetProcAddress( objc, "objc_getAssociatedObject" );
             Internal::sel_registerName              = ( SEL                           ( * )( const char * )                                       )GetProcAddress( objc, "sel_registerName" );
             Internal::sel_getName                   = ( const char                  * ( * )( SEL )                                                )GetProcAddress( objc, "sel_getName" );
             Internal::object_getClass               = ( Class                         ( * )( id )                                                 )GetProcAddress( objc, "object_getClass" );
@@ -300,6 +306,8 @@ namespace OBJCXX
             Internal::objc_msgSendSuper             = ::objc_msgSendSuper;
             Internal::objc_allocateClassPair        = ::objc_allocateClassPair;
             Internal::objc_registerClassPair        = ::objc_registerClassPair;
+            Internal::objc_setAssociatedObject      = ::objc_setAssociatedObject;
+            Internal::objc_getAssociatedObject      = ::objc_getAssociatedObject;
             Internal::sel_registerName              = ::sel_registerName;
             Internal::sel_getName                   = ::sel_getName;
             Internal::object_getClass               = ::object_getClass;

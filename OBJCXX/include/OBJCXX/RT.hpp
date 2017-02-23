@@ -98,6 +98,15 @@ namespace OBJCXX
                 
                 Internal( void ) = delete;
                 
+                enum class AssociationPolicy: int
+                {
+                    Assign          = 0,
+                    RetainNonAtomic = 1,
+                    CopyNonAtomic   = 3,
+                    Retain          = 01401,
+                    Copy            = 01403
+                };
+                
                 static Class                        ( * objc_getClass                 )( const char * );
                 static Class                        ( * objc_getMetaClass             )( const char * );
                 static Protocol                 *   ( * objc_getProtocol              )( const char * );
@@ -107,6 +116,8 @@ namespace OBJCXX
                 static id                           ( * objc_msgSendSuper             )( struct objc_super *, SEL, ... );
                 static Class                        ( * objc_allocateClassPair        )( Class, const char *, size_t );
                 static void                         ( * objc_registerClassPair        )( Class );
+                static void                         ( * objc_setAssociatedObject      )( id, const void *, id, AssociationPolicy );
+                static id                           ( * objc_getAssociatedObject      )( id, const void * );
                 static SEL                          ( * sel_registerName              )( const char * );
                 static const char                 * ( * sel_getName                   )( SEL );
                 static Class                        ( * object_getClass               )( id );

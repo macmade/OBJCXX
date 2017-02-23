@@ -505,6 +505,7 @@
 		058FAC2D1C2B1769009DD4DD /* NSXPCProxyCreating.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FABFF1C2B1769009DD4DD /* NSXPCProxyCreating.hpp */; };
 		05E382361D1D8CCB00E9EDAF /* ClassBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05E382351D1D8CCB00E9EDAF /* ClassBuilder.cpp */; };
 		05E4952E1E5F807E003A9DC4 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05E4952C1E5F807E003A9DC4 /* Test.cpp */; };
+		05E495311E5F8885003A9DC4 /* Bar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05E4952F1E5F8885003A9DC4 /* Bar.cpp */; };
 		05F527EF1E3BAEFA00E21B6B /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05F527EE1E3BAEFA00E21B6B /* Exception.cpp */; };
 /* End PBXBuildFile section */
 
@@ -1034,6 +1035,8 @@
 		05E382351D1D8CCB00E9EDAF /* ClassBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClassBuilder.cpp; sourceTree = "<group>"; };
 		05E4952C1E5F807E003A9DC4 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		05E4952D1E5F807E003A9DC4 /* Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
+		05E4952F1E5F8885003A9DC4 /* Bar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bar.cpp; sourceTree = "<group>"; };
+		05E495301E5F8885003A9DC4 /* Bar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bar.hpp; sourceTree = "<group>"; };
 		05F527EE1E3BAEFA00E21B6B /* Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
 		05FCC6B819DB3E7A00BC1FBE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1116,6 +1119,8 @@
 				05E4952D1E5F807E003A9DC4 /* Test.hpp */,
 				0558F96B1E5F7E70009FAC3A /* Foo.cpp */,
 				0558F96C1E5F7E70009FAC3A /* Foo.hpp */,
+				05E4952F1E5F8885003A9DC4 /* Bar.cpp */,
+				05E495301E5F8885003A9DC4 /* Bar.hpp */,
 			);
 			path = "OBJCXX-Test";
 			sourceTree = "<group>";
@@ -2252,6 +2257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E4952E1E5F807E003A9DC4 /* Test.cpp in Sources */,
+				05E495311E5F8885003A9DC4 /* Bar.cpp in Sources */,
 				0558F96D1E5F7E70009FAC3A /* Foo.cpp in Sources */,
 				058FA7901C29F62C009DD4DD /* main.cpp in Sources */,
 			);

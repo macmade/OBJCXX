@@ -111,6 +111,11 @@ namespace OBJCXX
         this->impl->_cls = RT::Internal::objc_allocateClassPair( RT::Internal::objc_getClass( super.c_str() ), name.c_str(), extraBytes );
     }
     
+    Class ClassBuilder::cls( void ) const
+    {
+        return this->impl->_cls;
+    }
+    
     size_t ClassBuilder::sizeForType( Type type ) const
     {
         switch( type )

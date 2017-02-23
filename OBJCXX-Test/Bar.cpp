@@ -28,37 +28,36 @@
  */
 
 #include <iostream>
-#include <OBJCXX.hpp>
-#include "Test.hpp"
-#include "Foo.hpp"
+#include <mutex>
 #include "Bar.hpp"
 
-int main( void )
+void Bar::test( void )
 {
-    OBJCXX::RT::Init();
+    static std::once_flag once;
+    
+    std::call_once
+    (
+        once,
+        []( void )
+        {
+            OBJCXX::ClassBuilder cls( "Bar", "NSObject" );
+            
+            cls.addInstanceMethod< Bar, void, int, int >( "method1", &Bar::method1, "" );
+            cls.registerClass();
+        }
+    );
     
     {
-        NS::AutoreleasePool ap;
+        Bar b;
         
-        testDescription();
-        testString();
-        testMutableArray();
-        testMutableDictionary();
-        testIDCast();
-        testFileManager();
-        testLock();
-        testDate();
-        testBadCast();
-        testArchiver();
-        testExceptions();
-        
-        Foo::test();
-        Bar::test();
+        b.message< void >( "method1" ).send< int, int >( 42, -1 );
     }
-    
-    #ifdef _WIN32
-    getchar();
-    #endif
-    
-    return 0;
+}
+
+Bar::Bar( void ): Object( "Bar" )
+{}
+
+void Bar::method1( int x, int y )
+{
+    std::cout << "Bar::method1( " << x << ", " << y << " ): " << static_cast< id >( *( this ) ) << std::endl;
 }
