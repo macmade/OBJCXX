@@ -119,6 +119,47 @@ The above example creates and registers a fully working Objective-C class simila
     
     @end
 
+#### Adding custom methods
+
+The example above only adds properties to the class, but custom methods can be added as well, and bound to C++ methods.
+
+Imagine the following C++/Objective-C wrapper class, inheriting directly from `NS::Object`:
+
+    class Foo: public NS::Object
+    {
+        public:
+            
+            OBJCXX_USING_BASE( Bar, Object )
+            
+            Foo( void ): Object( "Foo" )
+            {}
+            
+            NS::String test( int x )
+            {
+                return std::to_string( x );
+            }
+    };
+
+The Objective-C class can be created the following way:
+
+    {
+        OBJCXX::ClassBuilder cls( "Foo", "NSObject" );
+        
+        cls.instanceMethod< Foo, NS::String, int >( "test", &Foo::test, "" ).add< id, int >();
+        cls.registerClass();
+    }
+    
+The template parameters of `instanceMethod` are the expected C++ types, while the template parameters of `add` are the expected Objective-C type.  
+This is necessary in order to convert the objects to/from C++ and Objective-C.
+
+If the types are the same, the template parameters of `add` can be omitted, as they will be deduced automatically.
+
+The example above will effectively add a instance method to the `Foo` class, which will be callable either from Objective-C or from C++, meaning the following:
+
+    objc_msgSend( Foo(), "test", 42 );
+    
+will effectively ends up calling the C++ method implementation.
+
 License
 -------
 
