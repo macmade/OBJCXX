@@ -42,10 +42,14 @@ void Bar::test( void )
         {
             OBJCXX::ClassBuilder cls( "Bar", "NSObject" );
             
-            cls.addInstanceMethod< Bar, void, int, int >( "method1", &Bar::method1, "" );
-            cls.addInstanceMethod< Bar, void           >( "method2", &Bar::method2, "" );
-            cls.addInstanceMethod< Bar, int, int, int  >( "method3", &Bar::method3, "" );
-            cls.addInstanceMethod< Bar, int            >( "method4", &Bar::method4, "" );
+            cls.instanceMethod< Bar, void, int, int >( "method1", &Bar::method1, "" ).add();
+            cls.instanceMethod< Bar, void           >( "method2", &Bar::method2, "" ).add();
+            cls.instanceMethod< Bar, int, int, int  >( "method3", &Bar::method3, "" ).add();
+            cls.instanceMethod< Bar, int            >( "method4", &Bar::method4, "" ).add();
+            
+            cls.instanceMethod< Bar, void,       const NS::String & >( "method5", &Bar::method5, "" ).add< void, id >();
+            cls.instanceMethod< Bar, NS::String, const NS::String & >( "method6", &Bar::method6, "" ).add< id,   id >();
+            
             cls.registerClass();
         }
     );
@@ -58,12 +62,19 @@ void Bar::test( void )
         b.message< void >( "method2" ).send();
         
         x = b.message< int >( "method3" ).send< int, int >( 42, -1 );
-        
         std::cout << "    -> " << x << std::endl;
         
         x = b.message< int >( "method4" ).send();
-        
         std::cout << "    -> " << x << std::endl;
+        
+        {
+            NS::String s;
+            
+            b.message< void >( "method5" ).send< id >( NS::String( "hello, world" ) );
+            
+            s = b.message< id >( "method6" ).send< id >( NS::String( "hello, world" ) );
+            std::cout << "    -> " << s << std::endl;
+        }
     }
 }
 
@@ -92,4 +103,16 @@ int Bar::method4( void )
     std::cout << "Bar::method4(): self = " << static_cast< id >( *( this ) ) << std::endl;
     
     return 20;
+}
+
+void Bar::method5( const NS::String & s )
+{
+    std::cout << "Bar::method5( " << s << " ): self = " << static_cast< id >( *( this ) ) << std::endl;
+}
+
+NS::String Bar::method6( const NS::String & s )
+{
+    std::cout << "Bar::method6( " << s << " ): self = " << static_cast< id >( *( this ) ) << std::endl;
+    
+    return "hello, universe";
 }

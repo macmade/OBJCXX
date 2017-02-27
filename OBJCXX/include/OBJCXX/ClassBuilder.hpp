@@ -85,143 +85,211 @@ namespace OBJCXX
             bool addClassMethod( const std::string & name, IMP implementation, const std::string & types ) const;
             bool addInstanceMethod( const std::string & name, IMP implementation, const std::string & types );
             
-            template< typename ... _A_ >
-            static void IMPL_V( id self, SEL _cmd, _A_ ... args )
-            {
-                id                                     assoc;
-                std::function< void( id, _A_ ... ) > * f;
-                
-                assoc = RT::Internal::objc_getAssociatedObject
-                (
-                    reinterpret_cast< id >( RT::Internal::object_getClass( self ) ),
-                    _cmd
-                );
-                
-                if( assoc == nullptr )
-                {
-                    return;
-                }
-                
-                f = reinterpret_cast< decltype( f ) >( assoc );
-                
-                ( *( f ) )( self, std::forward< _A_ >( args ) ... );
-            }
-            
-            template< typename _R_, typename ... _A_ >
-            static _R_ IMPL_R( id self, SEL _cmd, _A_ ... args )
-            {
-                id                                     assoc;
-                std::function< _R_( id, _A_ ... ) > * f;
-                
-                assoc = RT::Internal::objc_getAssociatedObject
-                (
-                    reinterpret_cast< id >( RT::Internal::object_getClass( self ) ),
-                    _cmd
-                );
-                
-                if( assoc == nullptr )
-                {
-                    return {};
-                }
-                
-                f = reinterpret_cast< decltype( f ) >( assoc );
-                
-                return ( *( f ) )( self, std::forward< _A_ >( args ) ... );
-            }
-            
-            template< class _C_, typename _R_, typename ... _A_ >
-            bool addInstanceMethod( const std::string & name, void ( _C_::* imp )( _A_ ... ), const std::string & types )
-            {
-                SEL s;
-                
-                ( void )imp;
-                
-                s = RT::Internal::sel_registerName( name.c_str() );
-                
-                if
-                (
-                    RT::Internal::class_addMethod
-                    (
-                        this->cls(),
-                        s,
-                        reinterpret_cast< IMP >( IMPL_V< _A_ ... > ),
-                        types.c_str()
-                    )
-                    == false
-                )
-                {
-                    return false;
-                }
-                
-                RT::Internal::objc_setAssociatedObject
-                (
-                    reinterpret_cast< id >( this->cls() ),
-                    s,
-                    reinterpret_cast< id >
-                    (
-                        new std::function< _R_( id, _A_ ... ) >
-                        (
-                            [ = ]( id self, _A_ ... args )
-                            {
-                                _C_ o( self );
-                                
-                                ( o.* imp )( std::forward< _A_ >( args )... );
-                            }
-                        )
-                    ),
-                    RT::Internal::AssociationPolicy::Assign
-                );
-                
-                return true;
-            }
-            
-            template< class _C_, typename _R_, typename ... _A_ >
-            bool addInstanceMethod( const std::string & name, _R_ ( _C_::* imp )( _A_ ... ), const std::string & types )
-            {
-                SEL s;
-                
-                ( void )imp;
-                
-                s = RT::Internal::sel_registerName( name.c_str() );
-                
-                if
-                (
-                    RT::Internal::class_addMethod
-                    (
-                        this->cls(),
-                        s,
-                        reinterpret_cast< IMP >( IMPL_V< _A_ ... > ),
-                        types.c_str()
-                    )
-                    == false
-                )
-                {
-                    return false;
-                }
-                
-                RT::Internal::objc_setAssociatedObject
-                (
-                    reinterpret_cast< id >( this->cls() ),
-                    s,
-                    reinterpret_cast< id >
-                    (
-                        new std::function< _R_( id, _A_ ... ) >
-                        (
-                            [ = ]( id self, _A_ ... args )
-                            {
-                                _C_ o( self );
-                                
-                                return ( o.* imp )( std::forward< _A_ >( args )... );
-                            }
-                        )
-                    ),
-                    RT::Internal::AssociationPolicy::Assign
-                );
-                
-                return true;
-            }
-            
             void registerClass( void );
+            
+            template< class _C_, typename _R_, typename ... _A_ >
+            class Method
+            {
+                public:
+                    
+                    Method( Class cls, const std::string & name, _R_ ( _C_::* imp )( _A_ ... ), const std::string & types ):
+                        _class( cls ),
+                        _name(  name ),
+                        _types( types ),
+                        _imp(   imp )
+                    {}
+                    
+                    Method( const Method & o ):
+                        _class( o._class ),
+                        _name(  o._name ),
+                        _types( o._types ),
+                        _imp(   o._imp )
+                    {}
+                    
+                    Method & operator =( Method o )
+                    {
+                        swap( *( this ), o );
+                        
+                        return *( this );
+                    }
+                    
+                    friend void swap( Method & o1, Method & o2 )
+                    {
+                        using std::swap;
+                        
+                        swap( o1._class, o2._class );
+                        swap( o1._name,  o2._name );
+                        swap( o1._types, o2._types );
+                        swap( o1._imp,   o2._imp );
+                    }
+                    
+                    bool add( void )
+                    {
+                        SEL s;
+                        
+                        s = RT::Internal::sel_registerName( this->_name.c_str() );
+                        
+                        if
+                        (
+                            RT::Internal::class_addMethod
+                            (
+                                this->_class,
+                                s,
+                                reinterpret_cast< IMP >( CXX_IMP< _R_, _A_ ... > ),
+                                this->_types.c_str()
+                            )
+                            == false
+                        )
+                        {
+                            return false;
+                        }
+                        
+                        RT::Internal::objc_setAssociatedObject
+                        (
+                            reinterpret_cast< id >( this->_class ),
+                            s,
+                            reinterpret_cast< id >( new Method( *( this ) ) ),
+                            RT::Internal::AssociationPolicy::Assign
+                        );
+                        
+                        return true;
+                    }
+                    
+                    template< typename _OBJCR_, typename ... _OBJCA_ >
+                    bool add( void )
+                    {
+                        SEL s;
+                        
+                        s = RT::Internal::sel_registerName( this->_name.c_str() );
+                        
+                        if
+                        (
+                            RT::Internal::class_addMethod
+                            (
+                                this->_class,
+                                s,
+                                reinterpret_cast< IMP >( CXX_IMP< _OBJCR_, _OBJCA_ ... > ),
+                                this->_types.c_str()
+                            )
+                            == false
+                        )
+                        {
+                            return false;
+                        }
+                        
+                        RT::Internal::objc_setAssociatedObject
+                        (
+                            reinterpret_cast< id >( this->_class ),
+                            s,
+                            reinterpret_cast< id >( new Method( *( this ) ) ),
+                            RT::Internal::AssociationPolicy::Assign
+                        );
+                        
+                        return true;
+                    }
+                    
+                private:
+                    
+                    Class       _class;
+                    std::string _name;
+                    std::string _types;
+                    
+                    _R_ ( _C_::* _imp )( _A_ ... );
+                    
+                    template< typename _OBJCR_, typename ... _OBJCA_ >
+                    static typename std::enable_if< !std::is_void< _OBJCR_ >::value && !std::is_same< _OBJCR_, id >::value, _OBJCR_ >::type CXX_IMP( id self, SEL _cmd, _OBJCA_ ... args )
+                    {
+                        _C_                           o( self );
+                        Method< _C_, _R_, _A_ ... > * m;
+                        _R_ ( _C_::* imp )( _A_ ... );
+                        
+                        m = reinterpret_cast< Method< _C_, _R_, _A_ ... > * >
+                        (
+                            RT::Internal::objc_getAssociatedObject
+                            (
+                                reinterpret_cast< id >( RT::Internal::object_getClass( self ) ),
+                                _cmd
+                            )
+                        );
+                        
+                        if( m == nullptr || m->_imp == nullptr )
+                        {
+                            return {};
+                        }
+                        
+                        imp = m->_imp;
+                        
+                        return ( o.*imp )( args ... );
+                    }
+                    
+                    template< typename _OBJCR_, typename ... _OBJCA_ >
+                    static typename std::enable_if< !std::is_void< _OBJCR_ >::value && std::is_same< _OBJCR_, id >::value, _OBJCR_ >::type CXX_IMP( id self, SEL _cmd, _OBJCA_ ... args )
+                    {
+                        _C_                           o( self );
+                        Method< _C_, _R_, _A_ ... > * m;
+                        _R_ ( _C_::* imp )( _A_ ... );
+                        
+                        m = reinterpret_cast< Method< _C_, _R_, _A_ ... > * >
+                        (
+                            RT::Internal::objc_getAssociatedObject
+                            (
+                                reinterpret_cast< id >( RT::Internal::object_getClass( self ) ),
+                                _cmd
+                            )
+                        );
+                        
+                        if( m == nullptr || m->_imp == nullptr )
+                        {
+                            return {};
+                        }
+                        
+                        imp = m->_imp;
+                        
+                        return RT::Internal::objc_msgSend
+                        (
+                            RT::Internal::objc_msgSend
+                            (
+                                ( o.*imp )( args ... ),
+                                RT::Internal::sel_registerName( "retain" )
+                            ),
+                            RT::Internal::sel_registerName( "autorelease" )
+                        );
+                    }
+                    
+                    template< typename _OBJCR_, typename ... _OBJCA_ >
+                    static typename std::enable_if< std::is_void< _OBJCR_ >::value, _OBJCR_ >::type CXX_IMP( id self, SEL _cmd, _OBJCA_ ... args )
+                    {
+                        _C_                           o( self );
+                        Method< _C_, _R_, _A_ ... > * m;
+                        _R_ ( _C_::* imp )( _A_ ... );
+                        
+                        m = reinterpret_cast< Method< _C_, _R_, _A_ ... > * >
+                        (
+                            RT::Internal::objc_getAssociatedObject
+                            (
+                                reinterpret_cast< id >( RT::Internal::object_getClass( self ) ),
+                                _cmd
+                            )
+                        );
+                        
+                        if( m == nullptr || m->_imp == nullptr )
+                        {
+                            return;
+                        }
+                        
+                        imp = m->_imp;
+                        
+                        ( o.*imp )( args ... );
+                    }
+            };
+            
+            template< class _C_, typename _R_, typename ... _A_ >
+            Method< _C_, _R_, _A_ ... > instanceMethod( const std::string & name, _R_ ( _C_::* imp )( _A_ ... ), const std::string & types )
+            {
+                Method< _C_, _R_, _A_ ... > m( this->cls(), name, imp, types );
+                
+                return m;
+            }
     };
 }
 
