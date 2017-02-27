@@ -8,6 +8,228 @@
 
 /* Begin PBXBuildFile section */
 		0558F96D1E5F7E70009FAC3A /* Foo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0558F96B1E5F7E70009FAC3A /* Foo.cpp */; };
+		05855C261E64B4790020E1C9 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA7731C29E3FB009DD4DD /* Object.cpp */; };
+		05855C271E64B4790020E1C9 /* RT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA7991C29F726009DD4DD /* RT.cpp */; };
+		05855C281E64B4790020E1C9 /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05F527EE1E3BAEFA00E21B6B /* Exception.cpp */; };
+		05855C291E64B4790020E1C9 /* ClassBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05E382351D1D8CCB00E9EDAF /* ClassBuilder.cpp */; };
+		05855C2A1E64B4830020E1C9 /* Functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8721C2B0EA8009DD4DD /* Functions.cpp */; };
+		05855C2B1E64B48D0020E1C9 /* NSAffineTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8A31C2B169A009DD4DD /* NSAffineTransform.cpp */; };
+		05855C2C1E64B48D0020E1C9 /* NSAppleEventDescriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8A41C2B169A009DD4DD /* NSAppleEventDescriptor.cpp */; };
+		05855C2D1E64B48D0020E1C9 /* NSAppleEventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8A51C2B169A009DD4DD /* NSAppleEventManager.cpp */; };
+		05855C2E1E64B48D0020E1C9 /* NSAppleScript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8A61C2B169A009DD4DD /* NSAppleScript.cpp */; };
+		05855C2F1E64B48D0020E1C9 /* NSArchiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8A71C2B169A009DD4DD /* NSArchiver.cpp */; };
+		05855C301E64B48D0020E1C9 /* NSArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8851C2B11FC009DD4DD /* NSArray.cpp */; };
+		05855C311E64B48D0020E1C9 /* NSAssertionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8A81C2B169A009DD4DD /* NSAssertionHandler.cpp */; };
+		05855C321E64B48D0020E1C9 /* NSAttributedString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8A91C2B169A009DD4DD /* NSAttributedString.cpp */; };
+		05855C331E64B48D0020E1C9 /* NSAutoreleasePool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8AA1C2B169A009DD4DD /* NSAutoreleasePool.cpp */; };
+		05855C341E64B48D0020E1C9 /* NSBackgroundActivityScheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8AB1C2B169A009DD4DD /* NSBackgroundActivityScheduler.cpp */; };
+		05855C351E64B48D0020E1C9 /* NSBlockOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8AC1C2B169A009DD4DD /* NSBlockOperation.cpp */; };
+		05855C361E64B48D0020E1C9 /* NSBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8AD1C2B169A009DD4DD /* NSBundle.cpp */; };
+		05855C371E64B48D0020E1C9 /* NSByteCountFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8AE1C2B169A009DD4DD /* NSByteCountFormatter.cpp */; };
+		05855C381E64B48D0020E1C9 /* NSCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8AF1C2B169A009DD4DD /* NSCache.cpp */; };
+		05855C391E64B48D0020E1C9 /* NSCachedURLResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8B01C2B169A009DD4DD /* NSCachedURLResponse.cpp */; };
+		05855C3A1E64B48D0020E1C9 /* NSCalendar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8B11C2B169A009DD4DD /* NSCalendar.cpp */; };
+		05855C3B1E64B48D0020E1C9 /* NSCalendarDate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8B21C2B169A009DD4DD /* NSCalendarDate.cpp */; };
+		05855C3C1E64B48D0020E1C9 /* NSCharacterSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8B31C2B169A009DD4DD /* NSCharacterSet.cpp */; };
+		05855C3D1E64B48D0020E1C9 /* NSClassDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8B41C2B169A009DD4DD /* NSClassDescription.cpp */; };
+		05855C3E1E64B48D0020E1C9 /* NSCloneCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8B51C2B169A009DD4DD /* NSCloneCommand.cpp */; };
+		05855C3F1E64B48D0020E1C9 /* NSCloseCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8B61C2B169A009DD4DD /* NSCloseCommand.cpp */; };
+		05855C401E64B48D0020E1C9 /* NSCoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8B71C2B169A009DD4DD /* NSCoder.cpp */; };
+		05855C411E64B48D0020E1C9 /* NSComparisonPredicate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8B81C2B169A009DD4DD /* NSComparisonPredicate.cpp */; };
+		05855C421E64B48D0020E1C9 /* NSCompoundPredicate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8B91C2B169A009DD4DD /* NSCompoundPredicate.cpp */; };
+		05855C431E64B48D0020E1C9 /* NSCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8BA1C2B169A009DD4DD /* NSCondition.cpp */; };
+		05855C441E64B48D0020E1C9 /* NSConditionLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8BB1C2B169A009DD4DD /* NSConditionLock.cpp */; };
+		05855C451E64B48D0020E1C9 /* NSConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8BC1C2B169A009DD4DD /* NSConnection.cpp */; };
+		05855C461E64B48D0020E1C9 /* NSCountCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8BD1C2B169A009DD4DD /* NSCountCommand.cpp */; };
+		05855C471E64B48D0020E1C9 /* NSCountedSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8BE1C2B169A009DD4DD /* NSCountedSet.cpp */; };
+		05855C481E64B48D0020E1C9 /* NSCreateCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8BF1C2B169A009DD4DD /* NSCreateCommand.cpp */; };
+		05855C491E64B48D0020E1C9 /* NSData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8861C2B11FC009DD4DD /* NSData.cpp */; };
+		05855C4A1E64B48D0020E1C9 /* NSDataDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8C01C2B169A009DD4DD /* NSDataDetector.cpp */; };
+		05855C4B1E64B48D0020E1C9 /* NSDate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8871C2B11FC009DD4DD /* NSDate.cpp */; };
+		05855C4C1E64B48D0020E1C9 /* NSDateComponents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8C11C2B169A009DD4DD /* NSDateComponents.cpp */; };
+		05855C4D1E64B48D0020E1C9 /* NSDateComponentsFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8C21C2B169A009DD4DD /* NSDateComponentsFormatter.cpp */; };
+		05855C4E1E64B48D0020E1C9 /* NSDateFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8C31C2B169A009DD4DD /* NSDateFormatter.cpp */; };
+		05855C4F1E64B48D0020E1C9 /* NSDateIntervalFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8C41C2B169A009DD4DD /* NSDateIntervalFormatter.cpp */; };
+		05855C501E64B48D0020E1C9 /* NSDecimalNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8C51C2B169A009DD4DD /* NSDecimalNumber.cpp */; };
+		05855C511E64B48D0020E1C9 /* NSDecimalNumberHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8C61C2B169A009DD4DD /* NSDecimalNumberHandler.cpp */; };
+		05855C521E64B48D0020E1C9 /* NSDeleteCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8C71C2B169A009DD4DD /* NSDeleteCommand.cpp */; };
+		05855C531E64B48D0020E1C9 /* NSDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8881C2B11FC009DD4DD /* NSDictionary.cpp */; };
+		05855C541E64B48D0020E1C9 /* NSDirectoryEnumerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8C81C2B169A009DD4DD /* NSDirectoryEnumerator.cpp */; };
+		05855C551E64B48D0020E1C9 /* NSDistantObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8C91C2B169A009DD4DD /* NSDistantObject.cpp */; };
+		05855C561E64B48D0020E1C9 /* NSDistantObjectRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8CA1C2B169A009DD4DD /* NSDistantObjectRequest.cpp */; };
+		05855C571E64B48D0020E1C9 /* NSDistributedLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8CB1C2B169A009DD4DD /* NSDistributedLock.cpp */; };
+		05855C581E64B48D0020E1C9 /* NSDistributedNotificationCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8CC1C2B169A009DD4DD /* NSDistributedNotificationCenter.cpp */; };
+		05855C591E64B48D0020E1C9 /* NSEnergyFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8CD1C2B169A009DD4DD /* NSEnergyFormatter.cpp */; };
+		05855C5A1E64B48D0020E1C9 /* NSEnumerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8CE1C2B169A009DD4DD /* NSEnumerator.cpp */; };
+		05855C5B1E64B48D0020E1C9 /* NSError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8891C2B11FC009DD4DD /* NSError.cpp */; };
+		05855C5C1E64B48D0020E1C9 /* NSException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8CF1C2B169A009DD4DD /* NSException.cpp */; };
+		05855C5D1E64B48D0020E1C9 /* NSExistsCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8D01C2B169A009DD4DD /* NSExistsCommand.cpp */; };
+		05855C5E1E64B48D0020E1C9 /* NSExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8D11C2B169A009DD4DD /* NSExpression.cpp */; };
+		05855C5F1E64B48D0020E1C9 /* NSExtensionContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8D21C2B169A009DD4DD /* NSExtensionContext.cpp */; };
+		05855C601E64B48D0020E1C9 /* NSExtensionItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8D31C2B169A009DD4DD /* NSExtensionItem.cpp */; };
+		05855C611E64B48D0020E1C9 /* NSFileAccessIntent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8D41C2B169A009DD4DD /* NSFileAccessIntent.cpp */; };
+		05855C621E64B48D0020E1C9 /* NSFileCoordinator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8D51C2B169A009DD4DD /* NSFileCoordinator.cpp */; };
+		05855C631E64B48D0020E1C9 /* NSFileHandle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8D61C2B169A009DD4DD /* NSFileHandle.cpp */; };
+		05855C641E64B48D0020E1C9 /* NSFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88A1C2B11FC009DD4DD /* NSFileManager.cpp */; };
+		05855C651E64B48D0020E1C9 /* NSFileSecurity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8D71C2B169A009DD4DD /* NSFileSecurity.cpp */; };
+		05855C661E64B48D0020E1C9 /* NSFileVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8D81C2B169A009DD4DD /* NSFileVersion.cpp */; };
+		05855C671E64B48D0020E1C9 /* NSFileWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8D91C2B169A009DD4DD /* NSFileWrapper.cpp */; };
+		05855C681E64B48D0020E1C9 /* NSFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8DA1C2B169A009DD4DD /* NSFormatter.cpp */; };
+		05855C691E64B48D0020E1C9 /* NSGarbageCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8DB1C2B169A009DD4DD /* NSGarbageCollector.cpp */; };
+		05855C6A1E64B48D0020E1C9 /* NSGetCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8DC1C2B169A009DD4DD /* NSGetCommand.cpp */; };
+		05855C6B1E64B48D0020E1C9 /* NSHashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8DD1C2B169A009DD4DD /* NSHashTable.cpp */; };
+		05855C6C1E64B48D0020E1C9 /* NSHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8DE1C2B169A009DD4DD /* NSHost.cpp */; };
+		05855C6D1E64B48D0020E1C9 /* NSHTTPCookie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8DF1C2B169A009DD4DD /* NSHTTPCookie.cpp */; };
+		05855C6E1E64B48D0020E1C9 /* NSHTTPCookieStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8E01C2B169A009DD4DD /* NSHTTPCookieStorage.cpp */; };
+		05855C6F1E64B48D0020E1C9 /* NSHTTPURLResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8E11C2B169A009DD4DD /* NSHTTPURLResponse.cpp */; };
+		05855C701E64B48D0020E1C9 /* NSIndexPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8E21C2B169A009DD4DD /* NSIndexPath.cpp */; };
+		05855C711E64B48D0020E1C9 /* NSIndexSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8E31C2B169A009DD4DD /* NSIndexSet.cpp */; };
+		05855C721E64B48D0020E1C9 /* NSIndexSpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8E41C2B169A009DD4DD /* NSIndexSpecifier.cpp */; };
+		05855C731E64B48D0020E1C9 /* NSInputStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8E51C2B169A009DD4DD /* NSInputStream.cpp */; };
+		05855C741E64B48D0020E1C9 /* NSInvocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8E61C2B169A009DD4DD /* NSInvocation.cpp */; };
+		05855C751E64B48D0020E1C9 /* NSInvocationOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8E71C2B169A009DD4DD /* NSInvocationOperation.cpp */; };
+		05855C761E64B48D0020E1C9 /* NSItemProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8E81C2B169A009DD4DD /* NSItemProvider.cpp */; };
+		05855C771E64B48D0020E1C9 /* NSJSONSerialization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8E91C2B169A009DD4DD /* NSJSONSerialization.cpp */; };
+		05855C781E64B48D0020E1C9 /* NSKeyedArchiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8EA1C2B169A009DD4DD /* NSKeyedArchiver.cpp */; };
+		05855C791E64B48D0020E1C9 /* NSKeyedUnarchiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8EB1C2B169A009DD4DD /* NSKeyedUnarchiver.cpp */; };
+		05855C7A1E64B48D0020E1C9 /* NSLengthFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8EC1C2B169A009DD4DD /* NSLengthFormatter.cpp */; };
+		05855C7B1E64B48D0020E1C9 /* NSLinguisticTagger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8ED1C2B169A009DD4DD /* NSLinguisticTagger.cpp */; };
+		05855C7C1E64B48D0020E1C9 /* NSLocale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8EE1C2B169A009DD4DD /* NSLocale.cpp */; };
+		05855C7D1E64B48D0020E1C9 /* NSLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88B1C2B11FC009DD4DD /* NSLock.cpp */; };
+		05855C7E1E64B48D0020E1C9 /* NSLogicalTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8EF1C2B169A009DD4DD /* NSLogicalTest.cpp */; };
+		05855C7F1E64B48D0020E1C9 /* NSMachBootstrapServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8F01C2B169A009DD4DD /* NSMachBootstrapServer.cpp */; };
+		05855C801E64B48D0020E1C9 /* NSMachPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8F11C2B169A009DD4DD /* NSMachPort.cpp */; };
+		05855C811E64B48D0020E1C9 /* NSMapTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8F21C2B169A009DD4DD /* NSMapTable.cpp */; };
+		05855C821E64B48D0020E1C9 /* NSMassFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8F31C2B169A009DD4DD /* NSMassFormatter.cpp */; };
+		05855C831E64B48D0020E1C9 /* NSMessagePort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8F41C2B169A009DD4DD /* NSMessagePort.cpp */; };
+		05855C841E64B48D0020E1C9 /* NSMessagePortNameServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8F51C2B169A009DD4DD /* NSMessagePortNameServer.cpp */; };
+		05855C851E64B48D0020E1C9 /* NSMetadataItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8F61C2B169A009DD4DD /* NSMetadataItem.cpp */; };
+		05855C861E64B48D0020E1C9 /* NSMetadataQuery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8F71C2B169A009DD4DD /* NSMetadataQuery.cpp */; };
+		05855C871E64B48D0020E1C9 /* NSMetadataQueryAttributeValueTuple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8F81C2B169A009DD4DD /* NSMetadataQueryAttributeValueTuple.cpp */; };
+		05855C881E64B48D0020E1C9 /* NSMetadataQueryResultGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8F91C2B169A009DD4DD /* NSMetadataQueryResultGroup.cpp */; };
+		05855C891E64B48D0020E1C9 /* NSMethodSignature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8FA1C2B169A009DD4DD /* NSMethodSignature.cpp */; };
+		05855C8A1E64B48D0020E1C9 /* NSMiddleSpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8FB1C2B169A009DD4DD /* NSMiddleSpecifier.cpp */; };
+		05855C8B1E64B48D0020E1C9 /* NSMoveCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8FC1C2B169A009DD4DD /* NSMoveCommand.cpp */; };
+		05855C8C1E64B48D0020E1C9 /* NSMutableArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88C1C2B11FC009DD4DD /* NSMutableArray.cpp */; };
+		05855C8D1E64B48D0020E1C9 /* NSMutableAttributedString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8FD1C2B169A009DD4DD /* NSMutableAttributedString.cpp */; };
+		05855C8E1E64B48D0020E1C9 /* NSMutableCharacterSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8FE1C2B169A009DD4DD /* NSMutableCharacterSet.cpp */; };
+		05855C8F1E64B48D0020E1C9 /* NSMutableData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88D1C2B11FC009DD4DD /* NSMutableData.cpp */; };
+		05855C901E64B48D0020E1C9 /* NSMutableDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88E1C2B11FC009DD4DD /* NSMutableDictionary.cpp */; };
+		05855C911E64B48D0020E1C9 /* NSMutableIndexSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8FF1C2B169A009DD4DD /* NSMutableIndexSet.cpp */; };
+		05855C921E64B48D0020E1C9 /* NSMutableOrderedSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9001C2B169A009DD4DD /* NSMutableOrderedSet.cpp */; };
+		05855C931E64B48D0020E1C9 /* NSMutableSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9011C2B169A009DD4DD /* NSMutableSet.cpp */; };
+		05855C941E64B48D0020E1C9 /* NSMutableString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA88F1C2B11FC009DD4DD /* NSMutableString.cpp */; };
+		05855C951E64B48D0020E1C9 /* NSMutableURLRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9021C2B169A009DD4DD /* NSMutableURLRequest.cpp */; };
+		05855C961E64B48D0020E1C9 /* NSNameSpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9031C2B169A009DD4DD /* NSNameSpecifier.cpp */; };
+		05855C971E64B48D0020E1C9 /* NSNetService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9041C2B169A009DD4DD /* NSNetService.cpp */; };
+		05855C981E64B48D0020E1C9 /* NSNetServiceBrowser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9051C2B169A009DD4DD /* NSNetServiceBrowser.cpp */; };
+		05855C991E64B48D0020E1C9 /* NSNotification.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9061C2B169A009DD4DD /* NSNotification.cpp */; };
+		05855C9A1E64B48D0020E1C9 /* NSNotificationCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9071C2B169A009DD4DD /* NSNotificationCenter.cpp */; };
+		05855C9B1E64B48D0020E1C9 /* NSNotificationQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9081C2B169A009DD4DD /* NSNotificationQueue.cpp */; };
+		05855C9C1E64B48D0020E1C9 /* NSNull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9091C2B169A009DD4DD /* NSNull.cpp */; };
+		05855C9D1E64B48D0020E1C9 /* NSNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA90A1C2B169A009DD4DD /* NSNumber.cpp */; };
+		05855C9E1E64B48D0020E1C9 /* NSNumberFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA90B1C2B169A009DD4DD /* NSNumberFormatter.cpp */; };
+		05855C9F1E64B48D0020E1C9 /* NSObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8901C2B11FC009DD4DD /* NSObject.cpp */; };
+		05855CA01E64B48D0020E1C9 /* NSOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA90C1C2B169A009DD4DD /* NSOperation.cpp */; };
+		05855CA11E64B48D0020E1C9 /* NSOperationQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA90D1C2B169A009DD4DD /* NSOperationQueue.cpp */; };
+		05855CA21E64B48D0020E1C9 /* NSOrderedSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA90E1C2B169A009DD4DD /* NSOrderedSet.cpp */; };
+		05855CA31E64B48D0020E1C9 /* NSOrthography.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA90F1C2B169A009DD4DD /* NSOrthography.cpp */; };
+		05855CA41E64B48D0020E1C9 /* NSOutputStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9101C2B169A009DD4DD /* NSOutputStream.cpp */; };
+		05855CA51E64B48D0020E1C9 /* NSPersonNameComponents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9111C2B169A009DD4DD /* NSPersonNameComponents.cpp */; };
+		05855CA61E64B48D0020E1C9 /* NSPersonNameComponentsFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9121C2B169A009DD4DD /* NSPersonNameComponentsFormatter.cpp */; };
+		05855CA71E64B48D0020E1C9 /* NSPipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9131C2B169A009DD4DD /* NSPipe.cpp */; };
+		05855CA81E64B48D0020E1C9 /* NSPointerArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9141C2B169A009DD4DD /* NSPointerArray.cpp */; };
+		05855CA91E64B48D0020E1C9 /* NSPointerFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9151C2B169A009DD4DD /* NSPointerFunctions.cpp */; };
+		05855CAA1E64B48D0020E1C9 /* NSPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9161C2B169A009DD4DD /* NSPort.cpp */; };
+		05855CAB1E64B48D0020E1C9 /* NSPortCoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9171C2B169A009DD4DD /* NSPortCoder.cpp */; };
+		05855CAC1E64B48D0020E1C9 /* NSPortMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9181C2B169A009DD4DD /* NSPortMessage.cpp */; };
+		05855CAD1E64B48D0020E1C9 /* NSPortNameServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9191C2B169A009DD4DD /* NSPortNameServer.cpp */; };
+		05855CAE1E64B48D0020E1C9 /* NSPositionalSpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA91A1C2B169A009DD4DD /* NSPositionalSpecifier.cpp */; };
+		05855CAF1E64B48D0020E1C9 /* NSPredicate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA91B1C2B169A009DD4DD /* NSPredicate.cpp */; };
+		05855CB01E64B48D0020E1C9 /* NSProcessInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA91C1C2B169A009DD4DD /* NSProcessInfo.cpp */; };
+		05855CB11E64B48D0020E1C9 /* NSProgress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA91D1C2B169A009DD4DD /* NSProgress.cpp */; };
+		05855CB21E64B48D0020E1C9 /* NSPropertyListSerialization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA91E1C2B169A009DD4DD /* NSPropertyListSerialization.cpp */; };
+		05855CB31E64B48D0020E1C9 /* NSPropertySpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA91F1C2B169A009DD4DD /* NSPropertySpecifier.cpp */; };
+		05855CB41E64B48D0020E1C9 /* NSProtocolChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9201C2B169A009DD4DD /* NSProtocolChecker.cpp */; };
+		05855CB51E64B48D0020E1C9 /* NSProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9211C2B169A009DD4DD /* NSProxy.cpp */; };
+		05855CB61E64B48D0020E1C9 /* NSPurgeableData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9221C2B169A009DD4DD /* NSPurgeableData.cpp */; };
+		05855CB71E64B48D0020E1C9 /* NSQuitCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9231C2B169A009DD4DD /* NSQuitCommand.cpp */; };
+		05855CB81E64B48D0020E1C9 /* NSRandomSpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9241C2B169A009DD4DD /* NSRandomSpecifier.cpp */; };
+		05855CB91E64B48D0020E1C9 /* NSRangeSpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9251C2B169A009DD4DD /* NSRangeSpecifier.cpp */; };
+		05855CBA1E64B48D0020E1C9 /* NSRecursiveLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8911C2B11FC009DD4DD /* NSRecursiveLock.cpp */; };
+		05855CBB1E64B48D0020E1C9 /* NSRegularExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9261C2B169A009DD4DD /* NSRegularExpression.cpp */; };
+		05855CBC1E64B48D0020E1C9 /* NSRelativeSpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9271C2B169A009DD4DD /* NSRelativeSpecifier.cpp */; };
+		05855CBD1E64B48D0020E1C9 /* NSRunLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9281C2B169A009DD4DD /* NSRunLoop.cpp */; };
+		05855CBE1E64B48D0020E1C9 /* NSScanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9291C2B169A009DD4DD /* NSScanner.cpp */; };
+		05855CBF1E64B48D0020E1C9 /* NSScriptClassDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA92A1C2B169A009DD4DD /* NSScriptClassDescription.cpp */; };
+		05855CC01E64B48D0020E1C9 /* NSScriptCoercionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA92B1C2B169A009DD4DD /* NSScriptCoercionHandler.cpp */; };
+		05855CC11E64B48D0020E1C9 /* NSScriptCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA92C1C2B169A009DD4DD /* NSScriptCommand.cpp */; };
+		05855CC21E64B48D0020E1C9 /* NSScriptCommandDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA92D1C2B169A009DD4DD /* NSScriptCommandDescription.cpp */; };
+		05855CC31E64B48D0020E1C9 /* NSScriptExecutionContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA92E1C2B169A009DD4DD /* NSScriptExecutionContext.cpp */; };
+		05855CC41E64B48D0020E1C9 /* NSScriptObjectSpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA92F1C2B169A009DD4DD /* NSScriptObjectSpecifier.cpp */; };
+		05855CC51E64B48D0020E1C9 /* NSScriptSuiteRegistry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9301C2B169A009DD4DD /* NSScriptSuiteRegistry.cpp */; };
+		05855CC61E64B48D0020E1C9 /* NSScriptWhoseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9311C2B169A009DD4DD /* NSScriptWhoseTest.cpp */; };
+		05855CC71E64B48D0020E1C9 /* NSSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9321C2B169A009DD4DD /* NSSet.cpp */; };
+		05855CC81E64B48D0020E1C9 /* NSSetCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9331C2B169A009DD4DD /* NSSetCommand.cpp */; };
+		05855CC91E64B48D0020E1C9 /* NSSocketPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9341C2B169A009DD4DD /* NSSocketPort.cpp */; };
+		05855CCA1E64B48D0020E1C9 /* NSSocketPortNameServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9351C2B169A009DD4DD /* NSSocketPortNameServer.cpp */; };
+		05855CCB1E64B48D0020E1C9 /* NSSortDescriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9361C2B169A009DD4DD /* NSSortDescriptor.cpp */; };
+		05855CCC1E64B48D0020E1C9 /* NSSpecifierTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9371C2B169A009DD4DD /* NSSpecifierTest.cpp */; };
+		05855CCD1E64B48D0020E1C9 /* NSSpellServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9381C2B169A009DD4DD /* NSSpellServer.cpp */; };
+		05855CCE1E64B48D0020E1C9 /* NSStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9391C2B169A009DD4DD /* NSStream.cpp */; };
+		05855CCF1E64B48D0020E1C9 /* NSString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8921C2B11FC009DD4DD /* NSString.cpp */; };
+		05855CD01E64B48D0020E1C9 /* NSTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA93A1C2B169A009DD4DD /* NSTask.cpp */; };
+		05855CD11E64B48D0020E1C9 /* NSTextCheckingResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA93B1C2B169A009DD4DD /* NSTextCheckingResult.cpp */; };
+		05855CD21E64B48D0020E1C9 /* NSThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA93C1C2B169A009DD4DD /* NSThread.cpp */; };
+		05855CD31E64B48D0020E1C9 /* NSTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA93D1C2B169A009DD4DD /* NSTimer.cpp */; };
+		05855CD41E64B48D0020E1C9 /* NSTimeZone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA93E1C2B169A009DD4DD /* NSTimeZone.cpp */; };
+		05855CD51E64B48D0020E1C9 /* NSUbiquitousKeyValueStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA93F1C2B169A009DD4DD /* NSUbiquitousKeyValueStore.cpp */; };
+		05855CD61E64B48D0020E1C9 /* NSUnarchiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9401C2B169A009DD4DD /* NSUnarchiver.cpp */; };
+		05855CD71E64B48D0020E1C9 /* NSUndoManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9411C2B169A009DD4DD /* NSUndoManager.cpp */; };
+		05855CD81E64B48D0020E1C9 /* NSUniqueIDSpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9421C2B169A009DD4DD /* NSUniqueIDSpecifier.cpp */; };
+		05855CD91E64B48D0020E1C9 /* NSURL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9431C2B169A009DD4DD /* NSURL.cpp */; };
+		05855CDA1E64B48D0020E1C9 /* NSURLAuthenticationChallenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9441C2B169A009DD4DD /* NSURLAuthenticationChallenge.cpp */; };
+		05855CDB1E64B48D0020E1C9 /* NSURLCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9451C2B169A009DD4DD /* NSURLCache.cpp */; };
+		05855CDC1E64B48D0020E1C9 /* NSURLComponents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9461C2B169A009DD4DD /* NSURLComponents.cpp */; };
+		05855CDD1E64B48D0020E1C9 /* NSURLConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9471C2B169A009DD4DD /* NSURLConnection.cpp */; };
+		05855CDE1E64B48D0020E1C9 /* NSURLCredential.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9481C2B169A009DD4DD /* NSURLCredential.cpp */; };
+		05855CDF1E64B48D0020E1C9 /* NSURLCredentialStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9491C2B169A009DD4DD /* NSURLCredentialStorage.cpp */; };
+		05855CE01E64B48D0020E1C9 /* NSURLDownload.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA94A1C2B169A009DD4DD /* NSURLDownload.cpp */; };
+		05855CE11E64B48D0020E1C9 /* NSURLHandle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA94B1C2B169A009DD4DD /* NSURLHandle.cpp */; };
+		05855CE21E64B48D0020E1C9 /* NSURLProtectionSpace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA94C1C2B169A009DD4DD /* NSURLProtectionSpace.cpp */; };
+		05855CE31E64B48D0020E1C9 /* NSURLProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA94D1C2B169A009DD4DD /* NSURLProtocol.cpp */; };
+		05855CE41E64B48D0020E1C9 /* NSURLQueryItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA94E1C2B169A009DD4DD /* NSURLQueryItem.cpp */; };
+		05855CE51E64B48D0020E1C9 /* NSURLRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA94F1C2B169A009DD4DD /* NSURLRequest.cpp */; };
+		05855CE61E64B48D0020E1C9 /* NSURLResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9501C2B169A009DD4DD /* NSURLResponse.cpp */; };
+		05855CE71E64B48D0020E1C9 /* NSURLSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9511C2B169A009DD4DD /* NSURLSession.cpp */; };
+		05855CE81E64B48D0020E1C9 /* NSURLSessionConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9521C2B169A009DD4DD /* NSURLSessionConfiguration.cpp */; };
+		05855CE91E64B48D0020E1C9 /* NSURLSessionDataTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9531C2B169A009DD4DD /* NSURLSessionDataTask.cpp */; };
+		05855CEA1E64B48D0020E1C9 /* NSURLSessionDownloadTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9541C2B169A009DD4DD /* NSURLSessionDownloadTask.cpp */; };
+		05855CEB1E64B48D0020E1C9 /* NSURLSessionStreamTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9551C2B169A009DD4DD /* NSURLSessionStreamTask.cpp */; };
+		05855CEC1E64B48D0020E1C9 /* NSURLSessionTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9561C2B169A009DD4DD /* NSURLSessionTask.cpp */; };
+		05855CED1E64B48D0020E1C9 /* NSURLSessionUploadTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9571C2B169A009DD4DD /* NSURLSessionUploadTask.cpp */; };
+		05855CEE1E64B48D0020E1C9 /* NSUserActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9581C2B169A009DD4DD /* NSUserActivity.cpp */; };
+		05855CEF1E64B48D0020E1C9 /* NSUserAppleScriptTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9591C2B169A009DD4DD /* NSUserAppleScriptTask.cpp */; };
+		05855CF01E64B48D0020E1C9 /* NSUserAutomatorTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA95A1C2B169A009DD4DD /* NSUserAutomatorTask.cpp */; };
+		05855CF11E64B48D0020E1C9 /* NSUserDefaults.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA95B1C2B169A009DD4DD /* NSUserDefaults.cpp */; };
+		05855CF21E64B48D0020E1C9 /* NSUserNotification.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA95C1C2B169A009DD4DD /* NSUserNotification.cpp */; };
+		05855CF31E64B48D0020E1C9 /* NSUserNotificationAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA95D1C2B169A009DD4DD /* NSUserNotificationAction.cpp */; };
+		05855CF41E64B48D0020E1C9 /* NSUserNotificationCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA95E1C2B169A009DD4DD /* NSUserNotificationCenter.cpp */; };
+		05855CF51E64B48D0020E1C9 /* NSUserScriptTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA95F1C2B169A009DD4DD /* NSUserScriptTask.cpp */; };
+		05855CF61E64B48D0020E1C9 /* NSUserUnixTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9601C2B169A009DD4DD /* NSUserUnixTask.cpp */; };
+		05855CF71E64B48D0020E1C9 /* NSUUID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9611C2B169A009DD4DD /* NSUUID.cpp */; };
+		05855CF81E64B48D0020E1C9 /* NSValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9621C2B169A009DD4DD /* NSValue.cpp */; };
+		05855CF91E64B48D0020E1C9 /* NSValueTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9631C2B169A009DD4DD /* NSValueTransformer.cpp */; };
+		05855CFA1E64B48D0020E1C9 /* NSWhoseSpecifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9641C2B169A009DD4DD /* NSWhoseSpecifier.cpp */; };
+		05855CFB1E64B48D0020E1C9 /* NSXMLDocument.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9651C2B169A009DD4DD /* NSXMLDocument.cpp */; };
+		05855CFC1E64B48D0020E1C9 /* NSXMLDTD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9661C2B169A009DD4DD /* NSXMLDTD.cpp */; };
+		05855CFD1E64B48D0020E1C9 /* NSXMLDTDNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9671C2B169A009DD4DD /* NSXMLDTDNode.cpp */; };
+		05855CFE1E64B48D0020E1C9 /* NSXMLElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9681C2B169A009DD4DD /* NSXMLElement.cpp */; };
+		05855CFF1E64B48D0020E1C9 /* NSXMLNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA9691C2B169A009DD4DD /* NSXMLNode.cpp */; };
+		05855D001E64B48D0020E1C9 /* NSXMLParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA96A1C2B169A009DD4DD /* NSXMLParser.cpp */; };
+		05855D011E64B48D0020E1C9 /* NSXPCConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA96B1C2B169A009DD4DD /* NSXPCConnection.cpp */; };
+		05855D021E64B48D0020E1C9 /* NSXPCInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA96C1C2B169A009DD4DD /* NSXPCInterface.cpp */; };
+		05855D031E64B48D0020E1C9 /* NSXPCListenerEndpoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA96D1C2B169A009DD4DD /* NSXPCListenerEndpoint.cpp */; };
 		058FA76E1C29E3CA009DD4DD /* Object.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA76A1C29E3CA009DD4DD /* Object.hpp */; };
 		058FA76F1C29E3CA009DD4DD /* RT.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058FA76B1C29E3CA009DD4DD /* RT.hpp */; };
 		058FA7761C29E3FB009DD4DD /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA7731C29E3FB009DD4DD /* Object.cpp */; };
@@ -510,6 +732,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		05855C241E64B4160020E1C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 056C87C618C8B0F8006260B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05855C1A1E64B4010020E1C9;
+			remoteInfo = "OBJCXX-iOS";
+		};
 		058862091C73BBCB000BB563 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 056C87C618C8B0F8006260B3 /* Project object */;
@@ -520,6 +749,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		05855C191E64B4010020E1C9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		058FA78B1C29F62C009DD4DD /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,6 +773,7 @@
 		0558F96B1E5F7E70009FAC3A /* Foo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Foo.cpp; sourceTree = "<group>"; };
 		0558F96C1E5F7E70009FAC3A /* Foo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Foo.hpp; sourceTree = "<group>"; };
 		056C881218C8B85F006260B3 /* libOBJCXX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOBJCXX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05855C1B1E64B4010020E1C9 /* libOBJCXX-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libOBJCXX-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		058FA76A1C29E3CA009DD4DD /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		058FA76B1C29E3CA009DD4DD /* RT.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RT.hpp; sourceTree = "<group>"; };
 		058FA7731C29E3FB009DD4DD /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
@@ -1049,6 +1288,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05855C181E64B4010020E1C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		058FA78A1C29F62C009DD4DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1078,6 +1324,7 @@
 			children = (
 				056C881218C8B85F006260B3 /* libOBJCXX.a */,
 				058FA78D1C29F62C009DD4DD /* OBJCXX-Test */,
+				05855C1B1E64B4010020E1C9 /* libOBJCXX-iOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1972,6 +2219,23 @@
 			productReference = 056C881218C8B85F006260B3 /* libOBJCXX.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		05855C1A1E64B4010020E1C9 /* OBJCXX-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05855C231E64B4010020E1C9 /* Build configuration list for PBXNativeTarget "OBJCXX-iOS" */;
+			buildPhases = (
+				05855C171E64B4010020E1C9 /* Sources */,
+				05855C181E64B4010020E1C9 /* Frameworks */,
+				05855C191E64B4010020E1C9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OBJCXX-iOS";
+			productName = "OBJCXX-iOS";
+			productReference = 05855C1B1E64B4010020E1C9 /* libOBJCXX-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		058FA78C1C29F62C009DD4DD /* OBJCXX-Test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 058FA7911C29F62C009DD4DD /* Build configuration list for PBXNativeTarget "OBJCXX-Test" */;
@@ -1984,6 +2248,7 @@
 			);
 			dependencies = (
 				0588620A1C73BBCB000BB563 /* PBXTargetDependency */,
+				05855C251E64B4160020E1C9 /* PBXTargetDependency */,
 			);
 			name = "OBJCXX-Test";
 			productName = "OBJCXX-Test";
@@ -1999,6 +2264,10 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "XS-Labs";
 				TargetAttributes = {
+					05855C1A1E64B4010020E1C9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					058FA78C1C29F62C009DD4DD = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -2017,6 +2286,7 @@
 			projectRoot = "";
 			targets = (
 				056C881118C8B85F006260B3 /* OBJCXX */,
+				05855C1A1E64B4010020E1C9 /* OBJCXX-iOS */,
 				058FA78C1C29F62C009DD4DD /* OBJCXX-Test */,
 			);
 		};
@@ -2252,6 +2522,235 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05855C171E64B4010020E1C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05855C631E64B48D0020E1C9 /* NSFileHandle.cpp in Sources */,
+				05855C361E64B48D0020E1C9 /* NSBundle.cpp in Sources */,
+				05855C671E64B48D0020E1C9 /* NSFileWrapper.cpp in Sources */,
+				05855CE11E64B48D0020E1C9 /* NSURLHandle.cpp in Sources */,
+				05855CC91E64B48D0020E1C9 /* NSSocketPort.cpp in Sources */,
+				05855C821E64B48D0020E1C9 /* NSMassFormatter.cpp in Sources */,
+				05855CBD1E64B48D0020E1C9 /* NSRunLoop.cpp in Sources */,
+				05855C9A1E64B48D0020E1C9 /* NSNotificationCenter.cpp in Sources */,
+				05855CD61E64B48D0020E1C9 /* NSUnarchiver.cpp in Sources */,
+				05855C3D1E64B48D0020E1C9 /* NSClassDescription.cpp in Sources */,
+				05855CE81E64B48D0020E1C9 /* NSURLSessionConfiguration.cpp in Sources */,
+				05855C4A1E64B48D0020E1C9 /* NSDataDetector.cpp in Sources */,
+				05855D031E64B48D0020E1C9 /* NSXPCListenerEndpoint.cpp in Sources */,
+				05855C6F1E64B48D0020E1C9 /* NSHTTPURLResponse.cpp in Sources */,
+				05855C4E1E64B48D0020E1C9 /* NSDateFormatter.cpp in Sources */,
+				05855CD01E64B48D0020E1C9 /* NSTask.cpp in Sources */,
+				05855CB11E64B48D0020E1C9 /* NSProgress.cpp in Sources */,
+				05855C611E64B48D0020E1C9 /* NSFileAccessIntent.cpp in Sources */,
+				05855C9E1E64B48D0020E1C9 /* NSNumberFormatter.cpp in Sources */,
+				05855C581E64B48D0020E1C9 /* NSDistributedNotificationCenter.cpp in Sources */,
+				05855C261E64B4790020E1C9 /* Object.cpp in Sources */,
+				05855CF51E64B48D0020E1C9 /* NSUserScriptTask.cpp in Sources */,
+				05855CEE1E64B48D0020E1C9 /* NSUserActivity.cpp in Sources */,
+				05855CF41E64B48D0020E1C9 /* NSUserNotificationCenter.cpp in Sources */,
+				05855C7E1E64B48D0020E1C9 /* NSLogicalTest.cpp in Sources */,
+				05855CAD1E64B48D0020E1C9 /* NSPortNameServer.cpp in Sources */,
+				05855C421E64B48D0020E1C9 /* NSCompoundPredicate.cpp in Sources */,
+				05855CFA1E64B48D0020E1C9 /* NSWhoseSpecifier.cpp in Sources */,
+				05855C2F1E64B48D0020E1C9 /* NSArchiver.cpp in Sources */,
+				05855CBE1E64B48D0020E1C9 /* NSScanner.cpp in Sources */,
+				05855C5C1E64B48D0020E1C9 /* NSException.cpp in Sources */,
+				05855CFB1E64B48D0020E1C9 /* NSXMLDocument.cpp in Sources */,
+				05855CA71E64B48D0020E1C9 /* NSPipe.cpp in Sources */,
+				05855CC01E64B48D0020E1C9 /* NSScriptCoercionHandler.cpp in Sources */,
+				05855CB31E64B48D0020E1C9 /* NSPropertySpecifier.cpp in Sources */,
+				05855C801E64B48D0020E1C9 /* NSMachPort.cpp in Sources */,
+				05855CF01E64B48D0020E1C9 /* NSUserAutomatorTask.cpp in Sources */,
+				05855CED1E64B48D0020E1C9 /* NSURLSessionUploadTask.cpp in Sources */,
+				05855CD91E64B48D0020E1C9 /* NSURL.cpp in Sources */,
+				05855C731E64B48D0020E1C9 /* NSInputStream.cpp in Sources */,
+				05855CDD1E64B48D0020E1C9 /* NSURLConnection.cpp in Sources */,
+				05855CA21E64B48D0020E1C9 /* NSOrderedSet.cpp in Sources */,
+				05855C7C1E64B48D0020E1C9 /* NSLocale.cpp in Sources */,
+				05855C2B1E64B48D0020E1C9 /* NSAffineTransform.cpp in Sources */,
+				05855C9D1E64B48D0020E1C9 /* NSNumber.cpp in Sources */,
+				05855C3A1E64B48D0020E1C9 /* NSCalendar.cpp in Sources */,
+				05855CAA1E64B48D0020E1C9 /* NSPort.cpp in Sources */,
+				05855C501E64B48D0020E1C9 /* NSDecimalNumber.cpp in Sources */,
+				05855CB81E64B48D0020E1C9 /* NSRandomSpecifier.cpp in Sources */,
+				05855CA51E64B48D0020E1C9 /* NSPersonNameComponents.cpp in Sources */,
+				05855CEA1E64B48D0020E1C9 /* NSURLSessionDownloadTask.cpp in Sources */,
+				05855C791E64B48D0020E1C9 /* NSKeyedUnarchiver.cpp in Sources */,
+				05855CA81E64B48D0020E1C9 /* NSPointerArray.cpp in Sources */,
+				05855C3B1E64B48D0020E1C9 /* NSCalendarDate.cpp in Sources */,
+				05855C4D1E64B48D0020E1C9 /* NSDateComponentsFormatter.cpp in Sources */,
+				05855C701E64B48D0020E1C9 /* NSIndexPath.cpp in Sources */,
+				05855CB51E64B48D0020E1C9 /* NSProxy.cpp in Sources */,
+				05855C5F1E64B48D0020E1C9 /* NSExtensionContext.cpp in Sources */,
+				05855C851E64B48D0020E1C9 /* NSMetadataItem.cpp in Sources */,
+				05855C321E64B48D0020E1C9 /* NSAttributedString.cpp in Sources */,
+				05855C451E64B48D0020E1C9 /* NSConnection.cpp in Sources */,
+				05855CC81E64B48D0020E1C9 /* NSSetCommand.cpp in Sources */,
+				05855CA41E64B48D0020E1C9 /* NSOutputStream.cpp in Sources */,
+				05855C391E64B48D0020E1C9 /* NSCachedURLResponse.cpp in Sources */,
+				05855CA91E64B48D0020E1C9 /* NSPointerFunctions.cpp in Sources */,
+				05855C891E64B48D0020E1C9 /* NSMethodSignature.cpp in Sources */,
+				05855CCF1E64B48D0020E1C9 /* NSString.cpp in Sources */,
+				05855CA01E64B48D0020E1C9 /* NSOperation.cpp in Sources */,
+				05855C551E64B48D0020E1C9 /* NSDistantObject.cpp in Sources */,
+				05855C751E64B48D0020E1C9 /* NSInvocationOperation.cpp in Sources */,
+				05855C4F1E64B48D0020E1C9 /* NSDateIntervalFormatter.cpp in Sources */,
+				05855C2E1E64B48D0020E1C9 /* NSAppleScript.cpp in Sources */,
+				05855C301E64B48D0020E1C9 /* NSArray.cpp in Sources */,
+				05855C741E64B48D0020E1C9 /* NSInvocation.cpp in Sources */,
+				05855CBF1E64B48D0020E1C9 /* NSScriptClassDescription.cpp in Sources */,
+				05855C8B1E64B48D0020E1C9 /* NSMoveCommand.cpp in Sources */,
+				05855C6D1E64B48D0020E1C9 /* NSHTTPCookie.cpp in Sources */,
+				05855CBC1E64B48D0020E1C9 /* NSRelativeSpecifier.cpp in Sources */,
+				05855C951E64B48D0020E1C9 /* NSMutableURLRequest.cpp in Sources */,
+				05855C9B1E64B48D0020E1C9 /* NSNotificationQueue.cpp in Sources */,
+				05855C541E64B48D0020E1C9 /* NSDirectoryEnumerator.cpp in Sources */,
+				05855C7A1E64B48D0020E1C9 /* NSLengthFormatter.cpp in Sources */,
+				05855CDE1E64B48D0020E1C9 /* NSURLCredential.cpp in Sources */,
+				05855C811E64B48D0020E1C9 /* NSMapTable.cpp in Sources */,
+				05855C711E64B48D0020E1C9 /* NSIndexSet.cpp in Sources */,
+				05855CD21E64B48D0020E1C9 /* NSThread.cpp in Sources */,
+				05855C2D1E64B48D0020E1C9 /* NSAppleEventManager.cpp in Sources */,
+				05855CF21E64B48D0020E1C9 /* NSUserNotification.cpp in Sources */,
+				05855C981E64B48D0020E1C9 /* NSNetServiceBrowser.cpp in Sources */,
+				05855C6A1E64B48D0020E1C9 /* NSGetCommand.cpp in Sources */,
+				05855D011E64B48D0020E1C9 /* NSXPCConnection.cpp in Sources */,
+				05855C621E64B48D0020E1C9 /* NSFileCoordinator.cpp in Sources */,
+				05855CB21E64B48D0020E1C9 /* NSPropertyListSerialization.cpp in Sources */,
+				05855CCD1E64B48D0020E1C9 /* NSSpellServer.cpp in Sources */,
+				05855CA31E64B48D0020E1C9 /* NSOrthography.cpp in Sources */,
+				05855CE01E64B48D0020E1C9 /* NSURLDownload.cpp in Sources */,
+				05855CAC1E64B48D0020E1C9 /* NSPortMessage.cpp in Sources */,
+				05855CE31E64B48D0020E1C9 /* NSURLProtocol.cpp in Sources */,
+				05855C5A1E64B48D0020E1C9 /* NSEnumerator.cpp in Sources */,
+				05855C3F1E64B48D0020E1C9 /* NSCloseCommand.cpp in Sources */,
+				05855C7D1E64B48D0020E1C9 /* NSLock.cpp in Sources */,
+				05855D021E64B48D0020E1C9 /* NSXPCInterface.cpp in Sources */,
+				05855C771E64B48D0020E1C9 /* NSJSONSerialization.cpp in Sources */,
+				05855CAE1E64B48D0020E1C9 /* NSPositionalSpecifier.cpp in Sources */,
+				05855C971E64B48D0020E1C9 /* NSNetService.cpp in Sources */,
+				05855C9C1E64B48D0020E1C9 /* NSNull.cpp in Sources */,
+				05855CC21E64B48D0020E1C9 /* NSScriptCommandDescription.cpp in Sources */,
+				05855CAF1E64B48D0020E1C9 /* NSPredicate.cpp in Sources */,
+				05855C311E64B48D0020E1C9 /* NSAssertionHandler.cpp in Sources */,
+				05855CC11E64B48D0020E1C9 /* NSScriptCommand.cpp in Sources */,
+				05855CD31E64B48D0020E1C9 /* NSTimer.cpp in Sources */,
+				05855C641E64B48D0020E1C9 /* NSFileManager.cpp in Sources */,
+				05855C381E64B48D0020E1C9 /* NSCache.cpp in Sources */,
+				05855CEB1E64B48D0020E1C9 /* NSURLSessionStreamTask.cpp in Sources */,
+				05855CD71E64B48D0020E1C9 /* NSUndoManager.cpp in Sources */,
+				05855CDA1E64B48D0020E1C9 /* NSURLAuthenticationChallenge.cpp in Sources */,
+				05855CCA1E64B48D0020E1C9 /* NSSocketPortNameServer.cpp in Sources */,
+				05855C6C1E64B48D0020E1C9 /* NSHost.cpp in Sources */,
+				05855CA61E64B48D0020E1C9 /* NSPersonNameComponentsFormatter.cpp in Sources */,
+				05855C941E64B48D0020E1C9 /* NSMutableString.cpp in Sources */,
+				05855C281E64B4790020E1C9 /* Exception.cpp in Sources */,
+				05855C8A1E64B48D0020E1C9 /* NSMiddleSpecifier.cpp in Sources */,
+				05855C521E64B48D0020E1C9 /* NSDeleteCommand.cpp in Sources */,
+				05855CE71E64B48D0020E1C9 /* NSURLSession.cpp in Sources */,
+				05855CCC1E64B48D0020E1C9 /* NSSpecifierTest.cpp in Sources */,
+				05855C331E64B48D0020E1C9 /* NSAutoreleasePool.cpp in Sources */,
+				05855CFC1E64B48D0020E1C9 /* NSXMLDTD.cpp in Sources */,
+				05855C291E64B4790020E1C9 /* ClassBuilder.cpp in Sources */,
+				05855CFE1E64B48D0020E1C9 /* NSXMLElement.cpp in Sources */,
+				05855C781E64B48D0020E1C9 /* NSKeyedArchiver.cpp in Sources */,
+				05855C371E64B48D0020E1C9 /* NSByteCountFormatter.cpp in Sources */,
+				05855CA11E64B48D0020E1C9 /* NSOperationQueue.cpp in Sources */,
+				05855C2A1E64B4830020E1C9 /* Functions.cpp in Sources */,
+				05855CEF1E64B48D0020E1C9 /* NSUserAppleScriptTask.cpp in Sources */,
+				05855C7F1E64B48D0020E1C9 /* NSMachBootstrapServer.cpp in Sources */,
+				05855CD11E64B48D0020E1C9 /* NSTextCheckingResult.cpp in Sources */,
+				05855C441E64B48D0020E1C9 /* NSConditionLock.cpp in Sources */,
+				05855C561E64B48D0020E1C9 /* NSDistantObjectRequest.cpp in Sources */,
+				05855C351E64B48D0020E1C9 /* NSBlockOperation.cpp in Sources */,
+				05855C601E64B48D0020E1C9 /* NSExtensionItem.cpp in Sources */,
+				05855C691E64B48D0020E1C9 /* NSGarbageCollector.cpp in Sources */,
+				05855CE21E64B48D0020E1C9 /* NSURLProtectionSpace.cpp in Sources */,
+				05855CE41E64B48D0020E1C9 /* NSURLQueryItem.cpp in Sources */,
+				05855C6B1E64B48D0020E1C9 /* NSHashTable.cpp in Sources */,
+				05855C4B1E64B48D0020E1C9 /* NSDate.cpp in Sources */,
+				05855D001E64B48D0020E1C9 /* NSXMLParser.cpp in Sources */,
+				05855C5D1E64B48D0020E1C9 /* NSExistsCommand.cpp in Sources */,
+				05855C8D1E64B48D0020E1C9 /* NSMutableAttributedString.cpp in Sources */,
+				05855C721E64B48D0020E1C9 /* NSIndexSpecifier.cpp in Sources */,
+				05855C7B1E64B48D0020E1C9 /* NSLinguisticTagger.cpp in Sources */,
+				05855CEC1E64B48D0020E1C9 /* NSURLSessionTask.cpp in Sources */,
+				05855C991E64B48D0020E1C9 /* NSNotification.cpp in Sources */,
+				05855C881E64B48D0020E1C9 /* NSMetadataQueryResultGroup.cpp in Sources */,
+				05855C431E64B48D0020E1C9 /* NSCondition.cpp in Sources */,
+				05855CB01E64B48D0020E1C9 /* NSProcessInfo.cpp in Sources */,
+				05855CC41E64B48D0020E1C9 /* NSScriptObjectSpecifier.cpp in Sources */,
+				05855C411E64B48D0020E1C9 /* NSComparisonPredicate.cpp in Sources */,
+				05855CE51E64B48D0020E1C9 /* NSURLRequest.cpp in Sources */,
+				05855C8C1E64B48D0020E1C9 /* NSMutableArray.cpp in Sources */,
+				05855CBA1E64B48D0020E1C9 /* NSRecursiveLock.cpp in Sources */,
+				05855C491E64B48D0020E1C9 /* NSData.cpp in Sources */,
+				05855C681E64B48D0020E1C9 /* NSFormatter.cpp in Sources */,
+				05855C401E64B48D0020E1C9 /* NSCoder.cpp in Sources */,
+				05855CC51E64B48D0020E1C9 /* NSScriptSuiteRegistry.cpp in Sources */,
+				05855C571E64B48D0020E1C9 /* NSDistributedLock.cpp in Sources */,
+				05855C831E64B48D0020E1C9 /* NSMessagePort.cpp in Sources */,
+				05855C341E64B48D0020E1C9 /* NSBackgroundActivityScheduler.cpp in Sources */,
+				05855CF31E64B48D0020E1C9 /* NSUserNotificationAction.cpp in Sources */,
+				05855C511E64B48D0020E1C9 /* NSDecimalNumberHandler.cpp in Sources */,
+				05855C841E64B48D0020E1C9 /* NSMessagePortNameServer.cpp in Sources */,
+				05855C471E64B48D0020E1C9 /* NSCountedSet.cpp in Sources */,
+				05855CD41E64B48D0020E1C9 /* NSTimeZone.cpp in Sources */,
+				05855C8E1E64B48D0020E1C9 /* NSMutableCharacterSet.cpp in Sources */,
+				05855C3C1E64B48D0020E1C9 /* NSCharacterSet.cpp in Sources */,
+				05855CF91E64B48D0020E1C9 /* NSValueTransformer.cpp in Sources */,
+				05855C4C1E64B48D0020E1C9 /* NSDateComponents.cpp in Sources */,
+				05855C271E64B4790020E1C9 /* RT.cpp in Sources */,
+				05855CB71E64B48D0020E1C9 /* NSQuitCommand.cpp in Sources */,
+				05855C481E64B48D0020E1C9 /* NSCreateCommand.cpp in Sources */,
+				05855CCE1E64B48D0020E1C9 /* NSStream.cpp in Sources */,
+				05855C861E64B48D0020E1C9 /* NSMetadataQuery.cpp in Sources */,
+				05855CF11E64B48D0020E1C9 /* NSUserDefaults.cpp in Sources */,
+				05855CD51E64B48D0020E1C9 /* NSUbiquitousKeyValueStore.cpp in Sources */,
+				05855C531E64B48D0020E1C9 /* NSDictionary.cpp in Sources */,
+				05855C5E1E64B48D0020E1C9 /* NSExpression.cpp in Sources */,
+				05855C911E64B48D0020E1C9 /* NSMutableIndexSet.cpp in Sources */,
+				05855C651E64B48D0020E1C9 /* NSFileSecurity.cpp in Sources */,
+				05855C921E64B48D0020E1C9 /* NSMutableOrderedSet.cpp in Sources */,
+				05855CC31E64B48D0020E1C9 /* NSScriptExecutionContext.cpp in Sources */,
+				05855CFD1E64B48D0020E1C9 /* NSXMLDTDNode.cpp in Sources */,
+				05855CB91E64B48D0020E1C9 /* NSRangeSpecifier.cpp in Sources */,
+				05855CF61E64B48D0020E1C9 /* NSUserUnixTask.cpp in Sources */,
+				05855C761E64B48D0020E1C9 /* NSItemProvider.cpp in Sources */,
+				05855CFF1E64B48D0020E1C9 /* NSXMLNode.cpp in Sources */,
+				05855CD81E64B48D0020E1C9 /* NSUniqueIDSpecifier.cpp in Sources */,
+				05855C961E64B48D0020E1C9 /* NSNameSpecifier.cpp in Sources */,
+				05855CF81E64B48D0020E1C9 /* NSValue.cpp in Sources */,
+				05855CF71E64B48D0020E1C9 /* NSUUID.cpp in Sources */,
+				05855CC71E64B48D0020E1C9 /* NSSet.cpp in Sources */,
+				05855C8F1E64B48D0020E1C9 /* NSMutableData.cpp in Sources */,
+				05855CE91E64B48D0020E1C9 /* NSURLSessionDataTask.cpp in Sources */,
+				05855C591E64B48D0020E1C9 /* NSEnergyFormatter.cpp in Sources */,
+				05855C6E1E64B48D0020E1C9 /* NSHTTPCookieStorage.cpp in Sources */,
+				05855C871E64B48D0020E1C9 /* NSMetadataQueryAttributeValueTuple.cpp in Sources */,
+				05855C661E64B48D0020E1C9 /* NSFileVersion.cpp in Sources */,
+				05855C9F1E64B48D0020E1C9 /* NSObject.cpp in Sources */,
+				05855CAB1E64B48D0020E1C9 /* NSPortCoder.cpp in Sources */,
+				05855C3E1E64B48D0020E1C9 /* NSCloneCommand.cpp in Sources */,
+				05855C461E64B48D0020E1C9 /* NSCountCommand.cpp in Sources */,
+				05855C901E64B48D0020E1C9 /* NSMutableDictionary.cpp in Sources */,
+				05855CDC1E64B48D0020E1C9 /* NSURLComponents.cpp in Sources */,
+				05855C2C1E64B48D0020E1C9 /* NSAppleEventDescriptor.cpp in Sources */,
+				05855C5B1E64B48D0020E1C9 /* NSError.cpp in Sources */,
+				05855CE61E64B48D0020E1C9 /* NSURLResponse.cpp in Sources */,
+				05855CCB1E64B48D0020E1C9 /* NSSortDescriptor.cpp in Sources */,
+				05855CDB1E64B48D0020E1C9 /* NSURLCache.cpp in Sources */,
+				05855CBB1E64B48D0020E1C9 /* NSRegularExpression.cpp in Sources */,
+				05855CC61E64B48D0020E1C9 /* NSScriptWhoseTest.cpp in Sources */,
+				05855CB41E64B48D0020E1C9 /* NSProtocolChecker.cpp in Sources */,
+				05855CB61E64B48D0020E1C9 /* NSPurgeableData.cpp in Sources */,
+				05855C931E64B48D0020E1C9 /* NSMutableSet.cpp in Sources */,
+				05855CDF1E64B48D0020E1C9 /* NSURLCredentialStorage.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		058FA7891C29F62C009DD4DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2266,6 +2765,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		05855C251E64B4160020E1C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05855C1A1E64B4010020E1C9 /* OBJCXX-iOS */;
+			targetProxy = 05855C241E64B4160020E1C9 /* PBXContainerItemProxy */;
+		};
 		0588620A1C73BBCB000BB563 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 056C881118C8B85F006260B3 /* OBJCXX */;
@@ -2384,6 +2888,7 @@
 					OBJCXX/include,
 					Submodules/PIMPL/PIMPL/include,
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LLVM_LTO = YES_THIN;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2498,6 +3003,7 @@
 					OBJCXX/include,
 					Submodules/PIMPL/PIMPL/include,
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LLVM_LTO = YES_THIN;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = NO;
@@ -2528,6 +3034,33 @@
 				GCC_PREFIX_HEADER = OBJCXX/PrefixHeader.pch;
 				PRODUCT_NAME = OBJCXX;
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		05855C211E64B4010020E1C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		05855C221E64B4010020E1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -2568,6 +3101,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		05855C231E64B4010020E1C9 /* Build configuration list for PBXNativeTarget "OBJCXX-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05855C211E64B4010020E1C9 /* Debug */,
+				05855C221E64B4010020E1C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		058FA7911C29F62C009DD4DD /* Build configuration list for PBXNativeTarget "OBJCXX-Test" */ = {
 			isa = XCConfigurationList;
