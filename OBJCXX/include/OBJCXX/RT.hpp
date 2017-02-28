@@ -281,18 +281,20 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
-                    _T_ s {};
-                    
                     try
                     {
-                        static_cast< _T_ >( Internal::objc_msgSend_stret( &s, this->object(), this->selector(), args ... ) );
+                        return reinterpret_cast< _T_ ( * )( id, SEL, ... ) >
+                        (
+                            Internal::objc_msgSend
+                        )
+                        ( this->object(), this->selector(), args ... );
                     }
                     catch( ... )
                     {
                         RethrowLastException();
+                        
+                        return {};
                     }
-                    
-                    return s;
                 }
         };
     }
