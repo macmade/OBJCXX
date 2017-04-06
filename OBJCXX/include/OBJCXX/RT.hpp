@@ -82,11 +82,19 @@ extern "C"
     };
     
     typedef id ( * objc_exception_preprocessor )( id exception );
-    
-    OBJCXX_EXPORT id OBJCXX_Exception_Preprocessor( id e );
 }
 
+#else
+
+#include <objc/runtime.h>
+#include <objc/objc-exception.h>
+
 #endif
+
+extern "C"
+{
+    OBJCXX_EXPORT id OBJCXX_Exception_Preprocessor( id e );
+}
 
 namespace OBJCXX
 {
