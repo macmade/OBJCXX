@@ -505,6 +505,8 @@ void OBJCXX_IMP_dealloc( id self, SEL _cmd )
                 OBJCXX::RT::Internal::objc_msgSend( object, OBJCXX::RT::Internal::sel_registerName( "release" ) );
             }
         }
+        
+        free( methods );
     }
     
     {
