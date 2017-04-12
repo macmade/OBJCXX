@@ -41,11 +41,15 @@
 /* Can't inherit constructors with VisualStudio / V120 */
 #define OBJCXX_USING_BASE( _class_, _base_ )                                                                \
                                                                                                             \
+    protected:                                                                                              \
+                                                                                                            \
     _class_( const std::string & className ): _base_( className )                                           \
     {}                                                                                                      \
                                                                                                             \
     _class_( const std::string & className, std::function< id( void ) > init ): _base_( className, init )   \
     {}                                                                                                      \
+                                                                                                            \
+    public:                                                                                                 \
                                                                                                             \
     _class_( id object ): _base_( object )                                                                  \
     {}                                                                                                      \
@@ -74,8 +78,6 @@ namespace OBJCXX
             
             using XS::PIMPL::Object< Object >::impl;
             
-            Object( const std::string & className );
-            Object( const std::string & className, std::function< id( void ) > init );
             Object( id object );
             Object( const Object & o );
             Object( Object && o );
@@ -124,6 +126,10 @@ namespace OBJCXX
             NS::UInteger    retainCount( void )                   const override;
             void          * zone( void )                          const override;
             
+        protected:
+            
+            Object( const std::string & className );
+            Object( const std::string & className, std::function< id( void ) > init );
     };
 }
 
