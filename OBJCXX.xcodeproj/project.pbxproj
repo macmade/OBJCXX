@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050B83D21EB912F50090EA12 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 050B83D11EB912F50090EA12 /* libc++.tbd */; };
 		0558F96D1E5F7E70009FAC3A /* Foo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0558F96B1E5F7E70009FAC3A /* Foo.cpp */; };
 		05855C261E64B4790020E1C9 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA7731C29E3FB009DD4DD /* Object.cpp */; };
 		05855C271E64B4790020E1C9 /* RT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA7991C29F726009DD4DD /* RT.cpp */; };
@@ -770,6 +771,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		050B83D11EB912F50090EA12 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		0558F96B1E5F7E70009FAC3A /* Foo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Foo.cpp; sourceTree = "<group>"; };
 		0558F96C1E5F7E70009FAC3A /* Foo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Foo.hpp; sourceTree = "<group>"; };
 		056C881218C8B85F006260B3 /* libOBJCXX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOBJCXX.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1299,8 +1301,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058FA7981C29F704009DD4DD /* Foundation.framework in Frameworks */,
+				050B83D21EB912F50090EA12 /* libc++.tbd in Frameworks */,
 				058FA7961C29F700009DD4DD /* libobjc.tbd in Frameworks */,
+				058FA7981C29F704009DD4DD /* Foundation.framework in Frameworks */,
 				058FA7941C29F685009DD4DD /* libOBJCXX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1332,6 +1335,7 @@
 		056C880D18C8B50E006260B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				050B83D11EB912F50090EA12 /* libc++.tbd */,
 				058FA7971C29F704009DD4DD /* Foundation.framework */,
 				058FA7951C29F700009DD4DD /* libobjc.tbd */,
 			);
@@ -2782,6 +2786,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "$(SRCROOT)/Scripts/ccache.sh";
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_GCD = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
@@ -2807,7 +2812,7 @@
 				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
@@ -2902,6 +2907,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "$(SRCROOT)/Scripts/ccache.sh";
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_GCD = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
@@ -2927,7 +2933,7 @@
 				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
@@ -3016,6 +3022,7 @@
 		056C881418C8B85F006260B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CC = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3028,6 +3035,7 @@
 		056C881518C8B85F006260B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CC = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3109,6 +3117,7 @@
 				05855C221E64B4010020E1C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		058FA7911C29F62C009DD4DD /* Build configuration list for PBXNativeTarget "OBJCXX-Test" */ = {
 			isa = XCConfigurationList;
