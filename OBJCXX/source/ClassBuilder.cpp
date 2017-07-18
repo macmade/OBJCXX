@@ -506,7 +506,10 @@ void OBJCXX_IMP_dealloc( id self, SEL _cmd )
             }
         }
         
+        /* Crashes on Windows... Better to leak a few bytes... */
+        #ifndef _WIN32
         free( methods );
+        #endif
     }
     
     {
