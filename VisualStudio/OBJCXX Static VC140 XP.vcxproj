@@ -517,7 +517,7 @@
     <ClCompile Include="..\OBJCXX\source\RT.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{AD1CEED3-F175-42C9-8840-2243F78FC202}</ProjectGuid>
+    <ProjectGuid>{CD8F16DB-7A6D-4968-AD40-10214184B501}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>CF</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>

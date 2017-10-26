@@ -125,9 +125,8 @@ namespace OBJCXX
                     
                     bool add( void )
                     {
-                        SEL s;
-                        
-                        s = RT::Internal::sel_registerName( this->_name.c_str() );
+                        SEL  s = RT::Internal::sel_registerName( this->_name.c_str() );
+						auto f = &CXX_IMP< _R_, _A_ ... >;
                         
                         if
                         (
@@ -135,7 +134,7 @@ namespace OBJCXX
                             (
                                 this->_class,
                                 s,
-                                reinterpret_cast< IMP >( CXX_IMP< _R_, _A_ ... > ),
+                                reinterpret_cast< IMP >( f ),
                                 this->_types.c_str()
                             )
                             == false
@@ -158,9 +157,8 @@ namespace OBJCXX
                     template< typename _OBJCR_, typename ... _OBJCA_ >
                     bool add( void )
                     {
-                        SEL s;
-                        
-                        s = RT::Internal::sel_registerName( this->_name.c_str() );
+                        SEL s  = s = RT::Internal::sel_registerName( this->_name.c_str() );
+						auto f = &CXX_IMP< _OBJCR_, _OBJCA_ ... >;
                         
                         if
                         (
@@ -168,7 +166,7 @@ namespace OBJCXX
                             (
                                 this->_class,
                                 s,
-                                reinterpret_cast< IMP >( CXX_IMP< _OBJCR_, _OBJCA_ ... > ),
+                                reinterpret_cast< IMP >( f ),
                                 this->_types.c_str()
                             )
                             == false
