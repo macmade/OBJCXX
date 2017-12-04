@@ -28,6 +28,7 @@
  */
 
 #include <OBJCXX/ClassBuilder.hpp>
+#include <OBJCXX/MethodSignature.hpp>
 #include <OBJCXX/Foundation/Classes/NSString.hpp>
 #include <iostream>
 #include <cmath>
@@ -153,27 +154,27 @@ namespace OBJCXX
     {
         switch( type )
         {
-            case TypeSignedChar:        return "c";
-            case TypeSignedShort:       return "s";
-            case TypeSignedInt:         return "i";
-            case TypeSignedLong:        return "l";
-            case TypeSignedLongLong:    return "q";
-            case TypeUnsignedChar:      return "C";
-            case TypeUnsignedShort:     return "S";
-            case TypeUnsignedInt:       return "I";
-            case TypeUnsignedLong:      return "L";
-            case TypeUnsignedLongLong:  return "Q";
-            case TypeFloat:             return "f";
-            case TypeDouble:            return "d";
-            case TypeBool:              return "B";
-            case TypeCharPointer:       return "*";
-            case TypeObject:            return "@";
-            case TypeClass:             return "#";
-            case TypeSelector:          return ":";
+            case TypeSignedChar:        return RT::GetEncodingForType< char >();
+            case TypeSignedShort:       return RT::GetEncodingForType< short >();
+            case TypeSignedInt:         return RT::GetEncodingForType< int >();
+            case TypeSignedLong:        return RT::GetEncodingForType< long >();
+            case TypeSignedLongLong:    return RT::GetEncodingForType< long long >();
+            case TypeUnsignedChar:      return RT::GetEncodingForType< unsigned char >();
+            case TypeUnsignedShort:     return RT::GetEncodingForType< unsigned short >();
+            case TypeUnsignedInt:       return RT::GetEncodingForType< unsigned int >();
+            case TypeUnsignedLong:      return RT::GetEncodingForType< unsigned long >();
+            case TypeUnsignedLongLong:  return RT::GetEncodingForType< unsigned long long >();
+            case TypeFloat:             return RT::GetEncodingForType< float >();
+            case TypeDouble:            return RT::GetEncodingForType< double >();
+            case TypeBool:              return RT::GetEncodingForType< bool >();
+            case TypeCharPointer:       return RT::GetEncodingForType< char * >();
+            case TypeObject:            return RT::GetEncodingForType< id >();
+            case TypeClass:             return RT::GetEncodingForType< Class >();
+            case TypeSelector:          return RT::GetEncodingForType< SEL >();
         }
 
         #ifdef _WIN32
-        return "";
+        return "?";
         #endif
     }
     
@@ -236,8 +237,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_SignedChar_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_SignedChar_Set );
-                getTypes = "c16@0:8";
-                setTypes = "v20@0:8c16";
+                getTypes = RT::MethodSignature< char >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, char >().GetTypeEncoding();;
                 
                 break;
                 
@@ -245,8 +246,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_SignedShort_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_SignedShort_Set );
-                getTypes = "s16@0:8";
-                setTypes = "v20@0:8s16";
+                getTypes = RT::MethodSignature< short >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, short >().GetTypeEncoding();;
                 
                 break;
                 
@@ -254,8 +255,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_SignedInt_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_SignedInt_Set );
-                getTypes = "i16@0:8";
-                setTypes = "v20@0:8i16";
+                getTypes = RT::MethodSignature< int >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, int >().GetTypeEncoding();;
                 
                 break;
                 
@@ -263,8 +264,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_SignedLong_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_SignedLong_Set );
-                getTypes = "q16@0:8";
-                setTypes = "v24@0:8q16";
+                getTypes = RT::MethodSignature< long >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, long >().GetTypeEncoding();;
                 
                 break;
                 
@@ -272,8 +273,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_SignedLongLong_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_SignedLongLong_Set );
-                getTypes = "q16@0:8";
-                setTypes = "v24@0:8q16";
+                getTypes = RT::MethodSignature< long long >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, long long >().GetTypeEncoding();;
                 
                 break;
                 
@@ -281,8 +282,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_UnsignedChar_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_UnsignedChar_Set );
-                getTypes = "C16@0:8";
-                setTypes = "v20@0:8C16";
+                getTypes = RT::MethodSignature< unsigned char >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, unsigned char >().GetTypeEncoding();;
                 
                 break;
                 
@@ -290,8 +291,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_UnsignedShort_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_UnsignedShort_Set );
-                getTypes = "S16@0:8";
-                setTypes = "v20@0:8S16";
+                getTypes = RT::MethodSignature< unsigned short >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, unsigned short >().GetTypeEncoding();;
                 
                 break;
                 
@@ -299,8 +300,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_UnsignedInt_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_UnsignedInt_Set );
-                getTypes = "I16@0:8";
-                setTypes = "v20@0:8I16";
+                getTypes = RT::MethodSignature< unsigned int >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, unsigned int >().GetTypeEncoding();;
                 
                 break;
                 
@@ -308,8 +309,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_UnsignedLong_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_UnsignedLong_Set );
-                getTypes = "Q16@0:8";
-                setTypes = "v24@0:8Q16";
+                getTypes = RT::MethodSignature< unsigned long >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, unsigned long >().GetTypeEncoding();;
                 
                 break;
                 
@@ -317,8 +318,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_UnsignedLongLong_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_UnsignedLongLong_Set );
-                getTypes = "Q16@0:8";
-                setTypes = "v24@0:8Q16";
+                getTypes = RT::MethodSignature< unsigned long long >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, unsigned long long >().GetTypeEncoding();;
                 
                 break;
                 
@@ -326,8 +327,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_Float_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_Float_Set );
-                getTypes = "f16@0:8";
-                setTypes = "v20@0:8f16";
+                getTypes = RT::MethodSignature< float >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, float >().GetTypeEncoding();;
                 
                 break;
                 
@@ -335,8 +336,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_Double_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_Double_Set );
-                getTypes = "d16@0:8";
-                setTypes = "v24@0:8d16";
+                getTypes = RT::MethodSignature< double >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, double >().GetTypeEncoding();;
                 
                 break;
                 
@@ -344,8 +345,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_Bool_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_Bool_Set );
-                getTypes = "B16@0:8";
-                setTypes = "v20@0:8B16";
+                getTypes = RT::MethodSignature< bool >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, bool >().GetTypeEncoding();;
                 
                 break;
                 
@@ -353,8 +354,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_CharPointer_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_CharPointer_Set );
-                getTypes = "c16@0:8";
-                setTypes = "v20@0:8c16";
+                getTypes = RT::MethodSignature< char * >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, char * >().GetTypeEncoding();;
                 
                 break;
                 
@@ -362,8 +363,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_Object_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_Object_Set );
-                getTypes = "@16@0:8";
-                setTypes = "v24@0:8@16";
+                getTypes = RT::MethodSignature< id >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, id >().GetTypeEncoding();;
                 
                 break;
                 
@@ -371,8 +372,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_Class_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_Class_Set );
-                getTypes = "#16@0:8";
-                setTypes = "v24@0:8#16";
+                getTypes = RT::MethodSignature< Class >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, Class >().GetTypeEncoding();;
                 
                 break;
                 
@@ -380,8 +381,8 @@ namespace OBJCXX
                 
                 get      = reinterpret_cast< IMP >( OBJCXX_IMP_Selector_Get );
                 set      = reinterpret_cast< IMP >( OBJCXX_IMP_Selector_Set );
-                getTypes = ":16@0:8";
-                setTypes = "v24@0:8:16";
+                getTypes = RT::MethodSignature< SEL >().GetTypeEncoding();
+                setTypes = RT::MethodSignature< void, SEL >().GetTypeEncoding();;
                 
                 break;
 

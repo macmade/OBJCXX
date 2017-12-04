@@ -32,6 +32,7 @@
 
 #include <OBJCXX/RT.hpp>
 #include <OBJCXX/Object.hpp>
+#include <OBJCXX/MethodSignature.hpp>
 #include <OBJCXX/ClassBuilder.hpp>
 
 #include <OBJCXX/Foundation/Types.hpp>

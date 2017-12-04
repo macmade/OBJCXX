@@ -305,6 +305,89 @@ namespace OBJCXX
                     }
                 }
         };
+        
+        template < typename _T_ >
+        static std::string GetEncodingForType( void )
+        {
+            if( std::is_same< _T_, char >::value )
+            {
+                return "c";
+            }
+            else if( std::is_same< _T_, short >::value )
+            {
+                return "s";
+            }
+            else if( std::is_same< _T_, int >::value )
+            {
+                return "i";
+            }
+            else if( std::is_same< _T_, long >::value )
+            {
+                return "l";
+            }
+            else if( std::is_same< _T_, long long >::value )
+            {
+                return "q";
+            }
+            else if( std::is_same< _T_, unsigned char >::value )
+            {
+                return "C";
+            }
+            else if( std::is_same< _T_, unsigned short >::value )
+            {
+                return "S";
+            }
+            else if( std::is_same< _T_, unsigned int >::value )
+            {
+                return "I";
+            }
+            else if( std::is_same< _T_, unsigned long >::value )
+            {
+                return "L";
+            }
+            else if( std::is_same< _T_, unsigned long long >::value )
+            {
+                return "Q";
+            }
+            else if( std::is_same< _T_, float >::value )
+            {
+                return "f";
+            }
+            else if( std::is_same< _T_, double >::value )
+            {
+                return "d";
+            }
+            else if( std::is_same< _T_, bool >::value )
+            {
+                return "B";
+            }
+            else if( std::is_void< _T_ >::value )
+            {
+                return "v";
+            }
+            else if( std::is_same< _T_, char * >::value )
+            {
+                return "*";
+            }
+            else if( std::is_same< _T_, id >::value )
+            {
+                return "@";
+            }
+            else if( std::is_same< _T_, Class >::value )
+            {
+                return "#";
+            }
+            else if( std::is_same< _T_, SEL >::value )
+            {
+                return ":";
+            }
+            else if( std::is_pointer< _T_ >::value )
+            {
+                return "^";
+            }
+            
+            return "?";
+        }
     }
 }
 

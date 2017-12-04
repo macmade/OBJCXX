@@ -1271,6 +1271,7 @@
 		058FABFD1C2B1769009DD4DD /* NSXMLParserDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NSXMLParserDelegate.hpp; sourceTree = "<group>"; };
 		058FABFE1C2B1769009DD4DD /* NSXPCListenerDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NSXPCListenerDelegate.hpp; sourceTree = "<group>"; };
 		058FABFF1C2B1769009DD4DD /* NSXPCProxyCreating.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NSXPCProxyCreating.hpp; sourceTree = "<group>"; };
+		05A25C901FD5743A00647F6F /* MethodSignature.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MethodSignature.hpp; sourceTree = "<group>"; };
 		05D4BB681D91E2CD008043BC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		05E382341D1D8CBA00E9EDAF /* ClassBuilder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ClassBuilder.hpp; sourceTree = "<group>"; };
 		05E382351D1D8CCB00E9EDAF /* ClassBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClassBuilder.cpp; sourceTree = "<group>"; };
@@ -1917,6 +1918,7 @@
 				058FA7671C29E3CA009DD4DD /* Foundation */,
 				058FA76A1C29E3CA009DD4DD /* Object.hpp */,
 				058FA76B1C29E3CA009DD4DD /* RT.hpp */,
+				05A25C901FD5743A00647F6F /* MethodSignature.hpp */,
 				05E382341D1D8CBA00E9EDAF /* ClassBuilder.hpp */,
 			);
 			path = OBJCXX;
@@ -2811,7 +2813,7 @@
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = YES;
 				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -2942,7 +2944,7 @@
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = YES;
 				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
