@@ -31,75 +31,24 @@
 #define OBJCXX_RT_METHOD_SIGNATURE_H
 
 #include <string>
-#include <tuple>
-#include <type_traits>
-#include <functional>
-#include <OBJCXX/RT.hpp>
+#include <XS/PIMPL/Object.hpp>
 
 namespace OBJCXX
 {
     namespace RT
     {
-        template< typename _R_, typename ... _A_ >
-        class MethodSignature
+        class MethodSignature: XS::PIMPL::Object< MethodSignature >
         {
             public:
                 
-                std::string GetTypeEncoding( void ) const
-                {
-                    std::tuple< id, SEL, _A_ ... > t;
-                    std::string                    e;
-                    std::string                    a;
-                    std::size_t                    o;
-                    std::size_t                    l;
-                    std::size_t                    s;
-                    
-                    e = GetEncodingForType< _R_ >();
-                    o = 0;
-                    l = 0;
-                    
-                    /* For lambdas - We're on C++17 anyway... */
-                    #ifdef __clang__
-                    #pragma clang diagnostic push
-                    #pragma clang diagnostic ignored "-Wc++98-compat"
-                    #endif
-                    MethodSignature::For< 0, std::tuple_size< decltype( t ) >::value >
-                    (
-                        [ & ]( auto i )
-                        {
-                            s  = sizeof( typename std::tuple_element< i, decltype( t ) >::type );
-                            a += GetEncodingForType< typename std::tuple_element< i, decltype( t ) >::type >();
-                            a += std::to_string( o );
-                            o += s;
-                            l += s;
-                        }
-                    );
-                    
-                    e += std::to_string( l );
-                    e += a;
-                    
-                    return e;
-                }
+                using XS::PIMPL::Object< MethodSignature >::impl;
                 
-            private:
+                MethodSignature( const std::string & encoding );
                 
-                template< std::size_t _I_, std::size_t _N_, typename _F_ >
-                static inline void For( _F_ const & f )
-                {
-                    /* For constexpr - We're on C++17 anyway... */
-                    #ifdef __clang__
-                    #pragma clang diagnostic push
-                    #pragma clang diagnostic ignored "-Wc++98-c++11-c++14-compat"
-                    #endif
-                    if constexpr( _I_ < _N_ )
-                    {
-                         f( std::integral_constant< size_t, _I_ >{} );
-                         MethodSignature::For< _I_ + 1, _N_ >( f );
-                    }
-                    #ifdef __clang__
-                    #pragma clang diagnostic pop
-                    #endif
-                }
+                std::string GetTypeEncoding( void )                     const;
+                std::size_t GetNumberOfArguments( void )                const;
+                std::string GetArgumentTypeAtIndex( std::size_t index ) const;
+                std::string GetReturnType()                             const;
         };
     }
 }

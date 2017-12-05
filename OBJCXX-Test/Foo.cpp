@@ -48,11 +48,11 @@ void Foo::test( void )
             
             cls.addProtocol( "NSSecureCoding" );
             
-            cls.addInstanceMethod( "initWithCoder:", reinterpret_cast< IMP >( IMP_Foo_initWithCoder ), "@24@0:8@16" );
-            cls.addInstanceMethod( "encodeWithCoder:", reinterpret_cast< IMP >( IMP_Foo_encodeWithCoder ), "v24@0:8@16" );
+            cls.addInstanceMethod( "initWithCoder:", reinterpret_cast< IMP >( IMP_Foo_initWithCoder ), OBJCXX::RT::SignatureForMethod< id, id >().GetTypeEncoding() );
+            cls.addInstanceMethod( "encodeWithCoder:", reinterpret_cast< IMP >( IMP_Foo_encodeWithCoder ), OBJCXX::RT::SignatureForMethod< void, id >().GetTypeEncoding() );
             cls.addProperty( "text", OBJCXX::ClassBuilder::TypeObject );
             cls.registerClass();
-            cls.addClassMethod( "supportsSecureCoding", reinterpret_cast< IMP >( IMP_Foo_supportsSecureCoding ), "c16@0:8" );
+            cls.addClassMethod( "supportsSecureCoding", reinterpret_cast< IMP >( IMP_Foo_supportsSecureCoding ), OBJCXX::RT::SignatureForMethod< bool >().GetTypeEncoding() );
         }
     );
     

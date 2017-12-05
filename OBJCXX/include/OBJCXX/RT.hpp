@@ -61,6 +61,7 @@
 #include <cstdint>
 #include <cstdlib>
 #include <cstdarg>
+#include <OBJCXX/MethodSignature.hpp>
 
 #ifndef __OBJC__
 
@@ -387,6 +388,64 @@ namespace OBJCXX
             }
             
             return "?";
+        }
+        
+        template< std::size_t _I_, std::size_t _N_, typename _F_ >
+        static inline void For( _F_ const & f )
+        {
+            /* For constexpr and lambdas - We're on C++17 anyway... */
+            #ifdef __clang__
+            #pragma clang diagnostic push
+            #pragma clang diagnostic ignored "-Wc++98-compat"
+            #pragma clang diagnostic ignored "-Wc++98-c++11-c++14-compat"
+            #endif
+            if constexpr( _I_ < _N_ )
+            {
+                 f( std::integral_constant< size_t, _I_ >{} );
+                 For< _I_ + 1, _N_ >( f );
+            }
+            #ifdef __clang__
+            #pragma clang diagnostic pop
+            #endif
+        }
+        
+        template< typename _R_, typename ... _A_ >
+        MethodSignature SignatureForMethod()
+        {
+            std::tuple< id, SEL, _A_ ... > t1;
+            std::string                    e;
+            std::string                    a;
+            std::size_t                    o;
+            std::size_t                    l;
+            std::size_t                    s;
+            
+            e = GetEncodingForType< _R_ >();
+            o = 0;
+            l = 0;
+            
+            /* For lambdas - We're on C++17 anyway... */
+            #ifdef __clang__
+            #pragma clang diagnostic push
+            #pragma clang diagnostic ignored "-Wc++98-compat"
+            #endif
+            For< 0, std::tuple_size< decltype( t1 ) >::value >
+            (
+                [ & ]( auto i )
+                {
+                    std::tuple< id, SEL, _A_ ... > t2;
+                    
+                    s  = sizeof( typename std::tuple_element< i, decltype( t2 ) >::type );
+                    a += GetEncodingForType< typename std::tuple_element< i, decltype( t2 ) >::type >();
+                    a += std::to_string( o );
+                    o += s;
+                    l += s;
+                }
+            );
+            
+            e += std::to_string( l );
+            e += a;
+            
+            return MethodSignature( e );
         }
     }
 }
