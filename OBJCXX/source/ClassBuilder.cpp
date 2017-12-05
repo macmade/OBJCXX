@@ -490,6 +490,7 @@ void OBJCXX_IMP_dealloc( id self, SEL _cmd )
     unsigned int i;
     IMP          imp;
     id           object;
+    const char * encoding;
     
     methods = OBJCXX::RT::Internal::class_copyMethodList( OBJCXX::RT::Internal::object_getClass( self ), &count );
     
@@ -499,12 +500,48 @@ void OBJCXX_IMP_dealloc( id self, SEL _cmd )
         {
             imp = OBJCXX::RT::Internal::method_getImplementation( methods[ i ] );
             
-            if( imp == reinterpret_cast< IMP >( OBJCXX_IMP_Object_Get ) )
+            if( imp != reinterpret_cast< IMP >( OBJCXX_IMP_Object_Get ) )
             {
-                object = imp( self, OBJCXX::RT::Internal::method_getName( methods[ i ] ) );
-                
-                OBJCXX::RT::Internal::objc_msgSend( object, OBJCXX::RT::Internal::sel_registerName( "release" ) );
+                continue;
             }
+
+            encoding = OBJCXX::RT::Internal::method_getTypeEncoding( methods[ i ] );
+
+            if( encoding == nullptr )
+            {
+                continue;
+            }
+
+            /*
+             * Comparing the IMP with OBJCXX_IMP_Object_Get is not sufficient.
+             * Address comparison may not be reliable because of COMDAT folding.
+             * For instance, on architectures with 32-bit pointers and 32-bit
+             * integers, machine code for OBJCXX_IMP_Object_Get may be strictly
+             * identical to OBJCXX_IMP_UnsignedInteger_Get.
+             * In such a situation, the linker may optimize away one function.
+             * Address will then be the same for both IMPs.
+             * That's why we also check the method signature to ensure we have
+             * an object type property, before ending a release message.
+             */
+            try
+            {
+                {
+                    OBJCXX::RT::MethodSignature s( encoding );
+
+                    if( s.GetNumberOfArguments() != 3 || s.GetArgumentTypeAtIndex( 2 ) != "@" )
+                    {
+                        continue;
+                    }
+                }
+            }
+            catch( ... )
+            {
+                continue;
+            }
+
+            object = imp( self, OBJCXX::RT::Internal::method_getName( methods[ i ] ) );
+                
+            OBJCXX::RT::Internal::objc_msgSend( object, OBJCXX::RT::Internal::sel_registerName( "release" ) );
         }
         
         /* Crashes on Windows... Better to leak a few bytes... */

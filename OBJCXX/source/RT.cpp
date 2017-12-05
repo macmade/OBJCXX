@@ -60,6 +60,7 @@ extern "C"
     extern Class                       object_getClass              ( id );
     extern IMP                         method_getImplementation     ( Method );
     extern SEL                         method_getName               ( Method );
+    extern const char                * method_getTypeEncoding       ( Method );
     extern Class                       class_getSuperclass          ( Class );
     extern const char                * class_getName                ( Class );
     extern Method                    * class_copyMethodList         ( Class, unsigned int * );
@@ -215,6 +216,7 @@ namespace OBJCXX
         Class                       ( * Internal::object_getClass               )( id )                                                  = nullptr;
         IMP                         ( * Internal::method_getImplementation      )( Method )                                              = nullptr;
         SEL                         ( * Internal::method_getName                )( Method )                                              = nullptr;
+        const char                * ( * Internal::method_getTypeEncoding        )( Method )                                              = nullptr;
         Class                       ( * Internal::class_getSuperclass           )( Class )                                               = nullptr;
         const char                * ( * Internal::class_getName                 )( Class )                                               = nullptr;
         Method                    * ( * Internal::class_copyMethodList          )( Class, unsigned int * )                               = nullptr;
@@ -279,6 +281,7 @@ namespace OBJCXX
             Internal::object_getClass               = ( Class                         ( * )( id )                                                 )GetProcAddress( objc, "object_getClass" );
             Internal::method_getImplementation      = ( IMP                           ( * )( Method )                                             )GetProcAddress( objc, "method_getImplementation" );
             Internal::method_getName                = ( SEL                           ( * )( Method )                                             )GetProcAddress( objc, "method_getName" );
+            Internal::method_getTypeEncoding        = ( const char                  * ( * )( Method )                                             )GetProcAddress( objc, "method_getTypeEncoding" );
             Internal::class_getSuperclass           = ( Class                         ( * )( Class )                                              )GetProcAddress( objc, "class_getSuperclass" );
             Internal::class_getName                 = ( const char                  * ( * )( Class )                                              )GetProcAddress( objc, "class_getName" );
             Internal::class_copyMethodList          = ( Method                      * ( * )( Class, unsigned int * )                              )GetProcAddress( objc, "class_copyMethodList" );
@@ -313,6 +316,7 @@ namespace OBJCXX
             Internal::object_getClass               = ::object_getClass;
             Internal::method_getImplementation      = ::method_getImplementation;
             Internal::method_getName                = ::method_getName;
+            Internal::method_getTypeEncoding        = ::method_getTypeEncoding;
             Internal::class_getSuperclass           = ::class_getSuperclass;
             Internal::class_getName                 = ::class_getName;
             Internal::class_copyMethodList          = ::class_copyMethodList;

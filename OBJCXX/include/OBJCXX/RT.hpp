@@ -132,6 +132,7 @@ namespace OBJCXX
                 static Class                        ( * object_getClass               )( id );
                 static IMP                          ( * method_getImplementation      )( Method );
                 static SEL                          ( * method_getName                )( Method );
+                static const char                 * ( * method_getTypeEncoding        )( Method );
                 static Class                        ( * class_getSuperclass           )( Class );
                 static const char                 * ( * class_getName                 )( Class );
                 static Method                     * ( * class_copyMethodList          )( Class, unsigned int * );
