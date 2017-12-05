@@ -677,6 +677,9 @@
     <ClCompile Include="..\OBJCXX\source\Exception.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\OBJCXX\source\MethodSignature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Classes\NSAffineTransform.hpp">
@@ -1493,6 +1496,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\OBJCXX\include\OBJCXX\ClassBuilder.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\MethodSignature.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

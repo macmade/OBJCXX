@@ -31,13 +31,14 @@
 #define OBJCXX_RT_METHOD_SIGNATURE_H
 
 #include <string>
+#include <OBJCXX/RT.hpp>
 #include <XS/PIMPL/Object.hpp>
 
 namespace OBJCXX
 {
     namespace RT
     {
-        class MethodSignature: XS::PIMPL::Object< MethodSignature >
+        class OBJCXX_EXPORT MethodSignature: XS::PIMPL::Object< MethodSignature >
         {
             public:
                 
@@ -50,6 +51,45 @@ namespace OBJCXX
                 std::string GetArgumentTypeAtIndex( std::size_t index ) const;
                 std::string GetReturnType()                             const;
         };
+        
+        template< typename _R_, typename ... _A_ >
+        MethodSignature SignatureForMethod()
+        {
+            std::tuple< id, SEL, _A_ ... > t1;
+            std::string                    e;
+            std::string                    a;
+            std::size_t                    o;
+            std::size_t                    l;
+            std::size_t                    s;
+            
+            e = GetEncodingForType< _R_ >();
+            o = 0;
+            l = 0;
+            
+            /* For lambdas - We're on C++17 anyway... */
+            #ifdef __clang__
+            #pragma clang diagnostic push
+            #pragma clang diagnostic ignored "-Wc++98-compat"
+            #endif
+            For< 0, std::tuple_size< decltype( t1 ) >::value >
+            (
+                [ & ]( auto i )
+                {
+                    std::tuple< id, SEL, _A_ ... > t2;
+                    
+                    s  = sizeof( typename std::tuple_element< i, decltype( t2 ) >::type );
+                    a += GetEncodingForType< typename std::tuple_element< i, decltype( t2 ) >::type >();
+                    a += std::to_string( o );
+                    o += s;
+                    l += s;
+                }
+            );
+            
+            e += std::to_string( l );
+            e += a;
+            
+            return MethodSignature( e );
+        }
     }
 }
 

@@ -88,7 +88,7 @@ XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::IMPL( const std::string 
     
     if( encoding.length() == 0 )
     {
-        throw new std::runtime_error( "Invalid type encoding" );
+        throw new std::runtime_error( "Empty type encoding" );
     }
     
     cp = encoding.c_str();
@@ -97,7 +97,8 @@ XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::IMPL( const std::string 
     {
         if
         (
-               c != 'c' && c != 's' && c != 'i' && c != 'l' && c != 'q'
+               c != 'v'
+            && c != 'c' && c != 's' && c != 'i' && c != 'l' && c != 'q'
             && c != 'C' && c != 'S' && c != 'I' && c != 'L' && c != 'Q'
             && c != 'f' && c != 'd' && c != 'B' && c != 'v' && c != '*'
             && c != '@' && c != '#' && c != ':' && c != '^' && c != '?'
@@ -119,10 +120,12 @@ XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::IMPL( const std::string 
         {
             this->_arguments.push_back( std::string( 1, c ) );
         }
+
+        this->_encoding = encoding;
     }
 }
 
-XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::IMPL( const IMPL &o ):
+XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::IMPL( const IMPL & o ):
     _encoding( o._encoding ),
     _returnType( o._returnType ),
     _arguments( o._arguments )
