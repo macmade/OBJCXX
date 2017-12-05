@@ -408,45 +408,6 @@ namespace OBJCXX
             #pragma clang diagnostic pop
             #endif
         }
-        
-        template< typename _R_, typename ... _A_ >
-        MethodSignature SignatureForMethod()
-        {
-            std::tuple< id, SEL, _A_ ... > t1;
-            std::string                    e;
-            std::string                    a;
-            std::size_t                    o;
-            std::size_t                    l;
-            std::size_t                    s;
-            
-            e = GetEncodingForType< _R_ >();
-            o = 0;
-            l = 0;
-            
-            /* For lambdas - We're on C++17 anyway... */
-            #ifdef __clang__
-            #pragma clang diagnostic push
-            #pragma clang diagnostic ignored "-Wc++98-compat"
-            #endif
-            For< 0, std::tuple_size< decltype( t1 ) >::value >
-            (
-                [ & ]( auto i )
-                {
-                    std::tuple< id, SEL, _A_ ... > t2;
-                    
-                    s  = sizeof( typename std::tuple_element< i, decltype( t2 ) >::type );
-                    a += GetEncodingForType< typename std::tuple_element< i, decltype( t2 ) >::type >();
-                    a += std::to_string( o );
-                    o += s;
-                    l += s;
-                }
-            );
-            
-            e += std::to_string( l );
-            e += a;
-            
-            return MethodSignature( e );
-        }
     }
 }
 

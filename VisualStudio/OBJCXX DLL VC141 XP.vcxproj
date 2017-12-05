@@ -239,6 +239,7 @@
     <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXPCInterface.cpp" />
     <ClCompile Include="..\OBJCXX\source\Foundation\Classes\NSXPCListenerEndpoint.cpp" />
     <ClCompile Include="..\OBJCXX\source\Foundation\Functions.cpp" />
+    <ClCompile Include="..\OBJCXX\source\MethodSignature.cpp" />
     <ClCompile Include="..\OBJCXX\source\Object.cpp" />
     <ClCompile Include="..\OBJCXX\source\RT.cpp" />
   </ItemGroup>
@@ -513,6 +514,7 @@
     <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSXPCListenerDelegate.hpp" />
     <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Protocols\NSXPCProxyCreating.hpp" />
     <ClInclude Include="..\OBJCXX\include\OBJCXX\Foundation\Types.hpp" />
+    <ClInclude Include="..\OBJCXX\include\OBJCXX\MethodSignature.hpp" />
     <ClInclude Include="..\OBJCXX\include\OBJCXX\Object.hpp" />
     <ClInclude Include="..\OBJCXX\include\OBJCXX\RT.hpp" />
   </ItemGroup>
@@ -593,6 +595,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;XS_PIMPL_EXPORTS;OBJCXX_DLL_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;..\Submodules\PIMPL\PIMPL\include;..\OBJCXX\include;..\Apple\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -608,6 +611,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;XS_PIMPL_EXPORTS;OBJCXX_DLL_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;..\Submodules\PIMPL\PIMPL\include;..\OBJCXX\include;..\Apple\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -625,6 +629,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_LIB;XS_PIMPL_EXPORTS;OBJCXX_DLL_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;..\Submodules\PIMPL\PIMPL\include;..\OBJCXX\include;..\Apple\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -644,6 +649,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_LIB;XS_PIMPL_EXPORTS;OBJCXX_DLL_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;..\Submodules\PIMPL\PIMPL\include;..\OBJCXX\include;..\Apple\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
