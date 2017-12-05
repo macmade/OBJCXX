@@ -774,6 +774,41 @@
 
 /* Begin PBXFileReference section */
 		050B83D11EB912F50090EA12 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		0547289E1FD6B4580050F42A /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		0547289F1FD6B4580050F42A /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		054728A01FD6B4580050F42A /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		054728A31FD6B4580050F42A /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
+		054728A41FD6B4580050F42A /* Architectures.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Architectures.xcconfig; sourceTree = "<group>"; };
+		054728A61FD6B4580050F42A /* Issues.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Issues.xcconfig; sourceTree = "<group>"; };
+		054728A81FD6B4580050F42A /* Apple-APIs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Apple-APIs.xcconfig"; sourceTree = "<group>"; };
+		054728A91FD6B4580050F42A /* Generic-Issues.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Generic-Issues.xcconfig"; sourceTree = "<group>"; };
+		054728AA1FD6B4580050F42A /* Security.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Security.xcconfig; sourceTree = "<group>"; };
+		054728AB1FD6B4580050F42A /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
+		054728AC1FD6B4580050F42A /* Analysis-Policy.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Analysis-Policy.xcconfig"; sourceTree = "<group>"; };
+		054728AD1FD6B4580050F42A /* Deployment.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Deployment.xcconfig; sourceTree = "<group>"; };
+		054728AE1FD6B4580050F42A /* Build-Options.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Build-Options.xcconfig"; sourceTree = "<group>"; };
+		054728AF1FD6B4580050F42A /* Swift-Compiler.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Swift-Compiler.xcconfig"; sourceTree = "<group>"; };
+		054728B01FD6B4580050F42A /* Static-Analyzer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Static-Analyzer.xcconfig"; sourceTree = "<group>"; };
+		054728B21FD6B4580050F42A /* Warnings-Policies.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Warnings-Policies.xcconfig"; sourceTree = "<group>"; };
+		054728B31FD6B4580050F42A /* Code-Generation.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Code-Generation.xcconfig"; sourceTree = "<group>"; };
+		054728B41FD6B4580050F42A /* Language.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Language.xcconfig; sourceTree = "<group>"; };
+		054728B51FD6B4580050F42A /* General.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = General.xcconfig; sourceTree = "<group>"; };
+		054728B61FD6B4580050F42A /* Search-Paths.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Search-Paths.xcconfig"; sourceTree = "<group>"; };
+		054728B71FD6B4580050F42A /* Apple-LLVM.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Apple-LLVM.xcconfig"; sourceTree = "<group>"; };
+		054728BA1FD6B4580050F42A /* Modules.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Modules.xcconfig; sourceTree = "<group>"; };
+		054728BB1FD6B4580050F42A /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
+		054728BC1FD6B4580050F42A /* C++.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "C++.xcconfig"; sourceTree = "<group>"; };
+		054728BD1FD6B4580050F42A /* Code-Generation.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Code-Generation.xcconfig"; sourceTree = "<group>"; };
+		054728BE1FD6B4580050F42A /* Address-Sanitizer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Address-Sanitizer.xcconfig"; sourceTree = "<group>"; };
+		054728BF1FD6B4580050F42A /* Language.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Language.xcconfig; sourceTree = "<group>"; };
+		054728C01FD6B4580050F42A /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		054728C11FD6B4580050F42A /* Undefined-Behavior-Sanitizer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Undefined-Behavior-Sanitizer.xcconfig"; sourceTree = "<group>"; };
+		054728C21FD6B4580050F42A /* Warning-Policies.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Warning-Policies.xcconfig"; sourceTree = "<group>"; };
+		054728C41FD6B4580050F42A /* Objective-C-ARC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C-ARC.xcconfig"; sourceTree = "<group>"; };
+		054728C51FD6B4580050F42A /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
+		054728C61FD6B4580050F42A /* C++.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "C++.xcconfig"; sourceTree = "<group>"; };
+		054728C71FD6B4580050F42A /* All-Languages.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "All-Languages.xcconfig"; sourceTree = "<group>"; };
+		054728C81FD6B4580050F42A /* Preprocessing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Preprocessing.xcconfig; sourceTree = "<group>"; };
 		054ED11C1FD6AF9B00081837 /* MethodSignature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MethodSignature.cpp; sourceTree = "<group>"; };
 		0558F96B1E5F7E70009FAC3A /* Foo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Foo.cpp; sourceTree = "<group>"; };
 		0558F96C1E5F7E70009FAC3A /* Foo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Foo.hpp; sourceTree = "<group>"; };
@@ -1315,10 +1350,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0547289D1FD6B4580050F42A /* xcconfig */ = {
+			isa = PBXGroup;
+			children = (
+				0547289E1FD6B4580050F42A /* Common.xcconfig */,
+				0547289F1FD6B4580050F42A /* Debug.xcconfig */,
+				054728A01FD6B4580050F42A /* Release.xcconfig */,
+				054728A21FD6B4580050F42A /* Common */,
+			);
+			name = xcconfig;
+			path = Submodules/xcconfig;
+			sourceTree = "<group>";
+		};
+		054728A21FD6B4580050F42A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				054728A31FD6B4580050F42A /* Signing.xcconfig */,
+				054728A41FD6B4580050F42A /* Architectures.xcconfig */,
+				054728A51FD6B4580050F42A /* Static-Analyzer */,
+				054728AD1FD6B4580050F42A /* Deployment.xcconfig */,
+				054728AE1FD6B4580050F42A /* Build-Options.xcconfig */,
+				054728AF1FD6B4580050F42A /* Swift-Compiler.xcconfig */,
+				054728B01FD6B4580050F42A /* Static-Analyzer.xcconfig */,
+				054728B11FD6B4580050F42A /* Swift-Compiler */,
+				054728B61FD6B4580050F42A /* Search-Paths.xcconfig */,
+				054728B71FD6B4580050F42A /* Apple-LLVM.xcconfig */,
+				054728B81FD6B4580050F42A /* Apple-LLVM */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		054728A51FD6B4580050F42A /* Static-Analyzer */ = {
+			isa = PBXGroup;
+			children = (
+				054728A61FD6B4580050F42A /* Issues.xcconfig */,
+				054728A71FD6B4580050F42A /* Issues */,
+			);
+			path = "Static-Analyzer";
+			sourceTree = "<group>";
+		};
+		054728A71FD6B4580050F42A /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				054728A81FD6B4580050F42A /* Apple-APIs.xcconfig */,
+				054728A91FD6B4580050F42A /* Generic-Issues.xcconfig */,
+				054728AA1FD6B4580050F42A /* Security.xcconfig */,
+				054728AB1FD6B4580050F42A /* Objective-C.xcconfig */,
+				054728AC1FD6B4580050F42A /* Analysis-Policy.xcconfig */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		054728B11FD6B4580050F42A /* Swift-Compiler */ = {
+			isa = PBXGroup;
+			children = (
+				054728B21FD6B4580050F42A /* Warnings-Policies.xcconfig */,
+				054728B31FD6B4580050F42A /* Code-Generation.xcconfig */,
+				054728B41FD6B4580050F42A /* Language.xcconfig */,
+				054728B51FD6B4580050F42A /* General.xcconfig */,
+			);
+			path = "Swift-Compiler";
+			sourceTree = "<group>";
+		};
+		054728B81FD6B4580050F42A /* Apple-LLVM */ = {
+			isa = PBXGroup;
+			children = (
+				054728B91FD6B4580050F42A /* Language */,
+				054728BD1FD6B4580050F42A /* Code-Generation.xcconfig */,
+				054728BE1FD6B4580050F42A /* Address-Sanitizer.xcconfig */,
+				054728BF1FD6B4580050F42A /* Language.xcconfig */,
+				054728C01FD6B4580050F42A /* Warnings.xcconfig */,
+				054728C11FD6B4580050F42A /* Undefined-Behavior-Sanitizer.xcconfig */,
+				054728C21FD6B4580050F42A /* Warning-Policies.xcconfig */,
+				054728C31FD6B4580050F42A /* Warnings */,
+				054728C81FD6B4580050F42A /* Preprocessing.xcconfig */,
+			);
+			path = "Apple-LLVM";
+			sourceTree = "<group>";
+		};
+		054728B91FD6B4580050F42A /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				054728BA1FD6B4580050F42A /* Modules.xcconfig */,
+				054728BB1FD6B4580050F42A /* Objective-C.xcconfig */,
+				054728BC1FD6B4580050F42A /* C++.xcconfig */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		054728C31FD6B4580050F42A /* Warnings */ = {
+			isa = PBXGroup;
+			children = (
+				054728C41FD6B4580050F42A /* Objective-C-ARC.xcconfig */,
+				054728C51FD6B4580050F42A /* Objective-C.xcconfig */,
+				054728C61FD6B4580050F42A /* C++.xcconfig */,
+				054728C71FD6B4580050F42A /* All-Languages.xcconfig */,
+			);
+			path = Warnings;
+			sourceTree = "<group>";
+		};
 		056C87C518C8B0F8006260B3 = {
 			isa = PBXGroup;
 			children = (
 				05D4BB681D91E2CD008043BC /* README.md */,
+				0547289D1FD6B4580050F42A /* xcconfig */,
 				05FCC6A319DB3E7A00BC1FBE /* OBJCXX */,
 				058FA78E1C29F62C009DD4DD /* OBJCXX-Test */,
 				056C880D18C8B50E006260B3 /* Frameworks */,
@@ -2274,12 +2409,19 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "XS-Labs";
 				TargetAttributes = {
+					056C881118C8B85F006260B3 = {
+						DevelopmentTeam = 326Y53CJMD;
+						ProvisioningStyle = Automatic;
+					};
 					05855C1A1E64B4010020E1C9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 326Y53CJMD;
 						ProvisioningStyle = Automatic;
 					};
 					058FA78C1C29F62C009DD4DD = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 326Y53CJMD;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -2792,258 +2934,37 @@
 /* Begin XCBuildConfiguration section */
 		056C87D518C8B0F8006260B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0547289F1FD6B4580050F42A /* Debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CC = "$(SRCROOT)/Scripts/ccache.sh";
-				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
-				CLANG_ANALYZER_GCD = YES;
-				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_ANALYZER_OBJC_ATSYNC = YES;
-				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
-				CLANG_ANALYZER_OBJC_DEALLOC = YES;
-				CLANG_ANALYZER_OBJC_GENERICS = YES;
-				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
-				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
-				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
-				CLANG_ANALYZER_OBJC_SELF_INIT = YES;
-				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
-				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_GETPW_GETS = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = YES;
-				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_STATIC_ANALYZER_MODE = deep;
-				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
-				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = YES;
-				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
-				CLANG_WARN_ASSIGN_ENUM = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES_ERROR;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES_ERROR;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_CXX0X_EXTENSIONS = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES_ERROR;
-				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
-				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES_ERROR;
-				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
 				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
-				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = c11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
-				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = YES;
-				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
-				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
-				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
-				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
-				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_MISSING_PARENTHESES = YES;
 				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
-				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
-				GCC_WARN_PEDANTIC = YES;
-				GCC_WARN_SHADOW = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
-				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNKNOWN_PRAGMAS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = YES;
-				GCC_WARN_UNUSED_VALUE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					OBJCXX/include,
 					Submodules/PIMPL/PIMPL/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LLVM_LTO = YES_THIN;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				RUN_CLANG_STATIC_ANALYZER = NO;
-				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		056C87D618C8B0F8006260B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 054728A01FD6B4580050F42A /* Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CC = "$(SRCROOT)/Scripts/ccache.sh";
-				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
-				CLANG_ANALYZER_GCD = YES;
-				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_ANALYZER_OBJC_ATSYNC = YES;
-				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
-				CLANG_ANALYZER_OBJC_DEALLOC = YES;
-				CLANG_ANALYZER_OBJC_GENERICS = YES;
-				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
-				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
-				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
-				CLANG_ANALYZER_OBJC_SELF_INIT = YES;
-				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
-				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_GETPW_GETS = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
-				CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = YES;
-				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_STATIC_ANALYZER_MODE = deep;
-				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
-				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = YES;
-				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
-				CLANG_WARN_ASSIGN_ENUM = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES_ERROR;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES_ERROR;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_CXX0X_EXTENSIONS = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES_ERROR;
-				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
-				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES_ERROR;
-				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
 				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
-				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = c11;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
-				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = YES;
-				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
-				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
-				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
-				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
-				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_MISSING_PARENTHESES = YES;
 				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
-				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
-				GCC_WARN_PEDANTIC = YES;
-				GCC_WARN_SHADOW = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
-				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNKNOWN_PRAGMAS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = YES;
-				GCC_WARN_UNUSED_VALUE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					OBJCXX/include,
 					Submodules/PIMPL/PIMPL/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LLVM_LTO = YES_THIN;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = NO;
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -3051,7 +2972,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CC = "";
-				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OBJCXX/PrefixHeader.pch;
@@ -3064,7 +2984,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CC = "";
-				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OBJCXX/PrefixHeader.pch;
@@ -3077,12 +2996,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -3090,20 +3007,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
 		058FA7921C29F62C009DD4DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
