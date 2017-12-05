@@ -61,7 +61,6 @@
 #include <cstdint>
 #include <cstdlib>
 #include <cstdarg>
-#include <OBJCXX/MethodSignature.hpp>
 
 #ifndef __OBJC__
 
