@@ -12,8 +12,6 @@ install:
 script:
 - set -o pipefail && xcodebuild -project "OBJCXX.xcodeproj" -scheme "OBJCXX" build | xcpretty
 - set -o pipefail && scan-build --status-bugs xcodebuild -project "OBJCXX.xcodeproj" -scheme "OBJCXX" analyze | xcpretty
-- set -o pipefail && xcodebuild -project "OBJCXX.xcodeproj" -scheme "OBJCXX-iOS" -destination generic/platform=iOS build | xcpretty
-- set -o pipefail && scan-build --status-bugs xcodebuild -project "OBJCXX.xcodeproj" -scheme "OBJCXX-iOS" -destination generic/platform=iOS analyze | xcpretty
 - set -o pipefail && xcodebuild -project "OBJCXX.xcodeproj" -scheme "OBJCXX-Test" build | xcpretty
 - set -o pipefail && scan-build --status-bugs xcodebuild -project "OBJCXX.xcodeproj" -scheme "OBJCXX-Test" analyze | xcpretty
 before_script:
