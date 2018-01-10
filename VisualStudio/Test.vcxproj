@@ -148,6 +148,7 @@
       <PrecompiledHeaderFile />
       <AdditionalIncludeDirectories>..\Submodules\PIMPL\PIMPL\include;..\OBJCXX\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -170,6 +171,7 @@
       <PrecompiledHeaderFile />
       <AdditionalIncludeDirectories>..\Submodules\PIMPL\PIMPL\include;..\OBJCXX\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
