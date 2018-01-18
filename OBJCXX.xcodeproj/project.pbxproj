@@ -2934,10 +2934,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0547289F1FD6B4580050F42A /* Debug.xcconfig */;
 			buildSettings = {
-				CC = "$(SRCROOT)/Scripts/ccache.sh";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
-				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					OBJCXX/include,
@@ -2952,10 +2949,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 054728A01FD6B4580050F42A /* Release.xcconfig */;
 			buildSettings = {
-				CC = "$(SRCROOT)/Scripts/ccache.sh";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
-				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					OBJCXX/include,
