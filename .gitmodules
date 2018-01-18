@@ -1,9 +1,6 @@
 [submodule "Submodules/PIMPL"]
 	path = Submodules/PIMPL
 	url = https://github.com/macmade/PIMPL.git
-[submodule "Submodules/SeriousCode"]
-	path = Submodules/SeriousCode
-	url = https://github.com/macmade/SeriousCode.git
 [submodule "Submodules/xcconfig"]
 	path = Submodules/xcconfig
 	url = https://github.com/macmade/xcconfig.git
