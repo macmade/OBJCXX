@@ -1318,7 +1318,6 @@
 		05E4952F1E5F8885003A9DC4 /* Bar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bar.cpp; sourceTree = "<group>"; };
 		05E495301E5F8885003A9DC4 /* Bar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bar.hpp; sourceTree = "<group>"; };
 		05F527EE1E3BAEFA00E21B6B /* Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
-		05FCC6B819DB3E7A00BC1FBE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2023,7 +2022,6 @@
 			isa = PBXGroup;
 			children = (
 				05FCC6A519DB3E7A00BC1FBE /* include */,
-				05FCC6B819DB3E7A00BC1FBE /* PrefixHeader.pch */,
 				05FCC6B919DB3E7A00BC1FBE /* source */,
 			);
 			path = OBJCXX;
@@ -2973,8 +2971,6 @@
 			buildSettings = {
 				CC = "";
 				EXECUTABLE_PREFIX = lib;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = OBJCXX/PrefixHeader.pch;
 				PRODUCT_NAME = OBJCXX;
 				SKIP_INSTALL = YES;
 			};
@@ -2985,8 +2981,6 @@
 			buildSettings = {
 				CC = "";
 				EXECUTABLE_PREFIX = lib;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = OBJCXX/PrefixHeader.pch;
 				PRODUCT_NAME = OBJCXX;
 				SKIP_INSTALL = YES;
 			};
