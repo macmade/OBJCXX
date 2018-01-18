@@ -774,45 +774,50 @@
 
 /* Begin PBXFileReference section */
 		050B83D11EB912F50090EA12 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		0547289E1FD6B4580050F42A /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
-		0547289F1FD6B4580050F42A /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		054728A01FD6B4580050F42A /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		054728A31FD6B4580050F42A /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
-		054728A41FD6B4580050F42A /* Architectures.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Architectures.xcconfig; sourceTree = "<group>"; };
-		054728A61FD6B4580050F42A /* Issues.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Issues.xcconfig; sourceTree = "<group>"; };
-		054728A81FD6B4580050F42A /* Apple-APIs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Apple-APIs.xcconfig"; sourceTree = "<group>"; };
-		054728A91FD6B4580050F42A /* Generic-Issues.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Generic-Issues.xcconfig"; sourceTree = "<group>"; };
-		054728AA1FD6B4580050F42A /* Security.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Security.xcconfig; sourceTree = "<group>"; };
-		054728AB1FD6B4580050F42A /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
-		054728AC1FD6B4580050F42A /* Analysis-Policy.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Analysis-Policy.xcconfig"; sourceTree = "<group>"; };
-		054728AD1FD6B4580050F42A /* Deployment.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Deployment.xcconfig; sourceTree = "<group>"; };
-		054728AE1FD6B4580050F42A /* Build-Options.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Build-Options.xcconfig"; sourceTree = "<group>"; };
-		054728AF1FD6B4580050F42A /* Swift-Compiler.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Swift-Compiler.xcconfig"; sourceTree = "<group>"; };
-		054728B01FD6B4580050F42A /* Static-Analyzer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Static-Analyzer.xcconfig"; sourceTree = "<group>"; };
-		054728B21FD6B4580050F42A /* Warnings-Policies.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Warnings-Policies.xcconfig"; sourceTree = "<group>"; };
-		054728B31FD6B4580050F42A /* Code-Generation.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Code-Generation.xcconfig"; sourceTree = "<group>"; };
-		054728B41FD6B4580050F42A /* Language.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Language.xcconfig; sourceTree = "<group>"; };
-		054728B51FD6B4580050F42A /* General.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = General.xcconfig; sourceTree = "<group>"; };
-		054728B61FD6B4580050F42A /* Search-Paths.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Search-Paths.xcconfig"; sourceTree = "<group>"; };
-		054728B71FD6B4580050F42A /* Apple-LLVM.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Apple-LLVM.xcconfig"; sourceTree = "<group>"; };
-		054728BA1FD6B4580050F42A /* Modules.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Modules.xcconfig; sourceTree = "<group>"; };
-		054728BB1FD6B4580050F42A /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
-		054728BC1FD6B4580050F42A /* C++.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "C++.xcconfig"; sourceTree = "<group>"; };
-		054728BD1FD6B4580050F42A /* Code-Generation.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Code-Generation.xcconfig"; sourceTree = "<group>"; };
-		054728BE1FD6B4580050F42A /* Address-Sanitizer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Address-Sanitizer.xcconfig"; sourceTree = "<group>"; };
-		054728BF1FD6B4580050F42A /* Language.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Language.xcconfig; sourceTree = "<group>"; };
-		054728C01FD6B4580050F42A /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
-		054728C11FD6B4580050F42A /* Undefined-Behavior-Sanitizer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Undefined-Behavior-Sanitizer.xcconfig"; sourceTree = "<group>"; };
-		054728C21FD6B4580050F42A /* Warning-Policies.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Warning-Policies.xcconfig"; sourceTree = "<group>"; };
-		054728C41FD6B4580050F42A /* Objective-C-ARC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C-ARC.xcconfig"; sourceTree = "<group>"; };
-		054728C51FD6B4580050F42A /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
-		054728C61FD6B4580050F42A /* C++.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "C++.xcconfig"; sourceTree = "<group>"; };
-		054728C71FD6B4580050F42A /* All-Languages.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "All-Languages.xcconfig"; sourceTree = "<group>"; };
-		054728C81FD6B4580050F42A /* Preprocessing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Preprocessing.xcconfig; sourceTree = "<group>"; };
 		054ED11C1FD6AF9B00081837 /* MethodSignature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MethodSignature.cpp; sourceTree = "<group>"; };
 		0558F96B1E5F7E70009FAC3A /* Foo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Foo.cpp; sourceTree = "<group>"; };
 		0558F96C1E5F7E70009FAC3A /* Foo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Foo.hpp; sourceTree = "<group>"; };
 		056C881218C8B85F006260B3 /* libOBJCXX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOBJCXX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0572234C2011027D00DC0502 /* Release - ccache.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release - ccache.xcconfig"; sourceTree = "<group>"; };
+		0572234D2011027D00DC0502 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		0572234E2011027D00DC0502 /* Debug - ccache.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug - ccache.xcconfig"; sourceTree = "<group>"; };
+		0572234F2011027D00DC0502 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		057223502011027D00DC0502 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		057223512011027D00DC0502 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		057223532011027D00DC0502 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
+		057223542011027D00DC0502 /* Architectures.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Architectures.xcconfig; sourceTree = "<group>"; };
+		057223562011027D00DC0502 /* Issues.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Issues.xcconfig; sourceTree = "<group>"; };
+		057223582011027D00DC0502 /* Apple-APIs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Apple-APIs.xcconfig"; sourceTree = "<group>"; };
+		057223592011027D00DC0502 /* Generic-Issues.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Generic-Issues.xcconfig"; sourceTree = "<group>"; };
+		0572235A2011027D00DC0502 /* Security.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Security.xcconfig; sourceTree = "<group>"; };
+		0572235B2011027D00DC0502 /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
+		0572235C2011027D00DC0502 /* Analysis-Policy.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Analysis-Policy.xcconfig"; sourceTree = "<group>"; };
+		0572235D2011027D00DC0502 /* Deployment.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Deployment.xcconfig; sourceTree = "<group>"; };
+		0572235E2011027D00DC0502 /* Build-Options.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Build-Options.xcconfig"; sourceTree = "<group>"; };
+		0572235F2011027D00DC0502 /* Swift-Compiler.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Swift-Compiler.xcconfig"; sourceTree = "<group>"; };
+		057223602011027D00DC0502 /* Static-Analyzer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Static-Analyzer.xcconfig"; sourceTree = "<group>"; };
+		057223622011027D00DC0502 /* Warnings-Policies.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Warnings-Policies.xcconfig"; sourceTree = "<group>"; };
+		057223632011027D00DC0502 /* Code-Generation.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Code-Generation.xcconfig"; sourceTree = "<group>"; };
+		057223642011027D00DC0502 /* Language.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Language.xcconfig; sourceTree = "<group>"; };
+		057223652011027D00DC0502 /* General.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = General.xcconfig; sourceTree = "<group>"; };
+		057223662011027D00DC0502 /* Search-Paths.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Search-Paths.xcconfig"; sourceTree = "<group>"; };
+		057223672011027D00DC0502 /* Apple-LLVM.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Apple-LLVM.xcconfig"; sourceTree = "<group>"; };
+		0572236A2011027D00DC0502 /* Modules.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Modules.xcconfig; sourceTree = "<group>"; };
+		0572236B2011027D00DC0502 /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
+		0572236C2011027D00DC0502 /* C++.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "C++.xcconfig"; sourceTree = "<group>"; };
+		0572236D2011027D00DC0502 /* Code-Generation.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Code-Generation.xcconfig"; sourceTree = "<group>"; };
+		0572236E2011027D00DC0502 /* Address-Sanitizer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Address-Sanitizer.xcconfig"; sourceTree = "<group>"; };
+		0572236F2011027D00DC0502 /* Language.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Language.xcconfig; sourceTree = "<group>"; };
+		057223702011027D00DC0502 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		057223712011027D00DC0502 /* Undefined-Behavior-Sanitizer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Undefined-Behavior-Sanitizer.xcconfig"; sourceTree = "<group>"; };
+		057223722011027D00DC0502 /* Warning-Policies.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Warning-Policies.xcconfig"; sourceTree = "<group>"; };
+		057223742011027D00DC0502 /* Objective-C-ARC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C-ARC.xcconfig"; sourceTree = "<group>"; };
+		057223752011027D00DC0502 /* Objective-C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Objective-C.xcconfig"; sourceTree = "<group>"; };
+		057223762011027D00DC0502 /* C++.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "C++.xcconfig"; sourceTree = "<group>"; };
+		057223772011027D00DC0502 /* All-Languages.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "All-Languages.xcconfig"; sourceTree = "<group>"; };
+		057223782011027D00DC0502 /* Preprocessing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Preprocessing.xcconfig; sourceTree = "<group>"; };
+		0572237B2011027D00DC0502 /* ccache-config.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "ccache-config.sh"; sourceTree = "<group>"; };
+		0572237C2011027D00DC0502 /* ccache.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ccache.sh; sourceTree = "<group>"; };
 		05855C1B1E64B4010020E1C9 /* libOBJCXX-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libOBJCXX-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		058FA76A1C29E3CA009DD4DD /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		058FA76B1C29E3CA009DD4DD /* RT.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RT.hpp; sourceTree = "<group>"; };
@@ -1349,110 +1354,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0547289D1FD6B4580050F42A /* xcconfig */ = {
-			isa = PBXGroup;
-			children = (
-				0547289E1FD6B4580050F42A /* Common.xcconfig */,
-				0547289F1FD6B4580050F42A /* Debug.xcconfig */,
-				054728A01FD6B4580050F42A /* Release.xcconfig */,
-				054728A21FD6B4580050F42A /* Common */,
-			);
-			name = xcconfig;
-			path = Submodules/xcconfig;
-			sourceTree = "<group>";
-		};
-		054728A21FD6B4580050F42A /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				054728A31FD6B4580050F42A /* Signing.xcconfig */,
-				054728A41FD6B4580050F42A /* Architectures.xcconfig */,
-				054728A51FD6B4580050F42A /* Static-Analyzer */,
-				054728AD1FD6B4580050F42A /* Deployment.xcconfig */,
-				054728AE1FD6B4580050F42A /* Build-Options.xcconfig */,
-				054728AF1FD6B4580050F42A /* Swift-Compiler.xcconfig */,
-				054728B01FD6B4580050F42A /* Static-Analyzer.xcconfig */,
-				054728B11FD6B4580050F42A /* Swift-Compiler */,
-				054728B61FD6B4580050F42A /* Search-Paths.xcconfig */,
-				054728B71FD6B4580050F42A /* Apple-LLVM.xcconfig */,
-				054728B81FD6B4580050F42A /* Apple-LLVM */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		054728A51FD6B4580050F42A /* Static-Analyzer */ = {
-			isa = PBXGroup;
-			children = (
-				054728A61FD6B4580050F42A /* Issues.xcconfig */,
-				054728A71FD6B4580050F42A /* Issues */,
-			);
-			path = "Static-Analyzer";
-			sourceTree = "<group>";
-		};
-		054728A71FD6B4580050F42A /* Issues */ = {
-			isa = PBXGroup;
-			children = (
-				054728A81FD6B4580050F42A /* Apple-APIs.xcconfig */,
-				054728A91FD6B4580050F42A /* Generic-Issues.xcconfig */,
-				054728AA1FD6B4580050F42A /* Security.xcconfig */,
-				054728AB1FD6B4580050F42A /* Objective-C.xcconfig */,
-				054728AC1FD6B4580050F42A /* Analysis-Policy.xcconfig */,
-			);
-			path = Issues;
-			sourceTree = "<group>";
-		};
-		054728B11FD6B4580050F42A /* Swift-Compiler */ = {
-			isa = PBXGroup;
-			children = (
-				054728B21FD6B4580050F42A /* Warnings-Policies.xcconfig */,
-				054728B31FD6B4580050F42A /* Code-Generation.xcconfig */,
-				054728B41FD6B4580050F42A /* Language.xcconfig */,
-				054728B51FD6B4580050F42A /* General.xcconfig */,
-			);
-			path = "Swift-Compiler";
-			sourceTree = "<group>";
-		};
-		054728B81FD6B4580050F42A /* Apple-LLVM */ = {
-			isa = PBXGroup;
-			children = (
-				054728B91FD6B4580050F42A /* Language */,
-				054728BD1FD6B4580050F42A /* Code-Generation.xcconfig */,
-				054728BE1FD6B4580050F42A /* Address-Sanitizer.xcconfig */,
-				054728BF1FD6B4580050F42A /* Language.xcconfig */,
-				054728C01FD6B4580050F42A /* Warnings.xcconfig */,
-				054728C11FD6B4580050F42A /* Undefined-Behavior-Sanitizer.xcconfig */,
-				054728C21FD6B4580050F42A /* Warning-Policies.xcconfig */,
-				054728C31FD6B4580050F42A /* Warnings */,
-				054728C81FD6B4580050F42A /* Preprocessing.xcconfig */,
-			);
-			path = "Apple-LLVM";
-			sourceTree = "<group>";
-		};
-		054728B91FD6B4580050F42A /* Language */ = {
-			isa = PBXGroup;
-			children = (
-				054728BA1FD6B4580050F42A /* Modules.xcconfig */,
-				054728BB1FD6B4580050F42A /* Objective-C.xcconfig */,
-				054728BC1FD6B4580050F42A /* C++.xcconfig */,
-			);
-			path = Language;
-			sourceTree = "<group>";
-		};
-		054728C31FD6B4580050F42A /* Warnings */ = {
-			isa = PBXGroup;
-			children = (
-				054728C41FD6B4580050F42A /* Objective-C-ARC.xcconfig */,
-				054728C51FD6B4580050F42A /* Objective-C.xcconfig */,
-				054728C61FD6B4580050F42A /* C++.xcconfig */,
-				054728C71FD6B4580050F42A /* All-Languages.xcconfig */,
-			);
-			path = Warnings;
-			sourceTree = "<group>";
-		};
 		056C87C518C8B0F8006260B3 = {
 			isa = PBXGroup;
 			children = (
 				05D4BB681D91E2CD008043BC /* README.md */,
-				0547289D1FD6B4580050F42A /* xcconfig */,
+				0572234B2011027D00DC0502 /* xcconfig */,
 				05FCC6A319DB3E7A00BC1FBE /* OBJCXX */,
 				058FA78E1C29F62C009DD4DD /* OBJCXX-Test */,
 				056C880D18C8B50E006260B3 /* Frameworks */,
@@ -1478,6 +1384,118 @@
 				058FA7951C29F700009DD4DD /* libobjc.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0572234B2011027D00DC0502 /* xcconfig */ = {
+			isa = PBXGroup;
+			children = (
+				0572234C2011027D00DC0502 /* Release - ccache.xcconfig */,
+				0572234D2011027D00DC0502 /* Common.xcconfig */,
+				0572234E2011027D00DC0502 /* Debug - ccache.xcconfig */,
+				0572234F2011027D00DC0502 /* Debug.xcconfig */,
+				057223502011027D00DC0502 /* Release.xcconfig */,
+				057223512011027D00DC0502 /* README.md */,
+				057223522011027D00DC0502 /* Common */,
+				0572237A2011027D00DC0502 /* Scripts */,
+			);
+			name = xcconfig;
+			path = Submodules/xcconfig;
+			sourceTree = "<group>";
+		};
+		057223522011027D00DC0502 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				057223532011027D00DC0502 /* Signing.xcconfig */,
+				057223542011027D00DC0502 /* Architectures.xcconfig */,
+				057223552011027D00DC0502 /* Static-Analyzer */,
+				0572235D2011027D00DC0502 /* Deployment.xcconfig */,
+				0572235E2011027D00DC0502 /* Build-Options.xcconfig */,
+				0572235F2011027D00DC0502 /* Swift-Compiler.xcconfig */,
+				057223602011027D00DC0502 /* Static-Analyzer.xcconfig */,
+				057223612011027D00DC0502 /* Swift-Compiler */,
+				057223662011027D00DC0502 /* Search-Paths.xcconfig */,
+				057223672011027D00DC0502 /* Apple-LLVM.xcconfig */,
+				057223682011027D00DC0502 /* Apple-LLVM */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		057223552011027D00DC0502 /* Static-Analyzer */ = {
+			isa = PBXGroup;
+			children = (
+				057223562011027D00DC0502 /* Issues.xcconfig */,
+				057223572011027D00DC0502 /* Issues */,
+			);
+			path = "Static-Analyzer";
+			sourceTree = "<group>";
+		};
+		057223572011027D00DC0502 /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				057223582011027D00DC0502 /* Apple-APIs.xcconfig */,
+				057223592011027D00DC0502 /* Generic-Issues.xcconfig */,
+				0572235A2011027D00DC0502 /* Security.xcconfig */,
+				0572235B2011027D00DC0502 /* Objective-C.xcconfig */,
+				0572235C2011027D00DC0502 /* Analysis-Policy.xcconfig */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		057223612011027D00DC0502 /* Swift-Compiler */ = {
+			isa = PBXGroup;
+			children = (
+				057223622011027D00DC0502 /* Warnings-Policies.xcconfig */,
+				057223632011027D00DC0502 /* Code-Generation.xcconfig */,
+				057223642011027D00DC0502 /* Language.xcconfig */,
+				057223652011027D00DC0502 /* General.xcconfig */,
+			);
+			path = "Swift-Compiler";
+			sourceTree = "<group>";
+		};
+		057223682011027D00DC0502 /* Apple-LLVM */ = {
+			isa = PBXGroup;
+			children = (
+				057223692011027D00DC0502 /* Language */,
+				0572236D2011027D00DC0502 /* Code-Generation.xcconfig */,
+				0572236E2011027D00DC0502 /* Address-Sanitizer.xcconfig */,
+				0572236F2011027D00DC0502 /* Language.xcconfig */,
+				057223702011027D00DC0502 /* Warnings.xcconfig */,
+				057223712011027D00DC0502 /* Undefined-Behavior-Sanitizer.xcconfig */,
+				057223722011027D00DC0502 /* Warning-Policies.xcconfig */,
+				057223732011027D00DC0502 /* Warnings */,
+				057223782011027D00DC0502 /* Preprocessing.xcconfig */,
+			);
+			path = "Apple-LLVM";
+			sourceTree = "<group>";
+		};
+		057223692011027D00DC0502 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				0572236A2011027D00DC0502 /* Modules.xcconfig */,
+				0572236B2011027D00DC0502 /* Objective-C.xcconfig */,
+				0572236C2011027D00DC0502 /* C++.xcconfig */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		057223732011027D00DC0502 /* Warnings */ = {
+			isa = PBXGroup;
+			children = (
+				057223742011027D00DC0502 /* Objective-C-ARC.xcconfig */,
+				057223752011027D00DC0502 /* Objective-C.xcconfig */,
+				057223762011027D00DC0502 /* C++.xcconfig */,
+				057223772011027D00DC0502 /* All-Languages.xcconfig */,
+			);
+			path = Warnings;
+			sourceTree = "<group>";
+		};
+		0572237A2011027D00DC0502 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				0572237B2011027D00DC0502 /* ccache-config.sh */,
+				0572237C2011027D00DC0502 /* ccache.sh */,
+			);
+			path = Scripts;
 			sourceTree = "<group>";
 		};
 		058FA7671C29E3CA009DD4DD /* Foundation */ = {
@@ -2932,7 +2950,7 @@
 /* Begin XCBuildConfiguration section */
 		056C87D518C8B0F8006260B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0547289F1FD6B4580050F42A /* Debug.xcconfig */;
+			baseConfigurationReference = 0572234E2011027D00DC0502 /* Debug - ccache.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				HEADER_SEARCH_PATHS = (
@@ -2947,7 +2965,7 @@
 		};
 		056C87D618C8B0F8006260B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 054728A01FD6B4580050F42A /* Release.xcconfig */;
+			baseConfigurationReference = 0572234C2011027D00DC0502 /* Release - ccache.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				HEADER_SEARCH_PATHS = (
@@ -2963,7 +2981,6 @@
 		056C881418C8B85F006260B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CC = "";
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = OBJCXX;
 				SKIP_INSTALL = YES;
@@ -2973,7 +2990,6 @@
 		056C881518C8B85F006260B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CC = "";
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = OBJCXX;
 				SKIP_INSTALL = YES;
@@ -3006,7 +3022,6 @@
 		058FA7921C29F62C009DD4DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -3014,7 +3029,6 @@
 		058FA7931C29F62C009DD4DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
