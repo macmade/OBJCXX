@@ -8,12 +8,9 @@ install:
 - brew install ccache
 - PATH=$PATH:/usr/local/opt/ccache/libexec
 - export PYTHONUSERBASE=~/.local
-- easy_install --user scan-build
 script:
 - set -o pipefail && xcodebuild -project "OBJCXX.xcodeproj" -scheme "OBJCXX" build | xcpretty
-- set -o pipefail && scan-build --status-bugs xcodebuild -project "OBJCXX.xcodeproj" -scheme "OBJCXX" analyze | xcpretty
 - set -o pipefail && xcodebuild -project "OBJCXX.xcodeproj" -scheme "OBJCXX-Test" build | xcpretty
-- set -o pipefail && scan-build --status-bugs xcodebuild -project "OBJCXX.xcodeproj" -scheme "OBJCXX-Test" analyze | xcpretty
 before_script:
 - ccache -s
 - ccache -z
