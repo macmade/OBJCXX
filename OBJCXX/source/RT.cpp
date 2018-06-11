@@ -241,25 +241,31 @@ namespace OBJCXX
             {
                 return;
             }
-
-            #ifdef _WIN64
-            common = nullptr;
-            #else
-            common = getenv( "COMMONPROGRAMFILES(x86)" );
-            #endif
-
-            if( common == nullptr )
+            
+            objc       = LoadLibraryA( "objc.dll" ).c_str() );
+            foundation = LoadLibraryA( "Foundation.dll" ).c_str() );
+            
+            if( objc == nullptr || foundation == nullptr )
             {
-                common = getenv( "COMMONPROGRAMFILES" );
+                #ifdef _WIN64
+                common = nullptr;
+                #else
+                common = getenv( "COMMONPROGRAMFILES(x86)" );
+                #endif
+
+                if( common == nullptr )
+                {
+                    common = getenv( "COMMONPROGRAMFILES" );
+                }
+                
+                apple = std::string( common ) + "\\Apple\\Apple Application Support";
+
+                SetDllDirectoryA( apple.c_str() );
+
+                objc       = LoadLibraryA( ( apple + "\\objc.dll" ).c_str() );
+                foundation = LoadLibraryA( ( apple + "\\Foundation.dll" ).c_str() );
             }
             
-            apple = std::string( common ) + "\\Apple\\Apple Application Support";
-
-            SetDllDirectoryA( apple.c_str() );
-
-            objc       = LoadLibraryA( ( apple + "\\objc.dll" ).c_str() );
-            foundation = LoadLibraryA( ( apple + "\\Foundation.dll" ).c_str() );
-
             if( objc == nullptr || foundation == nullptr )
             {
                 return;
