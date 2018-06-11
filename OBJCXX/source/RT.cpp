@@ -242,8 +242,8 @@ namespace OBJCXX
                 return;
             }
             
-            objc       = LoadLibraryA( "objc.dll" ).c_str() );
-            foundation = LoadLibraryA( "Foundation.dll" ).c_str() );
+            objc       = LoadLibraryA( "objc.dll" );
+            foundation = LoadLibraryA( "Foundation.dll" );
             
             if( objc == nullptr || foundation == nullptr )
             {
