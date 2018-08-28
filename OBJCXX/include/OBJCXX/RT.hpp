@@ -153,16 +153,6 @@ namespace OBJCXX
         OBJCXX_EXPORT id          GetLastException( void );
         OBJCXX_EXPORT void        RethrowLastException( void );
         
-        template< typename _T_, typename _R_ >
-        _R_ UnsafeCast( _T_ v )
-        {
-            uintptr_t p;
-            
-            p = reinterpret_cast< uintptr_t >( v );
-            
-            return *( reinterpret_cast< _R_ * >( &p ) );
-        }
-        
         class OBJCXX_EXPORT MessageBase: public XS::PIMPL::Object< MessageBase >
         {
             public:
@@ -186,7 +176,7 @@ namespace OBJCXX
         template< class _U_ > struct IsSimpleReturnType: public std::integral_constant< bool, !IsVoidReturnType< _U_ >::value && !IsStructReturnType< _U_ >::value && !IsFloatReturnType< _U_ >::value > {};
         
         template< typename _T_ >
-        class OBJCXX_EXPORT Message< _T_, typename std::enable_if< IsSimpleReturnType< _T_ >::value >::type >: public MessageBase
+        class OBJCXX_EXPORT Message< _T_, typename std::enable_if< IsSimpleReturnType< _T_ >::value && sizeof( _T_ ) < sizeof( id ) >::type >: public MessageBase
         {
             public:
                 
@@ -204,13 +194,47 @@ namespace OBJCXX
                 {
                     try
                     {
-                        return UnsafeCast< id, _T_ >( Internal::objc_msgSend( this->object(), this->selector(), args ... ) );
+                        uintptr_t r;
+                        
+                        r = reinterpret_cast< uintptr_t >( Internal::objc_msgSend( this->object(), this->selector(), args ... ) );
+                        
+                        return static_cast< _T_ >( r );
                     }
                     catch( ... )
                     {
                         RethrowLastException();
                         
-                        return UnsafeCast< id, _T_ >( nullptr );
+                        return {};
+                    }
+                }
+        };
+        
+        template< typename _T_ >
+        class OBJCXX_EXPORT Message< _T_, typename std::enable_if< IsSimpleReturnType< _T_ >::value && sizeof( _T_ ) >= sizeof( id ) >::type >: public MessageBase
+        {
+            public:
+                
+                Message( id object, const std::string & selector ): MessageBase( object, selector )
+                {}
+                
+                Message( Class cls, const std::string & selector ): MessageBase( cls, selector )
+                {}
+                
+                Message( const std::string & cls, const std::string & selector ): MessageBase( cls, selector )
+                {}
+
+                template< typename ... _A_ >
+                _T_ send( _A_ ... args )
+                {
+                    try
+                    {
+                        return reinterpret_cast< _T_ >( Internal::objc_msgSend( this->object(), this->selector(), args ... ) );
+                    }
+                    catch( ... )
+                    {
+                        RethrowLastException();
+                        
+                        return {};
                     }
                 }
         };
