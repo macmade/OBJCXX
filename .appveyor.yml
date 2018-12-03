@@ -9,6 +9,6 @@ configuration:
 install:
   - git submodule update --init --recursive
 build:
-  project: OBJCXX.sln.sln
+  project: OBJCXX.sln
 before_build:
   - nuget restore
