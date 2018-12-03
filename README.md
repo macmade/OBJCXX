@@ -1,7 +1,7 @@
 OBJCXX
 ======
 
-[![Build Status](https://img.shields.io/travis/macmade/OBJCXX.svg?branch=master&style=flat)](https://travis-ci.org/macmade/OBJCXX)
+[![Build Status](https://img.shields.io/travis/macmade/OBJCXX.svg?branch=master&logo=travis&style=flat)](https://travis-ci.org/macmade/OBJCXX)
 [![Build-AppVeyor](https://ci.appveyor.com/api/projects/status/github/macmade/OBJCXX?svg=true)](https://ci.appveyor.com/project/macmade/OBJCXX)
 [![Coverage Status](https://img.shields.io/coveralls/macmade/OBJCXX.svg?branch=master&style=flat)](https://coveralls.io/r/macmade/OBJCXX?branch=master)
 [![Issues](http://img.shields.io/github/issues/macmade/OBJCXX.svg?style=flat)](https://github.com/macmade/OBJCXX/issues)
