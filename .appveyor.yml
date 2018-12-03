@@ -1,0 +1,27 @@
+image:
+  - Visual Studio 2017
+platform:
+  - x86
+  - x64
+configuration:
+  - Debug
+  - Release
+install:
+  - git submodule update --init --recursive
+build:
+  project: dlib.sln
+before_build:
+  - nuget restore
+for:
+  -
+    matrix:
+      only:
+        - platform: x86
+    test_script:
+      - '%APPVEYOR_BUILD_FOLDER%\Build\32\%CONFIGURATION%\Unit-Tests.exe'
+  -
+    matrix:
+      only:
+        - platform: x64
+    test_script:
+      - '%APPVEYOR_BUILD_FOLDER%\Build\64\%CONFIGURATION%\Unit-Tests.exe'
