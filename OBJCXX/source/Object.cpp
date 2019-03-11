@@ -86,7 +86,7 @@ namespace OBJCXX
     {
         using std::swap;
         
-        if( o != nullptr && o.message< bool >( "isKindOfClass:" ).send< Class >( this->impl->_class ) == false )
+        if( o != nullptr && this->impl->_class != nullptr && o.message< bool >( "isKindOfClass:" ).send< Class >( this->impl->_class ) == false )
         {
             std::string msg;
             
