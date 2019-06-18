@@ -29,6 +29,7 @@
 
 #include <OBJCXX/MethodSignature.hpp>
 #include <vector>
+#include <stdexcept>
 
 template<>
 class XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL
