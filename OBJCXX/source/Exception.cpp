@@ -42,7 +42,7 @@ extern "C"
     static void OBJCXX_Exception_MakeKey( void );
     static void OBJCXX_Exception_MakeKey( void )
     {
-        pthread_key_create( &exception, NULL );
+        pthread_key_create( &exception, nullptr );
         pthread_setspecific( exception, nullptr );
     }
 }

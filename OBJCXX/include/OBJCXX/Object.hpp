@@ -60,7 +60,7 @@
     _class_( _class_ && o ): _base_( std::forward< _class_ && >( o ) )                                      \
     {}                                                                                                      \
                                                                                                             \
-    ~_class_( void )                                                                                        \
+    ~_class_( void ) override                                                                               \
     {}                                                                                                      \
                                                                                                             \
     _class_ & operator =( _class_ o )                                                                       \
@@ -82,7 +82,7 @@ namespace OBJCXX
             Object( const Object & o );
             Object( Object && o );
             
-            ~Object( void );
+            ~Object( void ) override;
             
             Object & operator =( Object o );
             
