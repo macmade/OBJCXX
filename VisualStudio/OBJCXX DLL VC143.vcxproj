@@ -522,33 +522,33 @@
     <ProjectGuid>{2EAA5DF6-A43D-427E-B92D-FAC9A98EAFF2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>CF</RootNamespace>
-    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
-    <ProjectName>OBJCXX DLL VC141 XP</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>OBJCXX DLL VC143</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -571,22 +571,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>$(SolutionDir)Build\32\$(Configuration)\Temp\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)Build\32\$(Configuration)\</OutDir>
-    <TargetName>OBJCXX_V141XP</TargetName>
+    <TargetName>OBJCXX_V143</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Build\64\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Build\64\$(Configuration)\Temp\$(ProjectName)\</IntDir>
-    <TargetName>OBJCXX_V141XP</TargetName>
+    <TargetName>OBJCXX_V143</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(SolutionDir)Build\32\$(Configuration)\Temp\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)Build\32\$(Configuration)\</OutDir>
-    <TargetName>OBJCXX_V141XP</TargetName>
+    <TargetName>OBJCXX_V143</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Build\64\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Build\64\$(Configuration)\Temp\$(ProjectName)\</IntDir>
-    <TargetName>OBJCXX_V141XP</TargetName>
+    <TargetName>OBJCXX_V143</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
