@@ -2957,7 +2957,6 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					OBJCXX/include,
-					Submodules/PIMPL/PIMPL/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -2972,7 +2971,6 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					OBJCXX/include,
-					Submodules/PIMPL/PIMPL/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
