@@ -31,25 +31,37 @@
 #define OBJCXX_RT_METHOD_SIGNATURE_H
 
 #include <string>
+#include <memory>
+#include <algorithm>
 #include <OBJCXX/RT.hpp>
-#include <XS/PIMPL/Object.hpp>
 
 namespace OBJCXX
 {
     namespace RT
     {
-        class OBJCXX_EXPORT MethodSignature: XS::PIMPL::Object< MethodSignature >
+        class OBJCXX_EXPORT MethodSignature
         {
             public:
                 
-                using XS::PIMPL::Object< MethodSignature >::impl;
-                
                 MethodSignature( const std::string & encoding );
+                MethodSignature( const MethodSignature & o );
+                MethodSignature( MethodSignature && o ) noexcept;
+                ~MethodSignature();
+                
+                MethodSignature & operator =( MethodSignature o );
+                
+                friend void swap( MethodSignature & o1, MethodSignature & o2 );
                 
                 std::string GetTypeEncoding()                           const;
                 std::size_t GetNumberOfArguments()                      const;
                 std::string GetArgumentTypeAtIndex( std::size_t index ) const;
                 std::string GetReturnType()                             const;
+                
+            private:
+                
+                class IMPL;
+                
+                std::unique_ptr< IMPL > impl;
         };
         
         template< typename _R_, typename ... _A_ >

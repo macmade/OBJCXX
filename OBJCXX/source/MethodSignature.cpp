@@ -31,29 +31,48 @@
 #include <vector>
 #include <stdexcept>
 
-template<>
-class XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL
-{
-    public:
-        
-        IMPL( const std::string & encoding = "" );
-        IMPL( const IMPL & o );
-        ~IMPL();
-        
-        std::string                _encoding;
-        std::string                _returnType;
-        std::vector< std::string > _arguments;
-};
-
-#define XS_PIMPL_CLASS OBJCXX::RT::MethodSignature
-#include <XS/PIMPL/Object-IMPL.hpp>
-
 namespace OBJCXX
 {
     namespace RT
     {
-        MethodSignature::MethodSignature( const std::string & encoding ): XS::PIMPL::Object< MethodSignature >( encoding )
+        class MethodSignature::IMPL
+        {
+            public:
+                
+                IMPL( const std::string & encoding = "" );
+                IMPL( const IMPL & o );
+                ~IMPL();
+                
+                std::string                _encoding;
+                std::string                _returnType;
+                std::vector< std::string > _arguments;
+        };
+        
+        MethodSignature::MethodSignature( const std::string & encoding ): impl( std::make_unique< IMPL >( encoding ) )
         {}
+        
+        MethodSignature::MethodSignature( const MethodSignature & o ): impl( std::make_unique< IMPL >( *( o.impl ) ) )
+        {}
+        
+        MethodSignature::MethodSignature( MethodSignature && o ) noexcept: impl( std::move( o.impl ) )
+        {}
+        
+        MethodSignature::~MethodSignature()
+        {}
+        
+        MethodSignature & MethodSignature::operator =( MethodSignature o )
+        {
+            swap( *( this ), o );
+            
+            return *( this );
+        }
+        
+        void swap( MethodSignature & o1, MethodSignature & o2 )
+        {
+            using std::swap;
+            
+            swap( o1.impl, o2.impl );
+        }
         
         std::string MethodSignature::GetTypeEncoding() const
         {
@@ -79,58 +98,58 @@ namespace OBJCXX
         {
             return this->impl->_returnType;
         }
-    }
-}
 
-XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::IMPL( const std::string & encoding )
-{
-    const char * cp;
-    char         c;
-    
-    if( encoding.length() == 0 )
-    {
-        throw new std::runtime_error( "Empty type encoding" );
-    }
-    
-    cp = encoding.c_str();
-    
-    while( ( c = *( cp++ ) ) )
-    {
-        if
-        (
-               c != 'v'
-            && c != 'c' && c != 's' && c != 'i' && c != 'l' && c != 'q'
-            && c != 'C' && c != 'S' && c != 'I' && c != 'L' && c != 'Q'
-            && c != 'f' && c != 'd' && c != 'B' && c != 'v' && c != '*'
-            && c != '@' && c != '#' && c != ':' && c != '^' && c != '?'
-        )
+        MethodSignature::IMPL::IMPL( const std::string & encoding )
         {
-            if( isdigit( c ) == 0 )
+            const char * cp;
+            char         c;
+            
+            if( encoding.length() == 0 )
             {
-                throw new std::runtime_error( "Invalid type encoding" );
+                throw new std::runtime_error( "Empty type encoding" );
             }
             
-            continue;
-        }
-        
-        if( this->_returnType.length() == 0 )
-        {
-            this->_returnType = std::string( 1, c );
-        }
-        else
-        {
-            this->_arguments.push_back( std::string( 1, c ) );
+            cp = encoding.c_str();
+            
+            while( ( c = *( cp++ ) ) )
+            {
+                if
+                (
+                       c != 'v'
+                    && c != 'c' && c != 's' && c != 'i' && c != 'l' && c != 'q'
+                    && c != 'C' && c != 'S' && c != 'I' && c != 'L' && c != 'Q'
+                    && c != 'f' && c != 'd' && c != 'B' && c != 'v' && c != '*'
+                    && c != '@' && c != '#' && c != ':' && c != '^' && c != '?'
+                )
+                {
+                    if( isdigit( c ) == 0 )
+                    {
+                        throw new std::runtime_error( "Invalid type encoding" );
+                    }
+                    
+                    continue;
+                }
+                
+                if( this->_returnType.length() == 0 )
+                {
+                    this->_returnType = std::string( 1, c );
+                }
+                else
+                {
+                    this->_arguments.push_back( std::string( 1, c ) );
+                }
+
+                this->_encoding = encoding;
+            }
         }
 
-        this->_encoding = encoding;
+        MethodSignature::IMPL::IMPL( const IMPL & o ):
+            _encoding( o._encoding ),
+            _returnType( o._returnType ),
+            _arguments( o._arguments )
+        {}
+
+        MethodSignature::IMPL::~IMPL()
+        {}
     }
 }
-
-XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::IMPL( const IMPL & o ):
-    _encoding( o._encoding ),
-    _returnType( o._returnType ),
-    _arguments( o._arguments )
-{}
-
-XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::~IMPL()
-{}
