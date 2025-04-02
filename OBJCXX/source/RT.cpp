@@ -81,27 +81,23 @@ static void init()
 
 #endif
 
-template<>
-class XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL
-{
-    public:
-        
-        IMPL();
-        IMPL( id object, const std::string & selector );
-        IMPL( const IMPL & o );
-        ~IMPL();
-        
-        id  _object;
-        SEL _selector;
-};
-
-#define XS_PIMPL_CLASS OBJCXX::RT::MessageBase
-#include <XS/PIMPL/Object-IMPL.hpp>
-
 namespace OBJCXX
 {
     namespace RT
     {
+        class MessageBase::IMPL
+        {
+            public:
+                
+                IMPL();
+                IMPL( id object, const std::string & selector );
+                IMPL( const IMPL & o );
+                ~IMPL();
+                
+                id  _object;
+                SEL _selector;
+        };
+        
         Class GetClass( const std::string & name )
         {
             Class ret;
@@ -177,16 +173,41 @@ namespace OBJCXX
         }
             
         MessageBase::MessageBase( id object, const std::string & selector ):
-            XS::PIMPL::Object< MessageBase >( object, selector )
+            impl( std::make_unique< IMPL >( object, selector ) )
         {}
         
         MessageBase::MessageBase( Class cls, const std::string & selector ):
-            XS::PIMPL::Object< MessageBase >( reinterpret_cast< id >( cls ), selector )
+            impl( std::make_unique< IMPL >( reinterpret_cast< id >( cls ), selector ) )
         {}
         
         MessageBase::MessageBase( const std::string & cls, const std::string & selector ):
             MessageBase( GetClass( cls ), selector )
         {}
+        
+        MessageBase::MessageBase( const MessageBase & o ):
+            impl( std::make_unique< IMPL >( *( o.impl ) ) )
+        {}
+        
+        MessageBase::MessageBase( MessageBase && o ) noexcept:
+            impl( std::move( o.impl ) )
+        {}
+        
+        MessageBase::~MessageBase()
+        {}
+        
+        MessageBase & MessageBase::operator =( MessageBase o )
+        {
+            swap( *( this ), o );
+            
+            return *( this );
+        }
+        
+        void swap( MessageBase & o1, MessageBase & o2 )
+        {
+            using std::swap;
+            
+            swap( o1.impl, o2.impl );
+        }
         
         id MessageBase::object()
         {
@@ -338,23 +359,23 @@ namespace OBJCXX
                 }
             );
         }
+
+        MessageBase::IMPL::IMPL():
+            _object( nullptr ),
+            _selector( nullptr )
+        {}
+
+        MessageBase::IMPL::IMPL( id object, const std::string & selector ):
+            _object( object ),
+            _selector( OBJCXX::RT::GetSelector( selector ) )
+        {}
+
+        MessageBase::IMPL::IMPL( const IMPL & o ):
+            _object( o._object ),
+            _selector( o._selector )
+        {}
+
+        MessageBase::IMPL::~IMPL()
+        {}
     }
 }
-
-XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL():
-    _object( nullptr ),
-    _selector( nullptr )
-{}
-
-XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL( id object, const std::string & selector ):
-    _object( object ),
-    _selector( OBJCXX::RT::GetSelector( selector ) )
-{}
-
-XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL( const IMPL & o ):
-    _object( o._object ),
-    _selector( o._selector )
-{}
-
-XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::~IMPL()
-{}

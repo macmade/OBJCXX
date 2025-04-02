@@ -57,7 +57,8 @@
 
 #include <type_traits>
 #include <string>
-#include <XS/PIMPL/Object.hpp>
+#include <memory>
+#include <algorithm>
 #include <cstdint>
 #include <cstdlib>
 #include <cstdarg>
@@ -154,18 +155,29 @@ namespace OBJCXX
         OBJCXX_EXPORT id          GetLastException();
         OBJCXX_EXPORT void        RethrowLastException();
         
-        class OBJCXX_EXPORT MessageBase: public XS::PIMPL::Object< MessageBase >
+        class OBJCXX_EXPORT MessageBase
         {
             public:
-                
-                using XS::PIMPL::Object< MessageBase >::impl;
                 
                 MessageBase( id object, const std::string & selector );
                 MessageBase( Class cls, const std::string & selector );
                 MessageBase( const std::string & cls, const std::string & selector );
+                MessageBase( const MessageBase & o );
+                MessageBase( MessageBase && o ) noexcept;
+                ~MessageBase();
+                
+                MessageBase & operator =( MessageBase o );
+                
+                friend void swap( MessageBase & o1, MessageBase & o2 );
                 
                 id object();
                 SEL selector();
+                
+            private:
+                
+                class IMPL;
+                
+                std::unique_ptr< IMPL > impl;
         };
         
         template< typename _T_, class _E_ = void >
