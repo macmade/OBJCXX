@@ -32,11 +32,11 @@
 
 #include <string>
 #include <functional>
+#include <memory>
 #include <type_traits>
 #include <OBJCXX/RT.hpp>
 #include <OBJCXX/Foundation/Types.hpp>
 #include <OBJCXX/Foundation/Protocols/NSObject.hpp>
-#include <XS/PIMPL/Object.hpp>
 
 /* Can't inherit constructors with VisualStudio / V120 */
 #define OBJCXX_USING_BASE( _class_, _base_ )                                                                \
@@ -72,11 +72,9 @@
 
 namespace OBJCXX
 {
-    class OBJCXX_EXPORT Object: public XS::PIMPL::Object< Object >, public NS::Protocols::Object
+    class OBJCXX_EXPORT Object: public NS::Protocols::Object
     {
         public:
-            
-            using XS::PIMPL::Object< Object >::impl;
             
             Object( id object );
             Object( const Object & o );
@@ -130,6 +128,12 @@ namespace OBJCXX
             
             Object( const std::string & className );
             Object( const std::string & className, std::function< id() > init );
+            
+        private:
+            
+            class IMPL;
+            
+            std::unique_ptr< IMPL > impl;
     };
 }
 

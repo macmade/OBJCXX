@@ -31,26 +31,22 @@
 #include <OBJCXX/Foundation/Classes/NSString.hpp>
 #include <iostream>
 
-template<>
-class XS::PIMPL::Object< OBJCXX::Object >::IMPL
-{
-    public:
-        
-        IMPL();
-        IMPL( id o );
-        IMPL( const IMPL & o );
-        ~IMPL();
-        
-        std::string _className;
-        Class       _class;
-        id          _object;
-};
-
-#define XS_PIMPL_CLASS OBJCXX::Object
-#include <XS/PIMPL/Object-IMPL.hpp>
-
 namespace OBJCXX
 {
+    class Object::IMPL
+    {
+        public:
+            
+            IMPL();
+            IMPL( id o );
+            IMPL( const IMPL & o );
+            ~IMPL();
+            
+            std::string _className;
+            Class       _class;
+            id          _object;
+    };
+    
     Object::Object( const std::string & className ):
         Object
         (
@@ -62,7 +58,9 @@ namespace OBJCXX
         )
     {}
     
-    Object::Object( const std::string & className, std::function< id() > init ): XS::PIMPL::Object< Object >(), NS::Protocols::Object()
+    Object::Object( const std::string & className, std::function< id() > init ):
+        NS::Protocols::Object(),
+        impl( std::make_unique< IMPL >() )
     {
         this->impl->_className = className;
         this->impl->_class     = OBJCXX::RT::GetClass( this->impl->_className );
@@ -70,13 +68,19 @@ namespace OBJCXX
         this->impl->_object    = init();
     }
     
-    Object::Object( id object ): XS::PIMPL::Object< Object >( object ), NS::Protocols::Object()
+    Object::Object( id object ):
+        NS::Protocols::Object(),
+        impl( std::make_unique< IMPL >( object ) )
     {}
     
-    Object::Object( const Object & o ): XS::PIMPL::Object< Object >( std::forward< const XS::PIMPL::Object< OBJCXX::Object > & >( o ) ), NS::Protocols::Object()
+    Object::Object( const Object & o ):
+        NS::Protocols::Object(),
+        impl( std::make_unique< IMPL >( *( o.impl ) ) )
     {}
     
-    Object::Object( Object && o ): XS::PIMPL::Object< Object >( std::forward< const XS::PIMPL::Object< OBJCXX::Object > && >( o ) ), NS::Protocols::Object()
+    Object::Object( Object && o ):
+        NS::Protocols::Object(),
+        impl( std::move( o.impl ) )
     {}
     
     Object::~Object()
@@ -257,34 +261,34 @@ namespace OBJCXX
         
         return os;
     }
-}
 
-XS::PIMPL::Object< OBJCXX::Object >::IMPL::IMPL():
-    _className( "" ),
-    _class( nullptr ),
-    _object( nullptr )
-{}
-    
-XS::PIMPL::Object< OBJCXX::Object >::IMPL::IMPL( id o ): IMPL()
-{
-    if( o )
+    Object::IMPL::IMPL():
+        _className( "" ),
+        _class( nullptr ),
+        _object( nullptr )
+    {}
+        
+    Object::IMPL::IMPL( id o ): IMPL()
     {
-        this->_className = ( o ) ? OBJCXX::RT::GetClassName( OBJCXX::RT::GetClass( o ) ) : "";
-        this->_class     = ( o ) ? OBJCXX::RT::GetClass( this->_className ): nullptr;
-        this->_object    = ( o ) ? o : nullptr;
-        this->_object    = ( o ) ? OBJCXX::RT::Message< id >( this->_object, "retain" ).send() : nullptr;
+        if( o )
+        {
+            this->_className = ( o ) ? OBJCXX::RT::GetClassName( OBJCXX::RT::GetClass( o ) ) : "";
+            this->_class     = ( o ) ? OBJCXX::RT::GetClass( this->_className ): nullptr;
+            this->_object    = ( o ) ? o : nullptr;
+            this->_object    = ( o ) ? OBJCXX::RT::Message< id >( this->_object, "retain" ).send() : nullptr;
+        }
     }
-}
 
-XS::PIMPL::Object< OBJCXX::Object >::IMPL::IMPL( const IMPL & o ):
-    _className( o._className ),
-    _class( o._class ),
-    _object( o._object )
-{
-    this->_object = OBJCXX::RT::Message< id >( this->_object, "retain" ).send();
-}
+    Object::IMPL::IMPL( const IMPL & o ):
+        _className( o._className ),
+        _class( o._class ),
+        _object( o._object )
+    {
+        this->_object = OBJCXX::RT::Message< id >( this->_object, "retain" ).send();
+    }
 
-XS::PIMPL::Object< OBJCXX::Object >::IMPL::~IMPL()
-{
-    OBJCXX::RT::Message< void >( this->_object, "release" ).send();
+    Object::IMPL::~IMPL()
+    {
+        OBJCXX::RT::Message< void >( this->_object, "release" ).send();
+    }
 }
