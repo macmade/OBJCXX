@@ -41,26 +41,6 @@
 #pragma clang diagnostic ignored "-Wcast-align"
 #endif
 
-template<>
-class XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL
-{
-    public:
-        
-        IMPL();
-        IMPL( const std::string & name, const std::string & super );
-        IMPL( const IMPL & o );
-        ~IMPL();
-        
-        std::string _name;
-        std::string _super;
-        Class       _cls;
-        bool        _registered;
-        bool        _hasCustomDealloc;
-};
-
-#define XS_PIMPL_CLASS OBJCXX::ClassBuilder
-#include <XS/PIMPL/Object-IMPL.hpp>
-
 extern "C"
 {
     void OBJCXX_IMP_dealloc( id self, SEL _cmd );
@@ -104,13 +84,29 @@ extern "C"
 
 namespace OBJCXX
 {
-    ClassBuilder::ClassBuilder(): XS::PIMPL::Object< ClassBuilder >()
-    {}
+    class ClassBuilder::IMPL
+    {
+        public:
+            
+            IMPL();
+            IMPL( const std::string & name, const std::string & super );
+            IMPL( const IMPL & o );
+            ~IMPL();
+            
+            std::string _name;
+            std::string _super;
+            Class       _cls;
+            bool        _registered;
+            bool        _hasCustomDealloc;
+    };
     
-    ClassBuilder::ClassBuilder( const std::string & name, const std::string & super, size_t extraBytes ): XS::PIMPL::Object< ClassBuilder >( name, super )
+    ClassBuilder::ClassBuilder( const std::string & name, const std::string & super, size_t extraBytes ): impl( std::make_unique< IMPL >( name, super ) )
     {
         this->impl->_cls = RT::Internal::objc_allocateClassPair( RT::Internal::objc_getClass( super.c_str() ), name.c_str(), extraBytes );
     }
+    
+    ClassBuilder::~ClassBuilder()
+    {}
     
     Class ClassBuilder::cls() const
     {
@@ -454,34 +450,34 @@ namespace OBJCXX
         
         this->impl->_registered = true;
     }
+    
+    ClassBuilder::IMPL::IMPL():
+        _name( "" ),
+        _super( "" ),
+        _cls( nullptr ),
+        _registered( false ),
+        _hasCustomDealloc( false )
+    {}
+
+    ClassBuilder::IMPL::IMPL( const std::string & name, const std::string & super ):
+        _name( name ),
+        _super( super ),
+        _cls( nullptr ),
+        _registered( false ),
+        _hasCustomDealloc( false )
+    {}
+
+    ClassBuilder::IMPL::IMPL( const IMPL & o ):
+        _name( o._name ),
+        _super( o._super ),
+        _cls( o._cls ),
+        _registered( o._registered ),
+        _hasCustomDealloc( o._hasCustomDealloc )
+    {}
+
+    ClassBuilder::IMPL::~IMPL()
+    {}
 }
-
-XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL::IMPL():
-    _name( "" ),
-    _super( "" ),
-    _cls( nullptr ),
-    _registered( false ),
-    _hasCustomDealloc( false )
-{}
-
-XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL::IMPL( const std::string & name, const std::string & super ):
-    _name( name ),
-    _super( super ),
-    _cls( nullptr ),
-    _registered( false ),
-    _hasCustomDealloc( false )
-{}
-
-XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL::IMPL( const IMPL & o ):
-    _name( o._name ),
-    _super( o._super ),
-    _cls( o._cls ),
-    _registered( o._registered ),
-    _hasCustomDealloc( o._hasCustomDealloc )
-{}
-
-XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL::~IMPL()
-{}
 
 void OBJCXX_IMP_dealloc( id self, SEL _cmd )
 {

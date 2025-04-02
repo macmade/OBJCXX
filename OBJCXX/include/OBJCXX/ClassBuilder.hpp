@@ -31,18 +31,14 @@
 #define OBJCXX_CLASS_BUILDER_H
 
 #include <string>
+#include <memory>
 #include <OBJCXX/RT.hpp>
-#include <XS/PIMPL/Object.hpp>
-
-#include <iostream>
 
 namespace OBJCXX
 {
-    class OBJCXX_EXPORT ClassBuilder: public XS::PIMPL::Object< ClassBuilder >
+    class OBJCXX_EXPORT ClassBuilder
     {
         public:
-            
-            using XS::PIMPL::Object< ClassBuilder >::impl;
             
             typedef enum
             {
@@ -66,8 +62,14 @@ namespace OBJCXX
             }
             Type;
             
-            ClassBuilder();
             ClassBuilder( const std::string & name, const std::string & super, size_t extraBytes = 0 );
+            ~ClassBuilder();
+            
+            ClassBuilder( const ClassBuilder & o ) = delete;
+            ClassBuilder( ClassBuilder && o )      = delete;
+            
+            ClassBuilder & operator =( const ClassBuilder & o ) = delete;
+            ClassBuilder & operator =( ClassBuilder && o )      = delete;
             
             Class cls() const;
             
@@ -294,6 +296,12 @@ namespace OBJCXX
                 
                 return m;
             }
+            
+        private:
+            
+            class IMPL;
+            
+            std::unique_ptr< IMPL > impl;
     };
 }
 
