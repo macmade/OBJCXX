@@ -120,7 +120,6 @@ namespace OBJCXX
                 static Protocol                 *   ( * objc_getProtocol              )( const char * );
                 static id                           ( * objc_msgSend                  )( id, SEL, ... );
                 static double                       ( * objc_msgSend_fpret            )( id, SEL, ... );
-                static void                         ( * objc_msgSend_stret            )( void *, id, SEL, ... );
                 static id                           ( * objc_msgSendSuper             )( struct objc_super *, SEL, ... );
                 static Class                        ( * objc_allocateClassPair        )( Class, const char *, size_t );
                 static void                         ( * objc_registerClassPair        )( Class );

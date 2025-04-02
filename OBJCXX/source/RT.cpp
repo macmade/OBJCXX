@@ -49,7 +49,6 @@ extern "C"
     extern Protocol                *   objc_getProtocol             ( const char * );
     extern id                          objc_msgSend                 ( id, SEL, ... );
     extern double                      objc_msgSend_fpret           ( id, SEL, ... );
-    extern void                        objc_msgSend_stret           ( void *, id, SEL, ... );
     extern id                          objc_msgSendSuper            ( struct objc_super *, SEL, ... );
     extern Class                       objc_allocateClassPair       ( Class, const char *, size_t );
     extern void                        objc_registerClassPair       ( Class );
@@ -205,7 +204,6 @@ namespace OBJCXX
         Protocol                *   ( * Internal::objc_getProtocol              )( const char * )                                        = nullptr;
         id                          ( * Internal::objc_msgSend                  )( id, SEL, ... )                                        = nullptr;
         double                      ( * Internal::objc_msgSend_fpret            )( id, SEL, ... )                                        = nullptr;
-        void                        ( * Internal::objc_msgSend_stret            )( void *, id, SEL, ... )                                = nullptr;
         id                          ( * Internal::objc_msgSendSuper             )( struct objc_super *, SEL, ... )                       = nullptr;
         Class                       ( * Internal::objc_allocateClassPair        )( Class, const char *, size_t )                         = nullptr;
         void                        ( * Internal::objc_registerClassPair        )( Class )                                               = nullptr;
@@ -276,7 +274,6 @@ namespace OBJCXX
             Internal::objc_getProtocol              = ( Protocol                  *   ( * )( const char * )                                       )GetProcAddress( objc, "objc_getProtocol" );
             Internal::objc_msgSend                  = ( id                            ( * )( id, SEL, ... )                                       )GetProcAddress( objc, "objc_msgSend" );
             Internal::objc_msgSend_fpret            = ( double                        ( * )( id, SEL, ... )                                       )GetProcAddress( objc, "objc_msgSend_fpret" );
-            Internal::objc_msgSend_stret            = ( void                          ( * )( void *, id, SEL, ... )                               )GetProcAddress( objc, "objc_msgSend_stret" );
             Internal::objc_msgSendSuper             = ( id                            ( * )( struct objc_super *, SEL, ... )                      )GetProcAddress( objc, "objc_msgSendSuper" );
             Internal::objc_allocateClassPair        = ( Class                         ( * )( Class, const char *, size_t )                        )GetProcAddress( objc, "objc_allocateClassPair" );
             Internal::objc_registerClassPair        = ( void                          ( * )( Class )                                              )GetProcAddress( objc, "objc_registerClassPair" );
@@ -311,7 +308,6 @@ namespace OBJCXX
             Internal::objc_getProtocol              = ::objc_getProtocol;
             Internal::objc_msgSend                  = ::objc_msgSend;
             Internal::objc_msgSend_fpret            = ::objc_msgSend_fpret;
-            Internal::objc_msgSend_stret            = ::objc_msgSend_stret;
             Internal::objc_msgSendSuper             = ::objc_msgSendSuper;
             Internal::objc_allocateClassPair        = ::objc_allocateClassPair;
             Internal::objc_registerClassPair        = ::objc_registerClassPair;
