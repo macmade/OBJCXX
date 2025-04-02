@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		050B83D21EB912F50090EA12 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 050B83D11EB912F50090EA12 /* libc++.tbd */; };
 		054ED11D1FD6AF9B00081837 /* MethodSignature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 054ED11C1FD6AF9B00081837 /* MethodSignature.cpp */; };
 		054ED11E1FD6AF9B00081837 /* MethodSignature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 054ED11C1FD6AF9B00081837 /* MethodSignature.cpp */; };
 		0558F96D1E5F7E70009FAC3A /* Foo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0558F96B1E5F7E70009FAC3A /* Foo.cpp */; };
@@ -1344,7 +1343,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				050B83D21EB912F50090EA12 /* libc++.tbd in Frameworks */,
 				058FA7961C29F700009DD4DD /* libobjc.tbd in Frameworks */,
 				058FA7981C29F704009DD4DD /* Foundation.framework in Frameworks */,
 				058FA7941C29F685009DD4DD /* libOBJCXX.a in Frameworks */,
@@ -2422,7 +2420,8 @@
 		056C87C618C8B0F8006260B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1140;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = "XS-Labs";
 				TargetAttributes = {
 					056C881118C8B85F006260B3 = {
