@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Bundle::Bundle( void ): Object( "NSBundle" )
+    Bundle::Bundle(): Object( "NSBundle" )
     {}
 }
 

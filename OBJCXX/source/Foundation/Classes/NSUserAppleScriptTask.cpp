@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    UserAppleScriptTask::UserAppleScriptTask( void ): UserScriptTask( "NSUserAppleScriptTask" )
+    UserAppleScriptTask::UserAppleScriptTask(): UserScriptTask( "NSUserAppleScriptTask" )
     {}
 }
 

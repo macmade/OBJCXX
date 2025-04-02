@@ -43,16 +43,16 @@ namespace NS
             
             OBJCXX_USING_BASE( Error, Object )
             
-            Error( void );
+            Error();
             Error( NS::String domain, NS::Integer code, NS::Dictionary userInfo );
             
-            NS::Integer    code( void )                        const;
-            NS::String     domain( void )                      const;
-            NS::Dictionary userInfo( void )                    const;
-            NS::String     localizedDescription( void )        const;
-            NS::Array      localizedRecoveryOptions( void )    const;
-            NS::String     localizedRecoverySuggestion( void ) const;
-            NS::String     localizedFailureReason( void )      const;
+            NS::Integer    code()                        const;
+            NS::String     domain()                      const;
+            NS::Dictionary userInfo()                    const;
+            NS::String     localizedDescription()        const;
+            NS::Array      localizedRecoveryOptions()    const;
+            NS::String     localizedRecoverySuggestion() const;
+            NS::String     localizedFailureReason()      const;
     };
 }
 

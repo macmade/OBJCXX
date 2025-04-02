@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( LengthFormatter, Formatter )
             
-            LengthFormatter( void );
+            LengthFormatter();
     };
 }
 

@@ -38,14 +38,14 @@ class Bar: public NS::Object
         
         OBJCXX_USING_BASE( Bar, Object )
         
-        static void test( void );
+        static void test();
         
-        Bar( void );
+        Bar();
         
         void       method1( int x, int y );
-        void       method2( void );
+        void       method2();
         int        method3( int x, int y );
-        int        method4( void );
+        int        method4();
         void       method5( const NS::String & s );
         NS::String method6( const NS::String & s );
 };

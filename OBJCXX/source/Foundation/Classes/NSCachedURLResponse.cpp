@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    CachedURLResponse::CachedURLResponse( void ): Object( "NSCachedURLResponse" )
+    CachedURLResponse::CachedURLResponse(): Object( "NSCachedURLResponse" )
     {}
 }
 

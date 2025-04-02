@@ -33,7 +33,7 @@
 #include "Foo.hpp"
 #include "Bar.hpp"
 
-int main( void )
+int main()
 {
     OBJCXX::RT::Init();
     

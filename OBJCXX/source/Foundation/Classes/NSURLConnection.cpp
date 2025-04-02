@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLConnection::URLConnection( void ): Object( "NSURLConnection" )
+    URLConnection::URLConnection(): Object( "NSURLConnection" )
     {}
 }
 

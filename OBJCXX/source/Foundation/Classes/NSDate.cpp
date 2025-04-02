@@ -31,6 +31,6 @@
 
 namespace NS
 {
-    Date::Date( void ): Object( "NSDate" )
+    Date::Date(): Object( "NSDate" )
     {}
 }

@@ -40,7 +40,7 @@ namespace NS
         return o;
     }
     
-    KeyedUnarchiver::KeyedUnarchiver( void ): Coder( "NSKeyedUnarchiver" )
+    KeyedUnarchiver::KeyedUnarchiver(): Coder( "NSKeyedUnarchiver" )
     {}
 }
 

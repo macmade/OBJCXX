@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( Port, Object )
             
-            Port( void );
+            Port();
     };
 }
 

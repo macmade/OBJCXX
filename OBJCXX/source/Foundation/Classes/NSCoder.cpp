@@ -31,10 +31,10 @@
 
 namespace NS
 {
-    Coder::Coder( void ): Object( "NSCoder" )
+    Coder::Coder(): Object( "NSCoder" )
     {}
     
-    bool Coder::allowsKeyedCoding( void )
+    bool Coder::allowsKeyedCoding()
     {
         return this->message< bool >( "allowsKeyedCoding:" ).send();
     }
@@ -208,7 +208,7 @@ namespace NS
         return this->message< void * >( "decodeBytesWithReturnedLength:" ).send< UInteger * >( lengthp );
     }
 
-    Data Coder::decodeDataObject( void )
+    Data Coder::decodeDataObject()
     {
         return this->message< id >( "decodeDataObject:" ).send();
     }
@@ -243,12 +243,12 @@ namespace NS
         return this->message< int64_t >( "decodeInt64ForKey:" ).send< id >( key );
     }
 
-    id Coder::decodeNXObject( void )
+    id Coder::decodeNXObject()
     {
         return this->message< id >( "decodeNXObject" ).send();
     }
 
-    id Coder::decodeObject( void )
+    id Coder::decodeObject()
     {
         return this->message< id >( "decodeObject" ).send();
     }
@@ -264,7 +264,7 @@ namespace NS
     }
     
     /*
-    Point Coder::decodePoint( void )
+    Point Coder::decodePoint()
     {
         return this->message< Point >( "decodePoint" ).send();
     }
@@ -274,7 +274,7 @@ namespace NS
         return this->message< Point >( "decodePointForKey:" ).send< id >( key );
     }
 
-    Rect Coder::decodeRect( void )
+    Rect Coder::decodeRect()
     {
         return this->message< Rect >( "decodeRect" ).send();
     }
@@ -284,7 +284,7 @@ namespace NS
         return this->message< Rect >( "decodeRectForKey:" ).send< id >( key );
     }
 
-    Size Coder::decodeSize( void )
+    Size Coder::decodeSize()
     {
         return this->message< Size >( "decodeSize" ).send();
     }
@@ -321,12 +321,12 @@ namespace NS
     {}
     */
     
-    bool Coder::requiresSecureCoding( void )
+    bool Coder::requiresSecureCoding()
     {
         return this->message< bool >( "requiresSecureCoding" ).send();
     }
 
-    Set Coder::allowedClasses( void )
+    Set Coder::allowedClasses()
     {
         return this->message< id >( "allowedClasses" ).send();
     }
@@ -336,7 +336,7 @@ namespace NS
         this->message< void >( "setAllowedClasses:" ).send< id >( allowedClasses );
     }
 
-    unsigned int Coder::systemVersion( void )
+    unsigned int Coder::systemVersion()
     {
         return this->message< unsigned int >( "systemVersion" ).send();
     }
@@ -346,7 +346,7 @@ namespace NS
         return this->message< Integer >( "versionForClassName" ).send< id >( className );
     }
 
-    Zone * Coder::objectZone( void )
+    Zone * Coder::objectZone()
     {
         return this->message< Zone * >( "objectZone" ).send();
     }

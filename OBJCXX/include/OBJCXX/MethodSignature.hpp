@@ -46,8 +46,8 @@ namespace OBJCXX
                 
                 MethodSignature( const std::string & encoding );
                 
-                std::string GetTypeEncoding( void )                     const;
-                std::size_t GetNumberOfArguments( void )                const;
+                std::string GetTypeEncoding()                           const;
+                std::size_t GetNumberOfArguments()                      const;
                 std::string GetArgumentTypeAtIndex( std::size_t index ) const;
                 std::string GetReturnType()                             const;
         };

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLHandle::URLHandle( void ): Object( "NSURLHandle" )
+    URLHandle::URLHandle(): Object( "NSURLHandle" )
     {}
 }
 

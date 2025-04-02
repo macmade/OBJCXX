@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLAuthenticationChallenge::URLAuthenticationChallenge( void ): Object( "NSURLAuthenticationChallenge" )
+    URLAuthenticationChallenge::URLAuthenticationChallenge(): Object( "NSURLAuthenticationChallenge" )
     {}
 }
 

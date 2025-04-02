@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLSessionStreamTask::URLSessionStreamTask( void ): URLSessionTask( "NSURLSessionStreamTask" )
+    URLSessionStreamTask::URLSessionStreamTask(): URLSessionTask( "NSURLSessionStreamTask" )
     {}
 }
 

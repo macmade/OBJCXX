@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( GarbageCollector, Object )
             
-            GarbageCollector( void );
+            GarbageCollector();
     };
 }
 

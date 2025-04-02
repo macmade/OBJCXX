@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLProtectionSpace::URLProtectionSpace( void ): Object( "NSURLProtectionSpace" )
+    URLProtectionSpace::URLProtectionSpace(): Object( "NSURLProtectionSpace" )
     {}
 }
 

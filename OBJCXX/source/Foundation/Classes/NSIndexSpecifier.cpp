@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    IndexSpecifier::IndexSpecifier( void ): ScriptObjectSpecifier( "NSIndexSpecifier" )
+    IndexSpecifier::IndexSpecifier(): ScriptObjectSpecifier( "NSIndexSpecifier" )
     {}
 }
 

@@ -44,9 +44,9 @@ namespace NS
             
             Notification( const String & name, id object, const Dictionary & userInfo );
             
-            String     name( void );
-            id         object( void );
-            Dictionary userInfo( void );
+            String     name();
+            id         object();
+            Dictionary userInfo();
     };
 }
 

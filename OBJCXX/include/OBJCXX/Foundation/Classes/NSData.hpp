@@ -40,11 +40,11 @@ namespace NS
             
             OBJCXX_USING_BASE( Data, Object )
             
-            Data( void );
+            Data();
             Data( const void * bytes, NS::UInteger length );
             
-            const void * bytes( void )  const;
-            NS::UInteger length( void ) const;
+            const void * bytes()  const;
+            NS::UInteger length() const;
     };
 }
 

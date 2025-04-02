@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    XMLParser::XMLParser( void ): Object( "NSXMLParser" )
+    XMLParser::XMLParser(): Object( "NSXMLParser" )
     {}
 }
 

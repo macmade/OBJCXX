@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PortNameServer::PortNameServer( void ): Object( "NSPortNameServer" )
+    PortNameServer::PortNameServer(): Object( "NSPortNameServer" )
     {}
 }
 

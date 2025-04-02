@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ScriptCommand::ScriptCommand( void ): Object( "NSScriptCommand" )
+    ScriptCommand::ScriptCommand(): Object( "NSScriptCommand" )
     {}
 }
 

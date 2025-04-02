@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Thread::Thread( void ): Object( "NSThread" )
+    Thread::Thread(): Object( "NSThread" )
     {}
 }
 

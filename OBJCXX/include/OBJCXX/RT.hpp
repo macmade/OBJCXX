@@ -104,7 +104,7 @@ namespace OBJCXX
         {
             public:
                 
-                Internal( void ) = delete;
+                Internal() = delete;
                 
                 enum class AssociationPolicy: int
                 {
@@ -118,11 +118,11 @@ namespace OBJCXX
                 static Class                        ( * objc_getClass                 )( const char * );
                 static Class                        ( * objc_getMetaClass             )( const char * );
                 static Protocol                   * ( * objc_getProtocol              )( const char * );
-                static void                         ( * objc_msgSend                  )( void );
+                static void                         ( * objc_msgSend                  )();
                 #ifndef __arm64__
-                static void                         ( * objc_msgSend_fpret            )( void );
+                static void                         ( * objc_msgSend_fpret            )();
                 #endif
-                static void                         ( * objc_msgSendSuper             )( void );
+                static void                         ( * objc_msgSendSuper             )();
                 static Class                        ( * objc_allocateClassPair        )( Class, const char *, size_t );
                 static void                         ( * objc_registerClassPair        )( Class );
                 static void                         ( * objc_setAssociatedObject      )( id, const void *, id, AssociationPolicy );
@@ -145,14 +145,14 @@ namespace OBJCXX
                 static objc_exception_preprocessor  ( * objc_setExceptionPreprocessor )( objc_exception_preprocessor );
         };
         
-        OBJCXX_EXPORT void Init( void );
+        OBJCXX_EXPORT void Init();
 
         OBJCXX_EXPORT Class       GetClass( const std::string & name );
         OBJCXX_EXPORT Class       GetClass( id object );
         OBJCXX_EXPORT std::string GetClassName( Class cls );
         OBJCXX_EXPORT SEL         GetSelector( const std::string & name );
-        OBJCXX_EXPORT id          GetLastException( void );
-        OBJCXX_EXPORT void        RethrowLastException( void );
+        OBJCXX_EXPORT id          GetLastException();
+        OBJCXX_EXPORT void        RethrowLastException();
         
         class OBJCXX_EXPORT MessageBase: public XS::PIMPL::Object< MessageBase >
         {
@@ -164,8 +164,8 @@ namespace OBJCXX
                 MessageBase( Class cls, const std::string & selector );
                 MessageBase( const std::string & cls, const std::string & selector );
                 
-                id object( void );
-                SEL selector( void );
+                id object();
+                SEL selector();
         };
         
         template< typename _T_, class _E_ = void >
@@ -353,7 +353,7 @@ namespace OBJCXX
         };
         
         template < typename _T_ >
-        static std::string GetEncodingForType( void )
+        static std::string GetEncodingForType()
         {
             if( std::is_same< _T_, char >::value )
             {

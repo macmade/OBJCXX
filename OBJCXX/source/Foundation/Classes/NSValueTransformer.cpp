@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ValueTransformer::ValueTransformer( void ): Object( "NSValueTransformer" )
+    ValueTransformer::ValueTransformer(): Object( "NSValueTransformer" )
     {}
 }
 

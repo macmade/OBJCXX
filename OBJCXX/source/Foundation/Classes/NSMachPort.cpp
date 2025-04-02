@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MachPort::MachPort( void ): Port( "NSMachPort" )
+    MachPort::MachPort(): Port( "NSMachPort" )
     {}
 }
 

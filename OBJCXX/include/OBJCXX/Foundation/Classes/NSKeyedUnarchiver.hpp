@@ -42,7 +42,7 @@ namespace NS
             
             static id unarchiveObjectWithData( const Data & data );
             
-            KeyedUnarchiver( void );
+            KeyedUnarchiver();
     };
 }
 

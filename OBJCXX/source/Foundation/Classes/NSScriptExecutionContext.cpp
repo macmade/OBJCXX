@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ScriptExecutionContext::ScriptExecutionContext( void ): Object( "NSScriptExecutionContext" )
+    ScriptExecutionContext::ScriptExecutionContext(): Object( "NSScriptExecutionContext" )
     {}
 }
 

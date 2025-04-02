@@ -42,32 +42,32 @@ namespace NS
         )
     {}
     
-    void Exception::raise( void ) const
+    void Exception::raise() const
     {
         this->message< void >( "raise" ).send();
     }
     
-    NS::String Exception::name( void ) const
+    NS::String Exception::name() const
     {
         return this->message< id >( "name" ).send();
     }
     
-    NS::String Exception::reason( void ) const
+    NS::String Exception::reason() const
     {
         return this->message< id >( "reason" ).send();
     }
     
-    NS::Dictionary Exception::userInfo( void ) const
+    NS::Dictionary Exception::userInfo() const
     {
         return this->message< id >( "userInfo" ).send();
     }
     
-    NS::Array Exception::callStackReturnAddresses( void ) const
+    NS::Array Exception::callStackReturnAddresses() const
     {
         return this->message< id >( "callStackReturnAddresses" ).send();
     }
     
-    NS::Array Exception::callStackSymbols( void ) const
+    NS::Array Exception::callStackSymbols() const
     {
         return this->message< id >( "callStackSymbols" ).send();
     }

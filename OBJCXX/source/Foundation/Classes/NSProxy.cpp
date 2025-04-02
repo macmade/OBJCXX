@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Proxy::Proxy( void ): Object( "NSProxy" )
+    Proxy::Proxy(): Object( "NSProxy" )
     {}
 }
 

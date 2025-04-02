@@ -45,14 +45,14 @@ namespace NS
             
             Exception( const NS::String & name, const NS::String & reason, const NS::Dictionary & userInfo );
             
-            void raise( void ) const;
+            void raise() const;
             
-            NS::String     name( void )     const;
-            NS::String     reason( void )   const;
-            NS::Dictionary userInfo( void ) const;
+            NS::String     name()     const;
+            NS::String     reason()   const;
+            NS::Dictionary userInfo() const;
             
-            NS::Array callStackReturnAddresses( void ) const;
-            NS::Array callStackSymbols( void )         const;
+            NS::Array callStackReturnAddresses() const;
+            NS::Array callStackSymbols()         const;
     };
 }
 

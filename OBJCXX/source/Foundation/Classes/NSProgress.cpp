@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Progress::Progress( void ): Object( "NSProgress" )
+    Progress::Progress(): Object( "NSProgress" )
     {}
 }
 

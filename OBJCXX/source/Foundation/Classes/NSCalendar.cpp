@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Calendar::Calendar( void ): Object( "NSCalendar" )
+    Calendar::Calendar(): Object( "NSCalendar" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    NetServiceBrowser::NetServiceBrowser( void ): Object( "NSNetServiceBrowser" )
+    NetServiceBrowser::NetServiceBrowser(): Object( "NSNetServiceBrowser" )
     {}
 }
 

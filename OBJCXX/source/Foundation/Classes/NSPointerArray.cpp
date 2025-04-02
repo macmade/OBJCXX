@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PointerArray::PointerArray( void ): Object( "NSPointerArray" )
+    PointerArray::PointerArray(): Object( "NSPointerArray" )
     {}
 }
 

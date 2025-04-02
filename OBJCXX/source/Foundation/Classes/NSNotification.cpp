@@ -42,17 +42,17 @@ namespace NS
         )
     {}
     
-    String Notification::name( void )
+    String Notification::name()
     {
         return this->message< id >( "name" ).send();
     }
     
-    id Notification::object( void )
+    id Notification::object()
     {
         return this->message< id >( "object" ).send();
     }
     
-    Dictionary Notification::userInfo( void )
+    Dictionary Notification::userInfo()
     {
         return this->message< id >( "userInfo" ).send();
     }

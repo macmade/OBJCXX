@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    UserDefaults::UserDefaults( void ): Object( "NSUserDefaults" )
+    UserDefaults::UserDefaults(): Object( "NSUserDefaults" )
     {}
 }
 

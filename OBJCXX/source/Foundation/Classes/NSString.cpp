@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    String::String( void ): Object( "NSString" )
+    String::String(): Object( "NSString" )
     {}
     
     String::String( const char * utf8String ):
@@ -59,12 +59,12 @@ namespace NS
         return "";
     }
     
-    const char * String::UTF8String( void ) const
+    const char * String::UTF8String() const
     {
         return this->message< const char * >( "UTF8String" ).send();
     }
     
-    NS::UInteger String::length( void )
+    NS::UInteger String::length()
     {
         return this->message< NS::UInteger >( "length" ).send();
     }

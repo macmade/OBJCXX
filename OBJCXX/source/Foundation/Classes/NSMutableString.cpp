@@ -31,6 +31,6 @@
 
 namespace NS
 {
-    MutableString::MutableString( void ): String( "NSMutableString" )
+    MutableString::MutableString(): String( "NSMutableString" )
     {}
 }

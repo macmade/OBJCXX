@@ -40,13 +40,13 @@ namespace NS
             
             OBJCXX_USING_BASE( String, Object )
             
-            String( void );
+            String();
             String( const char * utf8String );
             
             operator std::string () const;
             
-            const char * UTF8String( void ) const;
-            NS::UInteger length( void );
+            const char * UTF8String() const;
+            NS::UInteger length();
     };
 }
 

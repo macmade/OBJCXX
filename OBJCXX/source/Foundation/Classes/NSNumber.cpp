@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Number::Number( void ): Value( "NSNumber" )
+    Number::Number(): Value( "NSNumber" )
     {}
     
     Number::Number( bool value ):
@@ -178,67 +178,67 @@ namespace NS
         )
     {}
     
-    bool Number::boolValue( void )
+    bool Number::boolValue()
     {
         return this->message< bool >( "boolValue" ).send();
     }
     
-    char Number::charValue( void )
+    char Number::charValue()
     {
         return this->message< char >( "charValue" ).send();
     }
     
-    short Number::shortValue( void )
+    short Number::shortValue()
     {
         return this->message< short >( "shortValue" ).send();
     }
     
-    int Number::intValue( void )
+    int Number::intValue()
     {
         return this->message< int >( "intValue" ).send();
     }
     
-    long Number::longValue( void )
+    long Number::longValue()
     {
         return this->message< long >( "longValue" ).send();
     }
     
-    long long Number::longLongValue( void )
+    long long Number::longLongValue()
     {
         return this->message< long long >( "longLongValue" ).send();
     }
     
-    unsigned char Number::unsignedCharValue( void )
+    unsigned char Number::unsignedCharValue()
     {
         return this->message< unsigned char >( "unsignedCharValue" ).send();
     }
     
-    unsigned short Number::unsignedShortValue( void )
+    unsigned short Number::unsignedShortValue()
     {
         return this->message< unsigned short >( "unsignedShortValue" ).send();
     }
     
-    unsigned int Number::unsignedIntValue( void )
+    unsigned int Number::unsignedIntValue()
     {
         return this->message< unsigned int >( "unsignedIntValue" ).send();
     }
     
-    unsigned long Number::unsignedLongValue( void )
+    unsigned long Number::unsignedLongValue()
     {
         return this->message< unsigned long >( "unsignedLongValue" ).send();
     }
     
-    unsigned long long Number::unsignedLongLongValue( void )
+    unsigned long long Number::unsignedLongLongValue()
     {
         return this->message< unsigned long long >( "unsignedLongLongValue" ).send();
     }
     
-    float Number::floatValue( void )
+    float Number::floatValue()
     {
         return this->message< float >( "floatValue" ).send();
     }
     
-    double Number::doubleValue( void )
+    double Number::doubleValue()
     {
         return this->message< double >( "doubleValue" ).send();
     }

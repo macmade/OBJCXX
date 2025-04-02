@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLComponents::URLComponents( void ): Object( "NSURLComponents" )
+    URLComponents::URLComponents(): Object( "NSURLComponents" )
     {}
 }
 

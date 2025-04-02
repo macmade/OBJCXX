@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLRequest::URLRequest( void ): Object( "NSURLRequest" )
+    URLRequest::URLRequest(): Object( "NSURLRequest" )
     {}
 }
 

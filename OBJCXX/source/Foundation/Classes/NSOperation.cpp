@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Operation::Operation( void ): Object( "NSOperation" )
+    Operation::Operation(): Object( "NSOperation" )
     {}
 }
 

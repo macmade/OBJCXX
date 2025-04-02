@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Invocation::Invocation( void ): Object( "NSInvocation" )
+    Invocation::Invocation(): Object( "NSInvocation" )
     {}
 }
 

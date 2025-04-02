@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ProcessInfo::ProcessInfo( void ): Object( "NSProcessInfo" )
+    ProcessInfo::ProcessInfo(): Object( "NSProcessInfo" )
     {}
 }
 

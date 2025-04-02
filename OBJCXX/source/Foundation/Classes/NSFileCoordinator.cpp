@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    FileCoordinator::FileCoordinator( void ): Object( "NSFileCoordinator" )
+    FileCoordinator::FileCoordinator(): Object( "NSFileCoordinator" )
     {}
 }
 

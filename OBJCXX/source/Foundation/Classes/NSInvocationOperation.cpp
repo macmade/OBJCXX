@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    InvocationOperation::InvocationOperation( void ): Operation( "NSInvocationOperation" )
+    InvocationOperation::InvocationOperation(): Operation( "NSInvocationOperation" )
     {}
 }
 

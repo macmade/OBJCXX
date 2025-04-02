@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    UbiquitousKeyValueStore::UbiquitousKeyValueStore( void ): Object( "NSUbiquitousKeyValueStore" )
+    UbiquitousKeyValueStore::UbiquitousKeyValueStore(): Object( "NSUbiquitousKeyValueStore" )
     {}
 }
 

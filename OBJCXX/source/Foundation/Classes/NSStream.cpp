@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Stream::Stream( void ): Object( "NSStream" )
+    Stream::Stream(): Object( "NSStream" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    CharacterSet::CharacterSet( void ): Object( "NSCharacterSet" )
+    CharacterSet::CharacterSet(): Object( "NSCharacterSet" )
     {}
 }
 

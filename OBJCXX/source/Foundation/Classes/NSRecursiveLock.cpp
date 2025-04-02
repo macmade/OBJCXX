@@ -31,15 +31,15 @@
 
 namespace NS
 {
-    RecursiveLock::RecursiveLock( void ): Object( "NSRecursiveLock" )
+    RecursiveLock::RecursiveLock(): Object( "NSRecursiveLock" )
     {}
     
-    void RecursiveLock::lock( void )
+    void RecursiveLock::lock()
     {
         this->message< void >( "lock" ).send();
     }
     
-    void RecursiveLock::unlock( void )
+    void RecursiveLock::unlock()
     {
         this->message< void >( "unlock" ).send();
     }
@@ -49,12 +49,12 @@ namespace NS
         return this->message< bool >( "lockBeforeDate:" ).send< id >( limit );
     }
     
-    bool RecursiveLock::tryLock( void )
+    bool RecursiveLock::tryLock()
     {
         return this->message< bool >( "tryLock" ).send();
     }
     
-    String RecursiveLock::name( void )
+    String RecursiveLock::name()
     {
         return this->message< id >( "name" ).send();
     }

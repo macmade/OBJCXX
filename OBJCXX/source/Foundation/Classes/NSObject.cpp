@@ -31,6 +31,6 @@
 
 namespace NS
 {
-    Object::Object( void ): Object( "NSObject" )
+    Object::Object(): Object( "NSObject" )
     {}
 }

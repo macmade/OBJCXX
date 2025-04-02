@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLCache::URLCache( void ): Object( "NSURLCache" )
+    URLCache::URLCache(): Object( "NSURLCache" )
     {}
 }
 

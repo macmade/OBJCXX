@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLQueryItem::URLQueryItem( void ): Object( "NSURLQueryItem" )
+    URLQueryItem::URLQueryItem(): Object( "NSURLQueryItem" )
     {}
 }
 

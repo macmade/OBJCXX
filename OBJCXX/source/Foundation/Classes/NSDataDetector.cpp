@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DataDetector::DataDetector( void ): RegularExpression( "NSDataDetector" )
+    DataDetector::DataDetector(): RegularExpression( "NSDataDetector" )
     {}
 }
 

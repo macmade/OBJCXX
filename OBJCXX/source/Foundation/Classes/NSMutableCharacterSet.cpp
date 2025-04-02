@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MutableCharacterSet::MutableCharacterSet( void ): CharacterSet( "NSMutableCharacterSet" )
+    MutableCharacterSet::MutableCharacterSet(): CharacterSet( "NSMutableCharacterSet" )
     {}
 }
 

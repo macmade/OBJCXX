@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PointerFunctions::PointerFunctions( void ): Object( "NSPointerFunctions" )
+    PointerFunctions::PointerFunctions(): Object( "NSPointerFunctions" )
     {}
 }
 

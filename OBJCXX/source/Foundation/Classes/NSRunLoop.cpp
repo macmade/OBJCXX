@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    RunLoop::RunLoop( void ): Object( "NSRunLoop" )
+    RunLoop::RunLoop(): Object( "NSRunLoop" )
     {}
 }
 

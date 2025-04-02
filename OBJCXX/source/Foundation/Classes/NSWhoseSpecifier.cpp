@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    WhoseSpecifier::WhoseSpecifier( void ): ScriptObjectSpecifier( "NSWhoseSpecifier" )
+    WhoseSpecifier::WhoseSpecifier(): ScriptObjectSpecifier( "NSWhoseSpecifier" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Port::Port( void ): Object( "NSPort" )
+    Port::Port(): Object( "NSPort" )
     {}
 }
 

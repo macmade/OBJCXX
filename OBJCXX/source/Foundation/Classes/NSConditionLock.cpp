@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ConditionLock::ConditionLock( void ): Object( "NSConditionLock" )
+    ConditionLock::ConditionLock(): Object( "NSConditionLock" )
     {}
 }
 

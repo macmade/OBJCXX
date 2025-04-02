@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( TextCheckingResult, Object )
             
-            TextCheckingResult( void );
+            TextCheckingResult();
     };
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ExtensionContext::ExtensionContext( void ): Object( "NSExtensionContext" )
+    ExtensionContext::ExtensionContext(): Object( "NSExtensionContext" )
     {}
 }
 

@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( CloneCommand, ScriptCommand )
             
-            CloneCommand( void );
+            CloneCommand();
     };
 }
 

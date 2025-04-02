@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ScriptSuiteRegistry::ScriptSuiteRegistry( void ): Object( "NSScriptSuiteRegistry" )
+    ScriptSuiteRegistry::ScriptSuiteRegistry(): Object( "NSScriptSuiteRegistry" )
     {}
 }
 

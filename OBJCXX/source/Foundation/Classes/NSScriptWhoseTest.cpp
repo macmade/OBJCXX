@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ScriptWhoseTest::ScriptWhoseTest( void ): Object( "NSScriptWhoseTest" )
+    ScriptWhoseTest::ScriptWhoseTest(): Object( "NSScriptWhoseTest" )
     {}
 }
 

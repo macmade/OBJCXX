@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    SpecifierTest::SpecifierTest( void ): ScriptWhoseTest( "NSSpecifierTest" )
+    SpecifierTest::SpecifierTest(): ScriptWhoseTest( "NSSpecifierTest" )
     {}
 }
 

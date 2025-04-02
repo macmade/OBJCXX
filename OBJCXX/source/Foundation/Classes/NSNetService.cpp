@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    NetService::NetService( void ): Object( "NSNetService" )
+    NetService::NetService(): Object( "NSNetService" )
     {}
 }
 

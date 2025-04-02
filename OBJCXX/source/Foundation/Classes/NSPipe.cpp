@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Pipe::Pipe( void ): Object( "NSPipe" )
+    Pipe::Pipe(): Object( "NSPipe" )
     {}
 }
 

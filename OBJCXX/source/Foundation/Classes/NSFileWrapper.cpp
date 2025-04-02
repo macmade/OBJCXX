@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    FileWrapper::FileWrapper( void ): Object( "NSFileWrapper" )
+    FileWrapper::FileWrapper(): Object( "NSFileWrapper" )
     {}
 }
 

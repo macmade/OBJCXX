@@ -43,9 +43,9 @@ namespace NS
             
             OBJCXX_USING_BASE( Coder, Object )
             
-            Coder( void );
+            Coder();
             
-            bool allowsKeyedCoding( void );
+            bool allowsKeyedCoding();
             bool containsValueForKey( const String & key );
             void encodeArrayOfObjCType( const char * type, UInteger count, const void * array );
             void encodeBool( bool boolv, const String & key );
@@ -88,24 +88,24 @@ namespace NS
             bool            decodeBoolForKey( const String & key );
             const uint8_t * decodeBytesForKey( const String & key, UInteger * lengthp );
             void          * decodeBytesWithReturnedLength( UInteger * lengthp );
-            Data            decodeDataObject( void );
+            Data            decodeDataObject();
             double          decodeDoubleForKey( const String & key );
             float           decodeFloatForKey( const String & key );
             int             decodeIntForKey( const String & key );
             Integer         decodeIntegerForKey( const String & key );
             int32_t         decodeInt32ForKey( const String & key );
             int64_t         decodeInt64ForKey( const String & key );
-            id              decodeNXObject( void );
-            id              decodeObject( void );
+            id              decodeNXObject();
+            id              decodeObject();
             id              decodeObjectForKey( const String & key );
             id              decodePropertyListForKey( const String & key );
             
             /*
-            Point           decodePoint( void );
+            Point           decodePoint();
             Point           decodePointForKey( const String & key );
-            Rect            decodeRect( void );
+            Rect            decodeRect();
             Rect            decodeRectForKey( const String & key );
-            Size            decodeSize( void );
+            Size            decodeSize();
             Size            decodeSizeForKey( const String & key );
             */
             
@@ -120,12 +120,12 @@ namespace NS
             CMTimeMapping   decodeCMTimeMappingForKey( const String & key );
             */
             
-            bool         requiresSecureCoding( void );
-            Set          allowedClasses( void );
+            bool         requiresSecureCoding();
+            Set          allowedClasses();
             void         setAllowedClasses( const Set & allowedClasses );
-            unsigned int systemVersion( void );
+            unsigned int systemVersion();
             Integer      versionForClassName( const String & className );
-            Zone       * objectZone( void );
+            Zone       * objectZone();
             void         setObjectZone( Zone * zone );
     };
 }

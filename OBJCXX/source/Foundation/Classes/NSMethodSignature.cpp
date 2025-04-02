@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MethodSignature::MethodSignature( void ): Object( "NSMethodSignature" )
+    MethodSignature::MethodSignature(): Object( "NSMethodSignature" )
     {}
 }
 

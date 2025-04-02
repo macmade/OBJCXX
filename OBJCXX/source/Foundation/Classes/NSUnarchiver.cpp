@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Unarchiver::Unarchiver( void ): Coder( "NSUnarchiver" )
+    Unarchiver::Unarchiver(): Coder( "NSUnarchiver" )
     {}
     
     Unarchiver::Unarchiver( NS::Data data ):
@@ -45,7 +45,7 @@ namespace NS
         )
     {}
     
-    id Unarchiver::decodeObject( void )
+    id Unarchiver::decodeObject()
     {
         return this->message< id >( "decodeObject" ).send();
     }

@@ -81,7 +81,7 @@ namespace OBJCXX
 {
     namespace RT
     {
-        id GetLastException( void )
+        id GetLastException()
         {
             #if defined( __APPLE__ )
             return static_cast< id >( pthread_getspecific( exception ) );
@@ -90,7 +90,7 @@ namespace OBJCXX
             #endif
         }
         
-        void RethrowLastException( void )
+        void RethrowLastException()
         {
             NS::Exception e( GetLastException() );
             

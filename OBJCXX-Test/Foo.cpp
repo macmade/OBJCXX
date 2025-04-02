@@ -35,14 +35,14 @@ static bool IMP_Foo_supportsSecureCoding( Class cls, SEL _cmd );
 static id   IMP_Foo_initWithCoder( id self, SEL _cmd, id coder );
 static void IMP_Foo_encodeWithCoder( id self, SEL _cmd, id coder );
 
-void Foo::test( void )
+void Foo::test()
 {
     static std::once_flag once;
     
     std::call_once
     (
         once,
-        []( void )
+        []()
         {
             OBJCXX::ClassBuilder cls( "Foo", "NSObject" );
             
@@ -75,10 +75,10 @@ void Foo::test( void )
     }
 }
 
-Foo::Foo( void ): Object( "Foo" )
+Foo::Foo(): Object( "Foo" )
 {}
 
-NS::String Foo::text( void )
+NS::String Foo::text()
 {
     return this->message< id >( "text" ).send();
 }

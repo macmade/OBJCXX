@@ -30,17 +30,17 @@
 #ifndef TEST_HPP
 #define TEST_HPP
 
-void testDescription( void );
-void testString( void );
-void testMutableArray( void );
-void testMutableDictionary( void );
-void testIDCast( void );
-void testFileManager( void );
-void testLock( void );
-void testDate( void );
-void testLog( void );
-void testBadCast( void );
-void testArchiver( void );
-void testExceptions( void );
+void testDescription();
+void testString();
+void testMutableArray();
+void testMutableDictionary();
+void testIDCast();
+void testFileManager();
+void testLock();
+void testDate();
+void testLog();
+void testBadCast();
+void testArchiver();
+void testExceptions();
 
 #endif /* TEST_HPP */

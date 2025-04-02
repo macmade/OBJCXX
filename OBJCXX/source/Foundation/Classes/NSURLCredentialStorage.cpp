@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLCredentialStorage::URLCredentialStorage( void ): Object( "NSURLCredentialStorage" )
+    URLCredentialStorage::URLCredentialStorage(): Object( "NSURLCredentialStorage" )
     {}
 }
 

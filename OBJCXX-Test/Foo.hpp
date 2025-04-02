@@ -38,11 +38,11 @@ class Foo: public NS::Object
         
         OBJCXX_USING_BASE( Foo, Object )
         
-        static void test( void );
+        static void test();
         
-        Foo( void );
+        Foo();
         
-        NS::String text( void );
+        NS::String text();
         void       text( const NS::String & text );
 };
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MetadataItem::MetadataItem( void ): Object( "NSMetadataItem" )
+    MetadataItem::MetadataItem(): Object( "NSMetadataItem" )
     {}
 }
 

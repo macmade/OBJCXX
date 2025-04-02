@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLSession::URLSession( void ): Object( "NSURLSession" )
+    URLSession::URLSession(): Object( "NSURLSession" )
     {}
 }
 

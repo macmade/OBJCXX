@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( MutableArray, Array )
             
-            MutableArray( void );
+            MutableArray();
             
             void addObject( const Object & o );
     };

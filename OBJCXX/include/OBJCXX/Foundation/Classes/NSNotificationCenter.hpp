@@ -43,9 +43,9 @@ namespace NS
             
             OBJCXX_USING_BASE( NotificationCenter, Object )
             
-            static NotificationCenter defaultCenter( void );
+            static NotificationCenter defaultCenter();
             
-            NotificationCenter( void );
+            NotificationCenter();
             
             void addObserver( id notificationObserver, SEL notificationSelector, const String & notificationName, id notificationSender );
             void removeObserver( id notificationObserver );

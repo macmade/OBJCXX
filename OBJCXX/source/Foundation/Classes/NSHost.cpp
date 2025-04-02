@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Host::Host( void ): Object( "NSHost" )
+    Host::Host(): Object( "NSHost" )
     {}
 }
 

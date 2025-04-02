@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    IndexSet::IndexSet( void ): Object( "NSIndexSet" )
+    IndexSet::IndexSet(): Object( "NSIndexSet" )
     {}
 }
 

@@ -31,14 +31,14 @@
 #include <OBJCXX.hpp>
 #include <iostream>
 
-void testDescription( void )
+void testDescription()
 {
     NS::Object o;
 
     std::cout << o << std::endl;
 }
 
-void testString( void )
+void testString()
 {
     NS::String o( "hello, world" );
 
@@ -46,7 +46,7 @@ void testString( void )
     std::cout << o.UTF8String() << std::endl;
 }
 
-void testMutableArray( void )
+void testMutableArray()
 {
     NS::MutableArray o;
 
@@ -58,7 +58,7 @@ void testMutableArray( void )
     std::cout << o << std::endl;
 }
 
-void testMutableDictionary( void )
+void testMutableDictionary()
 {
     NS::MutableDictionary o;
 
@@ -70,7 +70,7 @@ void testMutableDictionary( void )
     std::cout << o << std::endl;
 }
 
-void testIDCast( void )
+void testIDCast()
 {
     NS::String o1( "hello, world" );
     NS::String o2( o1 );
@@ -85,7 +85,7 @@ void testIDCast( void )
     std::cout << static_cast< id >( o2 ) << std::endl;
 }
 
-void testFileManager( void )
+void testFileManager()
 {
     NS::FileManager o1;
     NS::FileManager o2;
@@ -120,7 +120,7 @@ void testFileManager( void )
     }
 }
 
-void testLock( void )
+void testLock()
 {
     NS::Lock o;
 
@@ -139,17 +139,17 @@ void testLock( void )
     std::cout << o << std::endl;
 }
 
-void testDate( void )
+void testDate()
 {
     std::cout << NS::Date() << std::endl;
 }
 
-void testLog( void )
+void testLog()
 {
     NS::Log( "hello, world %i %i", 42, 43 );
 }
 
-void testBadCast( void )
+void testBadCast()
 {
     NS::Data         o1{};
     NS::Data         o2{};
@@ -169,7 +169,7 @@ void testBadCast( void )
     }
 }
 
-void testArchiver( void )
+void testArchiver()
 {
     NS::String s1( "hello, world" );
     NS::String s2;
@@ -186,7 +186,7 @@ void testArchiver( void )
     NS::Log( "Unarchived string: %@", static_cast< id >( s2 ) );
 }
 
-void testExceptions( void )
+void testExceptions()
 {
     try
     {

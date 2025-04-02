@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PropertyListSerialization::PropertyListSerialization( void ): Object( "NSPropertyListSerialization" )
+    PropertyListSerialization::PropertyListSerialization(): Object( "NSPropertyListSerialization" )
     {}
 }
 

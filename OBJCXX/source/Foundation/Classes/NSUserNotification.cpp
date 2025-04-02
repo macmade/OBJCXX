@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    UserNotification::UserNotification( void ): Object( "NSUserNotification" )
+    UserNotification::UserNotification(): Object( "NSUserNotification" )
     {}
 }
 

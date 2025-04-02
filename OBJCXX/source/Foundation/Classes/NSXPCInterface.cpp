@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    XPCInterface::XPCInterface( void ): Object( "NSXPCInterface" )
+    XPCInterface::XPCInterface(): Object( "NSXPCInterface" )
     {}
 }
 

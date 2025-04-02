@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    LinguisticTagger::LinguisticTagger( void ): Object( "NSLinguisticTagger" )
+    LinguisticTagger::LinguisticTagger(): Object( "NSLinguisticTagger" )
     {}
 }
 

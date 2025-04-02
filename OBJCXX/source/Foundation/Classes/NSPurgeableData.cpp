@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PurgeableData::PurgeableData( void ): MutableData( "NSPurgeableData" )
+    PurgeableData::PurgeableData(): MutableData( "NSPurgeableData" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PortCoder::PortCoder( void ): Coder( "NSPortCoder" )
+    PortCoder::PortCoder(): Coder( "NSPortCoder" )
     {}
 }
 

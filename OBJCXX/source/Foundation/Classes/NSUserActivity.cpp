@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    UserActivity::UserActivity( void ): Object( "NSUserActivity" )
+    UserActivity::UserActivity(): Object( "NSUserActivity" )
     {}
 }
 

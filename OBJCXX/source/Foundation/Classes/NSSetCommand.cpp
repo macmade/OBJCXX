@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    SetCommand::SetCommand( void ): ScriptCommand( "NSSetCommand" )
+    SetCommand::SetCommand(): ScriptCommand( "NSSetCommand" )
     {}
 }
 

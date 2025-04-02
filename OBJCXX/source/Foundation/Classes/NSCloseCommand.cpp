@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    CloseCommand::CloseCommand( void ): ScriptCommand( "NSCloseCommand" )
+    CloseCommand::CloseCommand(): ScriptCommand( "NSCloseCommand" )
     {}
 }
 

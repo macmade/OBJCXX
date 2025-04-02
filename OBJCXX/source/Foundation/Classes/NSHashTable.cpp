@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    HashTable::HashTable( void ): Object( "NSHashTable" )
+    HashTable::HashTable(): Object( "NSHashTable" )
     {}
 }
 

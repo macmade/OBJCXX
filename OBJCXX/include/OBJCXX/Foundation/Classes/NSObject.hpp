@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( Object, OBJCXX::Object )
             
-            Object( void );
+            Object();
     };
 }
 

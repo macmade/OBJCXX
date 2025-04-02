@@ -38,10 +38,10 @@ namespace NS
         {
             public:
                 
-                virtual ~Locking( void ) = default;
+                virtual ~Locking() = default;
                 
-                virtual void lock( void )   = 0;
-                virtual void unlock( void ) = 0;
+                virtual void lock()   = 0;
+                virtual void unlock() = 0;
         };
     }
 }

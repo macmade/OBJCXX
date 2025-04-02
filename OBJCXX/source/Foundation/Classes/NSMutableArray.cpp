@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MutableArray::MutableArray( void ): Array( "NSMutableArray" )
+    MutableArray::MutableArray(): Array( "NSMutableArray" )
     {}
     
     void MutableArray::addObject( const Object & o )

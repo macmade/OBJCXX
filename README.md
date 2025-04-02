@@ -31,7 +31,7 @@ Here's an hello world example using OBJCXX:
     
     #include <OBJCXX.h>
     
-    int main( void )
+    int main()
     {
         NS::Log( "%@", NS::String( "hello, world" ) );
         
@@ -42,7 +42,7 @@ Here's a more complex example:
 
     #include <OBJCXX.h>
     
-    int main( void )
+    int main()
     {
         /* Equivalent to @autoreleasepool */
         NS::AutoreleasePool ap;
@@ -91,7 +91,7 @@ As an example:
 
     #include <OBJCXX.h>
     
-    int main( void )
+    int main()
     {
         /* Class Foo inheriting from NSObject */
         OBJCXX::ClassBuilder cls( "Foo", "NSObject" );
@@ -129,7 +129,7 @@ Imagine the following C++/Objective-C wrapper class, inheriting directly from `N
             
             OBJCXX_USING_BASE( Bar, Object )
             
-            Foo( void ): Object( "Foo" )
+            Foo(): Object( "Foo" )
             {}
             
             NS::String test( int x )

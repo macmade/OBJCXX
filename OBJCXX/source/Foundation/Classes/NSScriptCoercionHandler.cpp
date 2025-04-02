@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ScriptCoercionHandler::ScriptCoercionHandler( void ): Object( "NSScriptCoercionHandler" )
+    ScriptCoercionHandler::ScriptCoercionHandler(): Object( "NSScriptCoercionHandler" )
     {}
 }
 

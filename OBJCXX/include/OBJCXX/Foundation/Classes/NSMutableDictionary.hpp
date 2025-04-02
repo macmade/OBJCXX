@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( MutableDictionary, Dictionary )
             
-            MutableDictionary( void );
+            MutableDictionary();
             
             void setObjectForKey( const Object & object, const Object & key );
     };

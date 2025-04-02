@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ProtocolChecker::ProtocolChecker( void ): Proxy( "NSProtocolChecker" )
+    ProtocolChecker::ProtocolChecker(): Proxy( "NSProtocolChecker" )
     {}
 }
 

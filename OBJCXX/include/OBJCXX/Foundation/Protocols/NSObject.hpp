@@ -43,30 +43,30 @@ namespace NS
         {
             public:
                 
-                Object( void )              = default;
+                Object()                    = default;
                 Object( const Object & o )  = default;
-                virtual ~Object( void )     = default;
+                virtual ~Object()           = default;
                 
-                virtual Class           getClass( void )                      const = 0;
-                virtual Class           superclass( void )                    const = 0;
+                virtual Class           getClass()                            const = 0;
+                virtual Class           superclass()                          const = 0;
                 virtual bool            isEqual( const OBJCXX::Object & o )   const = 0;
-                virtual UInteger        hash( void )                          const = 0;
-                virtual id              self( void )                          const = 0;
+                virtual UInteger        hash()                                const = 0;
+                virtual id              self()                                const = 0;
                 virtual bool            isKindOfClass( Class cls )            const = 0;
                 virtual bool            isMemberOfClass( Class cls )          const = 0;
                 virtual bool            respondsToSelector( SEL sel )         const = 0;
                 virtual bool            conformsToProtocol( void * protocol ) const = 0;
-                virtual std::string     description( void )                   const = 0;
-                virtual std::string     debugDescription( void )              const = 0;
+                virtual std::string     description()                         const = 0;
+                virtual std::string     debugDescription()                    const = 0;
                 virtual id              performSelector( SEL sel )                  = 0;
                 virtual id              performSelector( SEL sel, id o1 )           = 0;
                 virtual id              performSelector( SEL sel, id o1, id o2 )    = 0;
-                virtual bool            isProxy( void )                       const = 0;
-                virtual id              retain( void )                              = 0;
-                virtual void            release( void )                             = 0;
-                virtual id              autorelease( void )                   const = 0;
-                virtual UInteger        retainCount( void )                   const = 0;
-                virtual void          * zone( void )                          const = 0;
+                virtual bool            isProxy()                             const = 0;
+                virtual id              retain()                                    = 0;
+                virtual void            release()                                   = 0;
+                virtual id              autorelease()                         const = 0;
+                virtual UInteger        retainCount()                         const = 0;
+                virtual void          * zone()                                const = 0;
         };
     }
 }

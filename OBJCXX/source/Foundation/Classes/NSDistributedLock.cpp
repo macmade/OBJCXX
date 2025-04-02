@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DistributedLock::DistributedLock( void ): Object( "NSDistributedLock" )
+    DistributedLock::DistributedLock(): Object( "NSDistributedLock" )
     {}
 }
 

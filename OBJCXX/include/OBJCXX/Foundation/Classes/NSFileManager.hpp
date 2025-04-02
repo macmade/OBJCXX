@@ -44,9 +44,9 @@ namespace NS
             
             OBJCXX_USING_BASE( FileManager, Object )
             
-            static FileManager defaultManager( void );
+            static FileManager defaultManager();
             
-            FileManager( void );
+            FileManager();
             
             bool       createFileAtPath( const String & path, const Data & contents, const Dictionary & attributes ) const;
             Dictionary attributesOfItemAtPath( const String & path, Error & error ) const;

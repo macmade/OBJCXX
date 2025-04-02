@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MapTable::MapTable( void ): Object( "NSMapTable" )
+    MapTable::MapTable(): Object( "NSMapTable" )
     {}
 }
 

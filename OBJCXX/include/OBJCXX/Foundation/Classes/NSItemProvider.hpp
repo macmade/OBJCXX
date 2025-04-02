@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( ItemProvider, Object )
             
-            ItemProvider( void );
+            ItemProvider();
     };
 }
 

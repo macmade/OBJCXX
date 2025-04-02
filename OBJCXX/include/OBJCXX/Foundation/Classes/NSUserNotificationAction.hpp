@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( UserNotificationAction, Object )
             
-            UserNotificationAction( void );
+            UserNotificationAction();
     };
 }
 

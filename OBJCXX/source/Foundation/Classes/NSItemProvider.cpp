@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ItemProvider::ItemProvider( void ): Object( "NSItemProvider" )
+    ItemProvider::ItemProvider(): Object( "NSItemProvider" )
     {}
 }
 

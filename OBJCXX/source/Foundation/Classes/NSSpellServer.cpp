@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    SpellServer::SpellServer( void ): Object( "NSSpellServer" )
+    SpellServer::SpellServer(): Object( "NSSpellServer" )
     {}
 }
 

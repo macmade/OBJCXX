@@ -42,16 +42,16 @@ namespace NS
             
             OBJCXX_USING_BASE( Task, Object )
             
-            Task( void );
+            Task();
             
-            NS::String launchPath( void ) const;
-            NS::Array  arguments( void ) const;
+            NS::String launchPath() const;
+            NS::Array  arguments() const;
             
             void setLaunchPath( const NS::String & value );
             void setArguments( const NS::Array & value );
             
-            void launch( void ) const;
-            void waitUntilExit( void ) const;
+            void launch() const;
+            void waitUntilExit() const;
     };
 }
 

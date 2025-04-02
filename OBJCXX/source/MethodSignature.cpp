@@ -38,7 +38,7 @@ class XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL
         
         IMPL( const std::string & encoding = "" );
         IMPL( const IMPL & o );
-        ~IMPL( void );
+        ~IMPL();
         
         std::string                _encoding;
         std::string                _returnType;
@@ -55,12 +55,12 @@ namespace OBJCXX
         MethodSignature::MethodSignature( const std::string & encoding ): XS::PIMPL::Object< MethodSignature >( encoding )
         {}
         
-        std::string MethodSignature::GetTypeEncoding( void ) const
+        std::string MethodSignature::GetTypeEncoding() const
         {
             return this->impl->_encoding;
         }
         
-        std::size_t MethodSignature::GetNumberOfArguments( void ) const
+        std::size_t MethodSignature::GetNumberOfArguments() const
         {
             return this->impl->_arguments.size();
         }
@@ -132,5 +132,5 @@ XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::IMPL( const IMPL & o ):
     _arguments( o._arguments )
 {}
 
-XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::~IMPL( void )
+XS::PIMPL::Object< OBJCXX::RT::MethodSignature >::IMPL::~IMPL()
 {}

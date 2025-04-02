@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Formatter::Formatter( void ): Object( "NSFormatter" )
+    Formatter::Formatter(): Object( "NSFormatter" )
     {}
 }
 

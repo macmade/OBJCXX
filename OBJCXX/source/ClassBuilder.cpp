@@ -46,10 +46,10 @@ class XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL
 {
     public:
         
-        IMPL( void );
+        IMPL();
         IMPL( const std::string & name, const std::string & super );
         IMPL( const IMPL & o );
-        ~IMPL( void );
+        ~IMPL();
         
         std::string _name;
         std::string _super;
@@ -104,7 +104,7 @@ extern "C"
 
 namespace OBJCXX
 {
-    ClassBuilder::ClassBuilder( void ): XS::PIMPL::Object< ClassBuilder >()
+    ClassBuilder::ClassBuilder(): XS::PIMPL::Object< ClassBuilder >()
     {}
     
     ClassBuilder::ClassBuilder( const std::string & name, const std::string & super, size_t extraBytes ): XS::PIMPL::Object< ClassBuilder >( name, super )
@@ -112,7 +112,7 @@ namespace OBJCXX
         this->impl->_cls = RT::Internal::objc_allocateClassPair( RT::Internal::objc_getClass( super.c_str() ), name.c_str(), extraBytes );
     }
     
-    Class ClassBuilder::cls( void ) const
+    Class ClassBuilder::cls() const
     {
         return this->impl->_cls;
     }
@@ -438,7 +438,7 @@ namespace OBJCXX
         return RT::Internal::class_addMethod( this->impl->_cls, RT::Internal::sel_registerName( name.c_str() ), implementation, types.c_str() );
     }
     
-    void ClassBuilder::registerClass( void )
+    void ClassBuilder::registerClass()
     {
         if( this->impl->_registered )
         {
@@ -456,7 +456,7 @@ namespace OBJCXX
     }
 }
 
-XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL::IMPL( void ):
+XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL::IMPL():
     _name( "" ),
     _super( "" ),
     _cls( nullptr ),
@@ -480,7 +480,7 @@ XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL::IMPL( const IMPL & o ):
     _hasCustomDealloc( o._hasCustomDealloc )
 {}
 
-XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL::~IMPL( void )
+XS::PIMPL::Object< OBJCXX::ClassBuilder >::IMPL::~IMPL()
 {}
 
 void OBJCXX_IMP_dealloc( id self, SEL _cmd )

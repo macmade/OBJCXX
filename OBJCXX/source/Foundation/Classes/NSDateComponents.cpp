@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DateComponents::DateComponents( void ): Object( "NSDateComponents" )
+    DateComponents::DateComponents(): Object( "NSDateComponents" )
     {}
 }
 

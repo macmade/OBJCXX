@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Timer::Timer( void ): Object( "NSTimer" )
+    Timer::Timer(): Object( "NSTimer" )
     {}
 }
 

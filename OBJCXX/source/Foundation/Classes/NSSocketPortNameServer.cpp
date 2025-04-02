@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    SocketPortNameServer::SocketPortNameServer( void ): PortNameServer( "NSSocketPortNameServer" )
+    SocketPortNameServer::SocketPortNameServer(): PortNameServer( "NSSocketPortNameServer" )
     {}
 }
 

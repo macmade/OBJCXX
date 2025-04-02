@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MetadataQueryResultGroup::MetadataQueryResultGroup( void ): Object( "NSMetadataQueryResultGroup" )
+    MetadataQueryResultGroup::MetadataQueryResultGroup(): Object( "NSMetadataQueryResultGroup" )
     {}
 }
 

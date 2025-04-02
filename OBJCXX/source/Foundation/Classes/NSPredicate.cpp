@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Predicate::Predicate( void ): Object( "NSPredicate" )
+    Predicate::Predicate(): Object( "NSPredicate" )
     {}
 }
 

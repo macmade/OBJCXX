@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( Scanner, Object )
             
-            Scanner( void );
+            Scanner();
     };
 }
 

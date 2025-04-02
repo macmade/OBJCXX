@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    FileVersion::FileVersion( void ): Object( "NSFileVersion" )
+    FileVersion::FileVersion(): Object( "NSFileVersion" )
     {}
 }
 

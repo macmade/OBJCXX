@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Cache::Cache( void ): Object( "NSCache" )
+    Cache::Cache(): Object( "NSCache" )
     {}
 }
 

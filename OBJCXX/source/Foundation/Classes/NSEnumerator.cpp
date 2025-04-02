@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Enumerator::Enumerator( void ): Object( "NSEnumerator" )
+    Enumerator::Enumerator(): Object( "NSEnumerator" )
     {}
 }
 

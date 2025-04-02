@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Data::Data( void ): Object( "NSData" )
+    Data::Data(): Object( "NSData" )
     {}
     
     Data::Data( const void * bytes, NS::UInteger length ):
@@ -45,12 +45,12 @@ namespace NS
         )
     {}
     
-    const void * Data::bytes( void ) const
+    const void * Data::bytes() const
     {
         return this->message< const void * >( "bytes" ).send();
     }
     
-    NS::UInteger Data::length( void ) const
+    NS::UInteger Data::length() const
     {
         return this->message< NS::UInteger >( "length" ).send();
     }

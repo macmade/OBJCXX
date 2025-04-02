@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PortMessage::PortMessage( void ): Object( "NSPortMessage" )
+    PortMessage::PortMessage(): Object( "NSPortMessage" )
     {}
 }
 

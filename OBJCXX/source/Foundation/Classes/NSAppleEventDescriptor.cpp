@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    AppleEventDescriptor::AppleEventDescriptor( void ): Object( "NSAppleEventDescriptor" )
+    AppleEventDescriptor::AppleEventDescriptor(): Object( "NSAppleEventDescriptor" )
     {}
 }
 

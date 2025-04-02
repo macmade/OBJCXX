@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ExistsCommand::ExistsCommand( void ): ScriptCommand( "NSExistsCommand" )
+    ExistsCommand::ExistsCommand(): ScriptCommand( "NSExistsCommand" )
     {}
 }
 

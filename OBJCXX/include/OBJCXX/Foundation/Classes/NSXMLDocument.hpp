@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( XMLDocument, XMLNode )
             
-            XMLDocument( void );
+            XMLDocument();
     };
 }
 

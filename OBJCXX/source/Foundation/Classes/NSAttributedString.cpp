@@ -33,7 +33,7 @@
 
 namespace NS
 {
-    AttributedString::AttributedString( void ): Object( "NSAttributedString" )
+    AttributedString::AttributedString(): Object( "NSAttributedString" )
     {}
     
     NS::Dictionary AttributedString::attributesAtIndex( UInteger index, Range * outRange )
@@ -46,7 +46,7 @@ namespace NS
         return this->message< id >( "attribute:atIndex:effectiveRange:" ).send< id, UInteger, Range * >( attributeName, index, outRange );
     }
     
-    NS::String AttributedString::string( void )
+    NS::String AttributedString::string()
     {
         return this->message<id>( "string" ).send();
     }

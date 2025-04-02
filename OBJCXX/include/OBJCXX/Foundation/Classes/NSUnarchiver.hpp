@@ -40,11 +40,11 @@ namespace NS
             
             OBJCXX_USING_BASE( Unarchiver, Coder )
             
-            Unarchiver( void );
+            Unarchiver();
         
             Unarchiver( NS::Data data );
         
-            id decodeObject( void );
+            id decodeObject();
     };
 }
 

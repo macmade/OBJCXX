@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    FileAccessIntent::FileAccessIntent( void ): Object( "NSFileAccessIntent" )
+    FileAccessIntent::FileAccessIntent(): Object( "NSFileAccessIntent" )
     {}
 }
 

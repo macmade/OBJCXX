@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( WhoseSpecifier, ScriptObjectSpecifier )
             
-            WhoseSpecifier( void );
+            WhoseSpecifier();
     };
 }
 

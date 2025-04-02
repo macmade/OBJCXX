@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Expression::Expression( void ): Object( "NSExpression" )
+    Expression::Expression(): Object( "NSExpression" )
     {}
 }
 

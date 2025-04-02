@@ -40,7 +40,7 @@ namespace NS
         return Data( o );
     }
     
-    KeyedArchiver::KeyedArchiver( void ): Coder( "NSKeyedArchiver" )
+    KeyedArchiver::KeyedArchiver(): Coder( "NSKeyedArchiver" )
     {}
 }
 

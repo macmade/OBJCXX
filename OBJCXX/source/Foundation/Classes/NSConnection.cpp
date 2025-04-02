@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Connection::Connection( void ): Object( "NSConnection" )
+    Connection::Connection(): Object( "NSConnection" )
     {}
 }
 

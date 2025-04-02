@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    AffineTransform::AffineTransform( void ): Object( "NSAffineTransform" )
+    AffineTransform::AffineTransform(): Object( "NSAffineTransform" )
     {}
 }
 

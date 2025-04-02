@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    AppleEventManager::AppleEventManager( void ): Object( "NSAppleEventManager" )
+    AppleEventManager::AppleEventManager(): Object( "NSAppleEventManager" )
     {}
 }
 

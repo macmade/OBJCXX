@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Archiver::Archiver( void ): Coder( "NSArchiver" )
+    Archiver::Archiver(): Coder( "NSArchiver" )
     {}
 }
 

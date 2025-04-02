@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( URLConnection, Object )
             
-            URLConnection( void );
+            URLConnection();
     };
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    RelativeSpecifier::RelativeSpecifier( void ): ScriptObjectSpecifier( "NSRelativeSpecifier" )
+    RelativeSpecifier::RelativeSpecifier(): ScriptObjectSpecifier( "NSRelativeSpecifier" )
     {}
 }
 

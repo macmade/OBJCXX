@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DirectoryEnumerator::DirectoryEnumerator( void ): Enumerator( "NSDirectoryEnumerator" )
+    DirectoryEnumerator::DirectoryEnumerator(): Enumerator( "NSDirectoryEnumerator" )
     {}
 }
 

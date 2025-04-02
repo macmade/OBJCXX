@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( IndexSpecifier, ScriptObjectSpecifier )
             
-            IndexSpecifier( void );
+            IndexSpecifier();
     };
 }
 

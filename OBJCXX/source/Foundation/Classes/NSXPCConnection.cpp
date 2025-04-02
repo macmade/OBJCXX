@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    XPCConnection::XPCConnection( void ): Object( "NSXPCConnection" )
+    XPCConnection::XPCConnection(): Object( "NSXPCConnection" )
     {}
 }
 

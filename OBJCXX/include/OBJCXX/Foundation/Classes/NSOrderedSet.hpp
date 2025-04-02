@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( OrderedSet, Object )
             
-            OrderedSet( void );
+            OrderedSet();
     };
 }
 

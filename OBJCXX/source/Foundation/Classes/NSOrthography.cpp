@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Orthography::Orthography( void ): Object( "NSOrthography" )
+    Orthography::Orthography(): Object( "NSOrthography" )
     {}
 }
 

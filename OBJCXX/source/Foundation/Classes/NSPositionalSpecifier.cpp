@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PositionalSpecifier::PositionalSpecifier( void ): Object( "NSPositionalSpecifier" )
+    PositionalSpecifier::PositionalSpecifier(): Object( "NSPositionalSpecifier" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ClassDescription::ClassDescription( void ): Object( "NSClassDescription" )
+    ClassDescription::ClassDescription(): Object( "NSClassDescription" )
     {}
 }
 

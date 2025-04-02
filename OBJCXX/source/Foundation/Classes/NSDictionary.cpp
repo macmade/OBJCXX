@@ -31,6 +31,6 @@
 
 namespace NS
 {
-    Dictionary::Dictionary( void ): Object( "NSDictionary" )
+    Dictionary::Dictionary(): Object( "NSDictionary" )
     {}
 }

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Error::Error( void ):
+    Error::Error():
         Object
         (
             "NSError",
@@ -53,37 +53,37 @@ namespace NS
         )
     {}
     
-    NS::Integer Error::code( void ) const
+    NS::Integer Error::code() const
     {
         return this->message< NS::Integer >( "code" ).send();
     }
     
-    NS::String Error::domain( void ) const
+    NS::String Error::domain() const
     {
         return this->message< id >( "domain" ).send();
     }
     
-    NS::Dictionary Error::userInfo( void ) const
+    NS::Dictionary Error::userInfo() const
     {
         return this->message< id >( "userInfo" ).send();
     }
     
-    NS::String Error::localizedDescription( void ) const
+    NS::String Error::localizedDescription() const
     {
         return this->message< id >( "localizedDescription" ).send();
     }
     
-    NS::Array Error::localizedRecoveryOptions( void ) const
+    NS::Array Error::localizedRecoveryOptions() const
     {
         return this->message< id >( "localizedRecoveryOptions" ).send();
     }
     
-    NS::String Error::localizedRecoverySuggestion( void ) const
+    NS::String Error::localizedRecoverySuggestion() const
     {
         return this->message< id >( "localizedRecoverySuggestion" ).send();
     }
     
-    NS::String Error::localizedFailureReason( void ) const
+    NS::String Error::localizedFailureReason() const
     {
         return this->message< id >( "localizedFailureReason" ).send();
     }

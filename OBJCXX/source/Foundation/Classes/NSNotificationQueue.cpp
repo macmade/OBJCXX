@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    NotificationQueue::NotificationQueue( void ): Object( "NSNotificationQueue" )
+    NotificationQueue::NotificationQueue(): Object( "NSNotificationQueue" )
     {}
 }
 

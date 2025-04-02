@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DistributedNotificationCenter::DistributedNotificationCenter( void ): NotificationCenter( "NSDistributedNotificationCenter" )
+    DistributedNotificationCenter::DistributedNotificationCenter(): NotificationCenter( "NSDistributedNotificationCenter" )
     {}
 }
 

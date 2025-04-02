@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( FileCoordinator, Object )
             
-            FileCoordinator( void );
+            FileCoordinator();
     };
 }
 

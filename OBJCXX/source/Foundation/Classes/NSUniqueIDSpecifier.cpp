@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    UniqueIDSpecifier::UniqueIDSpecifier( void ): ScriptObjectSpecifier( "NSUniqueIDSpecifier" )
+    UniqueIDSpecifier::UniqueIDSpecifier(): ScriptObjectSpecifier( "NSUniqueIDSpecifier" )
     {}
 }
 

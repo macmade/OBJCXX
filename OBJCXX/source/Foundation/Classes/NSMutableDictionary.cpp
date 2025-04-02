@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MutableDictionary::MutableDictionary( void ): Dictionary( "NSMutableDictionary" )
+    MutableDictionary::MutableDictionary(): Dictionary( "NSMutableDictionary" )
     {}
     
     void MutableDictionary::setObjectForKey( const Object & object, const Object & key )

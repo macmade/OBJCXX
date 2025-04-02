@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( UserAppleScriptTask, UserScriptTask )
             
-            UserAppleScriptTask( void );
+            UserAppleScriptTask();
     };
 }
 

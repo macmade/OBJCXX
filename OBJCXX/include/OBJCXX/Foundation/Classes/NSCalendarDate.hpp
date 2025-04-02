@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( CalendarDate, Date )
             
-            CalendarDate( void );
+            CalendarDate();
     };
 }
 

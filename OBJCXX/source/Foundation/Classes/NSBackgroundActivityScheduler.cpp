@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    BackgroundActivityScheduler::BackgroundActivityScheduler( void ): Object( "NSBackgroundActivityScheduler" )
+    BackgroundActivityScheduler::BackgroundActivityScheduler(): Object( "NSBackgroundActivityScheduler" )
     {}
 }
 

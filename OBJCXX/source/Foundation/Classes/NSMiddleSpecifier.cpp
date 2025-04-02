@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MiddleSpecifier::MiddleSpecifier( void ): ScriptObjectSpecifier( "NSMiddleSpecifier" )
+    MiddleSpecifier::MiddleSpecifier(): ScriptObjectSpecifier( "NSMiddleSpecifier" )
     {}
 }
 

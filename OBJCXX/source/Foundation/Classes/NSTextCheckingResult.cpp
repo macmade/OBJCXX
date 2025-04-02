@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    TextCheckingResult::TextCheckingResult( void ): Object( "NSTextCheckingResult" )
+    TextCheckingResult::TextCheckingResult(): Object( "NSTextCheckingResult" )
     {}
 }
 

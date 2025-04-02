@@ -66,10 +66,10 @@ namespace OBJCXX
             }
             Type;
             
-            ClassBuilder( void );
+            ClassBuilder();
             ClassBuilder( const std::string & name, const std::string & super, size_t extraBytes = 0 );
             
-            Class cls( void ) const;
+            Class cls() const;
             
             size_t      sizeForType( Type type )      const;
             uint8_t     alignmentForType( Type type ) const;
@@ -85,7 +85,7 @@ namespace OBJCXX
             bool addClassMethod( const std::string & name, IMP implementation, const std::string & types ) const;
             bool addInstanceMethod( const std::string & name, IMP implementation, const std::string & types );
             
-            void registerClass( void );
+            void registerClass();
             
             template< class _C_, typename _R_, typename ... _A_ >
             class Method
@@ -123,7 +123,7 @@ namespace OBJCXX
                         swap( o1._imp,   o2._imp );
                     }
                     
-                    bool add( void )
+                    bool add()
                     {
                         SEL  s = RT::Internal::sel_registerName( this->_name.c_str() );
 						auto f = &CXX_IMP< _R_, _A_ ... >;
@@ -155,7 +155,7 @@ namespace OBJCXX
                     }
                     
                     template< typename _OBJCR_, typename ... _OBJCA_ >
-                    bool add( void )
+                    bool add()
                     {
                         SEL s  = s = RT::Internal::sel_registerName( this->_name.c_str() );
 						auto f = &CXX_IMP< _OBJCR_, _OBJCA_ ... >;

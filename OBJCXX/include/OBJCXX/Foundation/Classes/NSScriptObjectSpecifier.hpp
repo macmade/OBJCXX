@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( ScriptObjectSpecifier, Object )
             
-            ScriptObjectSpecifier( void );
+            ScriptObjectSpecifier();
     };
 }
 

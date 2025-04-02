@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( MessagePort, Port )
             
-            MessagePort( void );
+            MessagePort();
     };
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MetadataQuery::MetadataQuery( void ): Object( "NSMetadataQuery" )
+    MetadataQuery::MetadataQuery(): Object( "NSMetadataQuery" )
     {}
 }
 

@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( Formatter, Object )
             
-            Formatter( void );
+            Formatter();
     };
 }
 

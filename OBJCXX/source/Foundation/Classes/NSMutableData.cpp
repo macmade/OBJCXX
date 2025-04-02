@@ -31,6 +31,6 @@
 
 namespace NS
 {
-    MutableData::MutableData( void ): Data( "NSMutableData" )
+    MutableData::MutableData(): Data( "NSMutableData" )
     {}
 }

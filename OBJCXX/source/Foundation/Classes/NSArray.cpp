@@ -31,6 +31,6 @@
 
 namespace NS
 {
-    Array::Array( void ): Object( "NSArray" )
+    Array::Array(): Object( "NSArray" )
     {}
 }

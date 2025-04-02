@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( NetService, Object )
             
-            NetService( void );
+            NetService();
     };
 }
 

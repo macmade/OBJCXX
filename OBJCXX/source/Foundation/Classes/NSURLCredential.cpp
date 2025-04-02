@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLCredential::URLCredential( void ): Object( "NSURLCredential" )
+    URLCredential::URLCredential(): Object( "NSURLCredential" )
     {}
 }
 

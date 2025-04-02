@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    AssertionHandler::AssertionHandler( void ): Object( "NSAssertionHandler" )
+    AssertionHandler::AssertionHandler(): Object( "NSAssertionHandler" )
     {}
 }
 

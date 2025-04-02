@@ -73,8 +73,8 @@ extern "C"
     extern objc_exception_preprocessor objc_setExceptionPreprocessor( objc_exception_preprocessor );
 }
 
-static void init( void ) __attribute__( ( constructor ) );
-static void init( void )
+static void init() __attribute__( ( constructor ) );
+static void init()
 {
     OBJCXX::RT::Init();
 }
@@ -86,10 +86,10 @@ class XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL
 {
     public:
         
-        IMPL( void );
+        IMPL();
         IMPL( id object, const std::string & selector );
         IMPL( const IMPL & o );
-        ~IMPL( void );
+        ~IMPL();
         
         id  _object;
         SEL _selector;
@@ -188,12 +188,12 @@ namespace OBJCXX
             MessageBase( GetClass( cls ), selector )
         {}
         
-        id MessageBase::object( void )
+        id MessageBase::object()
         {
             return this->impl->_object;
         }
         
-        SEL MessageBase::selector( void )
+        SEL MessageBase::selector()
         {
             return this->impl->_selector;
         }
@@ -201,11 +201,11 @@ namespace OBJCXX
         Class                       ( * Internal::objc_getClass                 )( const char * )                                        = nullptr;
         Class                       ( * Internal::objc_getMetaClass             )( const char * )                                        = nullptr;
         Protocol                *   ( * Internal::objc_getProtocol              )( const char * )                                        = nullptr;
-        void                        ( * Internal::objc_msgSend                  )( void )                                                = nullptr;
+        void                        ( * Internal::objc_msgSend                  )()                                                = nullptr;
         #ifndef __arm64__
-        void                        ( * Internal::objc_msgSend_fpret            )( void )                                                = nullptr;
+        void                        ( * Internal::objc_msgSend_fpret            )()                                                = nullptr;
         #endif
-        void                        ( * Internal::objc_msgSendSuper             )( void )                                                = nullptr;
+        void                        ( * Internal::objc_msgSendSuper             )()                                                = nullptr;
         Class                       ( * Internal::objc_allocateClassPair        )( Class, const char *, size_t )                         = nullptr;
         void                        ( * Internal::objc_registerClassPair        )( Class )                                               = nullptr;
         void                        ( * Internal::objc_setAssociatedObject      )( id, const void *, id, AssociationPolicy )             = nullptr;
@@ -227,7 +227,7 @@ namespace OBJCXX
         void                        ( * Internal::NSLogv                        )( id, va_list )                                         = nullptr;
         objc_exception_preprocessor ( * Internal::objc_setExceptionPreprocessor )( objc_exception_preprocessor )                         = nullptr;
         
-        void Init( void )
+        void Init()
         {
             static std::once_flag once;
             
@@ -275,11 +275,11 @@ namespace OBJCXX
                     Internal::objc_getClass                 = ( Class                         ( * )( const char * )                                       )GetProcAddress( objc, "objc_getClass" );
                     Internal::objc_getMetaClass             = ( Class                         ( * )( const char * )                                       )GetProcAddress( objc, "objc_getMetaClass" );
                     Internal::objc_getProtocol              = ( Protocol                  *   ( * )( const char * )                                       )GetProcAddress( objc, "objc_getProtocol" );
-                    Internal::objc_msgSend                  = ( void                          ( * )( void )                                               )GetProcAddress( objc, "objc_msgSend" );
+                    Internal::objc_msgSend                  = ( void                          ( * )()                                               )GetProcAddress( objc, "objc_msgSend" );
                     #ifndef __arm64__
-                    Internal::objc_msgSend_fpret            = ( void                          ( * )( void )                                               )GetProcAddress( objc, "objc_msgSend_fpret" );
+                    Internal::objc_msgSend_fpret            = ( void                          ( * )()                                               )GetProcAddress( objc, "objc_msgSend_fpret" );
                     #endif
-                    Internal::objc_msgSendSuper             = ( void                          ( * )( void )                                               )GetProcAddress( objc, "objc_msgSendSuper" );
+                    Internal::objc_msgSendSuper             = ( void                          ( * )()                                               )GetProcAddress( objc, "objc_msgSendSuper" );
                     Internal::objc_allocateClassPair        = ( Class                         ( * )( Class, const char *, size_t )                        )GetProcAddress( objc, "objc_allocateClassPair" );
                     Internal::objc_registerClassPair        = ( void                          ( * )( Class )                                              )GetProcAddress( objc, "objc_registerClassPair" );
                     Internal::objc_setAssociatedObject      = ( void                          ( * )( id, const void *, id, Internal::AssociationPolicy )  )GetProcAddress( objc, "objc_setAssociatedObject" );
@@ -341,7 +341,7 @@ namespace OBJCXX
     }
 }
 
-XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL( void ):
+XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL():
     _object( nullptr ),
     _selector( nullptr )
 {}
@@ -356,5 +356,5 @@ XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::IMPL( const IMPL & o ):
     _selector( o._selector )
 {}
 
-XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::~IMPL( void )
+XS::PIMPL::Object< OBJCXX::RT::MessageBase >::IMPL::~IMPL()
 {}

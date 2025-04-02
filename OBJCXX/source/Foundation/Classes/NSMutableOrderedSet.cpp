@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MutableOrderedSet::MutableOrderedSet( void ): OrderedSet( "NSMutableOrderedSet" )
+    MutableOrderedSet::MutableOrderedSet(): OrderedSet( "NSMutableOrderedSet" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    OperationQueue::OperationQueue( void ): Object( "NSOperationQueue" )
+    OperationQueue::OperationQueue(): Object( "NSOperationQueue" )
     {}
 }
 

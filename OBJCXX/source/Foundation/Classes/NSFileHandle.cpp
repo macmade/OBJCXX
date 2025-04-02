@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    FileHandle::FileHandle( void ): Object( "NSFileHandle" )
+    FileHandle::FileHandle(): Object( "NSFileHandle" )
     {}
 }
 

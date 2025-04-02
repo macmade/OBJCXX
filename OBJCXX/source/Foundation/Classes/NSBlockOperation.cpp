@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    BlockOperation::BlockOperation( void ): Operation( "NSBlockOperation" )
+    BlockOperation::BlockOperation(): Operation( "NSBlockOperation" )
     {}
 }
 

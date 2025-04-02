@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MutableURLRequest::MutableURLRequest( void ): URLRequest( "NSMutableURLRequest" )
+    MutableURLRequest::MutableURLRequest(): URLRequest( "NSMutableURLRequest" )
     {}
 }
 

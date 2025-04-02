@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLResponse::URLResponse( void ): Object( "NSURLResponse" )
+    URLResponse::URLResponse(): Object( "NSURLResponse" )
     {}
 }
 

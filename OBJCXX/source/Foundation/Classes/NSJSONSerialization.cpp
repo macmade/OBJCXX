@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    JSONSerialization::JSONSerialization( void ): Object( "NSJSONSerialization" )
+    JSONSerialization::JSONSerialization(): Object( "NSJSONSerialization" )
     {}
 }
 

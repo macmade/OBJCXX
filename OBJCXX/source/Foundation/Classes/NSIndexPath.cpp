@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    IndexPath::IndexPath( void ): Object( "NSIndexPath" )
+    IndexPath::IndexPath(): Object( "NSIndexPath" )
     {}
 }
 

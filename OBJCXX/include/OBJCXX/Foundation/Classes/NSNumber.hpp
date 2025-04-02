@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( Number, Value )
             
-            Number( void );
+            Number();
             Number( bool value );
             Number( char value );
             Number( short value );
@@ -55,19 +55,19 @@ namespace NS
             Number( float value );
             Number( double value );
             
-            bool                boolValue( void );
-            char                charValue( void );
-            short               shortValue( void );
-            int                 intValue( void );
-            long                longValue( void );
-            long long           longLongValue( void );
-            unsigned char       unsignedCharValue( void );
-            unsigned short      unsignedShortValue( void );
-            unsigned int        unsignedIntValue( void );
-            unsigned long       unsignedLongValue( void );
-            unsigned long long  unsignedLongLongValue( void );
-            float               floatValue( void );
-            double              doubleValue( void );
+            bool                boolValue();
+            char                charValue();
+            short               shortValue();
+            int                 intValue();
+            long                longValue();
+            long long           longLongValue();
+            unsigned char       unsignedCharValue();
+            unsigned short      unsignedShortValue();
+            unsigned int        unsignedIntValue();
+            unsigned long       unsignedLongValue();
+            unsigned long long  unsignedLongLongValue();
+            float               floatValue();
+            double              doubleValue();
     };
 }
 

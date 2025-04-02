@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( ClassDescription, Object )
             
-            ClassDescription( void );
+            ClassDescription();
     };
 }
 

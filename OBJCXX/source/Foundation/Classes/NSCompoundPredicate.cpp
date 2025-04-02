@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    CompoundPredicate::CompoundPredicate( void ): Predicate( "NSCompoundPredicate" )
+    CompoundPredicate::CompoundPredicate(): Predicate( "NSCompoundPredicate" )
     {}
 }
 

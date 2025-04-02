@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DistantObjectRequest::DistantObjectRequest( void ): Object( "NSDistantObjectRequest" )
+    DistantObjectRequest::DistantObjectRequest(): Object( "NSDistantObjectRequest" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    PersonNameComponents::PersonNameComponents( void ): Object( "NSPersonNameComponents" )
+    PersonNameComponents::PersonNameComponents(): Object( "NSPersonNameComponents" )
     {}
 }
 

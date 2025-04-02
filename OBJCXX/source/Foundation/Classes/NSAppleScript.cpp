@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    AppleScript::AppleScript( void ): Object( "NSAppleScript" )
+    AppleScript::AppleScript(): Object( "NSAppleScript" )
     {}
 }
 

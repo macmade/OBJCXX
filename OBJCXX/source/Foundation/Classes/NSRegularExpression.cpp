@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    RegularExpression::RegularExpression( void ): Object( "NSRegularExpression" )
+    RegularExpression::RegularExpression(): Object( "NSRegularExpression" )
     {}
 }
 

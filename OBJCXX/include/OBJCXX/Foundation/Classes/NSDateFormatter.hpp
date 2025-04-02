@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( DateFormatter, Formatter )
             
-            DateFormatter( void );
+            DateFormatter();
     };
 }
 

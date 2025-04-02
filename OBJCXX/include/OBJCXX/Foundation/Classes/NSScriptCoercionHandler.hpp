@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( ScriptCoercionHandler, Object )
             
-            ScriptCoercionHandler( void );
+            ScriptCoercionHandler();
     };
 }
 

@@ -46,7 +46,7 @@
     _class_( const std::string & className ): _base_( className )                                           \
     {}                                                                                                      \
                                                                                                             \
-    _class_( const std::string & className, std::function< id( void ) > init ): _base_( className, init )   \
+    _class_( const std::string & className, std::function< id() > init ): _base_( className, init )         \
     {}                                                                                                      \
                                                                                                             \
     public:                                                                                                 \
@@ -60,7 +60,7 @@
     _class_( _class_ && o ): _base_( std::forward< _class_ && >( o ) )                                      \
     {}                                                                                                      \
                                                                                                             \
-    ~_class_( void ) override                                                                               \
+    ~_class_() override                                                                                     \
     {}                                                                                                      \
                                                                                                             \
     _class_ & operator =( _class_ o )                                                                       \
@@ -82,7 +82,7 @@ namespace OBJCXX
             Object( const Object & o );
             Object( Object && o );
             
-            ~Object( void ) override;
+            ~Object() override;
             
             Object & operator =( Object o );
             
@@ -95,7 +95,7 @@ namespace OBJCXX
             bool operator ==( std::nullptr_t n ) const;
             bool operator !=( std::nullptr_t n ) const;
             
-            operator id( void ) const;
+            operator id() const;
             
             template < typename _T_ >
             RT::Message< _T_ > message( const std::string & selector ) const
@@ -105,31 +105,31 @@ namespace OBJCXX
             
             friend OBJCXX_EXPORT std::ostream & operator << ( std::ostream & os, const Object & o );
             
-            Class           getClass( void )                      const override;
-            Class           superclass( void )                    const override;
+            Class           getClass()                            const override;
+            Class           superclass()                          const override;
             bool            isEqual( const Object & o )           const override;
-            NS::UInteger    hash( void )                          const override;
-            id              self( void )                          const override;
+            NS::UInteger    hash()                                const override;
+            id              self()                                const override;
             bool            isKindOfClass( Class cls )            const override;
             bool            isMemberOfClass( Class cls )          const override;
             bool            respondsToSelector( SEL sel )         const override;
             bool            conformsToProtocol( void * protocol ) const override;
-            std::string     description( void )                   const override;
-            std::string     debugDescription( void )              const override;
+            std::string     description()                         const override;
+            std::string     debugDescription()                    const override;
             id              performSelector( SEL sel )                  override;
             id              performSelector( SEL sel, id o1 )           override;
             id              performSelector( SEL sel, id o1, id o2 )    override;
-            bool            isProxy( void )                       const override;
-            id              retain( void )                              override;
-            void            release( void )                             override;
-            id              autorelease( void )                   const override;
-            NS::UInteger    retainCount( void )                   const override;
-            void          * zone( void )                          const override;
+            bool            isProxy()                             const override;
+            id              retain()                                    override;
+            void            release()                                   override;
+            id              autorelease()                         const override;
+            NS::UInteger    retainCount()                         const override;
+            void          * zone()                                const override;
             
         protected:
             
             Object( const std::string & className );
-            Object( const std::string & className, std::function< id( void ) > init );
+            Object( const std::string & className, std::function< id() > init );
     };
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    MetadataQueryAttributeValueTuple::MetadataQueryAttributeValueTuple( void ): Object( "NSMetadataQueryAttributeValueTuple" )
+    MetadataQueryAttributeValueTuple::MetadataQueryAttributeValueTuple(): Object( "NSMetadataQueryAttributeValueTuple" )
     {}
 }
 

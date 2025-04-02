@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Locale::Locale( void ): Object( "NSLocale" )
+    Locale::Locale(): Object( "NSLocale" )
     {}
 }
 

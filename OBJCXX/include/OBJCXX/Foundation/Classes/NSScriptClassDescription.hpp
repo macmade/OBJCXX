@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( ScriptClassDescription, ClassDescription )
             
-            ScriptClassDescription( void );
+            ScriptClassDescription();
     };
 }
 

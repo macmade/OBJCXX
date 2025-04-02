@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    HTTPCookieStorage::HTTPCookieStorage( void ): Object( "NSHTTPCookieStorage" )
+    HTTPCookieStorage::HTTPCookieStorage(): Object( "NSHTTPCookieStorage" )
     {}
 }
 

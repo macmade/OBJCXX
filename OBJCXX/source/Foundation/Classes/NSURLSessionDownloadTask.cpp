@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLSessionDownloadTask::URLSessionDownloadTask( void ): URLSessionTask( "NSURLSessionDownloadTask" )
+    URLSessionDownloadTask::URLSessionDownloadTask(): URLSessionTask( "NSURLSessionDownloadTask" )
     {}
 }
 

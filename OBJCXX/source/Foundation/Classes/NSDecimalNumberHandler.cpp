@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    DecimalNumberHandler::DecimalNumberHandler( void ): Object( "NSDecimalNumberHandler" )
+    DecimalNumberHandler::DecimalNumberHandler(): Object( "NSDecimalNumberHandler" )
     {}
 }
 

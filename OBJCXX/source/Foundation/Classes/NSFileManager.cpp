@@ -32,7 +32,7 @@
 
 namespace NS
 {
-    FileManager FileManager::defaultManager( void )
+    FileManager FileManager::defaultManager()
     {
         id o;
         
@@ -41,7 +41,7 @@ namespace NS
         return FileManager( o );
     }
     
-    FileManager::FileManager( void ): Object( "NSFileManager" )
+    FileManager::FileManager(): Object( "NSFileManager" )
     {}
     
     bool FileManager::createFileAtPath( const String & path, const Data & contents, const Dictionary & attributes ) const

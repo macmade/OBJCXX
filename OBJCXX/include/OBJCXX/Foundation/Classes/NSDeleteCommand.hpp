@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( DeleteCommand, ScriptCommand )
             
-            DeleteCommand( void );
+            DeleteCommand();
     };
 }
 

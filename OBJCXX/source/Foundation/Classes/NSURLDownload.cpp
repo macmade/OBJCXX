@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLDownload::URLDownload( void ): Object( "NSURLDownload" )
+    URLDownload::URLDownload(): Object( "NSURLDownload" )
     {}
 }
 

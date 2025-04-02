@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    TimeZone::TimeZone( void ): Object( "NSTimeZone" )
+    TimeZone::TimeZone(): Object( "NSTimeZone" )
     {}
 }
 

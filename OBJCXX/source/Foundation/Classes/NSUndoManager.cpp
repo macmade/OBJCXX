@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    UndoManager::UndoManager( void ): Object( "NSUndoManager" )
+    UndoManager::UndoManager(): Object( "NSUndoManager" )
     {}
 }
 

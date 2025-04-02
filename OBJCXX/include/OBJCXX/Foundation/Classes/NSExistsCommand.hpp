@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( ExistsCommand, ScriptCommand )
             
-            ExistsCommand( void );
+            ExistsCommand();
     };
 }
 

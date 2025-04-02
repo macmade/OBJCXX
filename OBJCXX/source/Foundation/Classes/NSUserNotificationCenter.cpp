@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    UserNotificationCenter::UserNotificationCenter( void ): Object( "NSUserNotificationCenter" )
+    UserNotificationCenter::UserNotificationCenter(): Object( "NSUserNotificationCenter" )
     {}
 }
 

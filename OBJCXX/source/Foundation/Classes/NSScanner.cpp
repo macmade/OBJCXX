@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Scanner::Scanner( void ): Object( "NSScanner" )
+    Scanner::Scanner(): Object( "NSScanner" )
     {}
 }
 

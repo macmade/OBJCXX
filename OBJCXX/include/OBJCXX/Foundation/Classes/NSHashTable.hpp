@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( HashTable, Object )
             
-            HashTable( void );
+            HashTable();
     };
 }
 

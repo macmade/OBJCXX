@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    LengthFormatter::LengthFormatter( void ): Formatter( "NSLengthFormatter" )
+    LengthFormatter::LengthFormatter(): Formatter( "NSLengthFormatter" )
     {}
 }
 

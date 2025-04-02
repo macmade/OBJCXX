@@ -31,14 +31,14 @@
 #include <mutex>
 #include "Bar.hpp"
 
-void Bar::test( void )
+void Bar::test()
 {
     static std::once_flag once;
     
     std::call_once
     (
         once,
-        []( void )
+        []()
         {
             OBJCXX::ClassBuilder cls( "Bar", "NSObject" );
             
@@ -78,7 +78,7 @@ void Bar::test( void )
     }
 }
 
-Bar::Bar( void ): Object( "Bar" )
+Bar::Bar(): Object( "Bar" )
 {}
 
 void Bar::method1( int x, int y )
@@ -86,7 +86,7 @@ void Bar::method1( int x, int y )
     std::cout << "Bar::method1( " << x << ", " << y << " ): self = " << static_cast< id >( *( this ) ) << std::endl;
 }
 
-void Bar::method2( void )
+void Bar::method2()
 {
     std::cout << "Bar::method2(): self = " << static_cast< id >( *( this ) ) << std::endl;
 }
@@ -98,7 +98,7 @@ int Bar::method3( int x, int y )
     return 10;
 }
 
-int Bar::method4( void )
+int Bar::method4()
 {
     std::cout << "Bar::method4(): self = " << static_cast< id >( *( this ) ) << std::endl;
     

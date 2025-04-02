@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Set::Set( void ): Object( "NSSet" )
+    Set::Set(): Object( "NSSet" )
     {}
 }
 

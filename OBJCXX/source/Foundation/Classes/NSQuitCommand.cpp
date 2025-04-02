@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    QuitCommand::QuitCommand( void ): ScriptCommand( "NSQuitCommand" )
+    QuitCommand::QuitCommand(): ScriptCommand( "NSQuitCommand" )
     {}
 }
 

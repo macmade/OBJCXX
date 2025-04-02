@@ -43,9 +43,9 @@ namespace NS
             
             OBJCXX_USING_BASE( AttributedString, Object )
             
-            AttributedString( void );
+            AttributedString();
         
-            NS::String string( void );
+            NS::String string();
         
             NS::Dictionary attributesAtIndex( UInteger index, Range * outRange );
             id attributeValueAtIndex( NS::String attributeName, UInteger index, Range * outRange );

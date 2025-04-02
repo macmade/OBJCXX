@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Condition::Condition( void ): Object( "NSCondition" )
+    Condition::Condition(): Object( "NSCondition" )
     {}
 }
 

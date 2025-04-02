@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    AutoreleasePool::AutoreleasePool( void ): Object( "NSAutoreleasePool" )
+    AutoreleasePool::AutoreleasePool(): Object( "NSAutoreleasePool" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ScriptObjectSpecifier::ScriptObjectSpecifier( void ): Object( "NSScriptObjectSpecifier" )
+    ScriptObjectSpecifier::ScriptObjectSpecifier(): Object( "NSScriptObjectSpecifier" )
     {}
 }
 

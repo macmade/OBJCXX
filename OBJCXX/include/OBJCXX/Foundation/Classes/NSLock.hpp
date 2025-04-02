@@ -43,14 +43,14 @@ namespace NS
             
             OBJCXX_USING_BASE( Lock, Object )
             
-            Lock( void );
+            Lock();
             
-            void lock( void )   override;
-            void unlock( void ) override;
+            void lock()   override;
+            void unlock() override;
             
             bool   lockBeforeDate( const Date & limit );
-            bool   tryLock( void );
-            String name( void );
+            bool   tryLock();
+            String name();
             void   setName( const String & name );
     };
 }

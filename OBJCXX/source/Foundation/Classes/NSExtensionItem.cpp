@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    ExtensionItem::ExtensionItem( void ): Object( "NSExtensionItem" )
+    ExtensionItem::ExtensionItem(): Object( "NSExtensionItem" )
     {}
 }
 

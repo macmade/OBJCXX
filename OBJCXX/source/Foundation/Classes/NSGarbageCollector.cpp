@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    GarbageCollector::GarbageCollector( void ): Object( "NSGarbageCollector" )
+    GarbageCollector::GarbageCollector(): Object( "NSGarbageCollector" )
     {}
 }
 

@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( XMLNode, Object )
             
-            XMLNode( void );
+            XMLNode();
     };
 }
 

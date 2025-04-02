@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    NotificationCenter NotificationCenter::defaultCenter( void )
+    NotificationCenter NotificationCenter::defaultCenter()
     {
         id o;
         
@@ -40,7 +40,7 @@ namespace NS
         return NotificationCenter( o );
     }
     
-    NotificationCenter::NotificationCenter( void ): Object( "NSNotificationCenter" )
+    NotificationCenter::NotificationCenter(): Object( "NSNotificationCenter" )
     {}
     
     void NotificationCenter::addObserver( id notificationObserver, SEL notificationSelector, const String & notificationName, id notificationSender )

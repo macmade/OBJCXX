@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    HTTPCookie::HTTPCookie( void ): Object( "NSHTTPCookie" )
+    HTTPCookie::HTTPCookie(): Object( "NSHTTPCookie" )
     {}
 }
 

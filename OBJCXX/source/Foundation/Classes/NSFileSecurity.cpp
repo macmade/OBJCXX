@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    FileSecurity::FileSecurity( void ): Object( "NSFileSecurity" )
+    FileSecurity::FileSecurity(): Object( "NSFileSecurity" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    Null::Null( void ): Object( "NSNull" )
+    Null::Null(): Object( "NSNull" )
     {}
 }
 

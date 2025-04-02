@@ -31,15 +31,15 @@
 
 namespace NS
 {
-    Lock::Lock( void ): Object( "NSLock" )
+    Lock::Lock(): Object( "NSLock" )
     {}
     
-    void Lock::lock( void )
+    void Lock::lock()
     {
         this->message< void >( "lock" ).send();
     }
     
-    void Lock::unlock( void )
+    void Lock::unlock()
     {
         this->message< void >( "unlock" ).send();
     }
@@ -49,12 +49,12 @@ namespace NS
         return this->message< bool >( "lockBeforeDate:" ).send< id >( limit );
     }
     
-    bool Lock::tryLock( void )
+    bool Lock::tryLock()
     {
         return this->message< bool >( "tryLock" ).send();
     }
     
-    String Lock::name( void )
+    String Lock::name()
     {
         return this->message< id >( "name" ).send();
     }

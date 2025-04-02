@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( CreateCommand, ScriptCommand )
             
-            CreateCommand( void );
+            CreateCommand();
     };
 }
 

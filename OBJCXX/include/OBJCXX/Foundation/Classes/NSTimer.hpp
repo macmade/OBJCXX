@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( Timer, Object )
             
-            Timer( void );
+            Timer();
     };
 }
 

@@ -42,7 +42,7 @@ namespace NS
             
             static Data archivedDataWithRootObject( const Object & object );
             
-            KeyedArchiver( void );
+            KeyedArchiver();
     };
 }
 

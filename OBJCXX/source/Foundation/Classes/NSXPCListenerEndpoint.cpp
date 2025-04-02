@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    XPCListenerEndpoint::XPCListenerEndpoint( void ): Object( "NSXPCListenerEndpoint" )
+    XPCListenerEndpoint::XPCListenerEndpoint(): Object( "NSXPCListenerEndpoint" )
     {}
 }
 

@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    SortDescriptor::SortDescriptor( void ): Object( "NSSortDescriptor" )
+    SortDescriptor::SortDescriptor(): Object( "NSSortDescriptor" )
     {}
 }
 

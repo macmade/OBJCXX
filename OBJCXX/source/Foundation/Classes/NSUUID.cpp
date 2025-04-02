@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    UUID::UUID( void ): Object( "NSUUID" )
+    UUID::UUID(): Object( "NSUUID" )
     {}
 }
 

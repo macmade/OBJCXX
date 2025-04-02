@@ -31,7 +31,7 @@
 
 namespace NS
 {
-    URLProtocol::URLProtocol( void ): Object( "NSURLProtocol" )
+    URLProtocol::URLProtocol(): Object( "NSURLProtocol" )
     {}
 }
 

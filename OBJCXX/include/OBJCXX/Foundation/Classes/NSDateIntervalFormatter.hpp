@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( DateIntervalFormatter, Formatter )
             
-            DateIntervalFormatter( void );
+            DateIntervalFormatter();
     };
 }
 

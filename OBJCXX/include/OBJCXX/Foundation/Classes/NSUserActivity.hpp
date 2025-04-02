@@ -40,7 +40,7 @@ namespace NS
             
             OBJCXX_USING_BASE( UserActivity, Object )
             
-            UserActivity( void );
+            UserActivity();
     };
 }
 
