@@ -243,9 +243,15 @@ namespace OBJCXX
                         
                         imp = m->_imp;
                         
-                        return RT::Internal::objc_msgSend
+                        return reinterpret_cast< id ( * )( id, SEL ) >
                         (
                             RT::Internal::objc_msgSend
+                        )
+                        (
+                            reinterpret_cast< id ( * )( id, SEL ) >
+                            (
+                                RT::Internal::objc_msgSend
+                            )
                             (
                                 ( o.*imp )( args ... ),
                                 RT::Internal::sel_registerName( "retain" )

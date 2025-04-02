@@ -118,9 +118,9 @@ namespace OBJCXX
                 static Class                        ( * objc_getClass                 )( const char * );
                 static Class                        ( * objc_getMetaClass             )( const char * );
                 static Protocol                 *   ( * objc_getProtocol              )( const char * );
-                static id                           ( * objc_msgSend                  )( id, SEL, ... );
-                static double                       ( * objc_msgSend_fpret            )( id, SEL, ... );
-                static id                           ( * objc_msgSendSuper             )( struct objc_super *, SEL, ... );
+                static void                         ( * objc_msgSend                  )( void );
+                static void                         ( * objc_msgSend_fpret            )( void );
+                static void                         ( * objc_msgSendSuper             )( void );
                 static Class                        ( * objc_allocateClassPair        )( Class, const char *, size_t );
                 static void                         ( * objc_registerClassPair        )( Class );
                 static void                         ( * objc_setAssociatedObject      )( id, const void *, id, AssociationPolicy );
@@ -195,7 +195,11 @@ namespace OBJCXX
                     {
                         uintptr_t r;
                         
-                        r = reinterpret_cast< uintptr_t >( Internal::objc_msgSend( this->object(), this->selector(), args ... ) );
+                        r = reinterpret_cast< uintptr_t ( * )( id, SEL, _A_ ... ) >
+                        (
+                            Internal::objc_msgSend
+                        )
+                        ( this->object(), this->selector(), args ... );
                         
                         return static_cast< _T_ >( r );
                     }
@@ -227,7 +231,11 @@ namespace OBJCXX
                 {
                     try
                     {
-                        return reinterpret_cast< _T_ >( Internal::objc_msgSend( this->object(), this->selector(), args ... ) );
+                        return reinterpret_cast< _T_ ( * )( id, SEL, _A_ ... ) >
+                        (
+                            Internal::objc_msgSend
+                        )
+                        ( this->object(), this->selector(), args ... );
                     }
                     catch( ... )
                     {
@@ -257,7 +265,11 @@ namespace OBJCXX
                 {
                     try
                     {
-                        Internal::objc_msgSend( this->object(), this->selector(), args ... );
+                        reinterpret_cast< void ( * )( id, SEL, _A_ ... ) >
+                        (
+                            Internal::objc_msgSend
+                        )
+                        ( this->object(), this->selector(), args ... );
                     }
                     catch( ... )
                     {
@@ -285,7 +297,11 @@ namespace OBJCXX
                 {
                     try
                     {
-                        return static_cast< _T_ >( Internal::objc_msgSend_fpret( this->object(), this->selector(), args ... ) );
+                        return reinterpret_cast< _T_ ( * )( id, SEL, _A_ ... ) >
+                        (
+                            Internal::objc_msgSend_fpret
+                        )
+                        ( this->object(), this->selector(), args ... );
                     }
                     catch( ... )
                     {

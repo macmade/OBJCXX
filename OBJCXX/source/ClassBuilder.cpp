@@ -541,7 +541,11 @@ void OBJCXX_IMP_dealloc( id self, SEL _cmd )
 
             object = imp( self, OBJCXX::RT::Internal::method_getName( methods[ i ] ) );
 
-            OBJCXX::RT::Internal::objc_msgSend( object, OBJCXX::RT::Internal::sel_registerName( "release" ) );
+            reinterpret_cast< void ( * )( id, SEL ) >
+            (
+                OBJCXX::RT::Internal::objc_msgSend
+            )
+            ( object, OBJCXX::RT::Internal::sel_registerName( "release" ) );
         }
         
         /* Crashes on Windows... Better to leak a few bytes... */
@@ -558,7 +562,11 @@ void OBJCXX_IMP_dealloc( id self, SEL _cmd )
         sup.super_class = OBJCXX::RT::Internal::class_getSuperclass( OBJCXX::RT::Internal::object_getClass( self ) );
         sup.receiver    = self;
         
-        OBJCXX::RT::Internal::objc_msgSendSuper( &sup, _cmd );
+        reinterpret_cast< void ( * )( struct objc_super *, SEL ) >
+        (
+            OBJCXX::RT::Internal::objc_msgSendSuper
+        )
+        ( &sup, _cmd );
     }
 }
 
@@ -1103,10 +1111,18 @@ void OBJCXX_IMP_Object_Set( id self, SEL _cmd, id value )
     
     if( o != value )
     {
-        OBJCXX::RT::Internal::objc_msgSend( o, OBJCXX::RT::Internal::sel_registerName( "release" ) );
+        reinterpret_cast< void ( * )( id, SEL ) >
+        (
+            OBJCXX::RT::Internal::objc_msgSend
+        )
+        ( o, OBJCXX::RT::Internal::sel_registerName( "release" ) );
     }
     
-    value = OBJCXX::RT::Internal::objc_msgSend( value, OBJCXX::RT::Internal::sel_registerName( "retain" ) );
+    value = reinterpret_cast< id ( * )( id, SEL ) >
+    (
+        OBJCXX::RT::Internal::objc_msgSend
+    )
+    ( value, OBJCXX::RT::Internal::sel_registerName( "retain" ) );
     
     *( reinterpret_cast< id * >( p ) ) = value;
 }

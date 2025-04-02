@@ -47,9 +47,9 @@ extern "C"
     extern Class                       objc_getClass                ( const char * );
     extern Class                       objc_getMetaClass            ( const char * );
     extern Protocol                *   objc_getProtocol             ( const char * );
-    extern id                          objc_msgSend                 ( id, SEL, ... );
-    extern double                      objc_msgSend_fpret           ( id, SEL, ... );
-    extern id                          objc_msgSendSuper            ( struct objc_super *, SEL, ... );
+    extern void                        objc_msgSend                 ( void );
+    extern void                        objc_msgSend_fpret           ( void );
+    extern void                        objc_msgSendSuper            ( void );
     extern Class                       objc_allocateClassPair       ( Class, const char *, size_t );
     extern void                        objc_registerClassPair       ( Class );
     extern void                        objc_setAssociatedObject     ( id, const void *, id, OBJCXX::RT::Internal::AssociationPolicy );
@@ -202,9 +202,9 @@ namespace OBJCXX
         Class                       ( * Internal::objc_getClass                 )( const char * )                                        = nullptr;
         Class                       ( * Internal::objc_getMetaClass             )( const char * )                                        = nullptr;
         Protocol                *   ( * Internal::objc_getProtocol              )( const char * )                                        = nullptr;
-        id                          ( * Internal::objc_msgSend                  )( id, SEL, ... )                                        = nullptr;
-        double                      ( * Internal::objc_msgSend_fpret            )( id, SEL, ... )                                        = nullptr;
-        id                          ( * Internal::objc_msgSendSuper             )( struct objc_super *, SEL, ... )                       = nullptr;
+        void                        ( * Internal::objc_msgSend                  )( void )                                                = nullptr;
+        void                        ( * Internal::objc_msgSend_fpret            )( void )                                                = nullptr;
+        void                        ( * Internal::objc_msgSendSuper             )( void )                                                = nullptr;
         Class                       ( * Internal::objc_allocateClassPair        )( Class, const char *, size_t )                         = nullptr;
         void                        ( * Internal::objc_registerClassPair        )( Class )                                               = nullptr;
         void                        ( * Internal::objc_setAssociatedObject      )( id, const void *, id, AssociationPolicy )             = nullptr;
@@ -272,9 +272,9 @@ namespace OBJCXX
             Internal::objc_getClass                 = ( Class                         ( * )( const char * )                                       )GetProcAddress( objc, "objc_getClass" );
             Internal::objc_getMetaClass             = ( Class                         ( * )( const char * )                                       )GetProcAddress( objc, "objc_getMetaClass" );
             Internal::objc_getProtocol              = ( Protocol                  *   ( * )( const char * )                                       )GetProcAddress( objc, "objc_getProtocol" );
-            Internal::objc_msgSend                  = ( id                            ( * )( id, SEL, ... )                                       )GetProcAddress( objc, "objc_msgSend" );
-            Internal::objc_msgSend_fpret            = ( double                        ( * )( id, SEL, ... )                                       )GetProcAddress( objc, "objc_msgSend_fpret" );
-            Internal::objc_msgSendSuper             = ( id                            ( * )( struct objc_super *, SEL, ... )                      )GetProcAddress( objc, "objc_msgSendSuper" );
+            Internal::objc_msgSend                  = ( void                          ( * )( void )                                               )GetProcAddress( objc, "objc_msgSend" );
+            Internal::objc_msgSend_fpret            = ( void                          ( * )( void )                                               )GetProcAddress( objc, "objc_msgSend_fpret" );
+            Internal::objc_msgSendSuper             = ( void                          ( * )( void )                                               )GetProcAddress( objc, "objc_msgSendSuper" );
             Internal::objc_allocateClassPair        = ( Class                         ( * )( Class, const char *, size_t )                        )GetProcAddress( objc, "objc_allocateClassPair" );
             Internal::objc_registerClassPair        = ( void                          ( * )( Class )                                              )GetProcAddress( objc, "objc_registerClassPair" );
             Internal::objc_setAssociatedObject      = ( void                          ( * )( id, const void *, id, Internal::AssociationPolicy )  )GetProcAddress( objc, "objc_setAssociatedObject" );
