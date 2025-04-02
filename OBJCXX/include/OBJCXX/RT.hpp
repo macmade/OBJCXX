@@ -117,9 +117,11 @@ namespace OBJCXX
                 
                 static Class                        ( * objc_getClass                 )( const char * );
                 static Class                        ( * objc_getMetaClass             )( const char * );
-                static Protocol                 *   ( * objc_getProtocol              )( const char * );
+                static Protocol                   * ( * objc_getProtocol              )( const char * );
                 static void                         ( * objc_msgSend                  )( void );
+                #ifndef __arm64__
                 static void                         ( * objc_msgSend_fpret            )( void );
+                #endif
                 static void                         ( * objc_msgSendSuper             )( void );
                 static Class                        ( * objc_allocateClassPair        )( Class, const char *, size_t );
                 static void                         ( * objc_registerClassPair        )( Class );
@@ -299,7 +301,11 @@ namespace OBJCXX
                     {
                         return reinterpret_cast< _T_ ( * )( id, SEL, _A_ ... ) >
                         (
+                            #ifdef __arm64__
+                            Internal::objc_msgSend
+                            #else
                             Internal::objc_msgSend_fpret
+                            #endif
                         )
                         ( this->object(), this->selector(), args ... );
                     }

@@ -48,7 +48,9 @@ extern "C"
     extern Class                       objc_getMetaClass            ( const char * );
     extern Protocol                *   objc_getProtocol             ( const char * );
     extern void                        objc_msgSend                 ( void );
+    #ifndef __arm64__
     extern void                        objc_msgSend_fpret           ( void );
+    #endif
     extern void                        objc_msgSendSuper            ( void );
     extern Class                       objc_allocateClassPair       ( Class, const char *, size_t );
     extern void                        objc_registerClassPair       ( Class );
@@ -203,7 +205,9 @@ namespace OBJCXX
         Class                       ( * Internal::objc_getMetaClass             )( const char * )                                        = nullptr;
         Protocol                *   ( * Internal::objc_getProtocol              )( const char * )                                        = nullptr;
         void                        ( * Internal::objc_msgSend                  )( void )                                                = nullptr;
+        #ifndef __arm64__
         void                        ( * Internal::objc_msgSend_fpret            )( void )                                                = nullptr;
+        #endif
         void                        ( * Internal::objc_msgSendSuper             )( void )                                                = nullptr;
         Class                       ( * Internal::objc_allocateClassPair        )( Class, const char *, size_t )                         = nullptr;
         void                        ( * Internal::objc_registerClassPair        )( Class )                                               = nullptr;
@@ -273,7 +277,9 @@ namespace OBJCXX
             Internal::objc_getMetaClass             = ( Class                         ( * )( const char * )                                       )GetProcAddress( objc, "objc_getMetaClass" );
             Internal::objc_getProtocol              = ( Protocol                  *   ( * )( const char * )                                       )GetProcAddress( objc, "objc_getProtocol" );
             Internal::objc_msgSend                  = ( void                          ( * )( void )                                               )GetProcAddress( objc, "objc_msgSend" );
+            #ifndef __arm64__
             Internal::objc_msgSend_fpret            = ( void                          ( * )( void )                                               )GetProcAddress( objc, "objc_msgSend_fpret" );
+            #endif
             Internal::objc_msgSendSuper             = ( void                          ( * )( void )                                               )GetProcAddress( objc, "objc_msgSendSuper" );
             Internal::objc_allocateClassPair        = ( Class                         ( * )( Class, const char *, size_t )                        )GetProcAddress( objc, "objc_allocateClassPair" );
             Internal::objc_registerClassPair        = ( void                          ( * )( Class )                                              )GetProcAddress( objc, "objc_registerClassPair" );
@@ -307,7 +313,9 @@ namespace OBJCXX
             Internal::objc_getMetaClass             = ::objc_getMetaClass;
             Internal::objc_getProtocol              = ::objc_getProtocol;
             Internal::objc_msgSend                  = ::objc_msgSend;
+            #ifndef __arm64__
             Internal::objc_msgSend_fpret            = ::objc_msgSend_fpret;
+            #endif
             Internal::objc_msgSendSuper             = ::objc_msgSendSuper;
             Internal::objc_allocateClassPair        = ::objc_allocateClassPair;
             Internal::objc_registerClassPair        = ::objc_registerClassPair;
