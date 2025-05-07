@@ -81,8 +81,6 @@ extern "C"
         id    receiver;
         Class super_class;
     };
-    
-    typedef id ( * objc_exception_preprocessor )( id exception );
 }
 
 #else
@@ -91,11 +89,6 @@ extern "C"
 #include <objc/objc-exception.h>
 
 #endif
-
-extern "C"
-{
-    OBJCXX_EXPORT id OBJCXX_Exception_Preprocessor( id e );
-}
 
 namespace OBJCXX
 {
@@ -116,34 +109,33 @@ namespace OBJCXX
                     Copy            = 01403
                 };
                 
-                static Class                        ( * objc_getClass                 )( const char * );
-                static Class                        ( * objc_getMetaClass             )( const char * );
-                static Protocol                   * ( * objc_getProtocol              )( const char * );
-                static void                         ( * objc_msgSend                  )();
+                static Class        ( * objc_getClass             )( const char * );
+                static Class        ( * objc_getMetaClass         )( const char * );
+                static Protocol   * ( * objc_getProtocol          )( const char * );
+                static void         ( * objc_msgSend              )();
                 #ifndef __arm64__
-                static void                         ( * objc_msgSend_fpret            )();
+                static void         ( * objc_msgSend_fpret        )();
                 #endif
-                static void                         ( * objc_msgSendSuper             )();
-                static Class                        ( * objc_allocateClassPair        )( Class, const char *, size_t );
-                static void                         ( * objc_registerClassPair        )( Class );
-                static void                         ( * objc_setAssociatedObject      )( id, const void *, id, AssociationPolicy );
-                static id                           ( * objc_getAssociatedObject      )( id, const void * );
-                static SEL                          ( * sel_registerName              )( const char * );
-                static const char                 * ( * sel_getName                   )( SEL );
-                static Class                        ( * object_getClass               )( id );
-                static IMP                          ( * method_getImplementation      )( Method );
-                static SEL                          ( * method_getName                )( Method );
-                static const char                 * ( * method_getTypeEncoding        )( Method );
-                static Class                        ( * class_getSuperclass           )( Class );
-                static const char                 * ( * class_getName                 )( Class );
-                static Method                     * ( * class_copyMethodList          )( Class, unsigned int * );
-                static bool                         ( * class_addIvar                 )( Class, const char *, size_t, uint8_t, const char * );
-                static bool                         ( * class_addMethod               )( Class, SEL, IMP, const char * );
-                static bool                         ( * class_addProtocol             )( Class, Protocol * );
-                static Ivar                         ( * class_getInstanceVariable     )( Class, const char * );
-                static ptrdiff_t                    ( * ivar_getOffset                )( Ivar );
-                static void                         ( * NSLogv                        )( id, va_list );
-                static objc_exception_preprocessor  ( * objc_setExceptionPreprocessor )( objc_exception_preprocessor );
+                static void         ( * objc_msgSendSuper         )();
+                static Class        ( * objc_allocateClassPair    )( Class, const char *, size_t );
+                static void         ( * objc_registerClassPair    )( Class );
+                static void         ( * objc_setAssociatedObject  )( id, const void *, id, AssociationPolicy );
+                static id           ( * objc_getAssociatedObject  )( id, const void * );
+                static SEL          ( * sel_registerName          )( const char * );
+                static const char * ( * sel_getName               )( SEL );
+                static Class        ( * object_getClass           )( id );
+                static IMP          ( * method_getImplementation  )( Method );
+                static SEL          ( * method_getName            )( Method );
+                static const char * ( * method_getTypeEncoding    )( Method );
+                static Class        ( * class_getSuperclass       )( Class );
+                static const char * ( * class_getName             )( Class );
+                static Method     * ( * class_copyMethodList      )( Class, unsigned int * );
+                static bool         ( * class_addIvar             )( Class, const char *, size_t, uint8_t, const char * );
+                static bool         ( * class_addMethod           )( Class, SEL, IMP, const char * );
+                static bool         ( * class_addProtocol         )( Class, Protocol * );
+                static Ivar         ( * class_getInstanceVariable )( Class, const char * );
+                static ptrdiff_t    ( * ivar_getOffset            )( Ivar );
+                static void         ( * NSLogv                    )( id, va_list );
         };
         
         OBJCXX_EXPORT void Init();
@@ -152,8 +144,6 @@ namespace OBJCXX
         OBJCXX_EXPORT Class       GetClass( id object );
         OBJCXX_EXPORT std::string GetClassName( Class cls );
         OBJCXX_EXPORT SEL         GetSelector( const std::string & name );
-        OBJCXX_EXPORT id          GetLastException();
-        OBJCXX_EXPORT void        RethrowLastException();
         
         class OBJCXX_EXPORT MessageBase
         {
@@ -205,24 +195,15 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
-                    try
-                    {
-                        uintptr_t r;
-                        
-                        r = reinterpret_cast< uintptr_t ( * )( id, SEL, _A_ ... ) >
-                        (
-                            Internal::objc_msgSend
-                        )
-                        ( this->object(), this->selector(), args ... );
-                        
-                        return static_cast< _T_ >( r );
-                    }
-                    catch( ... )
-                    {
-                        RethrowLastException();
-                        
-                        return {};
-                    }
+                    uintptr_t r;
+                    
+                    r = reinterpret_cast< uintptr_t ( * )( id, SEL, _A_ ... ) >
+                    (
+                        Internal::objc_msgSend
+                    )
+                    ( this->object(), this->selector(), args ... );
+                    
+                    return static_cast< _T_ >( r );
                 }
         };
         
@@ -243,20 +224,11 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
-                    try
-                    {
-                        return reinterpret_cast< _T_ ( * )( id, SEL, _A_ ... ) >
-                        (
-                            Internal::objc_msgSend
-                        )
-                        ( this->object(), this->selector(), args ... );
-                    }
-                    catch( ... )
-                    {
-                        RethrowLastException();
-                        
-                        return {};
-                    }
+                    return reinterpret_cast< _T_ ( * )( id, SEL, _A_ ... ) >
+                    (
+                        Internal::objc_msgSend
+                    )
+                    ( this->object(), this->selector(), args ... );
                 }
         };
         
@@ -277,18 +249,11 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 void send( _A_ ... args )
                 {
-                    try
-                    {
-                        reinterpret_cast< void ( * )( id, SEL, _A_ ... ) >
-                        (
-                            Internal::objc_msgSend
-                        )
-                        ( this->object(), this->selector(), args ... );
-                    }
-                    catch( ... )
-                    {
-                        RethrowLastException();
-                    }
+                    reinterpret_cast< void ( * )( id, SEL, _A_ ... ) >
+                    (
+                        Internal::objc_msgSend
+                    )
+                    ( this->object(), this->selector(), args ... );
                 }
         };
         
@@ -309,24 +274,15 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
-                    try
-                    {
-                        return reinterpret_cast< _T_ ( * )( id, SEL, _A_ ... ) >
-                        (
-                            #ifdef __arm64__
-                            Internal::objc_msgSend
-                            #else
-                            Internal::objc_msgSend_fpret
-                            #endif
-                        )
-                        ( this->object(), this->selector(), args ... );
-                    }
-                    catch( ... )
-                    {
-                        RethrowLastException();
-                        
-                        return static_cast< _T_ >( 0 );
-                    }
+                    return reinterpret_cast< _T_ ( * )( id, SEL, _A_ ... ) >
+                    (
+                        #ifdef __arm64__
+                        Internal::objc_msgSend
+                        #else
+                        Internal::objc_msgSend_fpret
+                        #endif
+                    )
+                    ( this->object(), this->selector(), args ... );
                 }
         };
         
@@ -347,20 +303,11 @@ namespace OBJCXX
                 template< typename ... _A_ >
                 _T_ send( _A_ ... args )
                 {
-                    try
-                    {
-                        return reinterpret_cast< _T_ ( * )( id, SEL, ... ) >
-                        (
-                            Internal::objc_msgSend
-                        )
-                        ( this->object(), this->selector(), args ... );
-                    }
-                    catch( ... )
-                    {
-                        RethrowLastException();
-                        
-                        return {};
-                    }
+                    return reinterpret_cast< _T_ ( * )( id, SEL, ... ) >
+                    (
+                        Internal::objc_msgSend
+                    )
+                    ( this->object(), this->selector(), args ... );
                 }
         };
         

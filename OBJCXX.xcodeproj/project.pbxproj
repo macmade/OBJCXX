@@ -12,7 +12,6 @@
 		0558F96D1E5F7E70009FAC3A /* Foo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0558F96B1E5F7E70009FAC3A /* Foo.cpp */; };
 		05855C261E64B4790020E1C9 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA7731C29E3FB009DD4DD /* Object.cpp */; };
 		05855C271E64B4790020E1C9 /* RT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA7991C29F726009DD4DD /* RT.cpp */; };
-		05855C281E64B4790020E1C9 /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05F527EE1E3BAEFA00E21B6B /* Exception.cpp */; };
 		05855C291E64B4790020E1C9 /* ClassBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05E382351D1D8CCB00E9EDAF /* ClassBuilder.cpp */; };
 		05855C2A1E64B4830020E1C9 /* Functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8721C2B0EA8009DD4DD /* Functions.cpp */; };
 		05855C2B1E64B48D0020E1C9 /* NSAffineTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058FA8A31C2B169A009DD4DD /* NSAffineTransform.cpp */; };
@@ -730,7 +729,6 @@
 		05E382361D1D8CCB00E9EDAF /* ClassBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05E382351D1D8CCB00E9EDAF /* ClassBuilder.cpp */; };
 		05E4952E1E5F807E003A9DC4 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05E4952C1E5F807E003A9DC4 /* Test.cpp */; };
 		05E495311E5F8885003A9DC4 /* Bar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05E4952F1E5F8885003A9DC4 /* Bar.cpp */; };
-		05F527EF1E3BAEFA00E21B6B /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05F527EE1E3BAEFA00E21B6B /* Exception.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1321,7 +1319,6 @@
 		05E4952D1E5F807E003A9DC4 /* Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
 		05E4952F1E5F8885003A9DC4 /* Bar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bar.cpp; sourceTree = "<group>"; };
 		05E495301E5F8885003A9DC4 /* Bar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bar.hpp; sourceTree = "<group>"; };
-		05F527EE1E3BAEFA00E21B6B /* Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2058,7 +2055,6 @@
 				058FA7701C29E3FB009DD4DD /* Foundation */,
 				058FA7731C29E3FB009DD4DD /* Object.cpp */,
 				058FA7991C29F726009DD4DD /* RT.cpp */,
-				05F527EE1E3BAEFA00E21B6B /* Exception.cpp */,
 				054ED11C1FD6AF9B00081837 /* MethodSignature.cpp */,
 				05E382351D1D8CCB00E9EDAF /* ClassBuilder.cpp */,
 			);
@@ -2551,7 +2547,6 @@
 				058FA9DC1C2B169A009DD4DD /* NSOutputStream.cpp in Sources */,
 				058FA9AB1C2B169A009DD4DD /* NSHTTPCookie.cpp in Sources */,
 				058FA9C31C2B169A009DD4DD /* NSMetadataQuery.cpp in Sources */,
-				05F527EF1E3BAEFA00E21B6B /* Exception.cpp in Sources */,
 				058FA99E1C2B169A009DD4DD /* NSExtensionContext.cpp in Sources */,
 				058FA9D01C2B169A009DD4DD /* NSNetService.cpp in Sources */,
 				058FAA291C2B169A009DD4DD /* NSUserNotificationAction.cpp in Sources */,
@@ -2816,7 +2811,6 @@
 				05855C6C1E64B48D0020E1C9 /* NSHost.cpp in Sources */,
 				05855CA61E64B48D0020E1C9 /* NSPersonNameComponentsFormatter.cpp in Sources */,
 				05855C941E64B48D0020E1C9 /* NSMutableString.cpp in Sources */,
-				05855C281E64B4790020E1C9 /* Exception.cpp in Sources */,
 				05855C8A1E64B48D0020E1C9 /* NSMiddleSpecifier.cpp in Sources */,
 				05855C521E64B48D0020E1C9 /* NSDeleteCommand.cpp in Sources */,
 				05855CE71E64B48D0020E1C9 /* NSURLSession.cpp in Sources */,

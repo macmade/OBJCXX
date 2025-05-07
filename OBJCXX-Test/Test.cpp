@@ -194,15 +194,8 @@ void testExceptions()
     
         e.raise();
     }
-    catch( const NS::Exception & e )
+    catch( ... )
     {
-        std::cout << "Caught Objective-C exception:"
-                  << std::endl
-                  << "    - Name:   "
-                  << e.name().UTF8String()
-                  << std::endl
-                  << "    - Reason: "
-                  << e.reason().UTF8String()
-                  << std::endl;
+        std::cout << "Caught Objective-C exception" << std::endl;
     }
 }
